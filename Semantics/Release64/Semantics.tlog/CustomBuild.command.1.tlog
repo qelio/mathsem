@@ -1,0 +1,27 @@
+^C:\USERS\TEST\YANDEXDISK\SEMANTICSISHODNIKI\SEMANTICS\SEMANTICS\HLP\SEMANTICS.HHP
+start /wait hhc "hlp\Semantics.hhp"
+if not exist "hlp\Semantics.chm" goto :HelpError
+copy "hlp\Semantics.chm" "C:\Users\Test\YandexDisk\Semanticsishodniki\Semantics\Release64\Semantics.chm"
+goto :HelpDone
+:HelpError
+echo hlp\Semantics.hhp(1) : error:Проблемы при создании файла справки
+echo.
+:HelpDone
+echo.
+^C:\USERS\TEST\YANDEXDISK\SEMANTICSISHODNIKI\SEMANTICS\SEMANTICS\RESOURCE.H
+echo // Созданный файл схемы справки. Используется в Semantics.HHP. > "hlp\HTMLDefines.h"
+echo. > "hlp\HTMLDefines.h"
+echo // Команды (ID_* и IDM_*) >> "hlp\HTMLDefines.h"
+makehm /h ID_,HID_,0x10000 IDM_,HIDM_,0x10000 "C:\Users\Test\YandexDisk\Semanticsishodniki\Semantics\Semantics\Resource.h" >> "hlp\HTMLDefines.h"
+echo. >> "hlp\HTMLDefines.h"
+echo // Приглашения (IDP_*) >> "hlp\HTMLDefines.h"
+makehm /h IDP_,HIDP_,0x30000 "C:\Users\Test\YandexDisk\Semanticsishodniki\Semantics\Semantics\Resource.h" >> "hlp\HTMLDefines.h"
+echo. >> "hlp\HTMLDefines.h"
+echo // Ресурсы (IDR_*) >> "hlp\HTMLDefines.h"
+makehm /h IDR_,HIDR_,0x20000 "C:\Users\Test\YandexDisk\Semanticsishodniki\Semantics\Semantics\Resource.h" >> "hlp\HTMLDefines.h"
+echo. >> "hlp\HTMLDefines.h"
+echo // Диалоговые окна (IDD_*) >> "hlp\HTMLDefines.h"
+makehm /h IDD_,HIDD_,0x20000 "C:\Users\Test\YandexDisk\Semanticsishodniki\Semantics\Semantics\Resource.h" >> "hlp\HTMLDefines.h"
+echo. >> "hlp\HTMLDefines.h"
+echo // Элементы управления фреймов (IDW_*) >> "hlp\HTMLDefines.h"
+makehm /h /a afxhh.h IDW_,HIDW_,0x50000 "C:\Users\Test\YandexDisk\Semanticsishodniki\Semantics\Semantics\Resource.h" >> "hlp\HTMLDefines.h"
