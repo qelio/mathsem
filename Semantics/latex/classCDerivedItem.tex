@@ -1,0 +1,89 @@
+\doxysection{CDerived\+Item Class Reference}
+\hypertarget{classCDerivedItem}{}\label{classCDerivedItem}\index{CDerivedItem@{CDerivedItem}}
+
+
+Represents a derived item from \doxylink{classCItem}{CItem}.  
+
+
+
+
+{\ttfamily \#include $<$Item.\+h$>$}
+
+
+
+Inheritance diagram for CDerived\+Item\+:
+% FIG 0
+
+
+Collaboration diagram for CDerived\+Item\+:
+% FIG 1
+\doxysubsubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classCDerivedItem_a68d6704b05301c22bc844f8761b5b978}\label{classCDerivedItem_a68d6704b05301c22bc844f8761b5b978} 
+enum \{ {\bfseries e\+FIRST}
+, {\bfseries e\+SECOND}
+ \}
+\begin{DoxyCompactList}\small\item\em An example enumeration attribute. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classCDerivedItem_a675fda31c90b7147a352e7d832eff4f8}\label{classCDerivedItem_a675fda31c90b7147a352e7d832eff4f8} 
+{\bfseries CDerived\+Item} ()
+\begin{DoxyCompactList}\small\item\em Default constructor. \end{DoxyCompactList}\item 
+\Hypertarget{classCDerivedItem_ad0be8402850a8b2cdada1201151f1f06}\label{classCDerivedItem_ad0be8402850a8b2cdada1201151f1f06} 
+virtual {\bfseries \texorpdfstring{$\sim$}{\string~}\+CDerived\+Item} ()
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classCDerivedItem_a4de0e25e409092802aa590e01c298ebb}{Serialize}} (CArchive \&ar)
+\begin{DoxyCompactList}\small\item\em Serialize the derived item to or from an archive. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classCItem}{CItem}}}
+\begin{DoxyCompactItemize}
+\item 
+{\bfseries CItem} ()
+\begin{DoxyCompactList}\small\item\em Default constructor. \end{DoxyCompactList}\item 
+virtual {\bfseries \texorpdfstring{$\sim$}{\string~}\+CItem} ()
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classCDerivedItem_a9339fbfe8f3a0dccf19b798e12ed6538}\label{classCDerivedItem_a9339fbfe8f3a0dccf19b798e12ed6538} 
+enum CDerived\+Item\+:: \{ ... \}  {\bfseries m\+\_\+enum\+Attribute}
+\begin{DoxyCompactList}\small\item\em An example enumeration attribute. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes inherited from \mbox{\hyperlink{classCItem}{CItem}}}
+\begin{DoxyCompactItemize}
+\item 
+CTime {\bfseries Date\+Of\+Creation}
+\begin{DoxyCompactList}\small\item\em The creation date of the item. \end{DoxyCompactList}\item 
+CString {\bfseries Version}
+\begin{DoxyCompactList}\small\item\em The version of the file. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Represents a derived item from \doxylink{classCItem}{CItem}. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classCDerivedItem_a4de0e25e409092802aa590e01c298ebb}\label{classCDerivedItem_a4de0e25e409092802aa590e01c298ebb} 
+\index{CDerivedItem@{CDerivedItem}!Serialize@{Serialize}}
+\index{Serialize@{Serialize}!CDerivedItem@{CDerivedItem}}
+\doxysubsubsection{\texorpdfstring{Serialize()}{Serialize()}}
+{\footnotesize\ttfamily void CDerived\+Item\+::\+Serialize (\begin{DoxyParamCaption}\item[{CArchive \&}]{ar }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Serialize the derived item to or from an archive. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ar} & The archive to serialize to or from. \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{classCItem_a025961ca35edb2258b6c6afd5540dece}{CItem}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{Item_8h}{Item.\+h}}\item 
+Item.\+cpp\end{DoxyCompactItemize}

@@ -1,6 +1,10 @@
-//  Автор кода: Татаринцев В.В., akizelokro@mail.ru , 2013-2014
-//  Author: Tatarintsev V.V., akizelokro@mail.ru, 2013-2014
+/**
+ * @file OperationDlg.h
+ * @brief Defines the OperationDlg class for performing operations on formulas.
+ */
+
 #pragma once
+
 #include "afxwin.h"
 #include "afxbutton.h"
 #include "ScientificListBox.h"
@@ -8,70 +12,65 @@
 #include "ScientificStatic.h"
 #include "afxcmn.h"
 
-// диалоговое окно OperationDlg
-
+/**
+ * @brief Dialog class for various formula operations.
+ */
 class OperationDlg : public CDialogEx
 {
-	DECLARE_DYNAMIC(OperationDlg)
+    DECLARE_DYNAMIC(OperationDlg)
 
-	void SetOperationState();
-	void MoveSelected(ScientificListBox &Source, ScientificListBox &Destination);
-	void MoveAll(ScientificListBox &Source, ScientificListBox &Destination);
+    /**
+     * @brief Updates the state of the operation based on user interaction.
+     */
+    void SetOperationState();
 
+    /**
+     * @brief Moves selected items from the source list box to the destination list box.
+     * @param Source The source ScientificListBox.
+     * @param Destination The destination ScientificListBox.
+     */
+    void MoveSelected(ScientificListBox& Source, ScientificListBox& Destination);
 
-	vector <Formula *> * formulas;
-	vector <EntityBase *> * allEntities;
+    /**
+     * @brief Moves all items from the source list box to the destination list box.
+     * @param Source The source ScientificListBox.
+     * @param Destination The destination ScientificListBox.
+     */
+    void MoveAll(ScientificListBox& Source, ScientificListBox& Destination);
+
+    /**
+     * @brief Pointer to a vector of formulas used in operations.
+     */
+    std::vector<Formula*>* formulas;
+
+    /**
+     * @brief Pointer to a vector of all entities involved in operations.
+     */
+    std::vector<EntityBase*>* allEntities;
+
 public:
-	OperationDlg(CWnd* pParent = NULL);   // стандартный конструктор
-	virtual ~OperationDlg();
+    /**
+     * @brief Constructs the OperationDlg dialog.
+     * @param pParent Parent window of the dialog.
+     */
+    OperationDlg(CWnd* pParent = NULL);
 
-// Данные диалогового окна
-	enum { IDD = IDD_CHOOSEDIALOG };
+    /**
+     * @brief Destructs the OperationDlg dialog.
+     */
+    virtual ~OperationDlg();
+
+    /**
+     * @brief Dialog Data Identifier.
+     */
+    enum { IDD = IDD_CHOOSEDIALOG };
 
 protected:
-	virtual void DoDataExchange(CDataExchange* pDX);    // поддержка DDX/DDV
+    /**
+     * @brief Data exchange method for dialog controls.
+     * @param pDX Pointer to the data exchange object.
+     */
+    virtual void DoDataExchange(CDataExchange* pDX);
 
-	DECLARE_MESSAGE_MAP()
-public:
-	ScientificListBox m_ListBoxSource;
-	ScientificListBox m_ListBoxDestination1;
-	ScientificListBox m_ListBoxDestination2;
-	CMFCButton m_ButtonAdd1;
-	CMFCButton m_ButtonRemove1;
-	CScientificStatic m_StaticDescription;
-	CButton m_CheckApplyForAll;
-	CButton m_CheckBinary;
-	EntityBaseType operation;
-	CMFCButton m_ButtonAddAll1;
-	CMFCButton m_ButtonRemoveAll1;
-	CButton m_ButtonOK;
-	CFont * m_fIndexes;
-	CFont * m_fSymbol;
-	CFont * m_fVariables;
-	CFont * m_fIndexesVariables;
-	CFont * m_fSymbolVariables;
-
-
-	afx_msg void OnBnClickedCheck2();
-	void DisableBinary () { m_CheckBinary.EnableWindow(false); this->m_ListBoxDestination2.EnableWindow(false); };
-	void  setFormulas(vector <EntityBase *> * all_entities_ = NULL) { allEntities = all_entities_; };
-	virtual BOOL OnInitDialog();
-//	void SetOperation( Operation op_);
-	void SetOperation( EntityBaseType type ) { operation = type;};
-	EntityBaseType GetOperation() { return operation; };
-	afx_msg void OnBnClickedOk();
-	afx_msg void OnBnClickedMfcbutton1();
-	afx_msg void OnBnClickedMfcbutton5();
-	afx_msg void OnBnClickedMfcbutton2();
-	afx_msg void OnBnClickedMfcbutton6();
-	void ShowFreeVariables();
-	void HideFreeVariables();
-	afx_msg void OnSelchangeListdest1();
-	void ShowCandidates();
-	void HideCandidates();
-	CButton m_checkAll1;
-	CButton m_checkAll2;
-	afx_msg void OnBnClickedCheck1();
-	afx_msg void OnStnClickedStatic1();
-	afx_msg void OnBnClickedCheckall1();
+    DECLARE_MESSAGE_MAP()
 };

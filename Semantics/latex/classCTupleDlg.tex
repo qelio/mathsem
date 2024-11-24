@@ -1,0 +1,139 @@
+\doxysection{CTuple\+Dlg Class Reference}
+\hypertarget{classCTupleDlg}{}\label{classCTupleDlg}\index{CTupleDlg@{CTupleDlg}}
+
+
+A dialog class for handling tuple selection and display.  
+
+
+
+
+{\ttfamily \#include $<$Tuple\+Dlg.\+h$>$}
+
+
+
+Inheritance diagram for CTuple\+Dlg\+:
+% FIG 0
+
+
+Collaboration diagram for CTuple\+Dlg\+:
+% FIG 1
+\doxysubsubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classCTupleDlg_a97fa9b2889a855696a7f7088f9c7cf93}\label{classCTupleDlg_a97fa9b2889a855696a7f7088f9c7cf93} 
+enum \{ {\bfseries IDD} = IDD\+\_\+\+TUPLEDIALOG
+ \}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classCTupleDlg_a8620b91335e407ae2884d99ae41fc63b}{CTuple\+Dlg}} (CWnd \texorpdfstring{$\ast$}{*}p\+Parent=NULL)
+\begin{DoxyCompactList}\small\item\em Default constructor for the \doxylink{classCTupleDlg}{CTuple\+Dlg} class. Initializes the dialog without any data. \end{DoxyCompactList}\item 
+\Hypertarget{classCTupleDlg_ae311163f872a32ebde8d9c1a28c34e00}\label{classCTupleDlg_ae311163f872a32ebde8d9c1a28c34e00} 
+virtual {\bfseries \texorpdfstring{$\sim$}{\string~}\+CTuple\+Dlg} ()
+\begin{DoxyCompactList}\small\item\em Destructor for the \doxylink{classCTupleDlg}{CTuple\+Dlg} class. Cleans up any resources used by the dialog. \end{DoxyCompactList}\item 
+\Hypertarget{classCTupleDlg_ace3d97d975125499b5347788fe8e0a8c}\label{classCTupleDlg_ace3d97d975125499b5347788fe8e0a8c} 
+afx\+\_\+msg void {\bfseries On\+Bn\+Clicked\+Ok} ()
+\begin{DoxyCompactList}\small\item\em Handles the OK button click event. This function is called when the user clicks the "{}\+OK"{} button in the dialog. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classCTupleDlg_a7f187f0e8bc1705905d4394e85012c8a}{Set\+Entities}} (vector$<$ \mbox{\hyperlink{classEntityBase}{Entity\+Base}} \texorpdfstring{$\ast$}{*} $>$ \texorpdfstring{$\ast$}{*}ent)
+\begin{DoxyCompactList}\small\item\em Sets the vector of entities for the dialog. This function sets the pointer to the list of entities that will be used in the dialog. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+CCombo\+Box \mbox{\hyperlink{classCTupleDlg_a1c62121618b749b2c62f38da8a2237a4}{combo1}}
+\begin{DoxyCompactList}\small\item\em Message map for handling dialog messages. \end{DoxyCompactList}\item 
+\Hypertarget{classCTupleDlg_a3b9ee114de5682bb0f2547eec73c2417}\label{classCTupleDlg_a3b9ee114de5682bb0f2547eec73c2417} 
+CCombo\+Box {\bfseries combo2}
+\begin{DoxyCompactList}\small\item\em A combo box for selecting the second value of the tuple. \end{DoxyCompactList}\item 
+\Hypertarget{classCTupleDlg_aa6d2b09ac84ec9574f572bae874c43ee}\label{classCTupleDlg_aa6d2b09ac84ec9574f572bae874c43ee} 
+CCombo\+Box {\bfseries combo3}
+\begin{DoxyCompactList}\small\item\em A combo box for selecting the third value of the tuple. \end{DoxyCompactList}\item 
+\Hypertarget{classCTupleDlg_a3453069d432c93b169a759a8af147f72}\label{classCTupleDlg_a3453069d432c93b169a759a8af147f72} 
+CEdit {\bfseries m\+\_\+lowindex1}
+\begin{DoxyCompactList}\small\item\em An edit control for entering the first index value. \end{DoxyCompactList}\item 
+\Hypertarget{classCTupleDlg_a365c72abeaa8ece049f26c57a521e765}\label{classCTupleDlg_a365c72abeaa8ece049f26c57a521e765} 
+CEdit {\bfseries m\+\_\+lowindex2}
+\begin{DoxyCompactList}\small\item\em An edit control for entering the second index value. \end{DoxyCompactList}\item 
+\Hypertarget{classCTupleDlg_afd5b0ff8fdc51abc08ed94a6d2f351a5}\label{classCTupleDlg_afd5b0ff8fdc51abc08ed94a6d2f351a5} 
+CEdit {\bfseries m\+\_\+lowindex3}
+\begin{DoxyCompactList}\small\item\em An edit control for entering the third index value. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{classCTupleDlg_a973481570cd70b21dde727cdb5ad07bc}{Do\+Data\+Exchange}} (CData\+Exchange \texorpdfstring{$\ast$}{*}p\+DX)
+\begin{DoxyCompactList}\small\item\em Handles data exchange between controls and variables. This function ensures that the data entered into the controls is properly transferred to the class variables. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A dialog class for handling tuple selection and display. 
+
+This dialog allows the user to select values for tuples and manage the corresponding entities. It includes combo boxes for tuple selection and edit controls for displaying and modifying values. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classCTupleDlg_a8620b91335e407ae2884d99ae41fc63b}\label{classCTupleDlg_a8620b91335e407ae2884d99ae41fc63b} 
+\index{CTupleDlg@{CTupleDlg}!CTupleDlg@{CTupleDlg}}
+\index{CTupleDlg@{CTupleDlg}!CTupleDlg@{CTupleDlg}}
+\doxysubsubsection{\texorpdfstring{CTupleDlg()}{CTupleDlg()}}
+{\footnotesize\ttfamily CTuple\+Dlg\+::\+CTuple\+Dlg (\begin{DoxyParamCaption}\item[{CWnd \texorpdfstring{$\ast$}{*}}]{p\+Parent = {\ttfamily NULL} }\end{DoxyParamCaption})}
+
+
+
+Default constructor for the \doxylink{classCTupleDlg}{CTuple\+Dlg} class. Initializes the dialog without any data. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+Parent} & A pointer to the parent window, default is NULL. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classCTupleDlg_a973481570cd70b21dde727cdb5ad07bc}\label{classCTupleDlg_a973481570cd70b21dde727cdb5ad07bc} 
+\index{CTupleDlg@{CTupleDlg}!DoDataExchange@{DoDataExchange}}
+\index{DoDataExchange@{DoDataExchange}!CTupleDlg@{CTupleDlg}}
+\doxysubsubsection{\texorpdfstring{DoDataExchange()}{DoDataExchange()}}
+{\footnotesize\ttfamily void CTuple\+Dlg\+::\+Do\+Data\+Exchange (\begin{DoxyParamCaption}\item[{CData\+Exchange \texorpdfstring{$\ast$}{*}}]{p\+DX }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Handles data exchange between controls and variables. This function ensures that the data entered into the controls is properly transferred to the class variables. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+DX} & Pointer to the CData\+Exchange object used to exchange data. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classCTupleDlg_a7f187f0e8bc1705905d4394e85012c8a}\label{classCTupleDlg_a7f187f0e8bc1705905d4394e85012c8a} 
+\index{CTupleDlg@{CTupleDlg}!SetEntities@{SetEntities}}
+\index{SetEntities@{SetEntities}!CTupleDlg@{CTupleDlg}}
+\doxysubsubsection{\texorpdfstring{SetEntities()}{SetEntities()}}
+{\footnotesize\ttfamily void CTuple\+Dlg\+::\+Set\+Entities (\begin{DoxyParamCaption}\item[{vector$<$ \mbox{\hyperlink{classEntityBase}{Entity\+Base}} \texorpdfstring{$\ast$}{*} $>$ \texorpdfstring{$\ast$}{*}}]{ent }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Sets the vector of entities for the dialog. This function sets the pointer to the list of entities that will be used in the dialog. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ent} & A pointer to the vector of \doxylink{classEntityBase}{Entity\+Base} objects. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{classCTupleDlg_a1c62121618b749b2c62f38da8a2237a4}\label{classCTupleDlg_a1c62121618b749b2c62f38da8a2237a4} 
+\index{CTupleDlg@{CTupleDlg}!combo1@{combo1}}
+\index{combo1@{combo1}!CTupleDlg@{CTupleDlg}}
+\doxysubsubsection{\texorpdfstring{combo1}{combo1}}
+{\footnotesize\ttfamily CTuple\+Dlg\+::combo1}
+
+
+
+Message map for handling dialog messages. 
+
+A combo box for selecting the first value of the tuple. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Tuple\+Dlg.\+h\item 
+Tuple\+Dlg.\+cpp\end{DoxyCompactItemize}

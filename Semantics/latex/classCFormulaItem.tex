@@ -1,0 +1,145 @@
+\doxysection{CFormula\+Item Class Reference}
+\hypertarget{classCFormulaItem}{}\label{classCFormulaItem}\index{CFormulaItem@{CFormulaItem}}
+
+
+Represents a formula item used in serialization.  
+
+
+
+
+{\ttfamily \#include $<$Item.\+h$>$}
+
+
+
+Inheritance diagram for CFormula\+Item\+:
+% FIG 0
+
+
+Collaboration diagram for CFormula\+Item\+:
+% FIG 1
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classCFormulaItem_a9f3188a2f262680e2835ee4548404efc}\label{classCFormulaItem_a9f3188a2f262680e2835ee4548404efc} 
+{\bfseries CFormula\+Item} ()
+\begin{DoxyCompactList}\small\item\em Default constructor. \end{DoxyCompactList}\item 
+\Hypertarget{classCFormulaItem_ae7ef27d5f173bb6dea35e2243c75bc88}\label{classCFormulaItem_ae7ef27d5f173bb6dea35e2243c75bc88} 
+virtual {\bfseries \texorpdfstring{$\sim$}{\string~}\+CFormula\+Item} ()
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classCFormulaItem_a69ca2bed273e8f64e542dec1c06fe990}{Serialize}} (CArchive \&ar)
+\begin{DoxyCompactList}\small\item\em Serialize the formula item to or from an archive. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classCFormulaItem_a4a5ea233f7cac2bf7171380615e7478d}{CFormula\+Item}} (\mbox{\hyperlink{classFormula}{Formula}} \&ev)
+\begin{DoxyCompactList}\small\item\em Constructor that creates a formula item from a \doxylink{classFormula}{Formula} object. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classCFormulaItem_ad2da382800a79e7483e5995da63ebfc1}{Set\+Number}} (int number)
+\begin{DoxyCompactList}\small\item\em Sets the formula number. \end{DoxyCompactList}\item 
+\Hypertarget{classCFormulaItem_a08777e8d3fabafa65b9546b2dec261ad}\label{classCFormulaItem_a08777e8d3fabafa65b9546b2dec261ad} 
+void {\bfseries Set\+Parent\+Set\+Number} (int number)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classCFormulaItem_ac21e04fb60100dcf587f13ef6cea65bb}\label{classCFormulaItem_ac21e04fb60100dcf587f13ef6cea65bb} 
+Formula\+\_\+\+Feature {\bfseries Feature}
+\begin{DoxyCompactList}\small\item\em The feature of the formula (axiom, theorem, conclusion). \end{DoxyCompactList}\item 
+\Hypertarget{classCFormulaItem_ab0df148bfcfab0814d6e95b3954eade3}\label{classCFormulaItem_ab0df148bfcfab0814d6e95b3954eade3} 
+int {\bfseries Number}
+\begin{DoxyCompactList}\small\item\em The unique number of the formula in general numbering. \end{DoxyCompactList}\item 
+\Hypertarget{classCFormulaItem_a926ca600b348d25d0415462d657701cf}\label{classCFormulaItem_a926ca600b348d25d0415462d657701cf} 
+int {\bfseries Parent\+Set\+Number}
+\begin{DoxyCompactList}\small\item\em The number of the parent set for this formula (used in conclusions). \end{DoxyCompactList}\item 
+\Hypertarget{classCFormulaItem_a5d6b7afcd17ec084560b5dc8056ef9de}\label{classCFormulaItem_a5d6b7afcd17ec084560b5dc8056ef9de} 
+int {\bfseries Replaced\+Number}
+\begin{DoxyCompactList}\small\item\em The number of the formula replaced by this one. \end{DoxyCompactList}\item 
+\Hypertarget{classCFormulaItem_a807c0976b3deccbb1049e895208960aa}\label{classCFormulaItem_a807c0976b3deccbb1049e895208960aa} 
+\mbox{\hyperlink{classCArrayXML}{CArray\+XML}}$<$ \mbox{\hyperlink{classCVariableItem}{CVariable\+Item}} \texorpdfstring{$\ast$}{*}, \mbox{\hyperlink{classCVariableItem}{CVariable\+Item}} \texorpdfstring{$\ast$}{*} $>$ {\bfseries Free\+Variables}
+\begin{DoxyCompactList}\small\item\em The collection of free variables. \end{DoxyCompactList}\item 
+\Hypertarget{classCFormulaItem_a6905b53cf798caad5543c7ea52658e5c}\label{classCFormulaItem_a6905b53cf798caad5543c7ea52658e5c} 
+\mbox{\hyperlink{classCArrayXML}{CArray\+XML}}$<$ \mbox{\hyperlink{classCVariableItem}{CVariable\+Item}} \texorpdfstring{$\ast$}{*}, \mbox{\hyperlink{classCVariableItem}{CVariable\+Item}} \texorpdfstring{$\ast$}{*} $>$ {\bfseries Linked\+Variables}
+\begin{DoxyCompactList}\small\item\em The collection of linked variables. \end{DoxyCompactList}\item 
+\Hypertarget{classCFormulaItem_a4611cd8397eedc6043bdc948c49ae67a}\label{classCFormulaItem_a4611cd8397eedc6043bdc948c49ae67a} 
+\mbox{\hyperlink{classCArrayXML}{CArray\+XML}}$<$ \mbox{\hyperlink{classCParentLinkItem}{CParent\+Link\+Item}} \texorpdfstring{$\ast$}{*}, \mbox{\hyperlink{classCParentLinkItem}{CParent\+Link\+Item}} \texorpdfstring{$\ast$}{*} $>$ {\bfseries Parent\+Links}
+\begin{DoxyCompactList}\small\item\em The collection of parent links. \end{DoxyCompactList}\item 
+\Hypertarget{classCFormulaItem_ae345f09c3d869571eb08c59494c0c5e4}\label{classCFormulaItem_ae345f09c3d869571eb08c59494c0c5e4} 
+\mbox{\hyperlink{classCArrayXML}{CArray\+XML}}$<$ \mbox{\hyperlink{classCVariableItem}{CVariable\+Item}} \texorpdfstring{$\ast$}{*}, \mbox{\hyperlink{classCVariableItem}{CVariable\+Item}} \texorpdfstring{$\ast$}{*} $>$ {\bfseries Replace\+Variables}
+\begin{DoxyCompactList}\small\item\em The collection of variables replaced in this formula. \end{DoxyCompactList}\item 
+\Hypertarget{classCFormulaItem_aa781540533e27e3a6a6ac49efdfe7376}\label{classCFormulaItem_aa781540533e27e3a6a6ac49efdfe7376} 
+CString {\bfseries Description}
+\begin{DoxyCompactList}\small\item\em The description of the formula. \end{DoxyCompactList}\item 
+\Hypertarget{classCFormulaItem_ac7b3424e66878bd842f622d756ac7248}\label{classCFormulaItem_ac7b3424e66878bd842f622d756ac7248} 
+CString {\bfseries Addons}
+\begin{DoxyCompactList}\small\item\em Additional information for the formula. \end{DoxyCompactList}\item 
+\Hypertarget{classCFormulaItem_afab67f1066b8b7b449d4a9ef7ab48b60}\label{classCFormulaItem_afab67f1066b8b7b449d4a9ef7ab48b60} 
+CString {\bfseries Label}
+\begin{DoxyCompactList}\small\item\em The label of the formula. \end{DoxyCompactList}\item 
+\Hypertarget{classCFormulaItem_a42fff8309c0511266b1e642d987b06f3}\label{classCFormulaItem_a42fff8309c0511266b1e642d987b06f3} 
+CString {\bfseries Text}
+\begin{DoxyCompactList}\small\item\em The initial text of the formula. \end{DoxyCompactList}\item 
+\Hypertarget{classCFormulaItem_aa4f85e081a297dc757fa14af61110e68}\label{classCFormulaItem_aa4f85e081a297dc757fa14af61110e68} 
+CString {\bfseries Redefined}
+\begin{DoxyCompactList}\small\item\em The redefined text of the formula. \end{DoxyCompactList}\item 
+\Hypertarget{classCFormulaItem_a6fbef81750bbc6c3d11848910545841d}\label{classCFormulaItem_a6fbef81750bbc6c3d11848910545841d} 
+bool {\bfseries Redefined\+\_\+\+Flag}
+\begin{DoxyCompactList}\small\item\em Flag indicating whether the formula has been redefined. \end{DoxyCompactList}\item 
+\Hypertarget{classCFormulaItem_a3c6e8e2116ed602c3df09380331bdad9}\label{classCFormulaItem_a3c6e8e2116ed602c3df09380331bdad9} 
+Entity\+Base\+Type {\bfseries Entity\+Type}
+\begin{DoxyCompactList}\small\item\em The type of the entity from Entity\+Base\+Type enumeration. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Represents a formula item used in serialization. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classCFormulaItem_a4a5ea233f7cac2bf7171380615e7478d}\label{classCFormulaItem_a4a5ea233f7cac2bf7171380615e7478d} 
+\index{CFormulaItem@{CFormulaItem}!CFormulaItem@{CFormulaItem}}
+\index{CFormulaItem@{CFormulaItem}!CFormulaItem@{CFormulaItem}}
+\doxysubsubsection{\texorpdfstring{CFormulaItem()}{CFormulaItem()}}
+{\footnotesize\ttfamily CFormula\+Item\+::\+CFormula\+Item (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classFormula}{Formula}} \&}]{ev }\end{DoxyParamCaption})}
+
+
+
+Constructor that creates a formula item from a \doxylink{classFormula}{Formula} object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em f} & The \doxylink{classFormula}{Formula} object to create from. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classCFormulaItem_a69ca2bed273e8f64e542dec1c06fe990}\label{classCFormulaItem_a69ca2bed273e8f64e542dec1c06fe990} 
+\index{CFormulaItem@{CFormulaItem}!Serialize@{Serialize}}
+\index{Serialize@{Serialize}!CFormulaItem@{CFormulaItem}}
+\doxysubsubsection{\texorpdfstring{Serialize()}{Serialize()}}
+{\footnotesize\ttfamily void CFormula\+Item\+::\+Serialize (\begin{DoxyParamCaption}\item[{CArchive \&}]{ar }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Serialize the formula item to or from an archive. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ar} & The archive to serialize to or from. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classCFormulaItem_ad2da382800a79e7483e5995da63ebfc1}\label{classCFormulaItem_ad2da382800a79e7483e5995da63ebfc1} 
+\index{CFormulaItem@{CFormulaItem}!SetNumber@{SetNumber}}
+\index{SetNumber@{SetNumber}!CFormulaItem@{CFormulaItem}}
+\doxysubsubsection{\texorpdfstring{SetNumber()}{SetNumber()}}
+{\footnotesize\ttfamily void CFormula\+Item\+::\+Set\+Number (\begin{DoxyParamCaption}\item[{int}]{number }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Sets the formula number. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em number} & The new formula number. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{Item_8h}{Item.\+h}}\item 
+Item.\+cpp\end{DoxyCompactItemize}

@@ -1,0 +1,130 @@
+\doxysection{CScientific\+Button Class Reference}
+\hypertarget{classCScientificButton}{}\label{classCScientificButton}\index{CScientificButton@{CScientificButton}}
+
+
+Represents a button that can display and interact with scientific characters.  
+
+
+
+
+{\ttfamily \#include $<$Scientific\+Button.\+h$>$}
+
+
+
+Inheritance diagram for CScientific\+Button\+:
+% FIG 0
+
+
+Collaboration diagram for CScientific\+Button\+:
+% FIG 1
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classCScientificButton_ab246cf2c2ed0869f7f1858ee0d946b09}{CScientific\+Button}} ()
+\begin{DoxyCompactList}\small\item\em Constructor for the \doxylink{classCScientificButton}{CScientific\+Button} class. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{classCScientificButton_a105c29af5e0a7e8b4a52e4aadfd5585c}{\texorpdfstring{$\sim$}{\string~}\+CScientific\+Button}} ()
+\begin{DoxyCompactList}\small\item\em Destructor for the \doxylink{classCScientificButton}{CScientific\+Button} class. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classCScientificButton_ac3931e833d26b08499013e0ae4c46a69}{add\+Sci\+Char\+Action}} (int pos, Scientific\+Character\+Action scichar)
+\begin{DoxyCompactList}\small\item\em Adds a scientific character action to the button at a specific position. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classCScientificButton_a9853f28cb185373b3ee2dadbf6743853}{set\+Sci\+Font}} (LOGFONT \texorpdfstring{$\ast$}{*}lf)
+\begin{DoxyCompactList}\small\item\em Sets the font for rendering scientific characters on the button. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classCScientificButton_a9d54b7b9ef1a8e4e06de093d73739dce}{On\+Draw\+Text}} (CDC \texorpdfstring{$\ast$}{*}p\+DC, const CRect \&rect, const CString \&str\+Text, UINT ui\+DTFlags, UINT ui\+State)
+\begin{DoxyCompactList}\small\item\em Custom drawing method to render text on the button. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Represents a button that can display and interact with scientific characters. 
+
+This class extends from CMFCButton and adds functionality for handling different scientific characters, such as quantifiers and indices, through various actions. It is used for creating customized scientific buttons with special drawing and behavior. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classCScientificButton_ab246cf2c2ed0869f7f1858ee0d946b09}\label{classCScientificButton_ab246cf2c2ed0869f7f1858ee0d946b09} 
+\index{CScientificButton@{CScientificButton}!CScientificButton@{CScientificButton}}
+\index{CScientificButton@{CScientificButton}!CScientificButton@{CScientificButton}}
+\doxysubsubsection{\texorpdfstring{CScientificButton()}{CScientificButton()}}
+{\footnotesize\ttfamily CScientific\+Button\+::\+CScientific\+Button (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Constructor for the \doxylink{classCScientificButton}{CScientific\+Button} class. 
+
+Initializes the scientific button, setting up the necessary properties and states. \Hypertarget{classCScientificButton_a105c29af5e0a7e8b4a52e4aadfd5585c}\label{classCScientificButton_a105c29af5e0a7e8b4a52e4aadfd5585c} 
+\index{CScientificButton@{CScientificButton}!````~CScientificButton@{\texorpdfstring{$\sim$}{\string~}CScientificButton}}
+\index{````~CScientificButton@{\texorpdfstring{$\sim$}{\string~}CScientificButton}!CScientificButton@{CScientificButton}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}CScientificButton()}{\string~CScientificButton()}}
+{\footnotesize\ttfamily CScientific\+Button\+::\texorpdfstring{$\sim$}{\string~}\+CScientific\+Button (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Destructor for the \doxylink{classCScientificButton}{CScientific\+Button} class. 
+
+Cleans up any resources used by the scientific button. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classCScientificButton_ac3931e833d26b08499013e0ae4c46a69}\label{classCScientificButton_ac3931e833d26b08499013e0ae4c46a69} 
+\index{CScientificButton@{CScientificButton}!addSciCharAction@{addSciCharAction}}
+\index{addSciCharAction@{addSciCharAction}!CScientificButton@{CScientificButton}}
+\doxysubsubsection{\texorpdfstring{addSciCharAction()}{addSciCharAction()}}
+{\footnotesize\ttfamily void CScientific\+Button\+::add\+Sci\+Char\+Action (\begin{DoxyParamCaption}\item[{int}]{pos,  }\item[{Scientific\+Character\+Action}]{scichar }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Adds a scientific character action to the button at a specific position. 
+
+This method allows associating a scientific character action with a given button position. For example, a quantifier or index can be added for a specific button position.
+
+
+\begin{DoxyParams}{Parameters}
+{\em pos} & The position on the button where the scientific action is assigned. \\
+\hline
+{\em scichar} & The scientific character action to be assigned to the position. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classCScientificButton_a9d54b7b9ef1a8e4e06de093d73739dce}\label{classCScientificButton_a9d54b7b9ef1a8e4e06de093d73739dce} 
+\index{CScientificButton@{CScientificButton}!OnDrawText@{OnDrawText}}
+\index{OnDrawText@{OnDrawText}!CScientificButton@{CScientificButton}}
+\doxysubsubsection{\texorpdfstring{OnDrawText()}{OnDrawText()}}
+{\footnotesize\ttfamily void CScientific\+Button\+::\+On\+Draw\+Text (\begin{DoxyParamCaption}\item[{CDC \texorpdfstring{$\ast$}{*}}]{p\+DC,  }\item[{const CRect \&}]{rect,  }\item[{const CString \&}]{str\+Text,  }\item[{UINT}]{ui\+DTFlags,  }\item[{UINT}]{ui\+State }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Custom drawing method to render text on the button. 
+
+This method overrides the default text drawing behavior to customize the appearance of the button text, especially for rendering scientific characters using the defined font.
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+DC} & The device context to draw on. \\
+\hline
+{\em rect} & The rectangle in which the text is to be drawn. \\
+\hline
+{\em str\+Text} & The text to be drawn. \\
+\hline
+{\em ui\+DTFlags} & The flags controlling text drawing options. \\
+\hline
+{\em ui\+State} & The state of the button (e.\+g., normal, pressed). \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classCScientificButton_a9853f28cb185373b3ee2dadbf6743853}\label{classCScientificButton_a9853f28cb185373b3ee2dadbf6743853} 
+\index{CScientificButton@{CScientificButton}!setSciFont@{setSciFont}}
+\index{setSciFont@{setSciFont}!CScientificButton@{CScientificButton}}
+\doxysubsubsection{\texorpdfstring{setSciFont()}{setSciFont()}}
+{\footnotesize\ttfamily void CScientific\+Button\+::set\+Sci\+Font (\begin{DoxyParamCaption}\item[{LOGFONT \texorpdfstring{$\ast$}{*}}]{lf }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Sets the font for rendering scientific characters on the button. 
+
+This method allows setting a custom font for rendering scientific symbols, based on the provided LOGFONT structure.
+
+
+\begin{DoxyParams}{Parameters}
+{\em lf} & The LOGFONT structure that defines the font to be used. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Scientific\+Button.\+h\item 
+Scientific\+Button.\+cpp\end{DoxyCompactItemize}

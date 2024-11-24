@@ -1,0 +1,88 @@
+\doxysection{CParent\+Link\+Item Class Reference}
+\hypertarget{classCParentLinkItem}{}\label{classCParentLinkItem}\index{CParentLinkItem@{CParentLinkItem}}
+
+
+Represents a parent link item used in serialization.  
+
+
+
+
+{\ttfamily \#include $<$Item.\+h$>$}
+
+
+
+Inheritance diagram for CParent\+Link\+Item\+:
+% FIG 0
+
+
+Collaboration diagram for CParent\+Link\+Item\+:
+% FIG 1
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classCParentLinkItem_aaed0d592cffb1642ed9b660c9fa84edc}\label{classCParentLinkItem_aaed0d592cffb1642ed9b660c9fa84edc} 
+{\bfseries CParent\+Link\+Item} ()
+\begin{DoxyCompactList}\small\item\em Default constructor. \end{DoxyCompactList}\item 
+\Hypertarget{classCParentLinkItem_ae142de29eeadfbf07302281078f7c7a0}\label{classCParentLinkItem_ae142de29eeadfbf07302281078f7c7a0} 
+virtual {\bfseries \texorpdfstring{$\sim$}{\string~}\+CParent\+Link\+Item} ()
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classCParentLinkItem_a84d9308bf2f97c66eee39a01ad71a259}{Serialize}} (CArchive \&ar)
+\begin{DoxyCompactList}\small\item\em Serialize the parent link item to or from an archive. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classCParentLinkItem_a4bd79ffaba55d2e3feb2c27ee4cad02d}{CParent\+Link\+Item}} (int Formula\+Number\+\_\+, int Variable\+Number\+\_\+)
+\begin{DoxyCompactList}\small\item\em Constructor that creates a parent link item with specified formula and variable numbers. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classCParentLinkItem_a5051fccb1d1e683b508311d3c9c95f19}\label{classCParentLinkItem_a5051fccb1d1e683b508311d3c9c95f19} 
+int {\bfseries Formula\+Number}
+\begin{DoxyCompactList}\small\item\em The number of the parent formula. \end{DoxyCompactList}\item 
+\Hypertarget{classCParentLinkItem_a96ccdd546802f15adc0bd9ddb96fbabd}\label{classCParentLinkItem_a96ccdd546802f15adc0bd9ddb96fbabd} 
+int {\bfseries Variable\+Number}
+\begin{DoxyCompactList}\small\item\em The number of the variable in the parent formula. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Represents a parent link item used in serialization. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classCParentLinkItem_a4bd79ffaba55d2e3feb2c27ee4cad02d}\label{classCParentLinkItem_a4bd79ffaba55d2e3feb2c27ee4cad02d} 
+\index{CParentLinkItem@{CParentLinkItem}!CParentLinkItem@{CParentLinkItem}}
+\index{CParentLinkItem@{CParentLinkItem}!CParentLinkItem@{CParentLinkItem}}
+\doxysubsubsection{\texorpdfstring{CParentLinkItem()}{CParentLinkItem()}}
+{\footnotesize\ttfamily CParent\+Link\+Item\+::\+CParent\+Link\+Item (\begin{DoxyParamCaption}\item[{int}]{Formula\+Number\+\_\+,  }\item[{int}]{Variable\+Number\+\_\+ }\end{DoxyParamCaption})}
+
+
+
+Constructor that creates a parent link item with specified formula and variable numbers. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Formula\+Number\+\_\+} & The formula number. \\
+\hline
+{\em Variable\+Number\+\_\+} & The variable number. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classCParentLinkItem_a84d9308bf2f97c66eee39a01ad71a259}\label{classCParentLinkItem_a84d9308bf2f97c66eee39a01ad71a259} 
+\index{CParentLinkItem@{CParentLinkItem}!Serialize@{Serialize}}
+\index{Serialize@{Serialize}!CParentLinkItem@{CParentLinkItem}}
+\doxysubsubsection{\texorpdfstring{Serialize()}{Serialize()}}
+{\footnotesize\ttfamily void CParent\+Link\+Item\+::\+Serialize (\begin{DoxyParamCaption}\item[{CArchive \&}]{ar }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Serialize the parent link item to or from an archive. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ar} & The archive to serialize to or from. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{Item_8h}{Item.\+h}}\item 
+Item.\+cpp\end{DoxyCompactItemize}

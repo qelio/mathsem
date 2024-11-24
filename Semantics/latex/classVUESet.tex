@@ -1,0 +1,153 @@
+\doxysection{VUESet Class Reference}
+\hypertarget{classVUESet}{}\label{classVUESet}\index{VUESet@{VUESet}}
+
+
+Represents a formula set node in the VUE-\/map.  
+
+
+
+
+{\ttfamily \#include $<$VUENode.\+h$>$}
+
+
+
+Inheritance diagram for VUESet\+:
+% FIG 0
+
+
+Collaboration diagram for VUESet\+:
+% FIG 1
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classVUESet_a41cbf6316c3b6a9500c2fdfb8b8e8b95}{VUESet}} (int child\+ID\+\_\+, int number\+In\+Layer\+\_\+)
+\begin{DoxyCompactList}\small\item\em Parameterized constructor for creating a set node with specific IDs. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classVUESet_a58072c11d3293cfeb5f87b517d2b39eb}{\texorpdfstring{$\sim$}{\string~}\+VUESet}} ()
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classVUESet_af337726ccf7c579f48b5c8bb8bdac5c8}{print}} (ostream \&os)
+\begin{DoxyCompactList}\small\item\em Outputs the set node to the VUE-\/map file. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classVUENode}{VUENode}}}
+\begin{DoxyCompactItemize}
+\item 
+{\bfseries VUENode} ()
+\begin{DoxyCompactList}\small\item\em Default constructor initializes default property values. \end{DoxyCompactList}\item 
+{\bfseries \texorpdfstring{$\sim$}{\string~}\+VUENode} ()
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classVUENode_a243bf5144d0296b47872785f3416d461}{VUENode}} (int child\+ID\+\_\+, int number\+In\+Layer\+\_\+)
+\begin{DoxyCompactList}\small\item\em Parameterized constructor for creating a node with specific IDs. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classVUENode_a49744f4f438dd487da569cc9eaa6430e}{Set\+Position}} (double x\+\_\+, double y\+\_\+, double width\+\_\+, double height\+\_\+)
+\begin{DoxyCompactList}\small\item\em Sets the position and size of the node. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classVUENode_a75208c6323ae43d1cd7dc1ec1ad268d5}{print}} (ostream \&os, string \&str)
+\begin{DoxyCompactList}\small\item\em Outputs the node to the VUE-\/map file. \end{DoxyCompactList}\item 
+void {\bfseries child\+Properties} ()
+\begin{DoxyCompactList}\small\item\em Sets properties specific to child nodes based on their type. \end{DoxyCompactList}\item 
+VUENode\+Type \mbox{\hyperlink{classVUENode_a46f219e69f6353a02a26c47fc84a108e}{Get\+Type}} ()
+\begin{DoxyCompactList}\small\item\em Gets the type of the node. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classFormulaSet}{Formula\+Set}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classVUESet_a8cb02f9ef322b4815fbdb8fcc461deb1}{parent\+Set}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes inherited from \mbox{\hyperlink{classVUENode}{VUENode}}}
+\begin{DoxyCompactItemize}
+\item 
+double \mbox{\hyperlink{classVUENode_a7cfd8c01ee48982c784d07813aacb64e}{x}}
+\item 
+double \mbox{\hyperlink{classVUENode_a3119033550890ebe47244182694baa16}{y}}
+\item 
+double \mbox{\hyperlink{classVUENode_a582edc53a3b7e8da5d1bf83674a7f31a}{width}}
+\item 
+double \mbox{\hyperlink{classVUENode_acb3b49d3a178c96f40cd69f08efa81fc}{height}}
+\item 
+int \mbox{\hyperlink{classVUENode_a3f4b805e97eb0922303f92aa025c1c10}{number\+In\+Group}}
+\item 
+int \mbox{\hyperlink{classVUENode_a2c86a3d7dda62d8f90d21aed80b646a0}{group\+Atom}}
+\item 
+int \mbox{\hyperlink{classVUENode_a6381487194717e6f1d93443a9cd589d4}{number\+In\+Layer}}
+\item 
+int \mbox{\hyperlink{classVUENode_a48fdf607f5d667dc33bc73013ed01eb7}{child\+ID}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{classVUENode}{VUENode}}}
+\begin{DoxyCompactItemize}
+\item 
+string \mbox{\hyperlink{classVUENode_a3769e1e5b9444a43bba64da4e7cb3f26}{fill\+Color}}
+\item 
+string \mbox{\hyperlink{classVUENode_a3355b3adf4e75632776a4936faf7b2a9}{text\+Color}}
+\item 
+string \mbox{\hyperlink{classVUENode_a895db5ad77e59923fb44881245abb1cb}{stroke\+Color}}
+\item 
+string \mbox{\hyperlink{classVUENode_a13ac8d7aca47ad1bbc60f57db0959532}{font}}
+\item 
+string \mbox{\hyperlink{classVUENode_af16b436c779f429bc0239ef56972b84d}{xsi}}
+\item 
+string \mbox{\hyperlink{classVUENode_a498e4888bca6379e53f25ce7dd2ba916}{stroke\+Style}}
+\item 
+VUENode\+Type \mbox{\hyperlink{classVUENode_a0aa6fc03281234c477f4db53addd6db5}{type}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Represents a formula set node in the VUE-\/map. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classVUESet_a41cbf6316c3b6a9500c2fdfb8b8e8b95}\label{classVUESet_a41cbf6316c3b6a9500c2fdfb8b8e8b95} 
+\index{VUESet@{VUESet}!VUESet@{VUESet}}
+\index{VUESet@{VUESet}!VUESet@{VUESet}}
+\doxysubsubsection{\texorpdfstring{VUESet()}{VUESet()}}
+{\footnotesize\ttfamily VUESet\+::\+VUESet (\begin{DoxyParamCaption}\item[{int}]{child\+ID\+\_\+,  }\item[{int}]{number\+In\+Layer\+\_\+ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Parameterized constructor for creating a set node with specific IDs. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em child\+ID\+\_\+} & Unique identifier for the node. \\
+\hline
+{\em number\+In\+Layer\+\_\+} & Position of the node within its layer. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classVUESet_a58072c11d3293cfeb5f87b517d2b39eb}\label{classVUESet_a58072c11d3293cfeb5f87b517d2b39eb} 
+\index{VUESet@{VUESet}!````~VUESet@{\texorpdfstring{$\sim$}{\string~}VUESet}}
+\index{````~VUESet@{\texorpdfstring{$\sim$}{\string~}VUESet}!VUESet@{VUESet}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}VUESet()}{\string~VUESet()}}
+{\footnotesize\ttfamily VUESet\+::\texorpdfstring{$\sim$}{\string~}\+VUESet (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Destructor. 
+
+\doxylink{classVUESet}{VUESet}. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classVUESet_af337726ccf7c579f48b5c8bb8bdac5c8}\label{classVUESet_af337726ccf7c579f48b5c8bb8bdac5c8} 
+\index{VUESet@{VUESet}!print@{print}}
+\index{print@{print}!VUESet@{VUESet}}
+\doxysubsubsection{\texorpdfstring{print()}{print()}}
+{\footnotesize\ttfamily void VUESet\+::print (\begin{DoxyParamCaption}\item[{ostream \&}]{os }\end{DoxyParamCaption})}
+
+
+
+Outputs the set node to the VUE-\/map file. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em os} & Output stream to write the node data. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{classVUESet_a8cb02f9ef322b4815fbdb8fcc461deb1}\label{classVUESet_a8cb02f9ef322b4815fbdb8fcc461deb1} 
+\index{VUESet@{VUESet}!parentSet@{parentSet}}
+\index{parentSet@{parentSet}!VUESet@{VUESet}}
+\doxysubsubsection{\texorpdfstring{parentSet}{parentSet}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classFormulaSet}{Formula\+Set}}\texorpdfstring{$\ast$}{*} VUESet\+::parent\+Set}
+
+Pointer to the associated formula set object 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+VUENode.\+h\item 
+VUENode.\+cpp\end{DoxyCompactItemize}

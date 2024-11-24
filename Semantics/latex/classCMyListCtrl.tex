@@ -1,0 +1,124 @@
+\doxysection{CMy\+List\+Ctrl Class Reference}
+\hypertarget{classCMyListCtrl}{}\label{classCMyListCtrl}\index{CMyListCtrl@{CMyListCtrl}}
+
+
+Custom list control class that extends CMFCList\+Ctrl.  
+
+
+
+
+{\ttfamily \#include $<$My\+List\+Ctrl.\+h$>$}
+
+
+
+Inheritance diagram for CMy\+List\+Ctrl\+:
+% FIG 0
+
+
+Collaboration diagram for CMy\+List\+Ctrl\+:
+% FIG 1
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classCMyListCtrl_ae8412301c0676d67d1789407c11e2c9e}{CMy\+List\+Ctrl}} ()
+\begin{DoxyCompactList}\small\item\em Default constructor for \doxylink{classCMyListCtrl}{CMy\+List\+Ctrl}. \end{DoxyCompactList}\item 
+\Hypertarget{classCMyListCtrl_a8f2272058a5f1bca9ac0a6921471d64a}\label{classCMyListCtrl_a8f2272058a5f1bca9ac0a6921471d64a} 
+virtual {\bfseries \texorpdfstring{$\sim$}{\string~}\+CMy\+List\+Ctrl} ()
+\begin{DoxyCompactList}\small\item\em Destructor for \doxylink{classCMyListCtrl}{CMy\+List\+Ctrl}. \end{DoxyCompactList}\item 
+virtual afx\+\_\+msg void \mbox{\hyperlink{classCMyListCtrl_a4e8e14d13a434d45d8a41576975e4fe9}{On\+NMClick}} (NMHDR \texorpdfstring{$\ast$}{*}p\+NMHDR, LRESULT \texorpdfstring{$\ast$}{*}p\+Result)
+\begin{DoxyCompactList}\small\item\em Handles the item click event in the list control. \end{DoxyCompactList}\item 
+virtual BOOL \mbox{\hyperlink{classCMyListCtrl_a897b8775bc044e36715d8cfbeb02dd4d}{Pre\+Translate\+Message}} (MSG \texorpdfstring{$\ast$}{*}p\+Msg)
+\begin{DoxyCompactList}\small\item\em Pre-\/translates messages for the list control. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classCMyListCtrl_aa7fe573b7aa5eb242fcaa990ae49e8fd}{set\+Formulas}} (vector$<$ \mbox{\hyperlink{classFormula}{Formula}} \texorpdfstring{$\ast$}{*} $>$ \texorpdfstring{$\ast$}{*}formulas\+\_\+)
+\begin{DoxyCompactList}\small\item\em Sets the formulas for the list control. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+CEdit \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classCMyListCtrl_a9d877508e7935b8c3737da9e85289cf6}{m\+\_\+edit}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Custom list control class that extends CMFCList\+Ctrl. 
+
+This class customizes the behavior of the list control by overriding functions for cell text color, background color, font, item comparison, and handling list edits. It also provides functionality for saving formulas and modifying cell properties. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classCMyListCtrl_ae8412301c0676d67d1789407c11e2c9e}\label{classCMyListCtrl_ae8412301c0676d67d1789407c11e2c9e} 
+\index{CMyListCtrl@{CMyListCtrl}!CMyListCtrl@{CMyListCtrl}}
+\index{CMyListCtrl@{CMyListCtrl}!CMyListCtrl@{CMyListCtrl}}
+\doxysubsubsection{\texorpdfstring{CMyListCtrl()}{CMyListCtrl()}}
+{\footnotesize\ttfamily CMy\+List\+Ctrl\+::\+CMy\+List\+Ctrl (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Default constructor for \doxylink{classCMyListCtrl}{CMy\+List\+Ctrl}. 
+
+Message map declaration for \doxylink{classCMyListCtrl}{CMy\+List\+Ctrl}. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classCMyListCtrl_a4e8e14d13a434d45d8a41576975e4fe9}\label{classCMyListCtrl_a4e8e14d13a434d45d8a41576975e4fe9} 
+\index{CMyListCtrl@{CMyListCtrl}!OnNMClick@{OnNMClick}}
+\index{OnNMClick@{OnNMClick}!CMyListCtrl@{CMyListCtrl}}
+\doxysubsubsection{\texorpdfstring{OnNMClick()}{OnNMClick()}}
+{\footnotesize\ttfamily void CMy\+List\+Ctrl\+::\+On\+NMClick (\begin{DoxyParamCaption}\item[{NMHDR \texorpdfstring{$\ast$}{*}}]{p\+NMHDR,  }\item[{LRESULT \texorpdfstring{$\ast$}{*}}]{p\+Result }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Handles the item click event in the list control. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+NMHDR} & Pointer to the NMHDR structure that contains the notification message information. \\
+\hline
+{\em p\+Result} & A pointer to the result of the message processing. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classCMyListCtrl_a897b8775bc044e36715d8cfbeb02dd4d}\label{classCMyListCtrl_a897b8775bc044e36715d8cfbeb02dd4d} 
+\index{CMyListCtrl@{CMyListCtrl}!PreTranslateMessage@{PreTranslateMessage}}
+\index{PreTranslateMessage@{PreTranslateMessage}!CMyListCtrl@{CMyListCtrl}}
+\doxysubsubsection{\texorpdfstring{PreTranslateMessage()}{PreTranslateMessage()}}
+{\footnotesize\ttfamily BOOL CMy\+List\+Ctrl\+::\+Pre\+Translate\+Message (\begin{DoxyParamCaption}\item[{MSG \texorpdfstring{$\ast$}{*}}]{p\+Msg }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Pre-\/translates messages for the list control. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+Msg} & Pointer to the MSG structure that contains the message to be processed. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+TRUE if the message was processed; otherwise, FALSE. 
+\end{DoxyReturn}
+\Hypertarget{classCMyListCtrl_aa7fe573b7aa5eb242fcaa990ae49e8fd}\label{classCMyListCtrl_aa7fe573b7aa5eb242fcaa990ae49e8fd} 
+\index{CMyListCtrl@{CMyListCtrl}!setFormulas@{setFormulas}}
+\index{setFormulas@{setFormulas}!CMyListCtrl@{CMyListCtrl}}
+\doxysubsubsection{\texorpdfstring{setFormulas()}{setFormulas()}}
+{\footnotesize\ttfamily void CMy\+List\+Ctrl\+::set\+Formulas (\begin{DoxyParamCaption}\item[{vector$<$ \mbox{\hyperlink{classFormula}{Formula}} \texorpdfstring{$\ast$}{*} $>$ \texorpdfstring{$\ast$}{*}}]{formulas\+\_\+ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Sets the formulas for the list control. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em formulas\+\_\+} & A pointer to a vector of \doxylink{classFormula}{Formula} objects. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{classCMyListCtrl_a9d877508e7935b8c3737da9e85289cf6}\label{classCMyListCtrl_a9d877508e7935b8c3737da9e85289cf6} 
+\index{CMyListCtrl@{CMyListCtrl}!m\_edit@{m\_edit}}
+\index{m\_edit@{m\_edit}!CMyListCtrl@{CMyListCtrl}}
+\doxysubsubsection{\texorpdfstring{m\_edit}{m\_edit}}
+{\footnotesize\ttfamily CEdit\texorpdfstring{$\ast$}{*} CMy\+List\+Ctrl\+::m\+\_\+edit\hspace{0.3cm}{\ttfamily [protected]}}
+
+Pointer to a CEdit control used for editing cells. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+My\+List\+Ctrl.\+h\item 
+My\+List\+Ctrl.\+cpp\end{DoxyCompactItemize}

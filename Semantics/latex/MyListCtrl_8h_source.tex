@@ -1,0 +1,54 @@
+\doxysection{My\+List\+Ctrl.\+h}
+\hypertarget{MyListCtrl_8h_source}{}\label{MyListCtrl_8h_source}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#include\ "{}stdafx.h"{}}}
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ "{}afxcmn.h"{}}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}Formula.h"{}}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}afxwin.h"{}}}
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00015\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classCMyListCtrl}{CMyListCtrl}}\ :\ \textcolor{keyword}{public}\ CMFCListCtrl}
+\DoxyCodeLine{00016\ \{}
+\DoxyCodeLine{00017\ \ \ \ \ DECLARE\_DYNAMIC(\mbox{\hyperlink{classCMyListCtrl}{CMyListCtrl}})}
+\DoxyCodeLine{00018\ }
+\DoxyCodeLine{00019\ \ \ \ \ }
+\DoxyCodeLine{00025\ \ \ \ \ \textcolor{keyword}{virtual}\ COLORREF\ OnGetCellTextColor(\textcolor{keywordtype}{int}\ nRow,\ \textcolor{keywordtype}{int}\ nColum);}
+\DoxyCodeLine{00026\ }
+\DoxyCodeLine{00033\ \ \ \ \ \textcolor{keyword}{virtual}\ COLORREF\ OnGetCellBkColor(\textcolor{keywordtype}{int}\ nRow,\ \textcolor{keywordtype}{int}\ nColum);}
+\DoxyCodeLine{00034\ }
+\DoxyCodeLine{00042\ \ \ \ \ \textcolor{keyword}{virtual}\ HFONT\ OnGetCellFont(\textcolor{keywordtype}{int}\ nRow,\ \textcolor{keywordtype}{int}\ nColum,\ DWORD\ dwData\ =\ 0);}
+\DoxyCodeLine{00043\ }
+\DoxyCodeLine{00045\ \ \ \ \ \textcolor{keywordtype}{int}\ subItemEdit;}
+\DoxyCodeLine{00046\ }
+\DoxyCodeLine{00048\ \ \ \ \ \textcolor{keywordtype}{int}\ itemEdit;}
+\DoxyCodeLine{00049\ }
+\DoxyCodeLine{00051\ \ \ \ \ \textcolor{keywordtype}{bool}\ m\_bIsModified;}
+\DoxyCodeLine{00052\ }
+\DoxyCodeLine{00054\ \ \ \ \ BOOL\ m\_bColor;}
+\DoxyCodeLine{00055\ }
+\DoxyCodeLine{00057\ \ \ \ \ BOOL\ m\_bModifyFont;}
+\DoxyCodeLine{00058\ }
+\DoxyCodeLine{00060\ \ \ \ \ vector\ <Formula\ *>\ *\ formulas;}
+\DoxyCodeLine{00061\ }
+\DoxyCodeLine{00069\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{int}\ OnCompareItems(LPARAM\ lParam1,\ LPARAM\ lParam2,\ \textcolor{keywordtype}{int}\ iColumn);}
+\DoxyCodeLine{00070\ }
+\DoxyCodeLine{00074\ \ \ \ \ \textcolor{keywordtype}{void}\ SaveFormulas();}
+\DoxyCodeLine{00075\ }
+\DoxyCodeLine{00076\ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00078\ \ \ \ \ CEdit\ *\ \mbox{\hyperlink{classCMyListCtrl_a9d877508e7935b8c3737da9e85289cf6}{m\_edit}};}
+\DoxyCodeLine{00079\ }
+\DoxyCodeLine{00081\ \ \ \ \ DECLARE\_MESSAGE\_MAP()}
+\DoxyCodeLine{00082\ }
+\DoxyCodeLine{00083\ public:}
+\DoxyCodeLine{00087\ \ \ \ \ \mbox{\hyperlink{classCMyListCtrl}{CMyListCtrl}}();}
+\DoxyCodeLine{00088\ }
+\DoxyCodeLine{00092\ \ \ \ \ virtual\ \string~\mbox{\hyperlink{classCMyListCtrl}{CMyListCtrl}}();}
+\DoxyCodeLine{00093\ }
+\DoxyCodeLine{00099\ \ \ \ \ afx\_msg\ virtual\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classCMyListCtrl_a4e8e14d13a434d45d8a41576975e4fe9}{OnNMClick}}(NMHDR\ *pNMHDR,\ LRESULT\ *pResult);}
+\DoxyCodeLine{00100\ }
+\DoxyCodeLine{00106\ \ \ \ \ virtual\ BOOL\ \mbox{\hyperlink{classCMyListCtrl_a897b8775bc044e36715d8cfbeb02dd4d}{PreTranslateMessage}}(MSG*\ pMsg);}
+\DoxyCodeLine{00107\ }
+\DoxyCodeLine{00112\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classCMyListCtrl_aa7fe573b7aa5eb242fcaa990ae49e8fd}{setFormulas}}(vector\ <\mbox{\hyperlink{classFormula}{Formula}}\ *>\ *\ formulas\_)\ \{\ formulas\ =\ formulas\_;\ \};}
+\DoxyCodeLine{00113\ \};}
+
+\end{DoxyCode}

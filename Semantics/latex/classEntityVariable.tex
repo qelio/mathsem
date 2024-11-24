@@ -1,0 +1,118 @@
+\doxysection{Entity\+Variable Class Reference}
+\hypertarget{classEntityVariable}{}\label{classEntityVariable}\index{EntityVariable@{EntityVariable}}
+
+
+Class representing a variable entity within a logical formula.  
+
+
+
+
+{\ttfamily \#include $<$Formula.\+h$>$}
+
+
+
+Inheritance diagram for Entity\+Variable\+:
+% FIG 0
+
+
+Collaboration diagram for Entity\+Variable\+:
+% FIG 1
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classEntityVariable_a8b34709abfacafbe7415407e42a5acaa}\label{classEntityVariable_a8b34709abfacafbe7415407e42a5acaa} 
+{\bfseries Entity\+Variable} ()
+\begin{DoxyCompactList}\small\item\em Default constructor, initializes the variable with default values. \end{DoxyCompactList}\item 
+\Hypertarget{classEntityVariable_a618126084462aa9450fecd9b9fc966ba}\label{classEntityVariable_a618126084462aa9450fecd9b9fc966ba} 
+{\bfseries \texorpdfstring{$\sim$}{\string~}\+Entity\+Variable} ()
+\begin{DoxyCompactList}\small\item\em Destructor for cleaning up the \doxylink{classEntityVariable}{Entity\+Variable} object. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classEntityVariable_a305888fbfb75297d63d1e62be2176761}{Entity\+Variable}} (const tstring \&str, const tstring \&index\+\_\+, Variable\+Type type\+\_\+)
+\begin{DoxyCompactList}\small\item\em Constructor with initialization parameters for variable type, label, and index. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classEntityVariable_ab9781b8ede360e307aa929ede648e669}{Entity\+Variable}} (const \mbox{\hyperlink{classEntityVariable}{Entity\+Variable}} \&ev)
+\begin{DoxyCompactList}\small\item\em Copy constructor to create a new \doxylink{classEntityVariable}{Entity\+Variable} from an existing one. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classEntityVariable_acef93cc5f3c3122ab9c288520b25dcf7}{Entity\+Variable}} (const \mbox{\hyperlink{classCVariableItem}{CVariable\+Item}} \&vi)
+\begin{DoxyCompactList}\small\item\em Constructor from a variable item in the case where libxml2 is not used. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classLevel}{Level}}}
+\begin{DoxyCompactItemize}
+\item 
+{\bfseries Level} ()
+\begin{DoxyCompactList}\small\item\em Default constructor, initializes the level to "{}0"{}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classLevel_a886f3a94be901722021c5c1a1cf372a7}{Level}} (tstring \&tstr)
+\begin{DoxyCompactList}\small\item\em Parameterized constructor, initializes the level with the given string. \end{DoxyCompactList}\item 
+{\bfseries \texorpdfstring{$\sim$}{\string~}\+Level} ()
+\begin{DoxyCompactList}\small\item\em Destructor for cleaning up the \doxylink{classLevel}{Level} object. \end{DoxyCompactList}\item 
+tstring \& \mbox{\hyperlink{classLevel_a5d92c8fa26b2e641c4236a07a273ba23}{Get\+Level}} ()
+\begin{DoxyCompactList}\small\item\em Retrieves the current level string. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classLevel_ac4be66ffd2986f4049b67cdeb09fe113}{Set\+Level}} (tstring \&tstr)
+\begin{DoxyCompactList}\small\item\em Sets the level to the specified string. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classLevel_a336e1ef5ac4f3ae3450fe48d8449cd1f}{compare}} (const \mbox{\hyperlink{classLevel}{Level}} \&l)
+\begin{DoxyCompactList}\small\item\em Compares the current level with another level. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{classLevel}{Level}}}
+\begin{DoxyCompactItemize}
+\item 
+tstring {\bfseries level}
+\begin{DoxyCompactList}\small\item\em The string representing the level. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Class representing a variable entity within a logical formula. 
+
+The class is used to handle variables, including their types, labels, and indices, and provides methods for manipulation and comparison. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classEntityVariable_a305888fbfb75297d63d1e62be2176761}\label{classEntityVariable_a305888fbfb75297d63d1e62be2176761} 
+\index{EntityVariable@{EntityVariable}!EntityVariable@{EntityVariable}}
+\index{EntityVariable@{EntityVariable}!EntityVariable@{EntityVariable}}
+\doxysubsubsection{\texorpdfstring{EntityVariable()}{EntityVariable()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily Entity\+Variable\+::\+Entity\+Variable (\begin{DoxyParamCaption}\item[{const tstring \&}]{str,  }\item[{const tstring \&}]{index\+\_\+,  }\item[{Variable\+Type}]{type\+\_\+ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Constructor with initialization parameters for variable type, label, and index. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em str} & The variable label. \\
+\hline
+{\em index\+\_\+} & The index of the variable. \\
+\hline
+{\em type\+\_\+} & The type of the variable (either VARIABLE or SET). \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classEntityVariable_ab9781b8ede360e307aa929ede648e669}\label{classEntityVariable_ab9781b8ede360e307aa929ede648e669} 
+\index{EntityVariable@{EntityVariable}!EntityVariable@{EntityVariable}}
+\index{EntityVariable@{EntityVariable}!EntityVariable@{EntityVariable}}
+\doxysubsubsection{\texorpdfstring{EntityVariable()}{EntityVariable()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily Entity\+Variable\+::\+Entity\+Variable (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classEntityVariable}{Entity\+Variable}} \&}]{ev }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Copy constructor to create a new \doxylink{classEntityVariable}{Entity\+Variable} from an existing one. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ev} & The \doxylink{classEntityVariable}{Entity\+Variable} to copy. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classEntityVariable_acef93cc5f3c3122ab9c288520b25dcf7}\label{classEntityVariable_acef93cc5f3c3122ab9c288520b25dcf7} 
+\index{EntityVariable@{EntityVariable}!EntityVariable@{EntityVariable}}
+\index{EntityVariable@{EntityVariable}!EntityVariable@{EntityVariable}}
+\doxysubsubsection{\texorpdfstring{EntityVariable()}{EntityVariable()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily Entity\+Variable\+::\+Entity\+Variable (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classCVariableItem}{CVariable\+Item}} \&}]{vi }\end{DoxyParamCaption})}
+
+
+
+Constructor from a variable item in the case where libxml2 is not used. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em vi} & The variable item to initialize from. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Formula.\+h\item 
+Item.\+cpp\end{DoxyCompactItemize}

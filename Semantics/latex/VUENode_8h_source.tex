@@ -1,0 +1,100 @@
+\doxysection{VUENode.\+h}
+\hypertarget{VUENode_8h_source}{}\label{VUENode_8h_source}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{//\ \ {\ucr}{\ucr}{\ucr}{\ucr}{\ucr}\ {\ucr}{\ucr}{\ucr}{\ucr}:\ {\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}\ {\ucr}.{\ucr}.,\ akizelokro@mail.ru\ ,\ 2013-\/2014}}
+\DoxyCodeLine{00002\ \textcolor{comment}{//\ \ Author:\ Tatarintsev\ V.V.,\ akizelokro@mail.ru,\ 2013-\/2014}}
+\DoxyCodeLine{00003\ \textcolor{comment}{//}}
+\DoxyCodeLine{00004\ \textcolor{comment}{//\ \ {\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}\ {\ucr}{\ucr}{\ucr}{\ucr}\ {\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}\ {\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}\ VUENode,\ VUEFormula\ {\ucr}\ VUESet,\ {\ucr}\ {\ucr}{\ucr}{\ucr}{\ucr}{\ucr}\ {\ucr}{\ucr}{\ucr}{\ucr}\ {\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}\ {\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}\ {\ucr}{\ucr}{\ucr}\ {\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}\ VUE-\/{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}}}
+\DoxyCodeLine{00005\ \textcolor{comment}{//}}
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ "{}common\_functions.h"{}}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ "{}Formula.h"{}}}
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00012\ \textcolor{comment}{//}}
+\DoxyCodeLine{00013\ \textcolor{comment}{//\ \ {\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}\ {\ucr}{\ucr}{\ucr}{\ucr}{\ucr}\ {\ucr}{\ucr}{\ucr}{\ucr}{\ucr}}}
+\DoxyCodeLine{00014\ \textcolor{comment}{//}}
+\DoxyCodeLine{00019\ \textcolor{keyword}{enum}\ VUENodeType}
+\DoxyCodeLine{00020\ \{}
+\DoxyCodeLine{00021\ \ \ \ \ VUENODE\ =\ 0,\ \ \ }
+\DoxyCodeLine{00022\ \ \ \ \ VUEFORMULA\ =\ 1,\ }
+\DoxyCodeLine{00023\ \ \ \ \ VUESET\ =\ 2\ \ \ \ \ \ }
+\DoxyCodeLine{00024\ \};}
+\DoxyCodeLine{00025\ }
+\DoxyCodeLine{00027\ \textcolor{comment}{//\ \ {\ucr}{\ucr}{\ucr}{\ucr}{\ucr}\ VUENode,\ {\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}\ {\ucr}{\ucr}{\ucr}\ {\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}\ VUEFormula\ {\ucr}\ VUESet,\ {\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}\ {\ucr}{\ucr}{\ucr}{\ucr}{\ucr}\ {\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr},\ {\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}\ {\ucr}\ {\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}\ {\ucr}{\ucr}{\ucr}}}
+\DoxyCodeLine{00028\ \textcolor{comment}{//\ \ {\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}\ {\ucr}{\ucr}{\ucr}{\ucr}{\ucr}\ {\ucr}\ VUE-\/{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}}}
+\DoxyCodeLine{00033\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classVUENode}{VUENode}}}
+\DoxyCodeLine{00034\ \{}
+\DoxyCodeLine{00035\ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00036\ \ \ \ \ \textcolor{keywordtype}{string}\ \mbox{\hyperlink{classVUENode_a3769e1e5b9444a43bba64da4e7cb3f26}{fillColor}};\ \ \ \ }
+\DoxyCodeLine{00037\ \ \ \ \ \textcolor{keywordtype}{string}\ \mbox{\hyperlink{classVUENode_a3355b3adf4e75632776a4936faf7b2a9}{textColor}};\ \ \ \ }
+\DoxyCodeLine{00038\ \ \ \ \ \textcolor{keywordtype}{string}\ \mbox{\hyperlink{classVUENode_a895db5ad77e59923fb44881245abb1cb}{strokeColor}};\ \ }
+\DoxyCodeLine{00039\ \ \ \ \ \textcolor{keywordtype}{string}\ \mbox{\hyperlink{classVUENode_a13ac8d7aca47ad1bbc60f57db0959532}{font}};\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00040\ \ \ \ \ \textcolor{keywordtype}{string}\ \mbox{\hyperlink{classVUENode_af16b436c779f429bc0239ef56972b84d}{xsi}};\ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00041\ \ \ \ \ \textcolor{keywordtype}{string}\ \mbox{\hyperlink{classVUENode_a498e4888bca6379e53f25ce7dd2ba916}{strokeStyle}};\ \ }
+\DoxyCodeLine{00042\ \ \ \ \ VUENodeType\ \mbox{\hyperlink{classVUENode_a0aa6fc03281234c477f4db53addd6db5}{type}};\ \ \ \ }
+\DoxyCodeLine{00044\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00045\ \ \ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{classVUENode_a7cfd8c01ee48982c784d07813aacb64e}{x}};\ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00046\ \ \ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{classVUENode_a3119033550890ebe47244182694baa16}{y}};\ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00047\ \ \ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{classVUENode_a582edc53a3b7e8da5d1bf83674a7f31a}{width}};\ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00048\ \ \ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{classVUENode_acb3b49d3a178c96f40cd69f08efa81fc}{height}};\ \ \ \ \ \ \ }
+\DoxyCodeLine{00050\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classVUENode_a3f4b805e97eb0922303f92aa025c1c10}{numberInGroup}};\ \ \ }
+\DoxyCodeLine{00051\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classVUENode_a2c86a3d7dda62d8f90d21aed80b646a0}{groupAtom}};\ \ \ \ \ \ \ }
+\DoxyCodeLine{00052\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classVUENode_a6381487194717e6f1d93443a9cd589d4}{numberInLayer}};\ \ \ }
+\DoxyCodeLine{00053\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classVUENode_a48fdf607f5d667dc33bc73013ed01eb7}{childID}};\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00058\ \ \ \ \ \mbox{\hyperlink{classVUENode_a8e570ae643130667fad9532e868cbc07}{VUENode}}();}
+\DoxyCodeLine{00059\ }
+\DoxyCodeLine{00063\ \ \ \ \ \mbox{\hyperlink{classVUENode_a1b9c1bcfe0aebfbeda4ae2d3c0d3ba81}{\string~VUENode}}();}
+\DoxyCodeLine{00064\ }
+\DoxyCodeLine{00070\ \ \ \ \ \mbox{\hyperlink{classVUENode_a8e570ae643130667fad9532e868cbc07}{VUENode}}(\textcolor{keywordtype}{int}\ childID\_,\ \textcolor{keywordtype}{int}\ numberInLayer\_);}
+\DoxyCodeLine{00071\ }
+\DoxyCodeLine{00079\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classVUENode_a49744f4f438dd487da569cc9eaa6430e}{SetPosition}}(\textcolor{keywordtype}{double}\ x\_,\ \textcolor{keywordtype}{double}\ y\_,\ \textcolor{keywordtype}{double}\ width\_,\ \textcolor{keywordtype}{double}\ height\_)\ \{\ \mbox{\hyperlink{classVUENode_a7cfd8c01ee48982c784d07813aacb64e}{x}}\ =\ x\_;\ \mbox{\hyperlink{classVUENode_a3119033550890ebe47244182694baa16}{y}}\ =\ y\_;\ \mbox{\hyperlink{classVUENode_a582edc53a3b7e8da5d1bf83674a7f31a}{width}}\ =\ width\_;\ \mbox{\hyperlink{classVUENode_acb3b49d3a178c96f40cd69f08efa81fc}{height}}\ =\ height\_;\ \};}
+\DoxyCodeLine{00080\ }
+\DoxyCodeLine{00086\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classVUENode_a75208c6323ae43d1cd7dc1ec1ad268d5}{print}}(ostream\&\ os,\ \textcolor{keywordtype}{string}\&\ str);}
+\DoxyCodeLine{00087\ }
+\DoxyCodeLine{00091\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classVUENode_a102c761a95a6c50baab3aeecd4269158}{childProperties}}();}
+\DoxyCodeLine{00092\ }
+\DoxyCodeLine{00097\ \ \ \ \ VUENodeType\ \mbox{\hyperlink{classVUENode_a46f219e69f6353a02a26c47fc84a108e}{GetType}}()\ \{\ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{classVUENode_a0aa6fc03281234c477f4db53addd6db5}{type}};\ \};}
+\DoxyCodeLine{00098\ \};}
+\DoxyCodeLine{00099\ }
+\DoxyCodeLine{00101\ \textcolor{comment}{//\ \ {\ucr}{\ucr}{\ucr}{\ucr}{\ucr}\ {\ucr}{\ucr}{\ucr}{\ucr}{\ucr},\ {\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}\ {\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}}}
+\DoxyCodeLine{00106\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classVUEFormula}{VUEFormula}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classVUENode}{VUENode}}}
+\DoxyCodeLine{00107\ \{}
+\DoxyCodeLine{00108\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00109\ \ \ \ \ \mbox{\hyperlink{classFormula}{Formula}}*\ \mbox{\hyperlink{classVUEFormula_a4413455b2ec9cd7679febb492caa0f47}{formula}};\ \ \ \ }
+\DoxyCodeLine{00116\ \ \ \ \ \mbox{\hyperlink{classVUEFormula_a0bea45aac6dcf7ce44d8a4d8cc592e91}{VUEFormula}}(\textcolor{keywordtype}{int}\ childID\_,\ \textcolor{keywordtype}{int}\ numberInLayer\_)\ :\ \mbox{\hyperlink{classVUENode}{VUENode}}(childID\_,\ numberInLayer\_)\ \{\ \mbox{\hyperlink{classVUENode_a0aa6fc03281234c477f4db53addd6db5}{type}}\ =\ VUEFORMULA;\ \};}
+\DoxyCodeLine{00117\ }
+\DoxyCodeLine{00121\ \ \ \ \ \mbox{\hyperlink{classVUEFormula_ad52f8f572ae8dd0ce9467bca557f2ed7}{\string~VUEFormula}}();}
+\DoxyCodeLine{00122\ }
+\DoxyCodeLine{00127\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classVUEFormula_a68bf7e2e7dd30f76e3e1f84b8bdca558}{print}}(ostream\&\ os);}
+\DoxyCodeLine{00128\ \};}
+\DoxyCodeLine{00129\ }
+\DoxyCodeLine{00131\ \textcolor{comment}{//\ \ {\ucr}{\ucr}{\ucr}{\ucr}{\ucr}\ {\ucr}{\ucr}{\ucr}{\ucr}{\ucr},\ {\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}\ {\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}\ {\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}}}
+\DoxyCodeLine{00136\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classVUESet}{VUESet}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classVUENode}{VUENode}}}
+\DoxyCodeLine{00137\ \{}
+\DoxyCodeLine{00138\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00139\ \ \ \ \ \mbox{\hyperlink{classFormulaSet}{FormulaSet}}*\ \mbox{\hyperlink{classVUESet_a8cb02f9ef322b4815fbdb8fcc461deb1}{parentSet}};\ \ \ \ }
+\DoxyCodeLine{00146\ \ \ \ \ \mbox{\hyperlink{classVUESet_a41cbf6316c3b6a9500c2fdfb8b8e8b95}{VUESet}}(\textcolor{keywordtype}{int}\ childID\_,\ \textcolor{keywordtype}{int}\ numberInLayer\_)\ :\ \mbox{\hyperlink{classVUENode}{VUENode}}(childID\_,\ numberInLayer\_)\ \{\ \mbox{\hyperlink{classVUENode_a0aa6fc03281234c477f4db53addd6db5}{type}}\ =\ VUESET;\ \};}
+\DoxyCodeLine{00147\ }
+\DoxyCodeLine{00151\ \ \ \ \ \mbox{\hyperlink{classVUESet_a58072c11d3293cfeb5f87b517d2b39eb}{\string~VUESet}}();}
+\DoxyCodeLine{00152\ }
+\DoxyCodeLine{00157\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classVUESet_af337726ccf7c579f48b5c8bb8bdac5c8}{print}}(ostream\&\ os);}
+\DoxyCodeLine{00158\ \};}
+\DoxyCodeLine{00159\ }
+\DoxyCodeLine{00161\ \textcolor{comment}{//\ {\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}\ {\ucr}{\ucr}{\ucr}\ {\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}\ VUE-\/{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}\ {\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}}}
+\DoxyCodeLine{00162\ \textcolor{comment}{//}}
+\DoxyCodeLine{00163\ }
+\DoxyCodeLine{00170\ \textcolor{keywordtype}{bool}\ UnPrepareMathSymbols(tstring\&\ tstr,\ \textcolor{keywordtype}{double}\ width);}
+\DoxyCodeLine{00171\ }
+\DoxyCodeLine{00176\ \textcolor{keywordtype}{void}\ convertVUERussianSymbols(tstring\&\ tstr);}
+\DoxyCodeLine{00177\ }
+\DoxyCodeLine{00184\ \textcolor{keywordtype}{void}\ printFirstPartVUEHeader(ostream\&\ tof,\ \textcolor{keywordtype}{string}\&\ filename,\ \textcolor{keywordtype}{string}\&\ currentDir);}
+\DoxyCodeLine{00185\ }
+\DoxyCodeLine{00191\ \textcolor{keywordtype}{void}\ printVUELegend(ostream\&\ tof,\ \textcolor{keywordtype}{string}\&\ legend);}
+\DoxyCodeLine{00192\ }
+\DoxyCodeLine{00199\ \textcolor{keywordtype}{void}\ printVUEFooter(ostream\&\ tof,\ \textcolor{keywordtype}{string}\&\ filename,\ \textcolor{keywordtype}{string}\&\ currentDir);}
+\DoxyCodeLine{00200\ }
+\DoxyCodeLine{00205\ \textcolor{keywordtype}{void}\ printVUELayer(ostream\&\ tof);}
+
+\end{DoxyCode}

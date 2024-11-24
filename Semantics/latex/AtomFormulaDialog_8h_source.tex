@@ -1,0 +1,67 @@
+\doxysection{Atom\+Formula\+Dialog.\+h}
+\hypertarget{AtomFormulaDialog_8h_source}{}\label{AtomFormulaDialog_8h_source}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{//\ Author:\ Tatarintsev\ V.V.,\ akizelokro@mail.ru,\ 2013-\/2014}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}ScientificStatic.h"{}}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}afxwin.h"{}}}
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00014\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classCAtomFormulaDialog}{CAtomFormulaDialog}}\ :\ \textcolor{keyword}{public}\ CDialog}
+\DoxyCodeLine{00015\ \{}
+\DoxyCodeLine{00016\ \ \ \ \ DECLARE\_DYNAMIC(\mbox{\hyperlink{classCAtomFormulaDialog}{CAtomFormulaDialog}})}
+\DoxyCodeLine{00017\ }
+\DoxyCodeLine{00018\ \ \ \ \ }
+\DoxyCodeLine{00025\ \ \ \ \ BOOL\ OnInitDialog();}
+\DoxyCodeLine{00026\ }
+\DoxyCodeLine{00027\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00033\ \ \ \ \ \mbox{\hyperlink{classCAtomFormulaDialog}{CAtomFormulaDialog}}(CWnd*\ pParent\ =\ NULL);}
+\DoxyCodeLine{00034\ }
+\DoxyCodeLine{00038\ \ \ \ \ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{classCAtomFormulaDialog_a9101f832702d37cb5214ab306244285c}{\string~CAtomFormulaDialog}}();}
+\DoxyCodeLine{00039\ }
+\DoxyCodeLine{00040\ \ \ \ \ \textcolor{comment}{//\ Dialog\ Data}}
+\DoxyCodeLine{00041\ \ \ \ \ \textcolor{keyword}{enum}\ \{\ IDD\ =\ IDD\_DIALOG1\ \};}
+\DoxyCodeLine{00042\ }
+\DoxyCodeLine{00043\ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00050\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classCAtomFormulaDialog_a8802ee15f9f14427b35aec01f1d84673}{DoDataExchange}}(CDataExchange*\ pDX);}
+\DoxyCodeLine{00051\ }
+\DoxyCodeLine{00052\ \ \ \ \ DECLARE\_MESSAGE\_MAP()}
+\DoxyCodeLine{00053\ }
+\DoxyCodeLine{00054\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00055\ \ \ \ \ \textcolor{comment}{//\ Character\ buffer\ for\ the\ first\ input\ field}}
+\DoxyCodeLine{00056\ \ \ \ \ TCHAR\ *\ tbuf1;}
+\DoxyCodeLine{00057\ }
+\DoxyCodeLine{00058\ \ \ \ \ \textcolor{comment}{//\ Character\ buffer\ for\ the\ second\ input\ field}}
+\DoxyCodeLine{00059\ \ \ \ \ TCHAR\ *\ tbuf2;}
+\DoxyCodeLine{00060\ }
+\DoxyCodeLine{00061\ \ \ \ \ \textcolor{comment}{//\ Character\ buffer\ for\ the\ index\ of\ the\ first\ input\ field}}
+\DoxyCodeLine{00062\ \ \ \ \ TCHAR\ *\ tbuf\_index1;}
+\DoxyCodeLine{00063\ }
+\DoxyCodeLine{00064\ \ \ \ \ \textcolor{comment}{//\ Character\ buffer\ for\ the\ index\ of\ the\ second\ input\ field}}
+\DoxyCodeLine{00065\ \ \ \ \ TCHAR\ *\ tbuf\_index2;}
+\DoxyCodeLine{00066\ }
+\DoxyCodeLine{00067\ \ \ \ \ \textcolor{comment}{//\ Static\ label\ for\ displaying\ description}}
+\DoxyCodeLine{00068\ \ \ \ \ \mbox{\hyperlink{classCScientificStatic}{CScientificStatic}}\ m\_lblDescription;}
+\DoxyCodeLine{00069\ }
+\DoxyCodeLine{00075\ \ \ \ \ afx\_msg\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classCAtomFormulaDialog_acd7c8c4a072e2965e325b5907117f2c4}{OnBnClickedOk}}();}
+\DoxyCodeLine{00076\ }
+\DoxyCodeLine{00077\ \ \ \ \ \textcolor{comment}{//\ Font\ used\ for\ displaying\ indices}}
+\DoxyCodeLine{00078\ \ \ \ \ CFont\ *\ m\_fIndexes;}
+\DoxyCodeLine{00079\ }
+\DoxyCodeLine{00080\ \ \ \ \ \textcolor{comment}{//\ Font\ used\ for\ displaying\ symbols}}
+\DoxyCodeLine{00081\ \ \ \ \ CFont\ *\ m\_fSymbol;}
+\DoxyCodeLine{00082\ }
+\DoxyCodeLine{00083\ \ \ \ \ \textcolor{comment}{//\ Edit\ control\ for\ the\ first\ index\ input}}
+\DoxyCodeLine{00084\ \ \ \ \ CEdit\ m\_index1;}
+\DoxyCodeLine{00085\ }
+\DoxyCodeLine{00086\ \ \ \ \ \textcolor{comment}{//\ Edit\ control\ for\ the\ second\ index\ input}}
+\DoxyCodeLine{00087\ \ \ \ \ CEdit\ m\_index2;}
+\DoxyCodeLine{00088\ }
+\DoxyCodeLine{00089\ \ \ \ \ \textcolor{comment}{//\ Combo\ box\ for\ selecting\ the\ first\ option}}
+\DoxyCodeLine{00090\ \ \ \ \ CComboBox\ m\_combo1;}
+\DoxyCodeLine{00091\ }
+\DoxyCodeLine{00092\ \ \ \ \ \textcolor{comment}{//\ Combo\ box\ for\ selecting\ the\ second\ option}}
+\DoxyCodeLine{00093\ \ \ \ \ CComboBox\ m\_combo2;}
+\DoxyCodeLine{00094\ \};}
+
+\end{DoxyCode}

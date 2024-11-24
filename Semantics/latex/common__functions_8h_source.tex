@@ -1,0 +1,83 @@
+\doxysection{common\+\_\+functions.\+h}
+\hypertarget{common__functions_8h_source}{}\label{common__functions_8h_source}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{//\ Written\ by\ Vitaly\ Tatarintsev,\ akizelokro@mail.ru,\ vtatarintsev.ru,\ 3\ August\ 2013}}
+\DoxyCodeLine{00002\ \textcolor{comment}{//\ Written\ by\ Vitaly\ Tatarintsev,\ akizelokro@mail.ru,\ vtatarintsev.ru,\ 3\ August\ 2013}}
+\DoxyCodeLine{00003\ \textcolor{comment}{//}}
+\DoxyCodeLine{00004\ \textcolor{comment}{//\ The\ following\ code\ contains\ utility\ functions\ for\ string\ manipulation,}}
+\DoxyCodeLine{00005\ \textcolor{comment}{//\ including\ removing\ whitespaces\ and\ searching\ strings.}}
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ "{}tchar.h"{}}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ <functional>}}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ <algorithm>}}
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#include\ <iostream>}}
+\DoxyCodeLine{00015\ \textcolor{preprocessor}{\#include\ <fstream>}}
+\DoxyCodeLine{00016\ \textcolor{preprocessor}{\#include\ <utility>}}
+\DoxyCodeLine{00017\ \textcolor{preprocessor}{\#include\ <tuple>}}
+\DoxyCodeLine{00018\ \textcolor{preprocessor}{\#include\ <random>}}
+\DoxyCodeLine{00019\ \textcolor{preprocessor}{\#include\ <map>}}
+\DoxyCodeLine{00020\ }
+\DoxyCodeLine{00021\ \textcolor{preprocessor}{\#include\ <sys/timeb.h>}}
+\DoxyCodeLine{00022\ \textcolor{preprocessor}{\#include\ <time.h>}}
+\DoxyCodeLine{00023\ \textcolor{keyword}{using\ namespace\ }std;}
+\DoxyCodeLine{00024\ }
+\DoxyCodeLine{00025\ \textcolor{comment}{//\ Defines\ wide\ character\ string\ types\ for\ Unicode\ or\ multibyte\ support}}
+\DoxyCodeLine{00026\ \textcolor{preprocessor}{\#ifdef\ \_UNICODE}}
+\DoxyCodeLine{00027\ \textcolor{keyword}{typedef}\ wstring\ tstring;}
+\DoxyCodeLine{00028\ \textcolor{preprocessor}{\#define\ tcin\ wcin}}
+\DoxyCodeLine{00029\ \textcolor{preprocessor}{\#define\ tcout\ wcout}}
+\DoxyCodeLine{00030\ \textcolor{preprocessor}{\#define\ tcerr\ wcerr}}
+\DoxyCodeLine{00031\ \textcolor{keyword}{typedef}\ wostringstream\ tostringstream;}
+\DoxyCodeLine{00032\ \textcolor{keyword}{typedef}\ wistringstream\ tistringstream;}
+\DoxyCodeLine{00033\ \textcolor{keyword}{typedef}\ wifstream\ tifstream;}
+\DoxyCodeLine{00034\ \textcolor{keyword}{typedef}\ wofstream\ tofstream;}
+\DoxyCodeLine{00035\ \textcolor{keyword}{typedef}\ wostream\ tostream;}
+\DoxyCodeLine{00036\ \textcolor{preprocessor}{\#define\ istspace\ iswspace}}
+\DoxyCodeLine{00037\ \textcolor{preprocessor}{\#define\ to\_tstring\ to\_wstring}}
+\DoxyCodeLine{00038\ \textcolor{preprocessor}{\#define\ SetWindowTextT\ SetWindowTextW}}
+\DoxyCodeLine{00039\ \textcolor{preprocessor}{\#define\ GetWindowTextT\ GetWindowTextW}}
+\DoxyCodeLine{00040\ \textcolor{preprocessor}{\#define\ GetWindowTextLengthT\ GetWindowTextLengthW}}
+\DoxyCodeLine{00041\ \textcolor{preprocessor}{\#define\ HtmlHelpT\ HtmlHelpW}}
+\DoxyCodeLine{00042\ \textcolor{preprocessor}{\#define\ istdigit\ iswdigit}}
+\DoxyCodeLine{00043\ \textcolor{preprocessor}{\#else}}
+\DoxyCodeLine{00044\ \textcolor{keyword}{typedef}\ std::string\ tstring;}
+\DoxyCodeLine{00045\ \textcolor{preprocessor}{\#define\ tcin\ cin}}
+\DoxyCodeLine{00046\ \textcolor{preprocessor}{\#define\ tcout\ cout}}
+\DoxyCodeLine{00047\ \textcolor{preprocessor}{\#define\ tcerr\ cerr}}
+\DoxyCodeLine{00048\ \textcolor{keyword}{typedef}\ ostringstream\ tostringstream;}
+\DoxyCodeLine{00049\ \textcolor{keyword}{typedef}\ istringstream\ tistringstream;}
+\DoxyCodeLine{00050\ \textcolor{keyword}{typedef}\ ifstream\ tifstream;}
+\DoxyCodeLine{00051\ \textcolor{keyword}{typedef}\ ofstream\ tofstream;}
+\DoxyCodeLine{00052\ \textcolor{keyword}{typedef}\ ostream\ tostream;}
+\DoxyCodeLine{00053\ \textcolor{preprocessor}{\#define\ istspace\ isspace}}
+\DoxyCodeLine{00054\ \textcolor{preprocessor}{\#define\ to\_tstring\ to\_string}}
+\DoxyCodeLine{00055\ \textcolor{preprocessor}{\#define\ SetWindowTextT\ SetWindowText}}
+\DoxyCodeLine{00056\ \textcolor{preprocessor}{\#define\ GetWindowTextT\ GetWindowText}}
+\DoxyCodeLine{00057\ \textcolor{preprocessor}{\#define\ GetWindowTextLengthT\ GetWindowTextLength}}
+\DoxyCodeLine{00058\ \textcolor{preprocessor}{\#define\ HtmlHelpT\ HtmlHelp}}
+\DoxyCodeLine{00059\ \textcolor{preprocessor}{\#define\ istdigit\ isdigit}}
+\DoxyCodeLine{00060\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00061\ }
+\DoxyCodeLine{00062\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{long}\ bufferLength\ =\ 500;}
+\DoxyCodeLine{00063\ }
+\DoxyCodeLine{00072\ \textcolor{keywordtype}{void}\ removeLeadingWhitespaces(tstring\ *\ str);}
+\DoxyCodeLine{00073\ }
+\DoxyCodeLine{00082\ \textcolor{keywordtype}{void}\ removeTrailingWhitespaces(tstring\ *\ str);}
+\DoxyCodeLine{00083\ }
+\DoxyCodeLine{00092\ \textcolor{keywordtype}{void}\ trimWhitespaces(tstring\ *\ str);}
+\DoxyCodeLine{00093\ }
+\DoxyCodeLine{00102\ \textcolor{keywordtype}{void}\ removeDoubledWhitespaces(tstring\ *\ ptstr);}
+\DoxyCodeLine{00103\ }
+\DoxyCodeLine{00112\ \textcolor{keywordtype}{void}\ removeAllWhitespaces(tstring\ *\ ptstr);}
+\DoxyCodeLine{00113\ }
+\DoxyCodeLine{00124\ \textcolor{keywordtype}{bool}\ search\_in(tstring\ *search,\ vector<tstring>\ *where);}
+\DoxyCodeLine{00125\ }
+\DoxyCodeLine{00136\ \textcolor{keywordtype}{bool}\ parseLongFromString(tstring\ *\ str,\ \textcolor{keywordtype}{long}\ *\ value);}
+\DoxyCodeLine{00137\ }
+\DoxyCodeLine{00147\ tstring\ *\ removeProtocolAndSlash(tstring\ *\ url);}
+
+\end{DoxyCode}

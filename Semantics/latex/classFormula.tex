@@ -1,0 +1,118 @@
+\doxysection{Formula Class Reference}
+\hypertarget{classFormula}{}\label{classFormula}\index{Formula@{Formula}}
+
+
+Inheritance diagram for Formula\+:
+% FIG 0
+
+
+Collaboration diagram for Formula\+:
+% FIG 1
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classFormula_a73f44866ccb6f67986bc1aafa5c19375}{Formula}} (void)
+\item 
+\mbox{\hyperlink{classFormula_a3b15cad2eac08bc53d7186940f5018d7}{\texorpdfstring{$\sim$}{\string~}\+Formula}} (void)
+\item 
+\mbox{\hyperlink{classFormula_a5667650f976ad5281093dcbba1aa3c0b}{Formula}} (const \mbox{\hyperlink{classCFormulaItem}{CFormula\+Item}} \&)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classEntityBase}{Entity\+Base}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classEntityBase_a27bec3b7dfba14d691809b1f00a9dcb6}{Entity\+Base}} (void)
+\item 
+\mbox{\hyperlink{classEntityBase_a30e418726b63d4ceeabb66694442f670}{\texorpdfstring{$\sim$}{\string~}\+Entity\+Base}} (void)
+\item 
+vector$<$ \mbox{\hyperlink{classEntityVariable}{Entity\+Variable}} \texorpdfstring{$\ast$}{*} $>$ \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classEntityBase_a0e91a1c0e1505076892420fb220613db}{get\+Free\+Variables}} ()
+\item 
+vector$<$ \mbox{\hyperlink{classEntityVariable}{Entity\+Variable}} \texorpdfstring{$\ast$}{*} $>$ \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classEntityBase_a6d97330c6d4baa832f7b14e714883912}{get\+Linked\+Variables}} ()
+\item 
+tstring \& \mbox{\hyperlink{classEntityBase_a214bd3f0cf94abbcbfaff08c9ac4e1f5}{get\+Text}} ()
+\item 
+tstring \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classEntityBase_aa09e55fa4507ce954fa7679cb2ef3be5}{get\+Description}} ()
+\item 
+tstring \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classEntityBase_a22143b2bfde1b9936eaecbd45a1d30cd}{get\+Add\+Ons}} ()
+\item 
+void \mbox{\hyperlink{classEntityBase_acb5e136b1304a5e34477c788aee7c0d2}{Set\+Text}} (LPCTSTR lpctstr)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classFormula_a388723adc317772285c3421886b385dd}\label{classFormula_a388723adc317772285c3421886b385dd} 
+vector$<$ Parent\+Link \texorpdfstring{$\ast$}{*} $>$ {\bfseries parents}
+\begin{DoxyCompactList}\small\item\em List of parent links to other formulas. \end{DoxyCompactList}\item 
+\Hypertarget{classFormula_aa713de1e3b67ae408f60bbb1ad58b735}\label{classFormula_aa713de1e3b67ae408f60bbb1ad58b735} 
+vector$<$ \mbox{\hyperlink{classEntityVariable}{Entity\+Variable}} \texorpdfstring{$\ast$}{*} $>$ {\bfseries possible\+Variables}
+\begin{DoxyCompactList}\small\item\em List of possible variables in the formula. \end{DoxyCompactList}\item 
+\Hypertarget{classFormula_a35ba2e15af4f1aeb69c672e51170d439}\label{classFormula_a35ba2e15af4f1aeb69c672e51170d439} 
+vector$<$ \mbox{\hyperlink{classFormula}{Formula}} \texorpdfstring{$\ast$}{*} $>$ {\bfseries possible\+Formulas}
+\begin{DoxyCompactList}\small\item\em List of possible formulas for further relationships. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classFormula_a7f5692b2cedd0e13123b8aeda17cdaaf}\label{classFormula_a7f5692b2cedd0e13123b8aeda17cdaaf} 
+Formula\+\_\+\+Feature {\bfseries feature}
+\begin{DoxyCompactList}\small\item\em Feature of the formula. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{classEntityBase}{Entity\+Base}}}
+\begin{DoxyCompactItemize}
+\item 
+vector$<$ \mbox{\hyperlink{classEntityVariable}{Entity\+Variable}} \texorpdfstring{$\ast$}{*} $>$ {\bfseries free\+Variables}
+\begin{DoxyCompactList}\small\item\em List of free variables. \end{DoxyCompactList}\item 
+vector$<$ \mbox{\hyperlink{classEntityVariable}{Entity\+Variable}} \texorpdfstring{$\ast$}{*} $>$ {\bfseries linked\+Variables}
+\begin{DoxyCompactList}\small\item\em List of linked variables. \end{DoxyCompactList}\item 
+tstring {\bfseries description}
+\begin{DoxyCompactList}\small\item\em Description of the entity. \end{DoxyCompactList}\item 
+tstring {\bfseries addons}
+\begin{DoxyCompactList}\small\item\em Addons related to the entity. \end{DoxyCompactList}\item 
+tstring {\bfseries label}
+\begin{DoxyCompactList}\small\item\em Label associated with the entity. \end{DoxyCompactList}\item 
+tstring {\bfseries text}
+\begin{DoxyCompactList}\small\item\em Text associated with the entity. \end{DoxyCompactList}\item 
+Entity\+Base\+Type {\bfseries type}
+\begin{DoxyCompactList}\small\item\em Type of the entity, from Entity\+Base\+Type enum. \end{DoxyCompactList}\item 
+tstring {\bfseries redefined\+\_\+text}
+\begin{DoxyCompactList}\small\item\em Redefined text, if any. \end{DoxyCompactList}\item 
+bool {\bfseries redefined}
+\begin{DoxyCompactList}\small\item\em Flag indicating if the entity has been redefined. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classEntityBase}{Entity\+Base}} \texorpdfstring{$\ast$}{*} {\bfseries replaced\+\_\+base}
+\begin{DoxyCompactList}\small\item\em Pointer to the replaced base entity, or nullptr. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classEntityVariable}{Entity\+Variable}} \texorpdfstring{$\ast$}{*} {\bfseries initial\+\_\+variable}
+\begin{DoxyCompactList}\small\item\em Initial variable, or nullptr. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classEntityVariable}{Entity\+Variable}} \texorpdfstring{$\ast$}{*} {\bfseries new\+\_\+variable}
+\begin{DoxyCompactList}\small\item\em New variable, or nullptr. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classFormula_a73f44866ccb6f67986bc1aafa5c19375}\label{classFormula_a73f44866ccb6f67986bc1aafa5c19375} 
+\index{Formula@{Formula}!Formula@{Formula}}
+\index{Formula@{Formula}!Formula@{Formula}}
+\doxysubsubsection{\texorpdfstring{Formula()}{Formula()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Formula\+::\+Formula (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+Default constructor for the \doxylink{classFormula}{Formula} class. \Hypertarget{classFormula_a3b15cad2eac08bc53d7186940f5018d7}\label{classFormula_a3b15cad2eac08bc53d7186940f5018d7} 
+\index{Formula@{Formula}!````~Formula@{\texorpdfstring{$\sim$}{\string~}Formula}}
+\index{````~Formula@{\texorpdfstring{$\sim$}{\string~}Formula}!Formula@{Formula}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}Formula()}{\string~Formula()}}
+{\footnotesize\ttfamily Formula\+::\texorpdfstring{$\sim$}{\string~}\+Formula (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+Destructor for the \doxylink{classFormula}{Formula} class. \Hypertarget{classFormula_a5667650f976ad5281093dcbba1aa3c0b}\label{classFormula_a5667650f976ad5281093dcbba1aa3c0b} 
+\index{Formula@{Formula}!Formula@{Formula}}
+\index{Formula@{Formula}!Formula@{Formula}}
+\doxysubsubsection{\texorpdfstring{Formula()}{Formula()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Formula\+::\+Formula (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classCFormulaItem}{CFormula\+Item}} \&}]{fi }\end{DoxyParamCaption})}
+
+Constructor that initializes the formula from a \doxylink{classCFormulaItem}{CFormula\+Item}.
+
+
+\begin{DoxyParams}{Parameters}
+{\em cfi} & The \doxylink{classCFormulaItem}{CFormula\+Item} to initialize the formula. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Formula.\+h\item 
+Formula.\+cpp\item 
+Item.\+cpp\end{DoxyCompactItemize}

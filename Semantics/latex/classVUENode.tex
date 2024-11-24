@@ -1,0 +1,247 @@
+\doxysection{VUENode Class Reference}
+\hypertarget{classVUENode}{}\label{classVUENode}\index{VUENode@{VUENode}}
+
+
+Base class for \doxylink{classVUEFormula}{VUEFormula} and \doxylink{classVUESet}{VUESet}, containing common properties and methods for VUE-\/map nodes.  
+
+
+
+
+{\ttfamily \#include $<$VUENode.\+h$>$}
+
+
+
+Inheritance diagram for VUENode\+:
+% FIG 0
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classVUENode_a8e570ae643130667fad9532e868cbc07}\label{classVUENode_a8e570ae643130667fad9532e868cbc07} 
+{\bfseries VUENode} ()
+\begin{DoxyCompactList}\small\item\em Default constructor initializes default property values. \end{DoxyCompactList}\item 
+\Hypertarget{classVUENode_a1b9c1bcfe0aebfbeda4ae2d3c0d3ba81}\label{classVUENode_a1b9c1bcfe0aebfbeda4ae2d3c0d3ba81} 
+{\bfseries \texorpdfstring{$\sim$}{\string~}\+VUENode} ()
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classVUENode_a243bf5144d0296b47872785f3416d461}{VUENode}} (int child\+ID\+\_\+, int number\+In\+Layer\+\_\+)
+\begin{DoxyCompactList}\small\item\em Parameterized constructor for creating a node with specific IDs. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classVUENode_a49744f4f438dd487da569cc9eaa6430e}{Set\+Position}} (double x\+\_\+, double y\+\_\+, double width\+\_\+, double height\+\_\+)
+\begin{DoxyCompactList}\small\item\em Sets the position and size of the node. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classVUENode_a75208c6323ae43d1cd7dc1ec1ad268d5}{print}} (ostream \&os, string \&str)
+\begin{DoxyCompactList}\small\item\em Outputs the node to the VUE-\/map file. \end{DoxyCompactList}\item 
+\Hypertarget{classVUENode_a102c761a95a6c50baab3aeecd4269158}\label{classVUENode_a102c761a95a6c50baab3aeecd4269158} 
+void {\bfseries child\+Properties} ()
+\begin{DoxyCompactList}\small\item\em Sets properties specific to child nodes based on their type. \end{DoxyCompactList}\item 
+VUENode\+Type \mbox{\hyperlink{classVUENode_a46f219e69f6353a02a26c47fc84a108e}{Get\+Type}} ()
+\begin{DoxyCompactList}\small\item\em Gets the type of the node. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+double \mbox{\hyperlink{classVUENode_a7cfd8c01ee48982c784d07813aacb64e}{x}}
+\item 
+double \mbox{\hyperlink{classVUENode_a3119033550890ebe47244182694baa16}{y}}
+\item 
+double \mbox{\hyperlink{classVUENode_a582edc53a3b7e8da5d1bf83674a7f31a}{width}}
+\item 
+double \mbox{\hyperlink{classVUENode_acb3b49d3a178c96f40cd69f08efa81fc}{height}}
+\item 
+int \mbox{\hyperlink{classVUENode_a3f4b805e97eb0922303f92aa025c1c10}{number\+In\+Group}}
+\item 
+int \mbox{\hyperlink{classVUENode_a2c86a3d7dda62d8f90d21aed80b646a0}{group\+Atom}}
+\item 
+int \mbox{\hyperlink{classVUENode_a6381487194717e6f1d93443a9cd589d4}{number\+In\+Layer}}
+\item 
+int \mbox{\hyperlink{classVUENode_a48fdf607f5d667dc33bc73013ed01eb7}{child\+ID}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+string \mbox{\hyperlink{classVUENode_a3769e1e5b9444a43bba64da4e7cb3f26}{fill\+Color}}
+\item 
+string \mbox{\hyperlink{classVUENode_a3355b3adf4e75632776a4936faf7b2a9}{text\+Color}}
+\item 
+string \mbox{\hyperlink{classVUENode_a895db5ad77e59923fb44881245abb1cb}{stroke\+Color}}
+\item 
+string \mbox{\hyperlink{classVUENode_a13ac8d7aca47ad1bbc60f57db0959532}{font}}
+\item 
+string \mbox{\hyperlink{classVUENode_af16b436c779f429bc0239ef56972b84d}{xsi}}
+\item 
+string \mbox{\hyperlink{classVUENode_a498e4888bca6379e53f25ce7dd2ba916}{stroke\+Style}}
+\item 
+VUENode\+Type \mbox{\hyperlink{classVUENode_a0aa6fc03281234c477f4db53addd6db5}{type}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Base class for \doxylink{classVUEFormula}{VUEFormula} and \doxylink{classVUESet}{VUESet}, containing common properties and methods for VUE-\/map nodes. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classVUENode_a243bf5144d0296b47872785f3416d461}\label{classVUENode_a243bf5144d0296b47872785f3416d461} 
+\index{VUENode@{VUENode}!VUENode@{VUENode}}
+\index{VUENode@{VUENode}!VUENode@{VUENode}}
+\doxysubsubsection{\texorpdfstring{VUENode()}{VUENode()}}
+{\footnotesize\ttfamily VUENode\+::\+VUENode (\begin{DoxyParamCaption}\item[{int}]{child\+ID\+\_\+,  }\item[{int}]{number\+In\+Layer\+\_\+ }\end{DoxyParamCaption})}
+
+
+
+Parameterized constructor for creating a node with specific IDs. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em child\+ID\+\_\+} & Unique identifier for the node. \\
+\hline
+{\em number\+In\+Layer\+\_\+} & Position of the node within its layer. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classVUENode_a46f219e69f6353a02a26c47fc84a108e}\label{classVUENode_a46f219e69f6353a02a26c47fc84a108e} 
+\index{VUENode@{VUENode}!GetType@{GetType}}
+\index{GetType@{GetType}!VUENode@{VUENode}}
+\doxysubsubsection{\texorpdfstring{GetType()}{GetType()}}
+{\footnotesize\ttfamily VUENode\+Type VUENode\+::\+Get\+Type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Gets the type of the node. 
+
+\begin{DoxyReturn}{Returns}
+The type of the node. 
+\end{DoxyReturn}
+\Hypertarget{classVUENode_a75208c6323ae43d1cd7dc1ec1ad268d5}\label{classVUENode_a75208c6323ae43d1cd7dc1ec1ad268d5} 
+\index{VUENode@{VUENode}!print@{print}}
+\index{print@{print}!VUENode@{VUENode}}
+\doxysubsubsection{\texorpdfstring{print()}{print()}}
+{\footnotesize\ttfamily void VUENode\+::print (\begin{DoxyParamCaption}\item[{ostream \&}]{os,  }\item[{string \&}]{str }\end{DoxyParamCaption})}
+
+
+
+Outputs the node to the VUE-\/map file. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em os} & Output stream to write the node data. \\
+\hline
+{\em str} & Additional string data to include in the output. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classVUENode_a49744f4f438dd487da569cc9eaa6430e}\label{classVUENode_a49744f4f438dd487da569cc9eaa6430e} 
+\index{VUENode@{VUENode}!SetPosition@{SetPosition}}
+\index{SetPosition@{SetPosition}!VUENode@{VUENode}}
+\doxysubsubsection{\texorpdfstring{SetPosition()}{SetPosition()}}
+{\footnotesize\ttfamily void VUENode\+::\+Set\+Position (\begin{DoxyParamCaption}\item[{double}]{x\+\_\+,  }\item[{double}]{y\+\_\+,  }\item[{double}]{width\+\_\+,  }\item[{double}]{height\+\_\+ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Sets the position and size of the node. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x\+\_\+} & X-\/coordinate of the node\textquotesingle{}s position. \\
+\hline
+{\em y\+\_\+} & Y-\/coordinate of the node\textquotesingle{}s position. \\
+\hline
+{\em width\+\_\+} & Width of the node. \\
+\hline
+{\em height\+\_\+} & Height of the node. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{classVUENode_a48fdf607f5d667dc33bc73013ed01eb7}\label{classVUENode_a48fdf607f5d667dc33bc73013ed01eb7} 
+\index{VUENode@{VUENode}!childID@{childID}}
+\index{childID@{childID}!VUENode@{VUENode}}
+\doxysubsubsection{\texorpdfstring{childID}{childID}}
+{\footnotesize\ttfamily int VUENode\+::child\+ID}
+
+Unique identifier for the node in the VUE-\/map \Hypertarget{classVUENode_a3769e1e5b9444a43bba64da4e7cb3f26}\label{classVUENode_a3769e1e5b9444a43bba64da4e7cb3f26} 
+\index{VUENode@{VUENode}!fillColor@{fillColor}}
+\index{fillColor@{fillColor}!VUENode@{VUENode}}
+\doxysubsubsection{\texorpdfstring{fillColor}{fillColor}}
+{\footnotesize\ttfamily string VUENode\+::fill\+Color\hspace{0.3cm}{\ttfamily [protected]}}
+
+Fill color of the node \Hypertarget{classVUENode_a13ac8d7aca47ad1bbc60f57db0959532}\label{classVUENode_a13ac8d7aca47ad1bbc60f57db0959532} 
+\index{VUENode@{VUENode}!font@{font}}
+\index{font@{font}!VUENode@{VUENode}}
+\doxysubsubsection{\texorpdfstring{font}{font}}
+{\footnotesize\ttfamily string VUENode\+::font\hspace{0.3cm}{\ttfamily [protected]}}
+
+Font used for the node\textquotesingle{}s label \Hypertarget{classVUENode_a2c86a3d7dda62d8f90d21aed80b646a0}\label{classVUENode_a2c86a3d7dda62d8f90d21aed80b646a0} 
+\index{VUENode@{VUENode}!groupAtom@{groupAtom}}
+\index{groupAtom@{groupAtom}!VUENode@{VUENode}}
+\doxysubsubsection{\texorpdfstring{groupAtom}{groupAtom}}
+{\footnotesize\ttfamily int VUENode\+::group\+Atom}
+
+Identifier of the group the node belongs to \Hypertarget{classVUENode_acb3b49d3a178c96f40cd69f08efa81fc}\label{classVUENode_acb3b49d3a178c96f40cd69f08efa81fc} 
+\index{VUENode@{VUENode}!height@{height}}
+\index{height@{height}!VUENode@{VUENode}}
+\doxysubsubsection{\texorpdfstring{height}{height}}
+{\footnotesize\ttfamily double VUENode\+::height}
+
+Height of the node \Hypertarget{classVUENode_a3f4b805e97eb0922303f92aa025c1c10}\label{classVUENode_a3f4b805e97eb0922303f92aa025c1c10} 
+\index{VUENode@{VUENode}!numberInGroup@{numberInGroup}}
+\index{numberInGroup@{numberInGroup}!VUENode@{VUENode}}
+\doxysubsubsection{\texorpdfstring{numberInGroup}{numberInGroup}}
+{\footnotesize\ttfamily int VUENode\+::number\+In\+Group}
+
+Number of the node within its group \Hypertarget{classVUENode_a6381487194717e6f1d93443a9cd589d4}\label{classVUENode_a6381487194717e6f1d93443a9cd589d4} 
+\index{VUENode@{VUENode}!numberInLayer@{numberInLayer}}
+\index{numberInLayer@{numberInLayer}!VUENode@{VUENode}}
+\doxysubsubsection{\texorpdfstring{numberInLayer}{numberInLayer}}
+{\footnotesize\ttfamily int VUENode\+::number\+In\+Layer}
+
+Position of the node within its layer \Hypertarget{classVUENode_a895db5ad77e59923fb44881245abb1cb}\label{classVUENode_a895db5ad77e59923fb44881245abb1cb} 
+\index{VUENode@{VUENode}!strokeColor@{strokeColor}}
+\index{strokeColor@{strokeColor}!VUENode@{VUENode}}
+\doxysubsubsection{\texorpdfstring{strokeColor}{strokeColor}}
+{\footnotesize\ttfamily string VUENode\+::stroke\+Color\hspace{0.3cm}{\ttfamily [protected]}}
+
+Border color of the node \Hypertarget{classVUENode_a498e4888bca6379e53f25ce7dd2ba916}\label{classVUENode_a498e4888bca6379e53f25ce7dd2ba916} 
+\index{VUENode@{VUENode}!strokeStyle@{strokeStyle}}
+\index{strokeStyle@{strokeStyle}!VUENode@{VUENode}}
+\doxysubsubsection{\texorpdfstring{strokeStyle}{strokeStyle}}
+{\footnotesize\ttfamily string VUENode\+::stroke\+Style\hspace{0.3cm}{\ttfamily [protected]}}
+
+Style of the node\textquotesingle{}s border \Hypertarget{classVUENode_a3355b3adf4e75632776a4936faf7b2a9}\label{classVUENode_a3355b3adf4e75632776a4936faf7b2a9} 
+\index{VUENode@{VUENode}!textColor@{textColor}}
+\index{textColor@{textColor}!VUENode@{VUENode}}
+\doxysubsubsection{\texorpdfstring{textColor}{textColor}}
+{\footnotesize\ttfamily string VUENode\+::text\+Color\hspace{0.3cm}{\ttfamily [protected]}}
+
+Text color inside the node \Hypertarget{classVUENode_a0aa6fc03281234c477f4db53addd6db5}\label{classVUENode_a0aa6fc03281234c477f4db53addd6db5} 
+\index{VUENode@{VUENode}!type@{type}}
+\index{type@{type}!VUENode@{VUENode}}
+\doxysubsubsection{\texorpdfstring{type}{type}}
+{\footnotesize\ttfamily VUENode\+Type VUENode\+::type\hspace{0.3cm}{\ttfamily [protected]}}
+
+Type of the node (VUENODE, VUEFORMULA, VUESET) \Hypertarget{classVUENode_a582edc53a3b7e8da5d1bf83674a7f31a}\label{classVUENode_a582edc53a3b7e8da5d1bf83674a7f31a} 
+\index{VUENode@{VUENode}!width@{width}}
+\index{width@{width}!VUENode@{VUENode}}
+\doxysubsubsection{\texorpdfstring{width}{width}}
+{\footnotesize\ttfamily double VUENode\+::width}
+
+Width of the node \Hypertarget{classVUENode_a7cfd8c01ee48982c784d07813aacb64e}\label{classVUENode_a7cfd8c01ee48982c784d07813aacb64e} 
+\index{VUENode@{VUENode}!x@{x}}
+\index{x@{x}!VUENode@{VUENode}}
+\doxysubsubsection{\texorpdfstring{x}{x}}
+{\footnotesize\ttfamily double VUENode\+::x}
+
+X-\/coordinate of the node\textquotesingle{}s position \Hypertarget{classVUENode_af16b436c779f429bc0239ef56972b84d}\label{classVUENode_af16b436c779f429bc0239ef56972b84d} 
+\index{VUENode@{VUENode}!xsi@{xsi}}
+\index{xsi@{xsi}!VUENode@{VUENode}}
+\doxysubsubsection{\texorpdfstring{xsi}{xsi}}
+{\footnotesize\ttfamily string VUENode\+::xsi\hspace{0.3cm}{\ttfamily [protected]}}
+
+Shape type of the node (e.\+g., rectangle, round\+Rect) \Hypertarget{classVUENode_a3119033550890ebe47244182694baa16}\label{classVUENode_a3119033550890ebe47244182694baa16} 
+\index{VUENode@{VUENode}!y@{y}}
+\index{y@{y}!VUENode@{VUENode}}
+\doxysubsubsection{\texorpdfstring{y}{y}}
+{\footnotesize\ttfamily double VUENode\+::y}
+
+Y-\/coordinate of the node\textquotesingle{}s position 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+VUENode.\+h\item 
+VUENode.\+cpp\end{DoxyCompactItemize}

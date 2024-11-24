@@ -1,0 +1,122 @@
+\doxysection{CSet\+Item Class Reference}
+\hypertarget{classCSetItem}{}\label{classCSetItem}\index{CSetItem@{CSetItem}}
+
+
+Represents a set item used in serialization.  
+
+
+
+
+{\ttfamily \#include $<$Item.\+h$>$}
+
+
+
+Inheritance diagram for CSet\+Item\+:
+% FIG 0
+
+
+Collaboration diagram for CSet\+Item\+:
+% FIG 1
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classCSetItem_a2738342296c3a94b46073b6bbf3d176b}\label{classCSetItem_a2738342296c3a94b46073b6bbf3d176b} 
+{\bfseries CSet\+Item} ()
+\begin{DoxyCompactList}\small\item\em Default constructor. \end{DoxyCompactList}\item 
+\Hypertarget{classCSetItem_a1cc5085aedbc4a3ec876ae954dd2fa96}\label{classCSetItem_a1cc5085aedbc4a3ec876ae954dd2fa96} 
+virtual {\bfseries \texorpdfstring{$\sim$}{\string~}\+CSet\+Item} ()
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classCSetItem_aebaabbcb9393d34d6197333989c85a2e}{Serialize}} (CArchive \&ar)
+\begin{DoxyCompactList}\small\item\em Serialize the set item to or from an archive. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classCSetItem_a2c59868a4fba01e35e647d0e01425c60}{CSet\+Item}} (\mbox{\hyperlink{classFormulaSet}{Formula\+Set}} \&ev)
+\begin{DoxyCompactList}\small\item\em Constructor that creates a set item from a \doxylink{classFormulaSet}{Formula\+Set} object. \end{DoxyCompactList}\item 
+\Hypertarget{classCSetItem_a52a4899bf1d07440b961fdaf0a202731}\label{classCSetItem_a52a4899bf1d07440b961fdaf0a202731} 
+void {\bfseries Set\+Number} (int number)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classCSetItem_a5ebcc143596e2adbed2cad2c4bc4e4ef}\label{classCSetItem_a5ebcc143596e2adbed2cad2c4bc4e4ef} 
+Formula\+\_\+\+Feature {\bfseries Feature}
+\begin{DoxyCompactList}\small\item\em The feature of the formula set. \end{DoxyCompactList}\item 
+\Hypertarget{classCSetItem_a7dc06f7258f2e176cd30dc66e24ecede}\label{classCSetItem_a7dc06f7258f2e176cd30dc66e24ecede} 
+int {\bfseries Number}
+\begin{DoxyCompactList}\small\item\em The unique number of the set in general numbering. \end{DoxyCompactList}\item 
+\Hypertarget{classCSetItem_ab7b25e218a267ee7b168cb1834768a96}\label{classCSetItem_ab7b25e218a267ee7b168cb1834768a96} 
+int {\bfseries Parent\+Set\+Number}
+\begin{DoxyCompactList}\small\item\em The number of the parent set for this set. \end{DoxyCompactList}\item 
+\Hypertarget{classCSetItem_a07037b1bd633c8ff4b56bbb476d60acc}\label{classCSetItem_a07037b1bd633c8ff4b56bbb476d60acc} 
+int {\bfseries Replaced\+Number}
+\begin{DoxyCompactList}\small\item\em The number of the set replaced by this one. \end{DoxyCompactList}\item 
+\Hypertarget{classCSetItem_a50da0d848d362a72becc50cbce836144}\label{classCSetItem_a50da0d848d362a72becc50cbce836144} 
+\mbox{\hyperlink{classCArrayXML}{CArray\+XML}}$<$ \mbox{\hyperlink{classCFormulaItem}{CFormula\+Item}} \texorpdfstring{$\ast$}{*}, \mbox{\hyperlink{classCFormulaItem}{CFormula\+Item}} \texorpdfstring{$\ast$}{*} $>$ {\bfseries Formulas}
+\begin{DoxyCompactList}\small\item\em The collection of formulas in this set. \end{DoxyCompactList}\item 
+\Hypertarget{classCSetItem_a091fa9c4aadcb2e2653cc3e74da8a77d}\label{classCSetItem_a091fa9c4aadcb2e2653cc3e74da8a77d} 
+\mbox{\hyperlink{classCArrayXML}{CArray\+XML}}$<$ \mbox{\hyperlink{classCVariableItem}{CVariable\+Item}} \texorpdfstring{$\ast$}{*}, \mbox{\hyperlink{classCVariableItem}{CVariable\+Item}} \texorpdfstring{$\ast$}{*} $>$ {\bfseries Replace\+Variables}
+\begin{DoxyCompactList}\small\item\em The collection of replace variables. \end{DoxyCompactList}\item 
+\Hypertarget{classCSetItem_a9c35d3028061b759a07d040062cfecc6}\label{classCSetItem_a9c35d3028061b759a07d040062cfecc6} 
+CString {\bfseries Description}
+\begin{DoxyCompactList}\small\item\em The description of the set. \end{DoxyCompactList}\item 
+\Hypertarget{classCSetItem_a1daf08cadb7cda19ec0ebedd7ce84cf7}\label{classCSetItem_a1daf08cadb7cda19ec0ebedd7ce84cf7} 
+CString {\bfseries Addons}
+\begin{DoxyCompactList}\small\item\em Additional information for the set. \end{DoxyCompactList}\item 
+\Hypertarget{classCSetItem_a7919adaa93c732b4288f34c207e8c2fc}\label{classCSetItem_a7919adaa93c732b4288f34c207e8c2fc} 
+CString {\bfseries Label}
+\begin{DoxyCompactList}\small\item\em The label of the set. \end{DoxyCompactList}\item 
+\Hypertarget{classCSetItem_ac39cd556523b106b4b09cf170dd5c836}\label{classCSetItem_ac39cd556523b106b4b09cf170dd5c836} 
+CString {\bfseries Text}
+\begin{DoxyCompactList}\small\item\em The initial text of the set. \end{DoxyCompactList}\item 
+\Hypertarget{classCSetItem_ae4e1acd5df463589edf20d39e3cfb910}\label{classCSetItem_ae4e1acd5df463589edf20d39e3cfb910} 
+CString {\bfseries Redefined}
+\begin{DoxyCompactList}\small\item\em The redefined text of the set. \end{DoxyCompactList}\item 
+\Hypertarget{classCSetItem_aa2a3685fe55a1e37f2a7f6e876c2108e}\label{classCSetItem_aa2a3685fe55a1e37f2a7f6e876c2108e} 
+bool {\bfseries Redefined\+\_\+\+Flag}
+\begin{DoxyCompactList}\small\item\em Flag indicating whether the set has been redefined. \end{DoxyCompactList}\item 
+\Hypertarget{classCSetItem_a2f9fed264c1f7bf06229ceb4e6963e69}\label{classCSetItem_a2f9fed264c1f7bf06229ceb4e6963e69} 
+Entity\+Base\+Type {\bfseries Entity\+Type}
+\begin{DoxyCompactList}\small\item\em The type of the entity from Entity\+Base\+Type enumeration. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Represents a set item used in serialization. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classCSetItem_a2c59868a4fba01e35e647d0e01425c60}\label{classCSetItem_a2c59868a4fba01e35e647d0e01425c60} 
+\index{CSetItem@{CSetItem}!CSetItem@{CSetItem}}
+\index{CSetItem@{CSetItem}!CSetItem@{CSetItem}}
+\doxysubsubsection{\texorpdfstring{CSetItem()}{CSetItem()}}
+{\footnotesize\ttfamily CSet\+Item\+::\+CSet\+Item (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classFormulaSet}{Formula\+Set}} \&}]{ev }\end{DoxyParamCaption})}
+
+
+
+Constructor that creates a set item from a \doxylink{classFormulaSet}{Formula\+Set} object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em f} & The \doxylink{classFormulaSet}{Formula\+Set} object to create from. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classCSetItem_aebaabbcb9393d34d6197333989c85a2e}\label{classCSetItem_aebaabbcb9393d34d6197333989c85a2e} 
+\index{CSetItem@{CSetItem}!Serialize@{Serialize}}
+\index{Serialize@{Serialize}!CSetItem@{CSetItem}}
+\doxysubsubsection{\texorpdfstring{Serialize()}{Serialize()}}
+{\footnotesize\ttfamily void CSet\+Item\+::\+Serialize (\begin{DoxyParamCaption}\item[{CArchive \&}]{ar }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Serialize the set item to or from an archive. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ar} & The archive to serialize to or from. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{Item_8h}{Item.\+h}}\item 
+Item.\+cpp\end{DoxyCompactItemize}

@@ -1,0 +1,91 @@
+\doxysection{List\+Ctrl\+Ex.\+h}
+\hypertarget{ListCtrlEx_8h_source}{}\label{ListCtrlEx_8h_source}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#include\ "{}MsgHook.h"{}}}
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ <Afxmt.h>}}
+\DoxyCodeLine{00004\ }
+\DoxyCodeLine{00005\ \textcolor{comment}{//\ CListCtrlEx}}
+\DoxyCodeLine{00006\ \textcolor{keyword}{typedef}\ BOOL\ (*PFNEDITORCALLBACK)(CWnd**\ pWnd,\ \textcolor{keywordtype}{int}\ nRow,\ \textcolor{keywordtype}{int}\ nColumn,\ CString\&\ strSubItemText,\ DWORD\_PTR\ dwItemData,\ \textcolor{keywordtype}{void}*\ pThis,\ BOOL\ bUpdate);}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00016\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classCListCtrlEx}{CListCtrlEx}}\ :\ \textcolor{keyword}{public}\ CListCtrl}
+\DoxyCodeLine{00017\ \{}
+\DoxyCodeLine{00018\ \ \ \ \ DECLARE\_DYNAMIC(\mbox{\hyperlink{classCListCtrlEx}{CListCtrlEx}})}
+\DoxyCodeLine{00019\ }
+\DoxyCodeLine{00020\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00024\ \ \ \ \ \mbox{\hyperlink{classCListCtrlEx_a48cfaa7bfca1ecc412b527afcd6ac37b}{CListCtrlEx}}();}
+\DoxyCodeLine{00025\ }
+\DoxyCodeLine{00029\ \ \ \ \ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{classCListCtrlEx_abdb77c67adec8d254568d25798f87172}{\string~CListCtrlEx}}();}
+\DoxyCodeLine{00030\ }
+\DoxyCodeLine{00036\ \ \ \ \ DWORD\_PTR\ \mbox{\hyperlink{classCListCtrlEx_a774967623673729599a5725e8ab8b45b}{GetItemData}}(\textcolor{keywordtype}{int}\ nItem)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00037\ }
+\DoxyCodeLine{00043\ \ \ \ \ DWORD\_PTR\ \mbox{\hyperlink{classCListCtrlEx_add445eb5536795f5ae5c8445013e22f2}{GetItemDataInternal}}(\textcolor{keywordtype}{int}\ nItem)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00044\ }
+\DoxyCodeLine{00051\ \ \ \ \ BOOL\ \mbox{\hyperlink{classCListCtrlEx_a9d6dee7feef6d8874fc432df63e2c909}{SetItemData}}(\textcolor{keywordtype}{int}\ nItem,\ DWORD\_PTR\ dwData);}
+\DoxyCodeLine{00052\ }
+\DoxyCodeLine{00058\ \ \ \ \ BOOL\ \mbox{\hyperlink{classCListCtrlEx_a04121431ee84803891ed82315c6b9b7f}{DeleteItem}}(\textcolor{keywordtype}{int}\ nItem);}
+\DoxyCodeLine{00059\ }
+\DoxyCodeLine{00064\ \ \ \ \ BOOL\ \mbox{\hyperlink{classCListCtrlEx_ad8104bdaffbad30d0d15ba39faf743e7}{DeleteAllItems}}();}
+\DoxyCodeLine{00065\ }
+\DoxyCodeLine{00072\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classCListCtrlEx_af4ca717ad996bc1b47b6ec5a7bae0b9a}{FindItem}}(LVFINDINFO*\ pFindInfo,\ \textcolor{keywordtype}{int}\ nStart\ =\ -\/1)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00073\ }
+\DoxyCodeLine{00080\ \ \ \ \ BOOL\ \mbox{\hyperlink{classCListCtrlEx_ad2230a57adabb4f774a7dc647f29c1fa}{SortItems}}(PFNLVCOMPARE\ pfnCompare,\ DWORD\_PTR\ dwData);}
+\DoxyCodeLine{00081\ }
+\DoxyCodeLine{00087\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classCListCtrlEx_a876ca17104e4bb9f1855346faf59a8b5}{InsertItem}}(\textcolor{keyword}{const}\ LVITEM*\ pItem);}
+\DoxyCodeLine{00088\ }
+\DoxyCodeLine{00095\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classCListCtrlEx_a876ca17104e4bb9f1855346faf59a8b5}{InsertItem}}(\textcolor{keywordtype}{int}\ nItem,\ LPCTSTR\ lpszItem);}
+\DoxyCodeLine{00096\ }
+\DoxyCodeLine{00104\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classCListCtrlEx_a876ca17104e4bb9f1855346faf59a8b5}{InsertItem}}(\textcolor{keywordtype}{int}\ nItem,\ LPCTSTR\ lpszItem,\ \textcolor{keywordtype}{int}\ nImage);}
+\DoxyCodeLine{00105\ }
+\DoxyCodeLine{00113\ \ \ \ \ BOOL\ \mbox{\hyperlink{classCListCtrlEx_a341270d45f0440863ecf6f03090a8bbd}{EnsureSubItemVisible}}(\textcolor{keywordtype}{int}\ nItem,\ \textcolor{keywordtype}{int}\ nSubItem,\ CRect\ *pRect\ =\ NULL);}
+\DoxyCodeLine{00114\ }
+\DoxyCodeLine{00118\ \ \ \ \ \textcolor{keyword}{typedef}\ \textcolor{keyword}{enum}\ \mbox{\hyperlink{classCListCtrlEx_a3eec9de280cc8fc4ecea5c7da2657f68}{Sort}}}
+\DoxyCodeLine{00119\ \ \ \ \ \{}
+\DoxyCodeLine{00120\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classCListCtrlEx_a3eec9de280cc8fc4ecea5c7da2657f68aad0154646ada38fb2fdef26f9304a497}{None}}\ =\ 0,\ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00121\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classCListCtrlEx_a3eec9de280cc8fc4ecea5c7da2657f68a38efb62f12f9a6a1e3c312fb81934efe}{Ascending}}\ =\ 1,\ \ \ \ \ }
+\DoxyCodeLine{00122\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classCListCtrlEx_a3eec9de280cc8fc4ecea5c7da2657f68a2e92cf60f72089119178b83b64c5e8a3}{Descending}}\ =\ 2,\ \ \ \ }
+\DoxyCodeLine{00123\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classCListCtrlEx_a3eec9de280cc8fc4ecea5c7da2657f68a77507b18ad3a13b6c3bed93a701ff9ac}{Auto}}\ =\ 4,\ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00124\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classCListCtrlEx_a3eec9de280cc8fc4ecea5c7da2657f68a4f180453dd377d8df5d2fc4227b7ed24}{SortBits}}\ =\ 7\ \ \ \ \ \ \ }
+\DoxyCodeLine{00125\ \ \ \ \ \}\ \mbox{\hyperlink{classCListCtrlEx_a3eec9de280cc8fc4ecea5c7da2657f68}{Sort}};}
+\DoxyCodeLine{00126\ }
+\DoxyCodeLine{00130\ \ \ \ \ \textcolor{keyword}{typedef}\ \textcolor{keyword}{enum}\ \mbox{\hyperlink{classCListCtrlEx_a3f4951fe03135c148835a8a80a106377}{Comparer}}}
+\DoxyCodeLine{00131\ \ \ \ \ \{}
+\DoxyCodeLine{00132\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classCListCtrlEx_a3f4951fe03135c148835a8a80a106377ab393e8e1b3d482659dd5b9a662649cbe}{NotSet}},\ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00133\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classCListCtrlEx_a3f4951fe03135c148835a8a80a106377a92212a020072dc94fbb1af868221be02}{Int}},\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00134\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classCListCtrlEx_a3f4951fe03135c148835a8a80a106377a57b4f67accf5aa22301bec7315ddc512}{Double}},\ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00135\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classCListCtrlEx_a3f4951fe03135c148835a8a80a106377a0b886e2b9ecb333277883eb0214f204b}{String}},\ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00136\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classCListCtrlEx_a3f4951fe03135c148835a8a80a106377a3ed6f8fd2e4304dace79ebbb27e0a528}{StringNumber}},\ \ \ \ \ \ }
+\DoxyCodeLine{00137\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classCListCtrlEx_a3f4951fe03135c148835a8a80a106377a6321ea506abe89896210eeda639d499f}{StringNoCase}},\ \ \ \ \ \ }
+\DoxyCodeLine{00138\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classCListCtrlEx_a3f4951fe03135c148835a8a80a106377ad9df51735ced1c361aaa9a4ffb0dec51}{StringNumberNoCase}},\ }
+\DoxyCodeLine{00139\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classCListCtrlEx_a3f4951fe03135c148835a8a80a106377a8bf0f76e348dc705bc551a7afce06fab}{Date}}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00140\ \ \ \ \ \}\ \mbox{\hyperlink{classCListCtrlEx_a3f4951fe03135c148835a8a80a106377}{Comparer}};}
+\DoxyCodeLine{00141\ }
+\DoxyCodeLine{00142\ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00150\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{int}\ CALLBACK\ \mbox{\hyperlink{classCListCtrlEx_a87a68651c5be0ed557d64461e3f3c7dc}{CompareProc}}(LPARAM\ lParam1,\ LPARAM\ lParam2,\ LPARAM\ lParamSort);}
+\DoxyCodeLine{00151\ }
+\DoxyCodeLine{00159\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classCListCtrlEx_a12061e1bf51d1072f7ca33179a3c197a}{Compare}}(LPARAM\ lParam1,\ LPARAM\ lParam2,\ LPARAM\ lParamSort);}
+\DoxyCodeLine{00160\ }
+\DoxyCodeLine{00167\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classCListCtrlEx_ae35bbb98d19417e53d54d794cbcb0cf0}{CompareInt}}(LPCTSTR\ pLeftText,\ LPCTSTR\ pRightText);}
+\DoxyCodeLine{00168\ }
+\DoxyCodeLine{00175\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classCListCtrlEx_a3b4a3897f2482cc97038b10c96f8a0a1}{CompareDouble}}(LPCTSTR\ pLeftText,\ LPCTSTR\ pRightText);}
+\DoxyCodeLine{00176\ }
+\DoxyCodeLine{00183\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classCListCtrlEx_a2d7ce5ae4c9128f042b067c0175bb0f9}{CompareString}}(LPCTSTR\ pLeftText,\ LPCTSTR\ pRightText);}
+\DoxyCodeLine{00184\ }
+\DoxyCodeLine{00191\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classCListCtrlEx_a29edbc8cb0245bc7bde5204795ea4239}{CompareNumberString}}(LPCTSTR\ pLeftText,\ LPCTSTR\ pRightText);}
+\DoxyCodeLine{00192\ }
+\DoxyCodeLine{00199\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classCListCtrlEx_a431ef4e20cbc27393263d2f9abf0ad02}{CompareNumberStringNoCase}}(LPCTSTR\ pLeftText,\ LPCTSTR\ pRightText);}
+\DoxyCodeLine{00200\ }
+\DoxyCodeLine{00207\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classCListCtrlEx_abe64e6267709657183b1c7d2de4f01dd}{CompareStringNoCase}}(LPCTSTR\ pLeftText,\ LPCTSTR\ pRightText);}
+\DoxyCodeLine{00208\ }
+\DoxyCodeLine{00215\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classCListCtrlEx_a92dece6f97d9f4fbd6aeab46ecbbb027}{CompareDate}}(LPCTSTR\ pLeftText,\ LPCTSTR\ pRightText);}
+\DoxyCodeLine{00216\ }
+\DoxyCodeLine{00220\ \ \ \ \ CCriticalSection\ \mbox{\hyperlink{classCListCtrlEx_adaae33ba75f78d63a11826a321eab279}{m\_oLock}};}
+\DoxyCodeLine{00221\ }
+\DoxyCodeLine{00222\ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00223\ \ \ \ \ DECLARE\_MESSAGE\_MAP()}
+\DoxyCodeLine{00224\ }
+\DoxyCodeLine{00225\ \ \ \ \ \textcolor{comment}{//\ Other\ private/protected\ member\ variables\ and\ methods\ omitted\ for\ brevity}}
+\DoxyCodeLine{00226\ }
+\DoxyCodeLine{00227\ \};\ \textcolor{comment}{//\ End\ of\ class\ CListCtrlEx}}
+
+\end{DoxyCode}

@@ -1,0 +1,167 @@
+\doxysection{Entity\+Base Class Reference}
+\hypertarget{classEntityBase}{}\label{classEntityBase}\index{EntityBase@{EntityBase}}
+
+
+{\ttfamily \#include $<$Formula.\+h$>$}
+
+
+
+Inheritance diagram for Entity\+Base\+:
+% FIG 0
+
+
+Collaboration diagram for Entity\+Base\+:
+% FIG 1
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classEntityBase_a27bec3b7dfba14d691809b1f00a9dcb6}{Entity\+Base}} (void)
+\item 
+\mbox{\hyperlink{classEntityBase_a30e418726b63d4ceeabb66694442f670}{\texorpdfstring{$\sim$}{\string~}\+Entity\+Base}} (void)
+\item 
+vector$<$ \mbox{\hyperlink{classEntityVariable}{Entity\+Variable}} \texorpdfstring{$\ast$}{*} $>$ \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classEntityBase_a0e91a1c0e1505076892420fb220613db}{get\+Free\+Variables}} ()
+\item 
+vector$<$ \mbox{\hyperlink{classEntityVariable}{Entity\+Variable}} \texorpdfstring{$\ast$}{*} $>$ \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classEntityBase_a6d97330c6d4baa832f7b14e714883912}{get\+Linked\+Variables}} ()
+\item 
+tstring \& \mbox{\hyperlink{classEntityBase_a214bd3f0cf94abbcbfaff08c9ac4e1f5}{get\+Text}} ()
+\item 
+tstring \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classEntityBase_aa09e55fa4507ce954fa7679cb2ef3be5}{get\+Description}} ()
+\item 
+tstring \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classEntityBase_a22143b2bfde1b9936eaecbd45a1d30cd}{get\+Add\+Ons}} ()
+\item 
+void \mbox{\hyperlink{classEntityBase_acb5e136b1304a5e34477c788aee7c0d2}{Set\+Text}} (LPCTSTR lpctstr)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classEntityBase_a74c83c99d68b1a57d19ef9528caf7eb7}\label{classEntityBase_a74c83c99d68b1a57d19ef9528caf7eb7} 
+vector$<$ \mbox{\hyperlink{classEntityVariable}{Entity\+Variable}} \texorpdfstring{$\ast$}{*} $>$ {\bfseries free\+Variables}
+\begin{DoxyCompactList}\small\item\em List of free variables. \end{DoxyCompactList}\item 
+\Hypertarget{classEntityBase_ac10a1c7826ee45c4feda21a168d8f433}\label{classEntityBase_ac10a1c7826ee45c4feda21a168d8f433} 
+vector$<$ \mbox{\hyperlink{classEntityVariable}{Entity\+Variable}} \texorpdfstring{$\ast$}{*} $>$ {\bfseries linked\+Variables}
+\begin{DoxyCompactList}\small\item\em List of linked variables. \end{DoxyCompactList}\item 
+\Hypertarget{classEntityBase_ac06d95415f22f1a886909eaead172fbc}\label{classEntityBase_ac06d95415f22f1a886909eaead172fbc} 
+tstring {\bfseries description}
+\begin{DoxyCompactList}\small\item\em Description of the entity. \end{DoxyCompactList}\item 
+\Hypertarget{classEntityBase_a98d9e38aabae0396581eb30bf5ed0abb}\label{classEntityBase_a98d9e38aabae0396581eb30bf5ed0abb} 
+tstring {\bfseries addons}
+\begin{DoxyCompactList}\small\item\em Addons related to the entity. \end{DoxyCompactList}\item 
+\Hypertarget{classEntityBase_abdf5dbea187af2510de461149f21eb62}\label{classEntityBase_abdf5dbea187af2510de461149f21eb62} 
+tstring {\bfseries label}
+\begin{DoxyCompactList}\small\item\em Label associated with the entity. \end{DoxyCompactList}\item 
+\Hypertarget{classEntityBase_a48895882eddf6f235feea8f7644d01e9}\label{classEntityBase_a48895882eddf6f235feea8f7644d01e9} 
+tstring {\bfseries text}
+\begin{DoxyCompactList}\small\item\em Text associated with the entity. \end{DoxyCompactList}\item 
+\Hypertarget{classEntityBase_acbbc575b5955a572cc15083529407359}\label{classEntityBase_acbbc575b5955a572cc15083529407359} 
+Entity\+Base\+Type {\bfseries type}
+\begin{DoxyCompactList}\small\item\em Type of the entity, from Entity\+Base\+Type enum. \end{DoxyCompactList}\item 
+\Hypertarget{classEntityBase_ad79064b5c9dc20d03df63f9ec793c996}\label{classEntityBase_ad79064b5c9dc20d03df63f9ec793c996} 
+tstring {\bfseries redefined\+\_\+text}
+\begin{DoxyCompactList}\small\item\em Redefined text, if any. \end{DoxyCompactList}\item 
+\Hypertarget{classEntityBase_ac08b94518b25029019ecb06c0e4043d3}\label{classEntityBase_ac08b94518b25029019ecb06c0e4043d3} 
+bool {\bfseries redefined}
+\begin{DoxyCompactList}\small\item\em Flag indicating if the entity has been redefined. \end{DoxyCompactList}\item 
+\Hypertarget{classEntityBase_aeba69ce31dab9cfc9a6c026658f538a5}\label{classEntityBase_aeba69ce31dab9cfc9a6c026658f538a5} 
+\mbox{\hyperlink{classEntityBase}{Entity\+Base}} \texorpdfstring{$\ast$}{*} {\bfseries replaced\+\_\+base}
+\begin{DoxyCompactList}\small\item\em Pointer to the replaced base entity, or nullptr. \end{DoxyCompactList}\item 
+\Hypertarget{classEntityBase_a196752e75adeedf14a06f1c2545a82c0}\label{classEntityBase_a196752e75adeedf14a06f1c2545a82c0} 
+\mbox{\hyperlink{classEntityVariable}{Entity\+Variable}} \texorpdfstring{$\ast$}{*} {\bfseries initial\+\_\+variable}
+\begin{DoxyCompactList}\small\item\em Initial variable, or nullptr. \end{DoxyCompactList}\item 
+\Hypertarget{classEntityBase_aa5ec30f38c66bce3f7cfa00069de4bf3}\label{classEntityBase_aa5ec30f38c66bce3f7cfa00069de4bf3} 
+\mbox{\hyperlink{classEntityVariable}{Entity\+Variable}} \texorpdfstring{$\ast$}{*} {\bfseries new\+\_\+variable}
+\begin{DoxyCompactList}\small\item\em New variable, or nullptr. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Represents an entity with free and linked variables, a description, and additional information. Provides accessors for free and linked variables, as well as the text and description of the entity. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classEntityBase_a27bec3b7dfba14d691809b1f00a9dcb6}\label{classEntityBase_a27bec3b7dfba14d691809b1f00a9dcb6} 
+\index{EntityBase@{EntityBase}!EntityBase@{EntityBase}}
+\index{EntityBase@{EntityBase}!EntityBase@{EntityBase}}
+\doxysubsubsection{\texorpdfstring{EntityBase()}{EntityBase()}}
+{\footnotesize\ttfamily Entity\+Base\+::\+Entity\+Base (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+Default constructor for the \doxylink{classEntityBase}{Entity\+Base} class. \Hypertarget{classEntityBase_a30e418726b63d4ceeabb66694442f670}\label{classEntityBase_a30e418726b63d4ceeabb66694442f670} 
+\index{EntityBase@{EntityBase}!````~EntityBase@{\texorpdfstring{$\sim$}{\string~}EntityBase}}
+\index{````~EntityBase@{\texorpdfstring{$\sim$}{\string~}EntityBase}!EntityBase@{EntityBase}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}EntityBase()}{\string~EntityBase()}}
+{\footnotesize\ttfamily Entity\+Base\+::\texorpdfstring{$\sim$}{\string~}\+Entity\+Base (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+Destructor for the \doxylink{classEntityBase}{Entity\+Base} class. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classEntityBase_a22143b2bfde1b9936eaecbd45a1d30cd}\label{classEntityBase_a22143b2bfde1b9936eaecbd45a1d30cd} 
+\index{EntityBase@{EntityBase}!getAddOns@{getAddOns}}
+\index{getAddOns@{getAddOns}!EntityBase@{EntityBase}}
+\doxysubsubsection{\texorpdfstring{getAddOns()}{getAddOns()}}
+{\footnotesize\ttfamily tstring \texorpdfstring{$\ast$}{*} Entity\+Base\+::get\+Add\+Ons (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Returns the addons related to the entity.
+
+\begin{DoxyReturn}{Returns}
+A pointer to the addons string. 
+\end{DoxyReturn}
+\Hypertarget{classEntityBase_aa09e55fa4507ce954fa7679cb2ef3be5}\label{classEntityBase_aa09e55fa4507ce954fa7679cb2ef3be5} 
+\index{EntityBase@{EntityBase}!getDescription@{getDescription}}
+\index{getDescription@{getDescription}!EntityBase@{EntityBase}}
+\doxysubsubsection{\texorpdfstring{getDescription()}{getDescription()}}
+{\footnotesize\ttfamily tstring \texorpdfstring{$\ast$}{*} Entity\+Base\+::get\+Description (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Returns the description of the entity.
+
+\begin{DoxyReturn}{Returns}
+A pointer to the description string. 
+\end{DoxyReturn}
+\Hypertarget{classEntityBase_a0e91a1c0e1505076892420fb220613db}\label{classEntityBase_a0e91a1c0e1505076892420fb220613db} 
+\index{EntityBase@{EntityBase}!getFreeVariables@{getFreeVariables}}
+\index{getFreeVariables@{getFreeVariables}!EntityBase@{EntityBase}}
+\doxysubsubsection{\texorpdfstring{getFreeVariables()}{getFreeVariables()}}
+{\footnotesize\ttfamily vector$<$ \mbox{\hyperlink{classEntityVariable}{Entity\+Variable}} \texorpdfstring{$\ast$}{*} $>$ \texorpdfstring{$\ast$}{*} Entity\+Base\+::get\+Free\+Variables (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Returns the list of free variables.
+
+\begin{DoxyReturn}{Returns}
+A pointer to the vector of free variables. 
+\end{DoxyReturn}
+\Hypertarget{classEntityBase_a6d97330c6d4baa832f7b14e714883912}\label{classEntityBase_a6d97330c6d4baa832f7b14e714883912} 
+\index{EntityBase@{EntityBase}!getLinkedVariables@{getLinkedVariables}}
+\index{getLinkedVariables@{getLinkedVariables}!EntityBase@{EntityBase}}
+\doxysubsubsection{\texorpdfstring{getLinkedVariables()}{getLinkedVariables()}}
+{\footnotesize\ttfamily vector$<$ \mbox{\hyperlink{classEntityVariable}{Entity\+Variable}} \texorpdfstring{$\ast$}{*} $>$ \texorpdfstring{$\ast$}{*} Entity\+Base\+::get\+Linked\+Variables (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Returns the list of linked variables.
+
+\begin{DoxyReturn}{Returns}
+A pointer to the vector of linked variables. 
+\end{DoxyReturn}
+\Hypertarget{classEntityBase_a214bd3f0cf94abbcbfaff08c9ac4e1f5}\label{classEntityBase_a214bd3f0cf94abbcbfaff08c9ac4e1f5} 
+\index{EntityBase@{EntityBase}!getText@{getText}}
+\index{getText@{getText}!EntityBase@{EntityBase}}
+\doxysubsubsection{\texorpdfstring{getText()}{getText()}}
+{\footnotesize\ttfamily tstring \& Entity\+Base\+::get\+Text (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Returns the text associated with the entity, considering redefinition if available.
+
+\begin{DoxyReturn}{Returns}
+A reference to the current text (either redefined or original). 
+\end{DoxyReturn}
+\Hypertarget{classEntityBase_acb5e136b1304a5e34477c788aee7c0d2}\label{classEntityBase_acb5e136b1304a5e34477c788aee7c0d2} 
+\index{EntityBase@{EntityBase}!SetText@{SetText}}
+\index{SetText@{SetText}!EntityBase@{EntityBase}}
+\doxysubsubsection{\texorpdfstring{SetText()}{SetText()}}
+{\footnotesize\ttfamily void Entity\+Base\+::\+Set\+Text (\begin{DoxyParamCaption}\item[{LPCTSTR}]{lpctstr }\end{DoxyParamCaption})}
+
+Sets the text for the entity.
+
+
+\begin{DoxyParams}{Parameters}
+{\em lpctstr} & The text to set. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Formula.\+h\item 
+Formula.\+cpp\end{DoxyCompactItemize}

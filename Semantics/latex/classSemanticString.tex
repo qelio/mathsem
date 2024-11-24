@@ -1,0 +1,83 @@
+\doxysection{Semantic\+String Class Reference}
+\hypertarget{classSemanticString}{}\label{classSemanticString}\index{SemanticString@{SemanticString}}
+
+
+Represents a semantic string for rendering mathematical expressions with styling.  
+
+
+
+
+{\ttfamily \#include $<$Semantic\+String.\+h$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classSemanticString_a72e8848189c00b23dc45f0232dcb004c}\label{classSemanticString_a72e8848189c00b23dc45f0232dcb004c} 
+{\bfseries Semantic\+String} ()
+\begin{DoxyCompactList}\small\item\em Constructs a new \doxylink{classSemanticString}{Semantic\+String} object. \end{DoxyCompactList}\item 
+\Hypertarget{classSemanticString_ac6bed5344138462122522dd096e461fe}\label{classSemanticString_ac6bed5344138462122522dd096e461fe} 
+{\bfseries \texorpdfstring{$\sim$}{\string~}\+Semantic\+String} ()
+\begin{DoxyCompactList}\small\item\em Destructs the \doxylink{classSemanticString}{Semantic\+String} object. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classSemanticString_a3c7ef303d3bbec278736b4a072fae7f6}{Prepare\+Sub\+Item\+Data}} (tstring \&tstr, bool for\+Word\+Export=false)
+\begin{DoxyCompactList}\small\item\em Prepares the internal data from the input string for rendering. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classSemanticString_a846d6ea683298aa4ad41a5f352503036}{Draw\+Item}} (CDC \&dc, CRect \&rect\+Sub\+Item, CFont \texorpdfstring{$\ast$}{*}m\+\_\+f\+Symbol, CFont \texorpdfstring{$\ast$}{*}m\+\_\+f\+Indexes)
+\begin{DoxyCompactList}\small\item\em Draws the \doxylink{classSemanticString}{Semantic\+String} content in the specified rectangle. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Represents a semantic string for rendering mathematical expressions with styling. 
+
+The \doxylink{classSemanticString}{Semantic\+String} class is responsible for preparing and rendering a string that contains mathematical expressions with various styles such as subscripts, superscripts, and special symbols. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classSemanticString_a846d6ea683298aa4ad41a5f352503036}\label{classSemanticString_a846d6ea683298aa4ad41a5f352503036} 
+\index{SemanticString@{SemanticString}!DrawItem@{DrawItem}}
+\index{DrawItem@{DrawItem}!SemanticString@{SemanticString}}
+\doxysubsubsection{\texorpdfstring{DrawItem()}{DrawItem()}}
+{\footnotesize\ttfamily void Semantic\+String\+::\+Draw\+Item (\begin{DoxyParamCaption}\item[{CDC \&}]{dc,  }\item[{CRect \&}]{rect\+Sub\+Item,  }\item[{CFont \texorpdfstring{$\ast$}{*}}]{m\+\_\+f\+Symbol,  }\item[{CFont \texorpdfstring{$\ast$}{*}}]{m\+\_\+f\+Indexes }\end{DoxyParamCaption})}
+
+
+
+Draws the \doxylink{classSemanticString}{Semantic\+String} content in the specified rectangle. 
+
+Renders the prepared string onto the device context {\ttfamily dc} within the rectangle {\ttfamily rect\+Sub\+Item}. Uses the provided fonts for symbols and indexes.
+
+
+\begin{DoxyParams}{Parameters}
+{\em dc} & The device context to draw on. \\
+\hline
+{\em rect\+Sub\+Item} & The rectangle area to draw the content. \\
+\hline
+{\em m\+\_\+f\+Symbol} & Font used for symbol typeface characters. \\
+\hline
+{\em m\+\_\+f\+Indexes} & Font used for subscript and superscript characters. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classSemanticString_a3c7ef303d3bbec278736b4a072fae7f6}\label{classSemanticString_a3c7ef303d3bbec278736b4a072fae7f6} 
+\index{SemanticString@{SemanticString}!PrepareSubItemData@{PrepareSubItemData}}
+\index{PrepareSubItemData@{PrepareSubItemData}!SemanticString@{SemanticString}}
+\doxysubsubsection{\texorpdfstring{PrepareSubItemData()}{PrepareSubItemData()}}
+{\footnotesize\ttfamily bool Semantic\+String\+::\+Prepare\+Sub\+Item\+Data (\begin{DoxyParamCaption}\item[{tstring \&}]{tstr,  }\item[{bool}]{for\+Word\+Export = {\ttfamily false} }\end{DoxyParamCaption})}
+
+
+
+Prepares the internal data from the input string for rendering. 
+
+Parses the given text string and fills the character and style arrays accordingly. Optionally formats the string for Word export if {\ttfamily for\+Word\+Export} is true.
+
+
+\begin{DoxyParams}{Parameters}
+{\em tstr} & The input text string to prepare. \\
+\hline
+{\em for\+Word\+Export} & Indicates if the preparation is for Word export. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if preparation is successful, false otherwise. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{SemanticString_8h}{Semantic\+String.\+h}}\item 
+Semantic\+String.\+cpp\end{DoxyCompactItemize}

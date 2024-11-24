@@ -1,0 +1,134 @@
+\doxysection{CAtom\+Formula\+Dialog Class Reference}
+\hypertarget{classCAtomFormulaDialog}{}\label{classCAtomFormulaDialog}\index{CAtomFormulaDialog@{CAtomFormulaDialog}}
+
+
+Dialog window for working with atomic formulas.  
+
+
+
+
+{\ttfamily \#include $<$Atom\+Formula\+Dialog.\+h$>$}
+
+
+
+Inheritance diagram for CAtom\+Formula\+Dialog\+:
+% FIG 0
+
+
+Collaboration diagram for CAtom\+Formula\+Dialog\+:
+% FIG 1
+\doxysubsubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classCAtomFormulaDialog_abeff3c702400d9f278b587ef73bfa67c}\label{classCAtomFormulaDialog_abeff3c702400d9f278b587ef73bfa67c} 
+enum \{ {\bfseries IDD} = IDD\+\_\+\+DIALOG1
+ \}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classCAtomFormulaDialog_a4184bcb6a5385eeb857be87b057c37e1}{CAtom\+Formula\+Dialog}} (CWnd \texorpdfstring{$\ast$}{*}p\+Parent=NULL)
+\begin{DoxyCompactList}\small\item\em Constructor for \doxylink{classCAtomFormulaDialog}{CAtom\+Formula\+Dialog}. \end{DoxyCompactList}\item 
+\Hypertarget{classCAtomFormulaDialog_a9101f832702d37cb5214ab306244285c}\label{classCAtomFormulaDialog_a9101f832702d37cb5214ab306244285c} 
+virtual {\bfseries \texorpdfstring{$\sim$}{\string~}\+CAtom\+Formula\+Dialog} ()
+\begin{DoxyCompactList}\small\item\em Destructor for \doxylink{classCAtomFormulaDialog}{CAtom\+Formula\+Dialog}. \end{DoxyCompactList}\item 
+afx\+\_\+msg void \mbox{\hyperlink{classCAtomFormulaDialog_acd7c8c4a072e2965e325b5907117f2c4}{On\+Bn\+Clicked\+Ok}} ()
+\begin{DoxyCompactList}\small\item\em Handler for the "{}\+OK"{} button click event. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classCAtomFormulaDialog_a6ae7673033deb23434fda880a9e400c2}\label{classCAtomFormulaDialog_a6ae7673033deb23434fda880a9e400c2} 
+TCHAR \texorpdfstring{$\ast$}{*} {\bfseries tbuf1}
+\item 
+\Hypertarget{classCAtomFormulaDialog_ae6364afd30ea5af446c327461c7dee9a}\label{classCAtomFormulaDialog_ae6364afd30ea5af446c327461c7dee9a} 
+TCHAR \texorpdfstring{$\ast$}{*} {\bfseries tbuf2}
+\item 
+\Hypertarget{classCAtomFormulaDialog_a4da8b9ccec482c839167f3df729bbee2}\label{classCAtomFormulaDialog_a4da8b9ccec482c839167f3df729bbee2} 
+TCHAR \texorpdfstring{$\ast$}{*} {\bfseries tbuf\+\_\+index1}
+\item 
+\Hypertarget{classCAtomFormulaDialog_a7076ade060e7f9aeb0d67c30823fdfe2}\label{classCAtomFormulaDialog_a7076ade060e7f9aeb0d67c30823fdfe2} 
+TCHAR \texorpdfstring{$\ast$}{*} {\bfseries tbuf\+\_\+index2}
+\item 
+\Hypertarget{classCAtomFormulaDialog_aa8f76df4a0991294dd523699cbe807f4}\label{classCAtomFormulaDialog_aa8f76df4a0991294dd523699cbe807f4} 
+\mbox{\hyperlink{classCScientificStatic}{CScientific\+Static}} {\bfseries m\+\_\+lbl\+Description}
+\item 
+\Hypertarget{classCAtomFormulaDialog_acedd27ff37c6d66dd435aa108ad1de23}\label{classCAtomFormulaDialog_acedd27ff37c6d66dd435aa108ad1de23} 
+CFont \texorpdfstring{$\ast$}{*} {\bfseries m\+\_\+f\+Indexes}
+\item 
+\Hypertarget{classCAtomFormulaDialog_a6b8764ca8fdee1234b2417b233ec023a}\label{classCAtomFormulaDialog_a6b8764ca8fdee1234b2417b233ec023a} 
+CFont \texorpdfstring{$\ast$}{*} {\bfseries m\+\_\+f\+Symbol}
+\item 
+\Hypertarget{classCAtomFormulaDialog_a93fa8c04df4a726a54a73625f454bd00}\label{classCAtomFormulaDialog_a93fa8c04df4a726a54a73625f454bd00} 
+CEdit {\bfseries m\+\_\+index1}
+\item 
+\Hypertarget{classCAtomFormulaDialog_a051cf7112d7e5bcd1b66bcea7c8be261}\label{classCAtomFormulaDialog_a051cf7112d7e5bcd1b66bcea7c8be261} 
+CEdit {\bfseries m\+\_\+index2}
+\item 
+\Hypertarget{classCAtomFormulaDialog_af603b4bf67e7f0dd4925eefa588e4df1}\label{classCAtomFormulaDialog_af603b4bf67e7f0dd4925eefa588e4df1} 
+CCombo\+Box {\bfseries m\+\_\+combo1}
+\item 
+\Hypertarget{classCAtomFormulaDialog_ab3886097dd577fbe5f7bfcd207aba8cb}\label{classCAtomFormulaDialog_ab3886097dd577fbe5f7bfcd207aba8cb} 
+CCombo\+Box {\bfseries m\+\_\+combo2}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{classCAtomFormulaDialog_a8802ee15f9f14427b35aec01f1d84673}{Do\+Data\+Exchange}} (CData\+Exchange \texorpdfstring{$\ast$}{*}p\+DX)
+\begin{DoxyCompactList}\small\item\em Handles the data exchange between controls and variables. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Dialog window for working with atomic formulas. 
+
+This class provides an interface for editing atomic formulas using various controls, including labels, input fields, and combo boxes. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classCAtomFormulaDialog_a4184bcb6a5385eeb857be87b057c37e1}\label{classCAtomFormulaDialog_a4184bcb6a5385eeb857be87b057c37e1} 
+\index{CAtomFormulaDialog@{CAtomFormulaDialog}!CAtomFormulaDialog@{CAtomFormulaDialog}}
+\index{CAtomFormulaDialog@{CAtomFormulaDialog}!CAtomFormulaDialog@{CAtomFormulaDialog}}
+\doxysubsubsection{\texorpdfstring{CAtomFormulaDialog()}{CAtomFormulaDialog()}}
+{\footnotesize\ttfamily CAtom\+Formula\+Dialog\+::\+CAtom\+Formula\+Dialog (\begin{DoxyParamCaption}\item[{CWnd \texorpdfstring{$\ast$}{*}}]{p\+Parent = {\ttfamily NULL} }\end{DoxyParamCaption})}
+
+
+
+Constructor for \doxylink{classCAtomFormulaDialog}{CAtom\+Formula\+Dialog}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+Parent} & The parent window for the dialog (default is NULL). \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classCAtomFormulaDialog_a8802ee15f9f14427b35aec01f1d84673}\label{classCAtomFormulaDialog_a8802ee15f9f14427b35aec01f1d84673} 
+\index{CAtomFormulaDialog@{CAtomFormulaDialog}!DoDataExchange@{DoDataExchange}}
+\index{DoDataExchange@{DoDataExchange}!CAtomFormulaDialog@{CAtomFormulaDialog}}
+\doxysubsubsection{\texorpdfstring{DoDataExchange()}{DoDataExchange()}}
+{\footnotesize\ttfamily void CAtom\+Formula\+Dialog\+::\+Do\+Data\+Exchange (\begin{DoxyParamCaption}\item[{CData\+Exchange \texorpdfstring{$\ast$}{*}}]{p\+DX }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Handles the data exchange between controls and variables. 
+
+This function binds the dialog controls to class member variables. 
+\begin{DoxyParams}{Parameters}
+{\em p\+DX} & Data exchange object. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classCAtomFormulaDialog_acd7c8c4a072e2965e325b5907117f2c4}\label{classCAtomFormulaDialog_acd7c8c4a072e2965e325b5907117f2c4} 
+\index{CAtomFormulaDialog@{CAtomFormulaDialog}!OnBnClickedOk@{OnBnClickedOk}}
+\index{OnBnClickedOk@{OnBnClickedOk}!CAtomFormulaDialog@{CAtomFormulaDialog}}
+\doxysubsubsection{\texorpdfstring{OnBnClickedOk()}{OnBnClickedOk()}}
+{\footnotesize\ttfamily void CAtom\+Formula\+Dialog\+::\+On\+Bn\+Clicked\+Ok (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Handler for the "{}\+OK"{} button click event. 
+
+This function is called when the "{}\+OK"{} button is clicked in the dialog. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Atom\+Formula\+Dialog.\+h\item 
+Atom\+Formula\+Dialog.\+cpp\end{DoxyCompactItemize}

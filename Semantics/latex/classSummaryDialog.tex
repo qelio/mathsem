@@ -1,0 +1,216 @@
+\doxysection{Summary\+Dialog Class Reference}
+\hypertarget{classSummaryDialog}{}\label{classSummaryDialog}\index{SummaryDialog@{SummaryDialog}}
+
+
+Dialog class that displays a summary of formulas and allows interaction with them.  
+
+
+
+
+{\ttfamily \#include $<$Summary\+Dialog.\+h$>$}
+
+
+
+Inheritance diagram for Summary\+Dialog\+:
+% FIG 0
+
+
+Collaboration diagram for Summary\+Dialog\+:
+% FIG 1
+\doxysubsubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classSummaryDialog_afa9fa65f67a73cc786d8c543d795ae2e}\label{classSummaryDialog_afa9fa65f67a73cc786d8c543d795ae2e} 
+enum \{ {\bfseries IDD} = IDD\+\_\+\+SUMMARYDIALOG
+ \}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classSummaryDialog_a312ee803f521a4a475277da4b2d2259f}{Summary\+Dialog}} (CWnd \texorpdfstring{$\ast$}{*}p\+Parent=NULL)
+\begin{DoxyCompactList}\small\item\em Default constructor for the \doxylink{classSummaryDialog}{Summary\+Dialog} class. Initializes the dialog without any data. \end{DoxyCompactList}\item 
+\Hypertarget{classSummaryDialog_aa0640e6c50eccfdbff43c6096cbe9c6a}\label{classSummaryDialog_aa0640e6c50eccfdbff43c6096cbe9c6a} 
+virtual {\bfseries \texorpdfstring{$\sim$}{\string~}\+Summary\+Dialog} ()
+\begin{DoxyCompactList}\small\item\em Destructor for the \doxylink{classSummaryDialog}{Summary\+Dialog} class. Cleans up any resources used by the dialog. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classSummaryDialog_a534a5ba067de848c55fbd2cc363a3e67}{set\+Formulas}} (vector$<$ \mbox{\hyperlink{classEntityBase}{Entity\+Base}} \texorpdfstring{$\ast$}{*} $>$ \texorpdfstring{$\ast$}{*}all\+\_\+entities=NULL)
+\begin{DoxyCompactList}\small\item\em Sets the formulas to be displayed in the dialog. This function populates the list of formulas based on the given entities. \end{DoxyCompactList}\item 
+virtual BOOL \mbox{\hyperlink{classSummaryDialog_afe8c76da398db0faf7bc9d203740fc38}{Pre\+Translate\+Message}} (MSG \texorpdfstring{$\ast$}{*}p\+Msg)
+\begin{DoxyCompactList}\small\item\em Pre-\/translates messages before they are dispatched to the control. This function processes key presses and other input before they reach the controls. \end{DoxyCompactList}\item 
+\Hypertarget{classSummaryDialog_a20845a95d9dd522ac2aa997011ed2eae}\label{classSummaryDialog_a20845a95d9dd522ac2aa997011ed2eae} 
+virtual void {\bfseries On\+Cancel} ()
+\begin{DoxyCompactList}\small\item\em Handles the cancel button press in the dialog. This function is called when the user clicks the "{}\+Cancel"{} button. \end{DoxyCompactList}\item 
+afx\+\_\+msg void \mbox{\hyperlink{classSummaryDialog_a0d031bfbcb04c7fe154d259d6fefbf8b}{On\+Measure\+Item}} (int n\+IDCtl, LPMEASUREITEMSTRUCT lp\+Measure\+Item\+Struct)
+\begin{DoxyCompactList}\small\item\em Handles the OK button press in the dialog. This function is called when the user clicks the "{}\+OK"{} button. \end{DoxyCompactList}\item 
+\Hypertarget{classSummaryDialog_a7277757a8745c80481026a6d0f2c39b9}\label{classSummaryDialog_a7277757a8745c80481026a6d0f2c39b9} 
+void {\bfseries Save\+And\+Exit} ()
+\begin{DoxyCompactList}\small\item\em Saves the formulas and exits the dialog. This function saves any changes made to the formulas and closes the dialog. \end{DoxyCompactList}\item 
+\Hypertarget{classSummaryDialog_a970984865468d937f5cd19709805d476}\label{classSummaryDialog_a970984865468d937f5cd19709805d476} 
+afx\+\_\+msg void {\bfseries On\+Bn\+Clicked\+Ok} ()
+\begin{DoxyCompactList}\small\item\em Handles the OK button click event. This function is called when the user clicks the "{}\+OK"{} button in the dialog. \end{DoxyCompactList}\item 
+\Hypertarget{classSummaryDialog_a45b93da7c5b38a058e2b9437d5d6f123}\label{classSummaryDialog_a45b93da7c5b38a058e2b9437d5d6f123} 
+afx\+\_\+msg void {\bfseries On\+Bn\+Clicked\+Pereopisanie} ()
+\begin{DoxyCompactList}\small\item\em Handles the redefinition of a formula. This function is triggered when the user attempts to redefine a formula. \end{DoxyCompactList}\item 
+afx\+\_\+msg void \mbox{\hyperlink{classSummaryDialog_ac7e9ce86110871b51f65086ba16fa3c5}{On\+Lvn\+Odstatechanged\+Summarylist}} (NMHDR \texorpdfstring{$\ast$}{*}p\+NMHDR, LRESULT \texorpdfstring{$\ast$}{*}p\+Result)
+\begin{DoxyCompactList}\small\item\em Handles changes to the summary list control. This function is called when an item in the summary list is changed. \end{DoxyCompactList}\item 
+afx\+\_\+msg void \mbox{\hyperlink{classSummaryDialog_a3da2e780be64bd1413003995bdd2b04c}{On\+RButton\+Down}} (UINT n\+Flags, CPoint point)
+\begin{DoxyCompactList}\small\item\em Handles the right-\/click event in the dialog. This function is triggered when the user right-\/clicks inside the dialog. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classCMathListCtrlEx}{CMath\+List\+Ctrl\+Ex}} \mbox{\hyperlink{classSummaryDialog_a9013b48d7eedc9a4a1543ef7c8c70732}{m\+\_\+list}}
+\begin{DoxyCompactList}\small\item\em Message map for handling dialog messages. \end{DoxyCompactList}\item 
+\Hypertarget{classSummaryDialog_a15cda19cdb489dfeecf52e5e0ca01793}\label{classSummaryDialog_a15cda19cdb489dfeecf52e5e0ca01793} 
+\mbox{\hyperlink{classCMyEdit}{CMy\+Edit}} {\bfseries m\+\_\+edit}
+\begin{DoxyCompactList}\small\item\em A custom edit control used for entering and modifying formulas. \end{DoxyCompactList}\item 
+\Hypertarget{classSummaryDialog_a231e26da489e1d8b2ea1d12133ddf4bd}\label{classSummaryDialog_a231e26da489e1d8b2ea1d12133ddf4bd} 
+CButton {\bfseries m\+\_\+\+Redefine\+Btn}
+\begin{DoxyCompactList}\small\item\em A button control that triggers the redefinition of formulas. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{classSummaryDialog_a8474bcdcf6ab1b059a3224252ee9313f}{Do\+Data\+Exchange}} (CData\+Exchange \texorpdfstring{$\ast$}{*}p\+DX)
+\begin{DoxyCompactList}\small\item\em Handles data exchange between controls and variables. This function ensures that the data entered into the controls is properly transferred to the class variables. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Dialog class that displays a summary of formulas and allows interaction with them. 
+
+This dialog handles the display of formulas and provides options for modifying and managing them. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classSummaryDialog_a312ee803f521a4a475277da4b2d2259f}\label{classSummaryDialog_a312ee803f521a4a475277da4b2d2259f} 
+\index{SummaryDialog@{SummaryDialog}!SummaryDialog@{SummaryDialog}}
+\index{SummaryDialog@{SummaryDialog}!SummaryDialog@{SummaryDialog}}
+\doxysubsubsection{\texorpdfstring{SummaryDialog()}{SummaryDialog()}}
+{\footnotesize\ttfamily Summary\+Dialog\+::\+Summary\+Dialog (\begin{DoxyParamCaption}\item[{CWnd \texorpdfstring{$\ast$}{*}}]{p\+Parent = {\ttfamily NULL} }\end{DoxyParamCaption})}
+
+
+
+Default constructor for the \doxylink{classSummaryDialog}{Summary\+Dialog} class. Initializes the dialog without any data. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+Parent} & A pointer to the parent window, default is NULL. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classSummaryDialog_a8474bcdcf6ab1b059a3224252ee9313f}\label{classSummaryDialog_a8474bcdcf6ab1b059a3224252ee9313f} 
+\index{SummaryDialog@{SummaryDialog}!DoDataExchange@{DoDataExchange}}
+\index{DoDataExchange@{DoDataExchange}!SummaryDialog@{SummaryDialog}}
+\doxysubsubsection{\texorpdfstring{DoDataExchange()}{DoDataExchange()}}
+{\footnotesize\ttfamily void Summary\+Dialog\+::\+Do\+Data\+Exchange (\begin{DoxyParamCaption}\item[{CData\+Exchange \texorpdfstring{$\ast$}{*}}]{p\+DX }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Handles data exchange between controls and variables. This function ensures that the data entered into the controls is properly transferred to the class variables. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+DX} & Pointer to the CData\+Exchange object used to exchange data. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classSummaryDialog_ac7e9ce86110871b51f65086ba16fa3c5}\label{classSummaryDialog_ac7e9ce86110871b51f65086ba16fa3c5} 
+\index{SummaryDialog@{SummaryDialog}!OnLvnOdstatechangedSummarylist@{OnLvnOdstatechangedSummarylist}}
+\index{OnLvnOdstatechangedSummarylist@{OnLvnOdstatechangedSummarylist}!SummaryDialog@{SummaryDialog}}
+\doxysubsubsection{\texorpdfstring{OnLvnOdstatechangedSummarylist()}{OnLvnOdstatechangedSummarylist()}}
+{\footnotesize\ttfamily void Summary\+Dialog\+::\+On\+Lvn\+Odstatechanged\+Summarylist (\begin{DoxyParamCaption}\item[{NMHDR \texorpdfstring{$\ast$}{*}}]{p\+NMHDR,  }\item[{LRESULT \texorpdfstring{$\ast$}{*}}]{p\+Result }\end{DoxyParamCaption})}
+
+
+
+Handles changes to the summary list control. This function is called when an item in the summary list is changed. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+NMHDR} & Pointer to the NMHDR structure containing details about the notification. \\
+\hline
+{\em p\+Result} & Pointer to the result of the notification. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classSummaryDialog_a0d031bfbcb04c7fe154d259d6fefbf8b}\label{classSummaryDialog_a0d031bfbcb04c7fe154d259d6fefbf8b} 
+\index{SummaryDialog@{SummaryDialog}!OnMeasureItem@{OnMeasureItem}}
+\index{OnMeasureItem@{OnMeasureItem}!SummaryDialog@{SummaryDialog}}
+\doxysubsubsection{\texorpdfstring{OnMeasureItem()}{OnMeasureItem()}}
+{\footnotesize\ttfamily void Summary\+Dialog\+::\+On\+Measure\+Item (\begin{DoxyParamCaption}\item[{int}]{n\+IDCtl,  }\item[{LPMEASUREITEMSTRUCT}]{lp\+Measure\+Item\+Struct }\end{DoxyParamCaption})}
+
+
+
+Handles the OK button press in the dialog. This function is called when the user clicks the "{}\+OK"{} button. 
+
+Handles the measurement of list items for the control. This function adjusts the size of list items based on their content. 
+\begin{DoxyParams}{Parameters}
+{\em n\+IDCtl} & The control ID. \\
+\hline
+{\em lp\+Measure\+Item\+Struct} & Pointer to the MEASUREITEMSTRUCT structure containing item size details. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classSummaryDialog_a3da2e780be64bd1413003995bdd2b04c}\label{classSummaryDialog_a3da2e780be64bd1413003995bdd2b04c} 
+\index{SummaryDialog@{SummaryDialog}!OnRButtonDown@{OnRButtonDown}}
+\index{OnRButtonDown@{OnRButtonDown}!SummaryDialog@{SummaryDialog}}
+\doxysubsubsection{\texorpdfstring{OnRButtonDown()}{OnRButtonDown()}}
+{\footnotesize\ttfamily void Summary\+Dialog\+::\+On\+RButton\+Down (\begin{DoxyParamCaption}\item[{UINT}]{n\+Flags,  }\item[{CPoint}]{point }\end{DoxyParamCaption})}
+
+
+
+Handles the right-\/click event in the dialog. This function is triggered when the user right-\/clicks inside the dialog. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em n\+Flags} & Flags specifying the state of the mouse buttons and keys. \\
+\hline
+{\em point} & The cursor position when the right-\/click occurred. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classSummaryDialog_afe8c76da398db0faf7bc9d203740fc38}\label{classSummaryDialog_afe8c76da398db0faf7bc9d203740fc38} 
+\index{SummaryDialog@{SummaryDialog}!PreTranslateMessage@{PreTranslateMessage}}
+\index{PreTranslateMessage@{PreTranslateMessage}!SummaryDialog@{SummaryDialog}}
+\doxysubsubsection{\texorpdfstring{PreTranslateMessage()}{PreTranslateMessage()}}
+{\footnotesize\ttfamily BOOL Summary\+Dialog\+::\+Pre\+Translate\+Message (\begin{DoxyParamCaption}\item[{MSG \texorpdfstring{$\ast$}{*}}]{p\+Msg }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Pre-\/translates messages before they are dispatched to the control. This function processes key presses and other input before they reach the controls. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+Msg} & Pointer to the MSG object containing message details. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+BOOL Returns TRUE if the message is processed, otherwise FALSE. 
+\end{DoxyReturn}
+\Hypertarget{classSummaryDialog_a534a5ba067de848c55fbd2cc363a3e67}\label{classSummaryDialog_a534a5ba067de848c55fbd2cc363a3e67} 
+\index{SummaryDialog@{SummaryDialog}!setFormulas@{setFormulas}}
+\index{setFormulas@{setFormulas}!SummaryDialog@{SummaryDialog}}
+\doxysubsubsection{\texorpdfstring{setFormulas()}{setFormulas()}}
+{\footnotesize\ttfamily void Summary\+Dialog\+::set\+Formulas (\begin{DoxyParamCaption}\item[{vector$<$ \mbox{\hyperlink{classEntityBase}{Entity\+Base}} \texorpdfstring{$\ast$}{*} $>$ \texorpdfstring{$\ast$}{*}}]{all\+\_\+entities = {\ttfamily NULL} }\end{DoxyParamCaption})}
+
+
+
+Sets the formulas to be displayed in the dialog. This function populates the list of formulas based on the given entities. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em all\+\_\+entities} & A pointer to a vector of \doxylink{classEntityBase}{Entity\+Base} objects, default is NULL. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{classSummaryDialog_a9013b48d7eedc9a4a1543ef7c8c70732}\label{classSummaryDialog_a9013b48d7eedc9a4a1543ef7c8c70732} 
+\index{SummaryDialog@{SummaryDialog}!m\_list@{m\_list}}
+\index{m\_list@{m\_list}!SummaryDialog@{SummaryDialog}}
+\doxysubsubsection{\texorpdfstring{m\_list}{m\_list}}
+{\footnotesize\ttfamily Summary\+Dialog\+::m\+\_\+list}
+
+
+
+Message map for handling dialog messages. 
+
+A custom list control that displays mathematical formulas. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Summary\+Dialog.\+h\item 
+Summary\+Dialog.\+cpp\end{DoxyCompactItemize}

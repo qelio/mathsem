@@ -1,0 +1,86 @@
+\doxysection{XMLArchive.\+h}
+\hypertarget{XMLArchive_8h_source}{}\label{XMLArchive_8h_source}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00007\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classCXMLArchive}{CXMLArchive}}\ :\ \textcolor{keyword}{public}\ CArchive}
+\DoxyCodeLine{00008\ \{}
+\DoxyCodeLine{00009\ \ \ \ \ std::stack\ <CXMLArchiveNode*>\ m\_nodeList;\ }
+\DoxyCodeLine{00010\ \ \ \ \ \textcolor{keyword}{static}\ CFile\ m\_dummyFile;\ }
+\DoxyCodeLine{00011\ \ \ \ \ IStream*\ m\_streamPtr;\ }
+\DoxyCodeLine{00012\ }
+\DoxyCodeLine{00013\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00021\ \ \ \ \ \mbox{\hyperlink{classCXMLArchive}{CXMLArchive}}(\textcolor{keyword}{const}\ CString\&\ fileName,\ UINT\ nMode,}
+\DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ IStream*\ streamPtr\ =\ NULL,}
+\DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ CDocument*\ docPtr\ =\ NULL);}
+\DoxyCodeLine{00024\ }
+\DoxyCodeLine{00028\ \ \ \ \ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{classCXMLArchive_aacfc9b25de270be337d288146984c478}{\string~CXMLArchive}}();}
+\DoxyCodeLine{00029\ }
+\DoxyCodeLine{00033\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classCXMLArchive_a15af537970d67fc4ea5934751215a6dd}{Close}}();}
+\DoxyCodeLine{00034\ }
+\DoxyCodeLine{00040\ \ \ \ \ \mbox{\hyperlink{classCXMLArchiveNode}{CXMLArchiveNode}}*\ \mbox{\hyperlink{classCXMLArchive_ac033e49887df13187021d705b8f4cdff}{GetNode}}(LPCTSTR\ nodeNameStr);}
+\DoxyCodeLine{00041\ }
+\DoxyCodeLine{00042\ \textcolor{preprocessor}{\#ifdef\ \_UNICODE}}
+\DoxyCodeLine{00048\ \ \ \ \ \mbox{\hyperlink{classCXMLArchiveNode}{CXMLArchiveNode}}*\ \mbox{\hyperlink{classCXMLArchive_ac033e49887df13187021d705b8f4cdff}{GetNode}}(LPCSTR\ nodeNameStr);}
+\DoxyCodeLine{00049\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00050\ }
+\DoxyCodeLine{00055\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classCXMLArchive_af231b17506f5aa597c5d6a2fcbbb9335}{RemoveNode}}(\mbox{\hyperlink{classCXMLArchiveNode}{CXMLArchiveNode}}*\ xmlArchiveNodePtr);}
+\DoxyCodeLine{00056\ }
+\DoxyCodeLine{00061\ \ \ \ \ \mbox{\hyperlink{classCXMLArchiveNode}{CXMLArchiveNode}}*\ \mbox{\hyperlink{classCXMLArchive_a55d555386a169d2558ca190edb977c18}{GetCurrentNode}}();}
+\DoxyCodeLine{00062\ }
+\DoxyCodeLine{00063\ \ \ \ \ \textcolor{comment}{//\ Attributes}}
+\DoxyCodeLine{00064\ \ \ \ \ \textcolor{keyword}{const}\ CString\ \mbox{\hyperlink{classCXMLArchive_ad65bfbfcd4e15fe8131e8281d703e716}{m\_fileName}};\ }
+\DoxyCodeLine{00065\ \ \ \ \ MSXML::IXMLDOMDocumentPtr\ \mbox{\hyperlink{classCXMLArchive_a028630e6bb6c8415a238f057616fe1ed}{m\_xmlDocPtr}};\ }
+\DoxyCodeLine{00066\ \};}
+\DoxyCodeLine{00067\ }
+\DoxyCodeLine{00075\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classCXMLArchiveNode}{CXMLArchiveNode}}}
+\DoxyCodeLine{00076\ \{}
+\DoxyCodeLine{00077\ \ \ \ \ \textcolor{keyword}{friend}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classCXMLArchive}{CXMLArchive}};\ }
+\DoxyCodeLine{00078\ }
+\DoxyCodeLine{00085\ \ \ \ \ \mbox{\hyperlink{classCXMLArchiveNode}{CXMLArchiveNode}}(\mbox{\hyperlink{classCXMLArchive}{CXMLArchive}}*\ archivePtr,\ MSXML::IXMLDOMElementPtr\ newNodePtr,\ MSXML::IXMLDOMNodePtr\ fatherNodePtr);}
+\DoxyCodeLine{00086\ }
+\DoxyCodeLine{00087\ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00088\ \ \ \ \ \textcolor{keyword}{static}\ CMapStringToPtr\ \mbox{\hyperlink{classCXMLArchiveNode_ab2e695a4fbb866660c5433d7c0c54a1e}{m\_classMap}};\ }
+\DoxyCodeLine{00089\ \ \ \ \ MSXML::IXMLDOMElementPtr\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classCXMLArchiveNode_a1b4a37e14943c1cbf72feab52fb2753a}{m\_nodePtr}};\ }
+\DoxyCodeLine{00090\ \ \ \ \ MSXML::IXMLDOMNodePtr\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classCXMLArchiveNode_a3e2af0a4e458c0dec5c8b375035dc276}{m\_fatherNodePtr}};\ }
+\DoxyCodeLine{00091\ \ \ \ \ \mbox{\hyperlink{classCXMLArchive}{CXMLArchive}}*\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classCXMLArchiveNode_a7e41b71814d5080a06549771c3082bca}{m\_archivePtr}};\ }
+\DoxyCodeLine{00092\ \ \ \ \ MSXML::IXMLDOMNodeListPtr\ \mbox{\hyperlink{classCXMLArchiveNode_a0dedd141ca60c2bf62b832f3d72da2ec}{m\_childNodeListPtr}};\ }
+\DoxyCodeLine{00093\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classCXMLArchiveNode_ad96b3cd17353eda66b91bd994d87cc23}{m\_childIndex}};\ }
+\DoxyCodeLine{00094\ }
+\DoxyCodeLine{00095\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00099\ \ \ \ \ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{classCXMLArchiveNode_a15d09ae1a051aacd9c53ee2eed11b601}{\string~CXMLArchiveNode}}();}
+\DoxyCodeLine{00100\ }
+\DoxyCodeLine{00107\ \ \ \ \ MSXML::IXMLDOMNodePtr\ \mbox{\hyperlink{classCXMLArchiveNode_ab59752eacecf542e6921334e34169467}{CreateDataNode}}(LPCTSTR\ attrName,\ CString\ attrValue);}
+\DoxyCodeLine{00108\ }
+\DoxyCodeLine{00115\ \ \ \ \ MSXML::IXMLDOMNodePtr\ \mbox{\hyperlink{classCXMLArchiveNode_a1c2cfeefbd73867d2f1bb5856a95d5ef}{GetDataNode}}(LPCTSTR\ nodeName,\ CString\&\ nodeText);}
+\DoxyCodeLine{00116\ }
+\DoxyCodeLine{00121\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classCXMLArchiveNode_aec73a30848a9487e185bc3fede9b36dc}{GetNoChildren}}();}
+\DoxyCodeLine{00122\ }
+\DoxyCodeLine{00128\ \ \ \ \ CString\ \mbox{\hyperlink{classCXMLArchiveNode_abfb63d87c72c3957ed926d31c3920ee6}{GetChildName}}(\textcolor{keywordtype}{int}\ childIndex);}
+\DoxyCodeLine{00129\ }
+\DoxyCodeLine{00134\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classCXMLArchiveNode_a1cb6aa0d3cf678e3916ca17e7cefdde4}{GetNextChildIndex}}();}
+\DoxyCodeLine{00135\ }
+\DoxyCodeLine{00139\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classCXMLArchiveNode_afc0e988033c6879b5d2e2ba4b25ecaa3}{Close}}();}
+\DoxyCodeLine{00140\ }
+\DoxyCodeLine{00146\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classCXMLArchiveNode_a7007e0bd67102f9a829e7ce8829a88d4}{DataNode}}(LPCTSTR\ attrName,\ CTime\&\ attrValue);}
+\DoxyCodeLine{00147\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classCXMLArchiveNode_a7007e0bd67102f9a829e7ce8829a88d4}{DataNode}}(LPCTSTR\ attrName,\ CTimeSpan\&\ attrValue);}
+\DoxyCodeLine{00148\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classCXMLArchiveNode_a7007e0bd67102f9a829e7ce8829a88d4}{DataNode}}(LPCTSTR\ attrName,\ CString\&\ attrValue);}
+\DoxyCodeLine{00149\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classCXMLArchiveNode_a7007e0bd67102f9a829e7ce8829a88d4}{DataNode}}(LPCTSTR\ attrName,\ \textcolor{keywordtype}{bool}\&\ attrValue);}
+\DoxyCodeLine{00150\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classCXMLArchiveNode_a7007e0bd67102f9a829e7ce8829a88d4}{DataNode}}(LPCTSTR\ attrName,\ \textcolor{keywordtype}{int}\&\ attrValue);}
+\DoxyCodeLine{00151\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classCXMLArchiveNode_a7007e0bd67102f9a829e7ce8829a88d4}{DataNode}}(LPCTSTR\ attrName,\ \textcolor{keywordtype}{double}\&\ attrValue);}
+\DoxyCodeLine{00152\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classCXMLArchiveNode_a7007e0bd67102f9a829e7ce8829a88d4}{DataNode}}(LPCTSTR\ attrName,\ LONG\&\ attrValue);}
+\DoxyCodeLine{00153\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classCXMLArchiveNode_a7007e0bd67102f9a829e7ce8829a88d4}{DataNode}}(LPCTSTR\ attrName,\ BYTE\&\ attrValue);}
+\DoxyCodeLine{00154\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classCXMLArchiveNode_a7007e0bd67102f9a829e7ce8829a88d4}{DataNode}}(LPCTSTR\ attrName,\ UINT\&\ attrValue);}
+\DoxyCodeLine{00155\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classCXMLArchiveNode_a7007e0bd67102f9a829e7ce8829a88d4}{DataNode}}(LPCTSTR\ attrName,\ CMapStringToPtr\&\ pointerMap);}
+\DoxyCodeLine{00156\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classCXMLArchiveNode_a7007e0bd67102f9a829e7ce8829a88d4}{DataNode}}(LPCTSTR\ attrName,\ CMapStringToString\&\ stringMap);}
+\DoxyCodeLine{00157\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classCXMLArchiveNode_a7007e0bd67102f9a829e7ce8829a88d4}{DataNode}}(LPCTSTR\ attrName,\ CStringArray\&\ stringArray);}
+\DoxyCodeLine{00158\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classCXMLArchiveNode_a7007e0bd67102f9a829e7ce8829a88d4}{DataNode}}(LPCTSTR\ attrName,\ CByteArray\&\ byteArray);}
+\DoxyCodeLine{00159\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classCXMLArchiveNode_a7007e0bd67102f9a829e7ce8829a88d4}{DataNode}}(LPCTSTR\ attrName,\ CDWordArray\&\ wordArray);}
+\DoxyCodeLine{00160\ }
+\DoxyCodeLine{00166\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classCXMLArchiveNode_a7007e0bd67102f9a829e7ce8829a88d4}{DataNode}}(LPCTSTR\ attrName,\ CObject\&\ \textcolor{keywordtype}{object});}
+\DoxyCodeLine{00167\ }
+\DoxyCodeLine{00173\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classCXMLArchiveNode_a7007e0bd67102f9a829e7ce8829a88d4}{DataNode}}(LPCTSTR\ attrName,\ CObject*\&\ objectPtr);}
+\DoxyCodeLine{00174\ }
+\DoxyCodeLine{00180\ \ \ \ \ \textcolor{keyword}{static}\ CObject*\ \mbox{\hyperlink{classCXMLArchiveNode_a054926d55c1d5c2829ea882e832e49e4}{CreateObject}}(\textcolor{keyword}{const}\ CString\&\ className);}
+\DoxyCodeLine{00181\ \};}
+
+\end{DoxyCode}

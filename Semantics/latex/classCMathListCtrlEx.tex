@@ -1,0 +1,633 @@
+\doxysection{CMath\+List\+Ctrl\+Ex Class Reference}
+\hypertarget{classCMathListCtrlEx}{}\label{classCMathListCtrlEx}\index{CMathListCtrlEx@{CMathListCtrlEx}}
+
+
+A custom list control with advanced sorting, editing, and item management features.  
+
+
+
+
+{\ttfamily \#include $<$Math\+List\+Ctrl\+Ex.\+h$>$}
+
+
+
+Inheritance diagram for CMath\+List\+Ctrl\+Ex\+:
+% FIG 0
+
+
+Collaboration diagram for CMath\+List\+Ctrl\+Ex\+:
+% FIG 1
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structCMathListCtrlEx_1_1CellInfo}{Cell\+Info}}
+\item 
+struct \mbox{\hyperlink{structCMathListCtrlEx_1_1EditorInfo}{Editor\+Info}}
+\begin{DoxyCompactList}\small\item\em The editor information structure. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{classCMathListCtrlEx_a956b5c9d43558b4193c89ce2d28eb9ce}{Sort}} \{ \newline
+\mbox{\hyperlink{classCMathListCtrlEx_a956b5c9d43558b4193c89ce2d28eb9cead0835f1812f3e485bb90525fb1b810d9}{None}} = 0
+, \mbox{\hyperlink{classCMathListCtrlEx_a956b5c9d43558b4193c89ce2d28eb9cea9ba3dcb643263438118f882aca30010a}{Ascending}} = 1
+, \mbox{\hyperlink{classCMathListCtrlEx_a956b5c9d43558b4193c89ce2d28eb9ceabcad7b4141d5b3f88908db2d5d0b86e6}{Descending}} = 2
+, \mbox{\hyperlink{classCMathListCtrlEx_a956b5c9d43558b4193c89ce2d28eb9cea51d1c2a1e1c70a716c12cc2479535fc8}{Auto}} = 4
+, \newline
+\mbox{\hyperlink{classCMathListCtrlEx_a956b5c9d43558b4193c89ce2d28eb9cea76271bb228658e13fbbb9417a66a3103}{Sort\+Bits}} = 7
+ \}
+\begin{DoxyCompactList}\small\item\em Defines the sorting states for columns. \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{classCMathListCtrlEx_a81424f2ec3528545d889bd16917fc64b}{Comparer}} \{ \newline
+\mbox{\hyperlink{classCMathListCtrlEx_a81424f2ec3528545d889bd16917fc64ba8890eb9fb85ecd4ed762f76032bd649a}{Not\+Set}}
+, \mbox{\hyperlink{classCMathListCtrlEx_a81424f2ec3528545d889bd16917fc64ba034c9eaca8266fb983b2f92374b80266}{Int}}
+, \mbox{\hyperlink{classCMathListCtrlEx_a81424f2ec3528545d889bd16917fc64ba38ee37c320fc3d41bf2c6e146ecd3e38}{Double}}
+, \mbox{\hyperlink{classCMathListCtrlEx_a81424f2ec3528545d889bd16917fc64ba74230e30af1d97c9199bdf7d1fab3456}{String}}
+, \newline
+\mbox{\hyperlink{classCMathListCtrlEx_a81424f2ec3528545d889bd16917fc64ba276402ec0bd53781781ac23b87ca6c49}{String\+Number}}
+, \mbox{\hyperlink{classCMathListCtrlEx_a81424f2ec3528545d889bd16917fc64ba55316b2639f7eccd8eba9393af5b376f}{String\+No\+Case}}
+, \mbox{\hyperlink{classCMathListCtrlEx_a81424f2ec3528545d889bd16917fc64baf4b7fb9eb6beb2826cdd63f879b1dfd5}{String\+Number\+No\+Case}}
+, \mbox{\hyperlink{classCMathListCtrlEx_a81424f2ec3528545d889bd16917fc64ba0b282631c8d18d2abcd1e9dbf65a3064}{Date}}
+ \}
+\begin{DoxyCompactList}\small\item\em Defines the comparison types for column sorting. \end{DoxyCompactList}\item 
+\Hypertarget{classCMathListCtrlEx_af48cf79e76a649c8a6abeecd9296e209}\label{classCMathListCtrlEx_af48cf79e76a649c8a6abeecd9296e209} 
+typedef enum \mbox{\hyperlink{classCMathListCtrlEx_a956b5c9d43558b4193c89ce2d28eb9ce}{CMath\+List\+Ctrl\+Ex\+::\+Sort}} {\bfseries Sort}
+\begin{DoxyCompactList}\small\item\em Defines the sorting states for columns. \end{DoxyCompactList}\item 
+\Hypertarget{classCMathListCtrlEx_a6d9576dde3af832b5ad03fb7a98d0c1f}\label{classCMathListCtrlEx_a6d9576dde3af832b5ad03fb7a98d0c1f} 
+typedef enum \mbox{\hyperlink{classCMathListCtrlEx_a81424f2ec3528545d889bd16917fc64b}{CMath\+List\+Ctrl\+Ex\+::\+Comparer}} {\bfseries Comparer}
+\begin{DoxyCompactList}\small\item\em Defines the comparison types for column sorting. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classCMathListCtrlEx_ae32898a343cf458211a54a11445636b4}\label{classCMathListCtrlEx_ae32898a343cf458211a54a11445636b4} 
+{\bfseries CMath\+List\+Ctrl\+Ex} ()
+\begin{DoxyCompactList}\small\item\em Default constructor for \doxylink{classCMathListCtrlEx}{CMath\+List\+Ctrl\+Ex}. \end{DoxyCompactList}\item 
+\Hypertarget{classCMathListCtrlEx_a1de2fe228e38af6dd3745be63f9ec6bc}\label{classCMathListCtrlEx_a1de2fe228e38af6dd3745be63f9ec6bc} 
+virtual {\bfseries \texorpdfstring{$\sim$}{\string~}\+CMath\+List\+Ctrl\+Ex} ()
+\begin{DoxyCompactList}\small\item\em Destructor for \doxylink{classCMathListCtrlEx}{CMath\+List\+Ctrl\+Ex}. \end{DoxyCompactList}\item 
+DWORD\+\_\+\+PTR \mbox{\hyperlink{classCMathListCtrlEx_a7eeb1055919ab8a7a18d2d6f16df9c2f}{Get\+Item\+Data}} (int n\+Item) const
+\begin{DoxyCompactList}\small\item\em Retrieves the data (l\+Param) associated with a particular item. \end{DoxyCompactList}\item 
+DWORD\+\_\+\+PTR \mbox{\hyperlink{classCMathListCtrlEx_a1294eaab42ab076f77363fb86d4ebf0e}{Get\+Item\+Data\+Internal}} (int n\+Item) const
+\begin{DoxyCompactList}\small\item\em Retrieves the internal data associated with a particular item. \end{DoxyCompactList}\item 
+BOOL \mbox{\hyperlink{classCMathListCtrlEx_aef33b500107e99fc94d42464eeb98cd0}{Set\+Item\+Data}} (int n\+Item, DWORD\+\_\+\+PTR dw\+Data)
+\begin{DoxyCompactList}\small\item\em Sets the data (l\+Param) associated with a particular item. \end{DoxyCompactList}\item 
+BOOL \mbox{\hyperlink{classCMathListCtrlEx_aee21ee538bf54f40fb0aa9af25684bc9}{Delete\+Item}} (int n\+Item)
+\begin{DoxyCompactList}\small\item\em Removes a single item from the control. \end{DoxyCompactList}\item 
+BOOL \mbox{\hyperlink{classCMathListCtrlEx_ace35261217c884a4b87889bb9a5b9c74}{Delete\+All\+Items}} ()
+\begin{DoxyCompactList}\small\item\em Removes all items from the control. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classCMathListCtrlEx_af07825f744d4d16b6466cec414d02231}{Find\+Item}} (LVFINDINFO \texorpdfstring{$\ast$}{*}p\+Find\+Info, int n\+Start=-\/1) const
+\begin{DoxyCompactList}\small\item\em Finds an item that matches the specified search criteria. \end{DoxyCompactList}\item 
+BOOL \mbox{\hyperlink{classCMathListCtrlEx_a8674737e1538d17fc230147a80fdc330}{Sort\+Items}} (PFNLVCOMPARE pfn\+Compare, DWORD\+\_\+\+PTR dw\+Data)
+\begin{DoxyCompactList}\small\item\em Sorts the items in the control using a custom comparison function. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classCMathListCtrlEx_a64e66b3f1542892fd3b48eec26a19b1a}{Insert\+Item}} (const LVITEM \texorpdfstring{$\ast$}{*}p\+Item)
+\begin{DoxyCompactList}\small\item\em Adds an item to the control. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classCMathListCtrlEx_a185c03be18a1373003ad64f6e4f363a6}{Insert\+Item}} (int n\+Item, LPCTSTR lpsz\+Item)
+\begin{DoxyCompactList}\small\item\em Adds an item to the control with a specified index and label. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classCMathListCtrlEx_a16df384b4e677ba923daffd594f6726d}{Insert\+Item}} (int n\+Item, LPCTSTR lpsz\+Item, int n\+Image)
+\begin{DoxyCompactList}\small\item\em Adds an item to the control with a specified index, label, and image index. \end{DoxyCompactList}\item 
+BOOL \mbox{\hyperlink{classCMathListCtrlEx_a67e654caaaa9758bf72cc506112ea0fe}{Ensure\+Sub\+Item\+Visible}} (int n\+Item, int n\+Sub\+Item, CRect \texorpdfstring{$\ast$}{*}p\+Rect=NULL)
+\begin{DoxyCompactList}\small\item\em Ensures that a specific subitem is visible. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Types}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classCMathListCtrlEx_acb1cab7b5a1a99c12d7844e391b86a09}\label{classCMathListCtrlEx_acb1cab7b5a1a99c12d7844e391b86a09} 
+typedef struct \mbox{\hyperlink{structCMathListCtrlEx_1_1EditorInfo}{CMath\+List\+Ctrl\+Ex\+::\+Editor\+Info}} {\bfseries Editor\+Info}
+\begin{DoxyCompactList}\small\item\em The editor information structure. \end{DoxyCompactList}\item 
+typedef struct \mbox{\hyperlink{structCMathListCtrlEx_1_1CellInfo}{CMath\+List\+Ctrl\+Ex\+::\+Cell\+Info}} \mbox{\hyperlink{classCMathListCtrlEx_a3385ccbfc8b5e3a928aa6f0542ade728}{Cell\+Info}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static int CALLBACK \mbox{\hyperlink{classCMathListCtrlEx_a4ffec835344b7dd79238ced0dce84c99}{Compare\+Proc}} (LPARAM l\+Param1, LPARAM l\+Param2, LPARAM l\+Param\+Sort)
+\begin{DoxyCompactList}\small\item\em Static callback function used for item comparison during sorting. \end{DoxyCompactList}\item 
+static int \mbox{\hyperlink{classCMathListCtrlEx_aaecd2697526980441ec450ba6dce34f4}{Compare}} (LPARAM l\+Param1, LPARAM l\+Param2, LPARAM l\+Param\+Sort)
+\begin{DoxyCompactList}\small\item\em Performs the actual comparison of two items. \end{DoxyCompactList}\item 
+static int \mbox{\hyperlink{classCMathListCtrlEx_a732685e84dd92ab2d4e84ee0a3387b9a}{Compare\+Int}} (LPCTSTR p\+Left\+Text, LPCTSTR p\+Right\+Text)
+\begin{DoxyCompactList}\small\item\em Compares two items as integers. \end{DoxyCompactList}\item 
+static int \mbox{\hyperlink{classCMathListCtrlEx_a9b786d8154b0ee734de0ebe2a1a948e0}{Compare\+Double}} (LPCTSTR p\+Left\+Text, LPCTSTR p\+Right\+Text)
+\begin{DoxyCompactList}\small\item\em Compares two items as doubles. \end{DoxyCompactList}\item 
+static int \mbox{\hyperlink{classCMathListCtrlEx_abe8ddea3025304b36d582c8cad9c467c}{Compare\+String}} (LPCTSTR p\+Left\+Text, LPCTSTR p\+Right\+Text)
+\begin{DoxyCompactList}\small\item\em Compares two items as strings. \end{DoxyCompactList}\item 
+static int \mbox{\hyperlink{classCMathListCtrlEx_a5e5d83e4be9736c3edd1f94ff10abd32}{Compare\+Number\+String}} (LPCTSTR p\+Left\+Text, LPCTSTR p\+Right\+Text)
+\begin{DoxyCompactList}\small\item\em Compares two items as number strings. \end{DoxyCompactList}\item 
+static int \mbox{\hyperlink{classCMathListCtrlEx_a7115b747a3005126de2cabb7ea9ae18b}{Compare\+Number\+String\+No\+Case}} (LPCTSTR p\+Left\+Text, LPCTSTR p\+Right\+Text)
+\begin{DoxyCompactList}\small\item\em Compares two items as case-\/insensitive number strings. \end{DoxyCompactList}\item 
+static int \mbox{\hyperlink{classCMathListCtrlEx_a98492aef1ee003f5972d38e3bf44e730}{Compare\+String\+No\+Case}} (LPCTSTR p\+Left\+Text, LPCTSTR p\+Right\+Text)
+\begin{DoxyCompactList}\small\item\em Compares two items as case-\/insensitive strings. \end{DoxyCompactList}\item 
+static int \mbox{\hyperlink{classCMathListCtrlEx_ad2a8421ccacfb2ce96f36cb09311bc6b}{Compare\+Date}} (LPCTSTR p\+Left\+Text, LPCTSTR p\+Right\+Text)
+\begin{DoxyCompactList}\small\item\em Compares two items as dates. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+CCritical\+Section \mbox{\hyperlink{classCMathListCtrlEx_a1a5697c4eaef6ab979e8bf7046f41834}{m\+\_\+o\+Lock}}
+\item 
+CArray$<$ \mbox{\hyperlink{structCMathListCtrlEx_1_1CellInfo}{Cell\+Info}} $>$ \mbox{\hyperlink{classCMathListCtrlEx_a85bb75033abfa3a70edc3f2d02e482dd}{m\+\_\+arr\+Cell\+Info}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A custom list control with advanced sorting, editing, and item management features. 
+
+This class extends the CList\+Ctrl and adds functionality for custom item editing, sorting, and management. It provides methods for adding, removing, and sorting items, as well as setting custom editors for specific columns, rows, or cells. 
+
+\doxysubsection{Member Typedef Documentation}
+\Hypertarget{classCMathListCtrlEx_a3385ccbfc8b5e3a928aa6f0542ade728}\label{classCMathListCtrlEx_a3385ccbfc8b5e3a928aa6f0542ade728} 
+\index{CMathListCtrlEx@{CMathListCtrlEx}!CellInfo@{CellInfo}}
+\index{CellInfo@{CellInfo}!CMathListCtrlEx@{CMathListCtrlEx}}
+\doxysubsubsection{\texorpdfstring{CellInfo}{CellInfo}}
+{\footnotesize\ttfamily typedef struct \mbox{\hyperlink{structCMathListCtrlEx_1_1CellInfo}{CMath\+List\+Ctrl\+Ex\+::\+Cell\+Info}} \mbox{\hyperlink{structCMathListCtrlEx_1_1CellInfo}{CMath\+List\+Ctrl\+Ex\+::\+Cell\+Info}}\hspace{0.3cm}{\ttfamily [protected]}}
+
+Structure representing cell information. 
+
+\doxysubsection{Member Enumeration Documentation}
+\Hypertarget{classCMathListCtrlEx_a81424f2ec3528545d889bd16917fc64b}\label{classCMathListCtrlEx_a81424f2ec3528545d889bd16917fc64b} 
+\index{CMathListCtrlEx@{CMathListCtrlEx}!Comparer@{Comparer}}
+\index{Comparer@{Comparer}!CMathListCtrlEx@{CMathListCtrlEx}}
+\doxysubsubsection{\texorpdfstring{Comparer}{Comparer}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{classCMathListCtrlEx_a81424f2ec3528545d889bd16917fc64b}{CMath\+List\+Ctrl\+Ex\+::\+Comparer}}}
+
+
+
+Defines the comparison types for column sorting. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{NotSet@{NotSet}!CMathListCtrlEx@{CMathListCtrlEx}}\index{CMathListCtrlEx@{CMathListCtrlEx}!NotSet@{NotSet}}}\Hypertarget{classCMathListCtrlEx_a81424f2ec3528545d889bd16917fc64ba8890eb9fb85ecd4ed762f76032bd649a}\label{classCMathListCtrlEx_a81424f2ec3528545d889bd16917fc64ba8890eb9fb85ecd4ed762f76032bd649a} 
+Not\+Set&No comparison set. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Int@{Int}!CMathListCtrlEx@{CMathListCtrlEx}}\index{CMathListCtrlEx@{CMathListCtrlEx}!Int@{Int}}}\Hypertarget{classCMathListCtrlEx_a81424f2ec3528545d889bd16917fc64ba034c9eaca8266fb983b2f92374b80266}\label{classCMathListCtrlEx_a81424f2ec3528545d889bd16917fc64ba034c9eaca8266fb983b2f92374b80266} 
+Int&Integer comparison. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Double@{Double}!CMathListCtrlEx@{CMathListCtrlEx}}\index{CMathListCtrlEx@{CMathListCtrlEx}!Double@{Double}}}\Hypertarget{classCMathListCtrlEx_a81424f2ec3528545d889bd16917fc64ba38ee37c320fc3d41bf2c6e146ecd3e38}\label{classCMathListCtrlEx_a81424f2ec3528545d889bd16917fc64ba38ee37c320fc3d41bf2c6e146ecd3e38} 
+Double&Double comparison. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{String@{String}!CMathListCtrlEx@{CMathListCtrlEx}}\index{CMathListCtrlEx@{CMathListCtrlEx}!String@{String}}}\Hypertarget{classCMathListCtrlEx_a81424f2ec3528545d889bd16917fc64ba74230e30af1d97c9199bdf7d1fab3456}\label{classCMathListCtrlEx_a81424f2ec3528545d889bd16917fc64ba74230e30af1d97c9199bdf7d1fab3456} 
+String&String comparison. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{StringNumber@{StringNumber}!CMathListCtrlEx@{CMathListCtrlEx}}\index{CMathListCtrlEx@{CMathListCtrlEx}!StringNumber@{StringNumber}}}\Hypertarget{classCMathListCtrlEx_a81424f2ec3528545d889bd16917fc64ba276402ec0bd53781781ac23b87ca6c49}\label{classCMathListCtrlEx_a81424f2ec3528545d889bd16917fc64ba276402ec0bd53781781ac23b87ca6c49} 
+String\+Number&String number comparison. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{StringNoCase@{StringNoCase}!CMathListCtrlEx@{CMathListCtrlEx}}\index{CMathListCtrlEx@{CMathListCtrlEx}!StringNoCase@{StringNoCase}}}\Hypertarget{classCMathListCtrlEx_a81424f2ec3528545d889bd16917fc64ba55316b2639f7eccd8eba9393af5b376f}\label{classCMathListCtrlEx_a81424f2ec3528545d889bd16917fc64ba55316b2639f7eccd8eba9393af5b376f} 
+String\+No\+Case&Case-\/insensitive string comparison. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{StringNumberNoCase@{StringNumberNoCase}!CMathListCtrlEx@{CMathListCtrlEx}}\index{CMathListCtrlEx@{CMathListCtrlEx}!StringNumberNoCase@{StringNumberNoCase}}}\Hypertarget{classCMathListCtrlEx_a81424f2ec3528545d889bd16917fc64baf4b7fb9eb6beb2826cdd63f879b1dfd5}\label{classCMathListCtrlEx_a81424f2ec3528545d889bd16917fc64baf4b7fb9eb6beb2826cdd63f879b1dfd5} 
+String\+Number\+No\+Case&Case-\/insensitive string number comparison. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Date@{Date}!CMathListCtrlEx@{CMathListCtrlEx}}\index{CMathListCtrlEx@{CMathListCtrlEx}!Date@{Date}}}\Hypertarget{classCMathListCtrlEx_a81424f2ec3528545d889bd16917fc64ba0b282631c8d18d2abcd1e9dbf65a3064}\label{classCMathListCtrlEx_a81424f2ec3528545d889bd16917fc64ba0b282631c8d18d2abcd1e9dbf65a3064} 
+Date&Date comparison. \\
+\hline
+
+\end{DoxyEnumFields}
+\Hypertarget{classCMathListCtrlEx_a956b5c9d43558b4193c89ce2d28eb9ce}\label{classCMathListCtrlEx_a956b5c9d43558b4193c89ce2d28eb9ce} 
+\index{CMathListCtrlEx@{CMathListCtrlEx}!Sort@{Sort}}
+\index{Sort@{Sort}!CMathListCtrlEx@{CMathListCtrlEx}}
+\doxysubsubsection{\texorpdfstring{Sort}{Sort}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{classCMathListCtrlEx_a956b5c9d43558b4193c89ce2d28eb9ce}{CMath\+List\+Ctrl\+Ex\+::\+Sort}}}
+
+
+
+Defines the sorting states for columns. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{None@{None}!CMathListCtrlEx@{CMathListCtrlEx}}\index{CMathListCtrlEx@{CMathListCtrlEx}!None@{None}}}\Hypertarget{classCMathListCtrlEx_a956b5c9d43558b4193c89ce2d28eb9cead0835f1812f3e485bb90525fb1b810d9}\label{classCMathListCtrlEx_a956b5c9d43558b4193c89ce2d28eb9cead0835f1812f3e485bb90525fb1b810d9} 
+None&No sorting. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Ascending@{Ascending}!CMathListCtrlEx@{CMathListCtrlEx}}\index{CMathListCtrlEx@{CMathListCtrlEx}!Ascending@{Ascending}}}\Hypertarget{classCMathListCtrlEx_a956b5c9d43558b4193c89ce2d28eb9cea9ba3dcb643263438118f882aca30010a}\label{classCMathListCtrlEx_a956b5c9d43558b4193c89ce2d28eb9cea9ba3dcb643263438118f882aca30010a} 
+Ascending&Ascending order. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Descending@{Descending}!CMathListCtrlEx@{CMathListCtrlEx}}\index{CMathListCtrlEx@{CMathListCtrlEx}!Descending@{Descending}}}\Hypertarget{classCMathListCtrlEx_a956b5c9d43558b4193c89ce2d28eb9ceabcad7b4141d5b3f88908db2d5d0b86e6}\label{classCMathListCtrlEx_a956b5c9d43558b4193c89ce2d28eb9ceabcad7b4141d5b3f88908db2d5d0b86e6} 
+Descending&Descending order. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Auto@{Auto}!CMathListCtrlEx@{CMathListCtrlEx}}\index{CMathListCtrlEx@{CMathListCtrlEx}!Auto@{Auto}}}\Hypertarget{classCMathListCtrlEx_a956b5c9d43558b4193c89ce2d28eb9cea51d1c2a1e1c70a716c12cc2479535fc8}\label{classCMathListCtrlEx_a956b5c9d43558b4193c89ce2d28eb9cea51d1c2a1e1c70a716c12cc2479535fc8} 
+Auto&Automatic sorting. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SortBits@{SortBits}!CMathListCtrlEx@{CMathListCtrlEx}}\index{CMathListCtrlEx@{CMathListCtrlEx}!SortBits@{SortBits}}}\Hypertarget{classCMathListCtrlEx_a956b5c9d43558b4193c89ce2d28eb9cea76271bb228658e13fbbb9417a66a3103}\label{classCMathListCtrlEx_a956b5c9d43558b4193c89ce2d28eb9cea76271bb228658e13fbbb9417a66a3103} 
+Sort\+Bits&All possible sorting states. \\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classCMathListCtrlEx_aaecd2697526980441ec450ba6dce34f4}\label{classCMathListCtrlEx_aaecd2697526980441ec450ba6dce34f4} 
+\index{CMathListCtrlEx@{CMathListCtrlEx}!Compare@{Compare}}
+\index{Compare@{Compare}!CMathListCtrlEx@{CMathListCtrlEx}}
+\doxysubsubsection{\texorpdfstring{Compare()}{Compare()}}
+{\footnotesize\ttfamily int CMath\+List\+Ctrl\+Ex\+::\+Compare (\begin{DoxyParamCaption}\item[{LPARAM}]{l\+Param1,  }\item[{LPARAM}]{l\+Param2,  }\item[{LPARAM}]{l\+Param\+Sort }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [protected]}}
+
+
+
+Performs the actual comparison of two items. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em l\+Param1} & The first item to compare. \\
+\hline
+{\em l\+Param2} & The second item to compare. \\
+\hline
+{\em l\+Param\+Sort} & Sorting data. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A value indicating the result of the comparison. 
+\end{DoxyReturn}
+\Hypertarget{classCMathListCtrlEx_ad2a8421ccacfb2ce96f36cb09311bc6b}\label{classCMathListCtrlEx_ad2a8421ccacfb2ce96f36cb09311bc6b} 
+\index{CMathListCtrlEx@{CMathListCtrlEx}!CompareDate@{CompareDate}}
+\index{CompareDate@{CompareDate}!CMathListCtrlEx@{CMathListCtrlEx}}
+\doxysubsubsection{\texorpdfstring{CompareDate()}{CompareDate()}}
+{\footnotesize\ttfamily int CMath\+List\+Ctrl\+Ex\+::\+Compare\+Date (\begin{DoxyParamCaption}\item[{LPCTSTR}]{p\+Left\+Text,  }\item[{LPCTSTR}]{p\+Right\+Text }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [protected]}}
+
+
+
+Compares two items as dates. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+Left\+Text} & The first text to compare. \\
+\hline
+{\em p\+Right\+Text} & The second text to compare. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A value indicating the result of the comparison. 
+\end{DoxyReturn}
+\Hypertarget{classCMathListCtrlEx_a9b786d8154b0ee734de0ebe2a1a948e0}\label{classCMathListCtrlEx_a9b786d8154b0ee734de0ebe2a1a948e0} 
+\index{CMathListCtrlEx@{CMathListCtrlEx}!CompareDouble@{CompareDouble}}
+\index{CompareDouble@{CompareDouble}!CMathListCtrlEx@{CMathListCtrlEx}}
+\doxysubsubsection{\texorpdfstring{CompareDouble()}{CompareDouble()}}
+{\footnotesize\ttfamily int CMath\+List\+Ctrl\+Ex\+::\+Compare\+Double (\begin{DoxyParamCaption}\item[{LPCTSTR}]{p\+Left\+Text,  }\item[{LPCTSTR}]{p\+Right\+Text }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [protected]}}
+
+
+
+Compares two items as doubles. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+Left\+Text} & The first text to compare. \\
+\hline
+{\em p\+Right\+Text} & The second text to compare. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A value indicating the result of the comparison. 
+\end{DoxyReturn}
+\Hypertarget{classCMathListCtrlEx_a732685e84dd92ab2d4e84ee0a3387b9a}\label{classCMathListCtrlEx_a732685e84dd92ab2d4e84ee0a3387b9a} 
+\index{CMathListCtrlEx@{CMathListCtrlEx}!CompareInt@{CompareInt}}
+\index{CompareInt@{CompareInt}!CMathListCtrlEx@{CMathListCtrlEx}}
+\doxysubsubsection{\texorpdfstring{CompareInt()}{CompareInt()}}
+{\footnotesize\ttfamily int CMath\+List\+Ctrl\+Ex\+::\+Compare\+Int (\begin{DoxyParamCaption}\item[{LPCTSTR}]{p\+Left\+Text,  }\item[{LPCTSTR}]{p\+Right\+Text }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [protected]}}
+
+
+
+Compares two items as integers. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+Left\+Text} & The first text to compare. \\
+\hline
+{\em p\+Right\+Text} & The second text to compare. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A value indicating the result of the comparison. 
+\end{DoxyReturn}
+\Hypertarget{classCMathListCtrlEx_a5e5d83e4be9736c3edd1f94ff10abd32}\label{classCMathListCtrlEx_a5e5d83e4be9736c3edd1f94ff10abd32} 
+\index{CMathListCtrlEx@{CMathListCtrlEx}!CompareNumberString@{CompareNumberString}}
+\index{CompareNumberString@{CompareNumberString}!CMathListCtrlEx@{CMathListCtrlEx}}
+\doxysubsubsection{\texorpdfstring{CompareNumberString()}{CompareNumberString()}}
+{\footnotesize\ttfamily int CMath\+List\+Ctrl\+Ex\+::\+Compare\+Number\+String (\begin{DoxyParamCaption}\item[{LPCTSTR}]{p\+Left\+Text,  }\item[{LPCTSTR}]{p\+Right\+Text }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [protected]}}
+
+
+
+Compares two items as number strings. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+Left\+Text} & The first text to compare. \\
+\hline
+{\em p\+Right\+Text} & The second text to compare. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A value indicating the result of the comparison. 
+\end{DoxyReturn}
+\Hypertarget{classCMathListCtrlEx_a7115b747a3005126de2cabb7ea9ae18b}\label{classCMathListCtrlEx_a7115b747a3005126de2cabb7ea9ae18b} 
+\index{CMathListCtrlEx@{CMathListCtrlEx}!CompareNumberStringNoCase@{CompareNumberStringNoCase}}
+\index{CompareNumberStringNoCase@{CompareNumberStringNoCase}!CMathListCtrlEx@{CMathListCtrlEx}}
+\doxysubsubsection{\texorpdfstring{CompareNumberStringNoCase()}{CompareNumberStringNoCase()}}
+{\footnotesize\ttfamily int CMath\+List\+Ctrl\+Ex\+::\+Compare\+Number\+String\+No\+Case (\begin{DoxyParamCaption}\item[{LPCTSTR}]{p\+Left\+Text,  }\item[{LPCTSTR}]{p\+Right\+Text }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [protected]}}
+
+
+
+Compares two items as case-\/insensitive number strings. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+Left\+Text} & The first text to compare. \\
+\hline
+{\em p\+Right\+Text} & The second text to compare. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A value indicating the result of the comparison. 
+\end{DoxyReturn}
+\Hypertarget{classCMathListCtrlEx_a4ffec835344b7dd79238ced0dce84c99}\label{classCMathListCtrlEx_a4ffec835344b7dd79238ced0dce84c99} 
+\index{CMathListCtrlEx@{CMathListCtrlEx}!CompareProc@{CompareProc}}
+\index{CompareProc@{CompareProc}!CMathListCtrlEx@{CMathListCtrlEx}}
+\doxysubsubsection{\texorpdfstring{CompareProc()}{CompareProc()}}
+{\footnotesize\ttfamily int CALLBACK CMath\+List\+Ctrl\+Ex\+::\+Compare\+Proc (\begin{DoxyParamCaption}\item[{LPARAM}]{l\+Param1,  }\item[{LPARAM}]{l\+Param2,  }\item[{LPARAM}]{l\+Param\+Sort }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [protected]}}
+
+
+
+Static callback function used for item comparison during sorting. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em l\+Param1} & The first item to compare. \\
+\hline
+{\em l\+Param2} & The second item to compare. \\
+\hline
+{\em l\+Param\+Sort} & Sorting data. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A value indicating the result of the comparison. 
+\end{DoxyReturn}
+\Hypertarget{classCMathListCtrlEx_abe8ddea3025304b36d582c8cad9c467c}\label{classCMathListCtrlEx_abe8ddea3025304b36d582c8cad9c467c} 
+\index{CMathListCtrlEx@{CMathListCtrlEx}!CompareString@{CompareString}}
+\index{CompareString@{CompareString}!CMathListCtrlEx@{CMathListCtrlEx}}
+\doxysubsubsection{\texorpdfstring{CompareString()}{CompareString()}}
+{\footnotesize\ttfamily int CMath\+List\+Ctrl\+Ex\+::\+Compare\+String (\begin{DoxyParamCaption}\item[{LPCTSTR}]{p\+Left\+Text,  }\item[{LPCTSTR}]{p\+Right\+Text }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [protected]}}
+
+
+
+Compares two items as strings. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+Left\+Text} & The first text to compare. \\
+\hline
+{\em p\+Right\+Text} & The second text to compare. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A value indicating the result of the comparison. 
+\end{DoxyReturn}
+\Hypertarget{classCMathListCtrlEx_a98492aef1ee003f5972d38e3bf44e730}\label{classCMathListCtrlEx_a98492aef1ee003f5972d38e3bf44e730} 
+\index{CMathListCtrlEx@{CMathListCtrlEx}!CompareStringNoCase@{CompareStringNoCase}}
+\index{CompareStringNoCase@{CompareStringNoCase}!CMathListCtrlEx@{CMathListCtrlEx}}
+\doxysubsubsection{\texorpdfstring{CompareStringNoCase()}{CompareStringNoCase()}}
+{\footnotesize\ttfamily int CMath\+List\+Ctrl\+Ex\+::\+Compare\+String\+No\+Case (\begin{DoxyParamCaption}\item[{LPCTSTR}]{p\+Left\+Text,  }\item[{LPCTSTR}]{p\+Right\+Text }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [protected]}}
+
+
+
+Compares two items as case-\/insensitive strings. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+Left\+Text} & The first text to compare. \\
+\hline
+{\em p\+Right\+Text} & The second text to compare. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A value indicating the result of the comparison. 
+\end{DoxyReturn}
+\Hypertarget{classCMathListCtrlEx_ace35261217c884a4b87889bb9a5b9c74}\label{classCMathListCtrlEx_ace35261217c884a4b87889bb9a5b9c74} 
+\index{CMathListCtrlEx@{CMathListCtrlEx}!DeleteAllItems@{DeleteAllItems}}
+\index{DeleteAllItems@{DeleteAllItems}!CMathListCtrlEx@{CMathListCtrlEx}}
+\doxysubsubsection{\texorpdfstring{DeleteAllItems()}{DeleteAllItems()}}
+{\footnotesize\ttfamily BOOL CMath\+List\+Ctrl\+Ex\+::\+Delete\+All\+Items (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Removes all items from the control. 
+
+\begin{DoxyReturn}{Returns}
+TRUE if all items were successfully removed. 
+\end{DoxyReturn}
+\Hypertarget{classCMathListCtrlEx_aee21ee538bf54f40fb0aa9af25684bc9}\label{classCMathListCtrlEx_aee21ee538bf54f40fb0aa9af25684bc9} 
+\index{CMathListCtrlEx@{CMathListCtrlEx}!DeleteItem@{DeleteItem}}
+\index{DeleteItem@{DeleteItem}!CMathListCtrlEx@{CMathListCtrlEx}}
+\doxysubsubsection{\texorpdfstring{DeleteItem()}{DeleteItem()}}
+{\footnotesize\ttfamily BOOL CMath\+List\+Ctrl\+Ex\+::\+Delete\+Item (\begin{DoxyParamCaption}\item[{int}]{n\+Item }\end{DoxyParamCaption})}
+
+
+
+Removes a single item from the control. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em n\+Item} & The index of the item to remove. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+TRUE if the item was successfully removed. 
+\end{DoxyReturn}
+\Hypertarget{classCMathListCtrlEx_a67e654caaaa9758bf72cc506112ea0fe}\label{classCMathListCtrlEx_a67e654caaaa9758bf72cc506112ea0fe} 
+\index{CMathListCtrlEx@{CMathListCtrlEx}!EnsureSubItemVisible@{EnsureSubItemVisible}}
+\index{EnsureSubItemVisible@{EnsureSubItemVisible}!CMathListCtrlEx@{CMathListCtrlEx}}
+\doxysubsubsection{\texorpdfstring{EnsureSubItemVisible()}{EnsureSubItemVisible()}}
+{\footnotesize\ttfamily BOOL CMath\+List\+Ctrl\+Ex\+::\+Ensure\+Sub\+Item\+Visible (\begin{DoxyParamCaption}\item[{int}]{n\+Item,  }\item[{int}]{n\+Sub\+Item,  }\item[{CRect \texorpdfstring{$\ast$}{*}}]{p\+Rect = {\ttfamily NULL} }\end{DoxyParamCaption})}
+
+
+
+Ensures that a specific subitem is visible. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em n\+Item} & The index of the item. \\
+\hline
+{\em n\+Sub\+Item} & The index of the subitem. \\
+\hline
+{\em p\+Rect} & The rectangle representing the area of the subitem. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+TRUE if the subitem is successfully made visible. 
+\end{DoxyReturn}
+\Hypertarget{classCMathListCtrlEx_af07825f744d4d16b6466cec414d02231}\label{classCMathListCtrlEx_af07825f744d4d16b6466cec414d02231} 
+\index{CMathListCtrlEx@{CMathListCtrlEx}!FindItem@{FindItem}}
+\index{FindItem@{FindItem}!CMathListCtrlEx@{CMathListCtrlEx}}
+\doxysubsubsection{\texorpdfstring{FindItem()}{FindItem()}}
+{\footnotesize\ttfamily int CMath\+List\+Ctrl\+Ex\+::\+Find\+Item (\begin{DoxyParamCaption}\item[{LVFINDINFO \texorpdfstring{$\ast$}{*}}]{p\+Find\+Info,  }\item[{int}]{n\+Start = {\ttfamily -\/1} }\end{DoxyParamCaption}) const}
+
+
+
+Finds an item that matches the specified search criteria. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+Find\+Info} & The search criteria. \\
+\hline
+{\em n\+Start} & The starting index for the search. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The index of the found item, or -\/1 if no item matches. 
+\end{DoxyReturn}
+\Hypertarget{classCMathListCtrlEx_a7eeb1055919ab8a7a18d2d6f16df9c2f}\label{classCMathListCtrlEx_a7eeb1055919ab8a7a18d2d6f16df9c2f} 
+\index{CMathListCtrlEx@{CMathListCtrlEx}!GetItemData@{GetItemData}}
+\index{GetItemData@{GetItemData}!CMathListCtrlEx@{CMathListCtrlEx}}
+\doxysubsubsection{\texorpdfstring{GetItemData()}{GetItemData()}}
+{\footnotesize\ttfamily DWORD\+\_\+\+PTR CMath\+List\+Ctrl\+Ex\+::\+Get\+Item\+Data (\begin{DoxyParamCaption}\item[{int}]{n\+Item }\end{DoxyParamCaption}) const}
+
+
+
+Retrieves the data (l\+Param) associated with a particular item. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em n\+Item} & The index of the item. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The item data (l\+Param). 
+\end{DoxyReturn}
+\Hypertarget{classCMathListCtrlEx_a1294eaab42ab076f77363fb86d4ebf0e}\label{classCMathListCtrlEx_a1294eaab42ab076f77363fb86d4ebf0e} 
+\index{CMathListCtrlEx@{CMathListCtrlEx}!GetItemDataInternal@{GetItemDataInternal}}
+\index{GetItemDataInternal@{GetItemDataInternal}!CMathListCtrlEx@{CMathListCtrlEx}}
+\doxysubsubsection{\texorpdfstring{GetItemDataInternal()}{GetItemDataInternal()}}
+{\footnotesize\ttfamily DWORD\+\_\+\+PTR CMath\+List\+Ctrl\+Ex\+::\+Get\+Item\+Data\+Internal (\begin{DoxyParamCaption}\item[{int}]{n\+Item }\end{DoxyParamCaption}) const}
+
+
+
+Retrieves the internal data associated with a particular item. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em n\+Item} & The index of the item. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The item data (l\+Param). 
+\end{DoxyReturn}
+\Hypertarget{classCMathListCtrlEx_a64e66b3f1542892fd3b48eec26a19b1a}\label{classCMathListCtrlEx_a64e66b3f1542892fd3b48eec26a19b1a} 
+\index{CMathListCtrlEx@{CMathListCtrlEx}!InsertItem@{InsertItem}}
+\index{InsertItem@{InsertItem}!CMathListCtrlEx@{CMathListCtrlEx}}
+\doxysubsubsection{\texorpdfstring{InsertItem()}{InsertItem()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily int CMath\+List\+Ctrl\+Ex\+::\+Insert\+Item (\begin{DoxyParamCaption}\item[{const LVITEM \texorpdfstring{$\ast$}{*}}]{p\+Item }\end{DoxyParamCaption})}
+
+
+
+Adds an item to the control. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+Item} & The item to insert. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The index of the newly inserted item. 
+\end{DoxyReturn}
+\Hypertarget{classCMathListCtrlEx_a185c03be18a1373003ad64f6e4f363a6}\label{classCMathListCtrlEx_a185c03be18a1373003ad64f6e4f363a6} 
+\index{CMathListCtrlEx@{CMathListCtrlEx}!InsertItem@{InsertItem}}
+\index{InsertItem@{InsertItem}!CMathListCtrlEx@{CMathListCtrlEx}}
+\doxysubsubsection{\texorpdfstring{InsertItem()}{InsertItem()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily int CMath\+List\+Ctrl\+Ex\+::\+Insert\+Item (\begin{DoxyParamCaption}\item[{int}]{n\+Item,  }\item[{LPCTSTR}]{lpsz\+Item }\end{DoxyParamCaption})}
+
+
+
+Adds an item to the control with a specified index and label. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em n\+Item} & The index of the item. \\
+\hline
+{\em lpsz\+Item} & The label of the item. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The index of the newly inserted item. 
+\end{DoxyReturn}
+\Hypertarget{classCMathListCtrlEx_a16df384b4e677ba923daffd594f6726d}\label{classCMathListCtrlEx_a16df384b4e677ba923daffd594f6726d} 
+\index{CMathListCtrlEx@{CMathListCtrlEx}!InsertItem@{InsertItem}}
+\index{InsertItem@{InsertItem}!CMathListCtrlEx@{CMathListCtrlEx}}
+\doxysubsubsection{\texorpdfstring{InsertItem()}{InsertItem()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily int CMath\+List\+Ctrl\+Ex\+::\+Insert\+Item (\begin{DoxyParamCaption}\item[{int}]{n\+Item,  }\item[{LPCTSTR}]{lpsz\+Item,  }\item[{int}]{n\+Image }\end{DoxyParamCaption})}
+
+
+
+Adds an item to the control with a specified index, label, and image index. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em n\+Item} & The index of the item. \\
+\hline
+{\em lpsz\+Item} & The label of the item. \\
+\hline
+{\em n\+Image} & The index of the image associated with the item. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The index of the newly inserted item. 
+\end{DoxyReturn}
+\Hypertarget{classCMathListCtrlEx_aef33b500107e99fc94d42464eeb98cd0}\label{classCMathListCtrlEx_aef33b500107e99fc94d42464eeb98cd0} 
+\index{CMathListCtrlEx@{CMathListCtrlEx}!SetItemData@{SetItemData}}
+\index{SetItemData@{SetItemData}!CMathListCtrlEx@{CMathListCtrlEx}}
+\doxysubsubsection{\texorpdfstring{SetItemData()}{SetItemData()}}
+{\footnotesize\ttfamily BOOL CMath\+List\+Ctrl\+Ex\+::\+Set\+Item\+Data (\begin{DoxyParamCaption}\item[{int}]{n\+Item,  }\item[{DWORD\+\_\+\+PTR}]{dw\+Data }\end{DoxyParamCaption})}
+
+
+
+Sets the data (l\+Param) associated with a particular item. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em n\+Item} & The index of the item. \\
+\hline
+{\em dw\+Data} & The data to set. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+TRUE if the data was successfully set. 
+\end{DoxyReturn}
+\Hypertarget{classCMathListCtrlEx_a8674737e1538d17fc230147a80fdc330}\label{classCMathListCtrlEx_a8674737e1538d17fc230147a80fdc330} 
+\index{CMathListCtrlEx@{CMathListCtrlEx}!SortItems@{SortItems}}
+\index{SortItems@{SortItems}!CMathListCtrlEx@{CMathListCtrlEx}}
+\doxysubsubsection{\texorpdfstring{SortItems()}{SortItems()}}
+{\footnotesize\ttfamily BOOL CMath\+List\+Ctrl\+Ex\+::\+Sort\+Items (\begin{DoxyParamCaption}\item[{PFNLVCOMPARE}]{pfn\+Compare,  }\item[{DWORD\+\_\+\+PTR}]{dw\+Data }\end{DoxyParamCaption})}
+
+
+
+Sorts the items in the control using a custom comparison function. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pfn\+Compare} & The custom comparison function. \\
+\hline
+{\em dw\+Data} & Additional data to pass to the comparison function. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+TRUE if the sorting was successful. 
+\end{DoxyReturn}
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{classCMathListCtrlEx_a85bb75033abfa3a70edc3f2d02e482dd}\label{classCMathListCtrlEx_a85bb75033abfa3a70edc3f2d02e482dd} 
+\index{CMathListCtrlEx@{CMathListCtrlEx}!m\_arrCellInfo@{m\_arrCellInfo}}
+\index{m\_arrCellInfo@{m\_arrCellInfo}!CMathListCtrlEx@{CMathListCtrlEx}}
+\doxysubsubsection{\texorpdfstring{m\_arrCellInfo}{m\_arrCellInfo}}
+{\footnotesize\ttfamily CArray$<$\mbox{\hyperlink{structCMathListCtrlEx_1_1CellInfo}{Cell\+Info}}$>$ CMath\+List\+Ctrl\+Ex\+::m\+\_\+arr\+Cell\+Info\hspace{0.3cm}{\ttfamily [protected]}}
+
+Array to store cell information for each item and subitem. \Hypertarget{classCMathListCtrlEx_a1a5697c4eaef6ab979e8bf7046f41834}\label{classCMathListCtrlEx_a1a5697c4eaef6ab979e8bf7046f41834} 
+\index{CMathListCtrlEx@{CMathListCtrlEx}!m\_oLock@{m\_oLock}}
+\index{m\_oLock@{m\_oLock}!CMathListCtrlEx@{CMathListCtrlEx}}
+\doxysubsubsection{\texorpdfstring{m\_oLock}{m\_oLock}}
+{\footnotesize\ttfamily CCritical\+Section CMath\+List\+Ctrl\+Ex\+::m\+\_\+o\+Lock\hspace{0.3cm}{\ttfamily [protected]}}
+
+Critical section for thread-\/safety. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Math\+List\+Ctrl\+Ex.\+h\item 
+Math\+List\+Ctrl\+Ex.\+cpp\end{DoxyCompactItemize}

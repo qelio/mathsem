@@ -1,0 +1,50 @@
+\doxysection{Semantic\+String.\+h}
+\hypertarget{SemanticString_8h_source}{}\label{SemanticString_8h_source}\mbox{\hyperlink{SemanticString_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ "{}common\_functions.h"{}}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ "{}Formula.h"{}}}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00015\ \textcolor{keyword}{enum}\ \mbox{\hyperlink{SemanticString_8h_ad85f24400d7401cab45c6b5c3cba6758}{MathStyle}}\ \{}
+\DoxyCodeLine{00016\ \ \ \ \ \mbox{\hyperlink{SemanticString_8h_ad85f24400d7401cab45c6b5c3cba6758aaf4a398ee9d09645b22790df5f61ce02}{NONE\_MATHSTYLE}}\ =\ 0,\ \ }
+\DoxyCodeLine{00017\ \ \ \ \ \mbox{\hyperlink{SemanticString_8h_ad85f24400d7401cab45c6b5c3cba6758a2038244af313559108dfaac18b1bcf38}{LOW\_MATHINDEX}}\ =\ 1,\ \ \ }
+\DoxyCodeLine{00018\ \ \ \ \ \mbox{\hyperlink{SemanticString_8h_ad85f24400d7401cab45c6b5c3cba6758ae89b1b59419fe6813f68556d2c1d79f9}{HIGH\_MATHINDEX}}\ =\ 2,\ \ }
+\DoxyCodeLine{00019\ \ \ \ \ \mbox{\hyperlink{SemanticString_8h_ad85f24400d7401cab45c6b5c3cba6758a9ec7ceecb5ca461d0bf89bed0042e412}{SYMBOL\_TYPEFACE}}\ =\ 3\ \ }
+\DoxyCodeLine{00020\ \};}
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00029\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classSemanticString}{SemanticString}}}
+\DoxyCodeLine{00030\ \{}
+\DoxyCodeLine{00031\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00035\ \ \ \ \ \mbox{\hyperlink{classSemanticString_a72e8848189c00b23dc45f0232dcb004c}{SemanticString}}();}
+\DoxyCodeLine{00036\ }
+\DoxyCodeLine{00040\ \ \ \ \ \mbox{\hyperlink{classSemanticString_ac6bed5344138462122522dd096e461fe}{\string~SemanticString}}();}
+\DoxyCodeLine{00041\ }
+\DoxyCodeLine{00052\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classSemanticString_a3c7ef303d3bbec278736b4a072fae7f6}{PrepareSubItemData}}(tstring\&\ tstr,\ \textcolor{keywordtype}{bool}\ forWordExport\ =\ \textcolor{keyword}{false});}
+\DoxyCodeLine{00053\ }
+\DoxyCodeLine{00065\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classSemanticString_a846d6ea683298aa4ad41a5f352503036}{DrawItem}}(CDC\&\ dc,\ CRect\&\ rectSubItem,\ CFont*\ m\_fSymbol,\ CFont*\ m\_fIndexes);}
+\DoxyCodeLine{00066\ }
+\DoxyCodeLine{00067\ \ \ \ \ \textcolor{comment}{//\ Additional\ methods\ and\ members\ can\ be\ added\ here...}}
+\DoxyCodeLine{00068\ }
+\DoxyCodeLine{00069\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00076\ \textcolor{preprocessor}{\#ifdef\ \_UNICODE}}
+\DoxyCodeLine{00077\ \ \ \ \ WCHAR\ tchars[256];}
+\DoxyCodeLine{00078\ \textcolor{preprocessor}{\#else}}
+\DoxyCodeLine{00079\ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{char}\ tchars[256];}
+\DoxyCodeLine{00080\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00081\ }
+\DoxyCodeLine{00087\ \ \ \ \ \textcolor{keywordtype}{int}\ symbolics[256];}
+\DoxyCodeLine{00088\ }
+\DoxyCodeLine{00092\ \ \ \ \ \textcolor{keywordtype}{int}\ count;}
+\DoxyCodeLine{00093\ }
+\DoxyCodeLine{00099\ \ \ \ \ \mbox{\hyperlink{classEntityBase}{EntityBase}}*\ formula;}
+\DoxyCodeLine{00100\ }
+\DoxyCodeLine{00104\ \ \ \ \ tstring*\ text;}
+\DoxyCodeLine{00105\ }
+\DoxyCodeLine{00111\ \ \ \ \ CSize\ size;}
+\DoxyCodeLine{00112\ }
+\DoxyCodeLine{00113\ \ \ \ \ \mbox{\hyperlink{classSemanticString}{SemanticString}}\ operator=(\mbox{\hyperlink{classSemanticString}{SemanticString}}\ \&str);\ \textcolor{comment}{//\ {\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}}}
+\DoxyCodeLine{00114\ \};}
+
+\end{DoxyCode}

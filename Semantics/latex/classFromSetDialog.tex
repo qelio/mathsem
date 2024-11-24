@@ -1,0 +1,135 @@
+\doxysection{From\+Set\+Dialog Class Reference}
+\hypertarget{classFromSetDialog}{}\label{classFromSetDialog}\index{FromSetDialog@{FromSetDialog}}
+
+
+Dialog for managing and selecting sets of formulas and entities.  
+
+
+
+
+{\ttfamily \#include $<$From\+Set\+Dialog.\+h$>$}
+
+
+
+Inheritance diagram for From\+Set\+Dialog\+:
+% FIG 0
+
+
+Collaboration diagram for From\+Set\+Dialog\+:
+% FIG 1
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classFromSetDialog_a98be5c09e1c67118e8a6aa1c93f0c999}{From\+Set\+Dialog}} (CWnd \texorpdfstring{$\ast$}{*}p\+Parent=NULL)
+\begin{DoxyCompactList}\small\item\em Constructor for the \doxylink{classFromSetDialog}{From\+Set\+Dialog} class. \end{DoxyCompactList}\item 
+\Hypertarget{classFromSetDialog_a1e61d963df7b52d550904a73e4a7d7f1}\label{classFromSetDialog_a1e61d963df7b52d550904a73e4a7d7f1} 
+virtual {\bfseries \texorpdfstring{$\sim$}{\string~}\+From\+Set\+Dialog} ()
+\begin{DoxyCompactList}\small\item\em Destructor for the \doxylink{classFromSetDialog}{From\+Set\+Dialog} class. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classFromSetDialog_a0002d4cb34a720e7054693b785bced37}{Do\+Data\+Exchange}} (CData\+Exchange \texorpdfstring{$\ast$}{*}p\+DX)
+\begin{DoxyCompactList}\small\item\em Dialog Data Exchange function for initializing the dialog. \end{DoxyCompactList}\item 
+virtual BOOL \mbox{\hyperlink{classFromSetDialog_a87d58199a39689f1b2914f9eda672b71}{On\+Init\+Dialog}} ()
+\begin{DoxyCompactList}\small\item\em Initializes the dialog. This function is automatically called when the dialog is created. \end{DoxyCompactList}\item 
+\Hypertarget{classFromSetDialog_ad04171e7bc5812e97bb04b93acbbd20f}\label{classFromSetDialog_ad04171e7bc5812e97bb04b93acbbd20f} 
+afx\+\_\+msg void {\bfseries On\+Lbn\+Selchange\+Setlist1} ()
+\begin{DoxyCompactList}\small\item\em Handler for list box selection change. This function is called when the selection in the list box changes. \end{DoxyCompactList}\item 
+\Hypertarget{classFromSetDialog_ae2412bb7a441b2a7be194506bf55b68f}\label{classFromSetDialog_ae2412bb7a441b2a7be194506bf55b68f} 
+afx\+\_\+msg void {\bfseries On\+Bn\+Clicked\+Ok} ()
+\begin{DoxyCompactList}\small\item\em Button OK click handler. This function is called when the OK button is clicked, typically to confirm the selection and close the dialog. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classFromSetDialog_addaa05904893be79fbbf527dd760110c}{set\+Entities}} (vector$<$ \mbox{\hyperlink{classEntityBase}{Entity\+Base}} \texorpdfstring{$\ast$}{*} $>$ \texorpdfstring{$\ast$}{*}all\+\_\+entities\+\_\+=NULL)
+\begin{DoxyCompactList}\small\item\em Sets the vector of \doxylink{classEntityBase}{Entity\+Base} objects to be used in the dialog. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classScientificListBox}{Scientific\+List\+Box}} \mbox{\hyperlink{classFromSetDialog_a417c19fc70bdd0f6cdef73cf013e5f69}{m\+\_\+\+List\+Box\+Source}}
+\begin{DoxyCompactList}\small\item\em Message map for handling Windows messages related to the dialog. \end{DoxyCompactList}\item 
+\Hypertarget{classFromSetDialog_a6476c239147297177a6b10218d41d968}\label{classFromSetDialog_a6476c239147297177a6b10218d41d968} 
+CButton {\bfseries m\+\_\+\+Button\+OK}
+\begin{DoxyCompactList}\small\item\em OK button control for confirming the selection. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Dialog for managing and selecting sets of formulas and entities. 
+
+This dialog allows users to view and select formula sets and entities from the provided lists. It is typically used in applications that deal with mathematical formulas or entities related to formula sets. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classFromSetDialog_a98be5c09e1c67118e8a6aa1c93f0c999}\label{classFromSetDialog_a98be5c09e1c67118e8a6aa1c93f0c999} 
+\index{FromSetDialog@{FromSetDialog}!FromSetDialog@{FromSetDialog}}
+\index{FromSetDialog@{FromSetDialog}!FromSetDialog@{FromSetDialog}}
+\doxysubsubsection{\texorpdfstring{FromSetDialog()}{FromSetDialog()}}
+{\footnotesize\ttfamily From\+Set\+Dialog\+::\+From\+Set\+Dialog (\begin{DoxyParamCaption}\item[{CWnd \texorpdfstring{$\ast$}{*}}]{p\+Parent = {\ttfamily NULL} }\end{DoxyParamCaption})}
+
+
+
+Constructor for the \doxylink{classFromSetDialog}{From\+Set\+Dialog} class. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+Parent} & Pointer to the parent window (default is NULL). \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classFromSetDialog_a0002d4cb34a720e7054693b785bced37}\label{classFromSetDialog_a0002d4cb34a720e7054693b785bced37} 
+\index{FromSetDialog@{FromSetDialog}!DoDataExchange@{DoDataExchange}}
+\index{DoDataExchange@{DoDataExchange}!FromSetDialog@{FromSetDialog}}
+\doxysubsubsection{\texorpdfstring{DoDataExchange()}{DoDataExchange()}}
+{\footnotesize\ttfamily void From\+Set\+Dialog\+::\+Do\+Data\+Exchange (\begin{DoxyParamCaption}\item[{CData\+Exchange \texorpdfstring{$\ast$}{*}}]{p\+DX }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Dialog Data Exchange function for initializing the dialog. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+DX} & Data exchange object. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classFromSetDialog_a87d58199a39689f1b2914f9eda672b71}\label{classFromSetDialog_a87d58199a39689f1b2914f9eda672b71} 
+\index{FromSetDialog@{FromSetDialog}!OnInitDialog@{OnInitDialog}}
+\index{OnInitDialog@{OnInitDialog}!FromSetDialog@{FromSetDialog}}
+\doxysubsubsection{\texorpdfstring{OnInitDialog()}{OnInitDialog()}}
+{\footnotesize\ttfamily BOOL From\+Set\+Dialog\+::\+On\+Init\+Dialog (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Initializes the dialog. This function is automatically called when the dialog is created. 
+
+\begin{DoxyReturn}{Returns}
+TRUE if initialization is successful, FALSE otherwise. 
+\end{DoxyReturn}
+\Hypertarget{classFromSetDialog_addaa05904893be79fbbf527dd760110c}\label{classFromSetDialog_addaa05904893be79fbbf527dd760110c} 
+\index{FromSetDialog@{FromSetDialog}!setEntities@{setEntities}}
+\index{setEntities@{setEntities}!FromSetDialog@{FromSetDialog}}
+\doxysubsubsection{\texorpdfstring{setEntities()}{setEntities()}}
+{\footnotesize\ttfamily void From\+Set\+Dialog\+::set\+Entities (\begin{DoxyParamCaption}\item[{vector$<$ \mbox{\hyperlink{classEntityBase}{Entity\+Base}} \texorpdfstring{$\ast$}{*} $>$ \texorpdfstring{$\ast$}{*}}]{all\+\_\+entities\+\_\+ = {\ttfamily NULL} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Sets the vector of \doxylink{classEntityBase}{Entity\+Base} objects to be used in the dialog. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em all\+\_\+entities\+\_\+} & Pointer to a vector of \doxylink{classEntityBase}{Entity\+Base} objects. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{classFromSetDialog_a417c19fc70bdd0f6cdef73cf013e5f69}\label{classFromSetDialog_a417c19fc70bdd0f6cdef73cf013e5f69} 
+\index{FromSetDialog@{FromSetDialog}!m\_ListBoxSource@{m\_ListBoxSource}}
+\index{m\_ListBoxSource@{m\_ListBoxSource}!FromSetDialog@{FromSetDialog}}
+\doxysubsubsection{\texorpdfstring{m\_ListBoxSource}{m\_ListBoxSource}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classScientificListBox}{Scientific\+List\+Box}} From\+Set\+Dialog\+::m\+\_\+\+List\+Box\+Source\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Message map for handling Windows messages related to the dialog. 
+
+List box control for displaying the available sets or entities. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+From\+Set\+Dialog.\+h\item 
+From\+Set\+Dialog.\+cpp\end{DoxyCompactItemize}

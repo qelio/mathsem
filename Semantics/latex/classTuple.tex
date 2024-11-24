@@ -1,0 +1,268 @@
+\doxysection{Tuple Class Reference}
+\hypertarget{classTuple}{}\label{classTuple}\index{Tuple@{Tuple}}
+
+
+Inheritance diagram for Tuple\+:
+% FIG 0
+
+
+Collaboration diagram for Tuple\+:
+% FIG 1
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classTuple_aaa3d1b792144c7f14b099ddf5d575d63}\label{classTuple_aaa3d1b792144c7f14b099ddf5d575d63} 
+{\bfseries Tuple} (void)
+\begin{DoxyCompactList}\small\item\em Default constructor for \doxylink{classTuple}{Tuple}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classTuple_a5fa5a7669f245b88b3917e5fcb38518f}{Tuple}} (\mbox{\hyperlink{classEntityVariable}{Entity\+Variable}} \&ev1, \mbox{\hyperlink{classEntityVariable}{Entity\+Variable}} \&set)
+\begin{DoxyCompactList}\small\item\em Constructor to create a \doxylink{classTuple}{Tuple} with a set of Entity\+Variables. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classTuple_abb52afb53761c75666b5e8d97aabf446}{Tuple}} (\mbox{\hyperlink{classEntityVariable}{Entity\+Variable}} \&ev1, \mbox{\hyperlink{classEntityVariable}{Entity\+Variable}} \&ev2, \mbox{\hyperlink{classEntityVariable}{Entity\+Variable}} \&set)
+\begin{DoxyCompactList}\small\item\em Constructor to create a \doxylink{classTuple}{Tuple} with two Entity\+Variables and a set. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classTuple_a63e52f5a5717e4f447784cfe2682a8c6}{Tuple}} (vector$<$ \mbox{\hyperlink{classEntityVariable}{Entity\+Variable}} \texorpdfstring{$\ast$}{*} $>$ \texorpdfstring{$\ast$}{*}pev, \mbox{\hyperlink{classEntityVariable}{Entity\+Variable}} \&set)
+\begin{DoxyCompactList}\small\item\em Constructor to create a \doxylink{classTuple}{Tuple} from a vector of Entity\+Variables and a set. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classTuple_a995eee44c818630a410314e114948623}{Tuple}} (const \mbox{\hyperlink{classCFormulaItem}{CFormula\+Item}} \&fi)
+\begin{DoxyCompactList}\small\item\em Constructor to create a \doxylink{classTuple}{Tuple} from a \doxylink{classCFormulaItem}{CFormula\+Item}. \end{DoxyCompactList}\item 
+\Hypertarget{classTuple_aad6937db049398362dd5242a17a46547}\label{classTuple_aad6937db049398362dd5242a17a46547} 
+{\bfseries \texorpdfstring{$\sim$}{\string~}\+Tuple} (void)
+\begin{DoxyCompactList}\small\item\em Destructor for \doxylink{classTuple}{Tuple}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classTuple_a7bc6cf60a9a85dfa29f84dfd35676b9d}{Set\+Level}} (int l)
+\begin{DoxyCompactList}\small\item\em Sets the level for the \doxylink{classTuple}{Tuple}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classTuple_a5883a02b1e20e986d77c26a85b4b0982}{Set\+Tuple\+Text}} (vector$<$ \mbox{\hyperlink{classEntityVariable}{Entity\+Variable}} \texorpdfstring{$\ast$}{*} $>$ \texorpdfstring{$\ast$}{*}depending=nullptr, tstring \texorpdfstring{$\ast$}{*}ptvars=nullptr)
+\begin{DoxyCompactList}\small\item\em Sets the text for the \doxylink{classTuple}{Tuple} based on the provided variables. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classTuple_a0cf3514bd1de0776ada0e19000f694c5}{Set\+Tuple\+Text}} (tstring \&tstr)
+\begin{DoxyCompactList}\small\item\em Sets the text for the \doxylink{classTuple}{Tuple} directly from a string. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classTuple_a3bfd643673cdaefc0efd647eb1f607de}{Set\+Tuple\+Label}} (tstring \&tstr)
+\begin{DoxyCompactList}\small\item\em Sets the label for the \doxylink{classTuple}{Tuple} from a string. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classTuple_ac134fc25c167cc0c9b5f82ff836f1e8d}{compare}} (const \mbox{\hyperlink{classEntityVariable}{Entity\+Variable}} \&ev)
+\begin{DoxyCompactList}\small\item\em Compares the \doxylink{classTuple}{Tuple} to an \doxylink{classEntityVariable}{Entity\+Variable}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classFormula}{Formula}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classFormula_a73f44866ccb6f67986bc1aafa5c19375}{Formula}} (void)
+\item 
+\mbox{\hyperlink{classFormula_a3b15cad2eac08bc53d7186940f5018d7}{\texorpdfstring{$\sim$}{\string~}\+Formula}} (void)
+\item 
+\mbox{\hyperlink{classFormula_a5667650f976ad5281093dcbba1aa3c0b}{Formula}} (const \mbox{\hyperlink{classCFormulaItem}{CFormula\+Item}} \&)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classEntityBase}{Entity\+Base}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classEntityBase_a27bec3b7dfba14d691809b1f00a9dcb6}{Entity\+Base}} (void)
+\item 
+\mbox{\hyperlink{classEntityBase_a30e418726b63d4ceeabb66694442f670}{\texorpdfstring{$\sim$}{\string~}\+Entity\+Base}} (void)
+\item 
+vector$<$ \mbox{\hyperlink{classEntityVariable}{Entity\+Variable}} \texorpdfstring{$\ast$}{*} $>$ \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classEntityBase_a0e91a1c0e1505076892420fb220613db}{get\+Free\+Variables}} ()
+\item 
+vector$<$ \mbox{\hyperlink{classEntityVariable}{Entity\+Variable}} \texorpdfstring{$\ast$}{*} $>$ \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classEntityBase_a6d97330c6d4baa832f7b14e714883912}{get\+Linked\+Variables}} ()
+\item 
+tstring \& \mbox{\hyperlink{classEntityBase_a214bd3f0cf94abbcbfaff08c9ac4e1f5}{get\+Text}} ()
+\item 
+tstring \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classEntityBase_aa09e55fa4507ce954fa7679cb2ef3be5}{get\+Description}} ()
+\item 
+tstring \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classEntityBase_a22143b2bfde1b9936eaecbd45a1d30cd}{get\+Add\+Ons}} ()
+\item 
+void \mbox{\hyperlink{classEntityBase_acb5e136b1304a5e34477c788aee7c0d2}{Set\+Text}} (LPCTSTR lpctstr)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Public Attributes inherited from \mbox{\hyperlink{classFormula}{Formula}}}
+\begin{DoxyCompactItemize}
+\item 
+vector$<$ Parent\+Link \texorpdfstring{$\ast$}{*} $>$ {\bfseries parents}
+\begin{DoxyCompactList}\small\item\em List of parent links to other formulas. \end{DoxyCompactList}\item 
+vector$<$ \mbox{\hyperlink{classEntityVariable}{Entity\+Variable}} \texorpdfstring{$\ast$}{*} $>$ {\bfseries possible\+Variables}
+\begin{DoxyCompactList}\small\item\em List of possible variables in the formula. \end{DoxyCompactList}\item 
+vector$<$ \mbox{\hyperlink{classFormula}{Formula}} \texorpdfstring{$\ast$}{*} $>$ {\bfseries possible\+Formulas}
+\begin{DoxyCompactList}\small\item\em List of possible formulas for further relationships. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{classFormula}{Formula}}}
+\begin{DoxyCompactItemize}
+\item 
+Formula\+\_\+\+Feature {\bfseries feature}
+\begin{DoxyCompactList}\small\item\em Feature of the formula. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{classEntityBase}{Entity\+Base}}}
+\begin{DoxyCompactItemize}
+\item 
+vector$<$ \mbox{\hyperlink{classEntityVariable}{Entity\+Variable}} \texorpdfstring{$\ast$}{*} $>$ {\bfseries free\+Variables}
+\begin{DoxyCompactList}\small\item\em List of free variables. \end{DoxyCompactList}\item 
+vector$<$ \mbox{\hyperlink{classEntityVariable}{Entity\+Variable}} \texorpdfstring{$\ast$}{*} $>$ {\bfseries linked\+Variables}
+\begin{DoxyCompactList}\small\item\em List of linked variables. \end{DoxyCompactList}\item 
+tstring {\bfseries description}
+\begin{DoxyCompactList}\small\item\em Description of the entity. \end{DoxyCompactList}\item 
+tstring {\bfseries addons}
+\begin{DoxyCompactList}\small\item\em Addons related to the entity. \end{DoxyCompactList}\item 
+tstring {\bfseries label}
+\begin{DoxyCompactList}\small\item\em Label associated with the entity. \end{DoxyCompactList}\item 
+tstring {\bfseries text}
+\begin{DoxyCompactList}\small\item\em Text associated with the entity. \end{DoxyCompactList}\item 
+Entity\+Base\+Type {\bfseries type}
+\begin{DoxyCompactList}\small\item\em Type of the entity, from Entity\+Base\+Type enum. \end{DoxyCompactList}\item 
+tstring {\bfseries redefined\+\_\+text}
+\begin{DoxyCompactList}\small\item\em Redefined text, if any. \end{DoxyCompactList}\item 
+bool {\bfseries redefined}
+\begin{DoxyCompactList}\small\item\em Flag indicating if the entity has been redefined. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classEntityBase}{Entity\+Base}} \texorpdfstring{$\ast$}{*} {\bfseries replaced\+\_\+base}
+\begin{DoxyCompactList}\small\item\em Pointer to the replaced base entity, or nullptr. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classEntityVariable}{Entity\+Variable}} \texorpdfstring{$\ast$}{*} {\bfseries initial\+\_\+variable}
+\begin{DoxyCompactList}\small\item\em Initial variable, or nullptr. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classEntityVariable}{Entity\+Variable}} \texorpdfstring{$\ast$}{*} {\bfseries new\+\_\+variable}
+\begin{DoxyCompactList}\small\item\em New variable, or nullptr. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classTuple_a5fa5a7669f245b88b3917e5fcb38518f}\label{classTuple_a5fa5a7669f245b88b3917e5fcb38518f} 
+\index{Tuple@{Tuple}!Tuple@{Tuple}}
+\index{Tuple@{Tuple}!Tuple@{Tuple}}
+\doxysubsubsection{\texorpdfstring{Tuple()}{Tuple()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
+{\footnotesize\ttfamily Tuple\+::\+Tuple (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classEntityVariable}{Entity\+Variable}} \&}]{ev1,  }\item[{\mbox{\hyperlink{classEntityVariable}{Entity\+Variable}} \&}]{set }\end{DoxyParamCaption})}
+
+
+
+Constructor to create a \doxylink{classTuple}{Tuple} with a set of Entity\+Variables. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ev1} & First \doxylink{classEntityVariable}{Entity\+Variable} \\
+\hline
+{\em set} & The set \doxylink{classEntityVariable}{Entity\+Variable} \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classTuple_abb52afb53761c75666b5e8d97aabf446}\label{classTuple_abb52afb53761c75666b5e8d97aabf446} 
+\index{Tuple@{Tuple}!Tuple@{Tuple}}
+\index{Tuple@{Tuple}!Tuple@{Tuple}}
+\doxysubsubsection{\texorpdfstring{Tuple()}{Tuple()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
+{\footnotesize\ttfamily Tuple\+::\+Tuple (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classEntityVariable}{Entity\+Variable}} \&}]{ev1,  }\item[{\mbox{\hyperlink{classEntityVariable}{Entity\+Variable}} \&}]{ev2,  }\item[{\mbox{\hyperlink{classEntityVariable}{Entity\+Variable}} \&}]{set }\end{DoxyParamCaption})}
+
+
+
+Constructor to create a \doxylink{classTuple}{Tuple} with two Entity\+Variables and a set. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ev1} & First \doxylink{classEntityVariable}{Entity\+Variable} \\
+\hline
+{\em ev2} & Second \doxylink{classEntityVariable}{Entity\+Variable} \\
+\hline
+{\em set} & The set \doxylink{classEntityVariable}{Entity\+Variable} \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classTuple_a63e52f5a5717e4f447784cfe2682a8c6}\label{classTuple_a63e52f5a5717e4f447784cfe2682a8c6} 
+\index{Tuple@{Tuple}!Tuple@{Tuple}}
+\index{Tuple@{Tuple}!Tuple@{Tuple}}
+\doxysubsubsection{\texorpdfstring{Tuple()}{Tuple()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
+{\footnotesize\ttfamily Tuple\+::\+Tuple (\begin{DoxyParamCaption}\item[{vector$<$ \mbox{\hyperlink{classEntityVariable}{Entity\+Variable}} \texorpdfstring{$\ast$}{*} $>$ \texorpdfstring{$\ast$}{*}}]{pev,  }\item[{\mbox{\hyperlink{classEntityVariable}{Entity\+Variable}} \&}]{set }\end{DoxyParamCaption})}
+
+
+
+Constructor to create a \doxylink{classTuple}{Tuple} from a vector of Entity\+Variables and a set. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pev} & Pointer to a vector of Entity\+Variables \\
+\hline
+{\em set} & The set \doxylink{classEntityVariable}{Entity\+Variable} \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classTuple_a995eee44c818630a410314e114948623}\label{classTuple_a995eee44c818630a410314e114948623} 
+\index{Tuple@{Tuple}!Tuple@{Tuple}}
+\index{Tuple@{Tuple}!Tuple@{Tuple}}
+\doxysubsubsection{\texorpdfstring{Tuple()}{Tuple()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
+{\footnotesize\ttfamily Tuple\+::\+Tuple (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classCFormulaItem}{CFormula\+Item}} \&}]{fi }\end{DoxyParamCaption})}
+
+
+
+Constructor to create a \doxylink{classTuple}{Tuple} from a \doxylink{classCFormulaItem}{CFormula\+Item}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em fi} & The \doxylink{classCFormulaItem}{CFormula\+Item} to initialize the \doxylink{classTuple}{Tuple}. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classTuple_ac134fc25c167cc0c9b5f82ff836f1e8d}\label{classTuple_ac134fc25c167cc0c9b5f82ff836f1e8d} 
+\index{Tuple@{Tuple}!compare@{compare}}
+\index{compare@{compare}!Tuple@{Tuple}}
+\doxysubsubsection{\texorpdfstring{compare()}{compare()}}
+{\footnotesize\ttfamily bool Tuple\+::compare (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classEntityVariable}{Entity\+Variable}} \&}]{ev }\end{DoxyParamCaption})}
+
+
+
+Compares the \doxylink{classTuple}{Tuple} to an \doxylink{classEntityVariable}{Entity\+Variable}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ev} & The \doxylink{classEntityVariable}{Entity\+Variable} to compare with. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if the \doxylink{classTuple}{Tuple} matches the \doxylink{classEntityVariable}{Entity\+Variable}, false otherwise. 
+\end{DoxyReturn}
+\Hypertarget{classTuple_a7bc6cf60a9a85dfa29f84dfd35676b9d}\label{classTuple_a7bc6cf60a9a85dfa29f84dfd35676b9d} 
+\index{Tuple@{Tuple}!SetLevel@{SetLevel}}
+\index{SetLevel@{SetLevel}!Tuple@{Tuple}}
+\doxysubsubsection{\texorpdfstring{SetLevel()}{SetLevel()}}
+{\footnotesize\ttfamily void Tuple\+::\+Set\+Level (\begin{DoxyParamCaption}\item[{int}]{l }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Sets the level for the \doxylink{classTuple}{Tuple}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em l} & The level to set. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classTuple_a3bfd643673cdaefc0efd647eb1f607de}\label{classTuple_a3bfd643673cdaefc0efd647eb1f607de} 
+\index{Tuple@{Tuple}!SetTupleLabel@{SetTupleLabel}}
+\index{SetTupleLabel@{SetTupleLabel}!Tuple@{Tuple}}
+\doxysubsubsection{\texorpdfstring{SetTupleLabel()}{SetTupleLabel()}}
+{\footnotesize\ttfamily void Tuple\+::\+Set\+Tuple\+Label (\begin{DoxyParamCaption}\item[{tstring \&}]{tstr }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Sets the label for the \doxylink{classTuple}{Tuple} from a string. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em tstr} & The label string to set. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classTuple_a0cf3514bd1de0776ada0e19000f694c5}\label{classTuple_a0cf3514bd1de0776ada0e19000f694c5} 
+\index{Tuple@{Tuple}!SetTupleText@{SetTupleText}}
+\index{SetTupleText@{SetTupleText}!Tuple@{Tuple}}
+\doxysubsubsection{\texorpdfstring{SetTupleText()}{SetTupleText()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void Tuple\+::\+Set\+Tuple\+Text (\begin{DoxyParamCaption}\item[{tstring \&}]{tstr }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Sets the text for the \doxylink{classTuple}{Tuple} directly from a string. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em tstr} & The text to set. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classTuple_a5883a02b1e20e986d77c26a85b4b0982}\label{classTuple_a5883a02b1e20e986d77c26a85b4b0982} 
+\index{Tuple@{Tuple}!SetTupleText@{SetTupleText}}
+\index{SetTupleText@{SetTupleText}!Tuple@{Tuple}}
+\doxysubsubsection{\texorpdfstring{SetTupleText()}{SetTupleText()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void Tuple\+::\+Set\+Tuple\+Text (\begin{DoxyParamCaption}\item[{vector$<$ \mbox{\hyperlink{classEntityVariable}{Entity\+Variable}} \texorpdfstring{$\ast$}{*} $>$ \texorpdfstring{$\ast$}{*}}]{depending = {\ttfamily nullptr},  }\item[{tstring \texorpdfstring{$\ast$}{*}}]{ptvars = {\ttfamily nullptr} }\end{DoxyParamCaption})}
+
+
+
+Sets the text for the \doxylink{classTuple}{Tuple} based on the provided variables. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em depending} & Pointer to a vector of Entity\+Variables (optional) \\
+\hline
+{\em ptvars} & Pointer to a string of variables (optional) \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Formula.\+h\item 
+Formula.\+cpp\item 
+Item.\+cpp\end{DoxyCompactItemize}

@@ -1,0 +1,172 @@
+\doxysection{VUELink Class Reference}
+\hypertarget{classVUELink}{}\label{classVUELink}\index{VUELink@{VUELink}}
+
+
+A class representing a link between two VUE nodes in the VUE environment.  
+
+
+
+
+{\ttfamily \#include $<$VUELink.\+h$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classVUELink_a8c75c3428516787c93dc03ad6d32f808}\label{classVUELink_a8c75c3428516787c93dc03ad6d32f808} 
+{\bfseries VUELink} (void)
+\begin{DoxyCompactList}\small\item\em Default constructor for the \doxylink{classVUELink}{VUELink} class. Initializes the \doxylink{classVUELink}{VUELink} with default values. \end{DoxyCompactList}\item 
+\Hypertarget{classVUELink_ab806c1ab262952d4fbedb132c0b5d964}\label{classVUELink_ab806c1ab262952d4fbedb132c0b5d964} 
+{\bfseries \texorpdfstring{$\sim$}{\string~}\+VUELink} (void)
+\begin{DoxyCompactList}\small\item\em Destructor for the \doxylink{classVUELink}{VUELink} class. Cleans up any resources associated with the link. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classVUELink_acdd8fdbdaf8422b5593ffc230e172032}{VUELink}} (int child\+ID\+\_\+, int number\+In\+Layer\+\_\+)
+\begin{DoxyCompactList}\small\item\em Parameterized constructor for creating a \doxylink{classVUELink}{VUELink} with specified child ID and layer number. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classVUELink_abd6680320784a3d08034944831e04df1}{print}} (ostream \&os)
+\begin{DoxyCompactList}\small\item\em Prints the details of the \doxylink{classVUELink}{VUELink} to the given output stream. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classVUELink_ab416cf7a1c4e4360a693b536e307e2fb}{set\+Link}} (\mbox{\hyperlink{classVUENode}{VUENode}} \texorpdfstring{$\ast$}{*}node1, \mbox{\hyperlink{classVUENode}{VUENode}} \texorpdfstring{$\ast$}{*}node2)
+\begin{DoxyCompactList}\small\item\em Sets the link between two VUE nodes. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classVUELink_a634b711b0be3bc9901d26332645f7dc7}{set\+Link}} (\mbox{\hyperlink{classVUEFormula}{VUEFormula}} \texorpdfstring{$\ast$}{*}node1, \mbox{\hyperlink{classVUESet}{VUESet}} \texorpdfstring{$\ast$}{*}node2)
+\begin{DoxyCompactList}\small\item\em Sets the link between a VUE formula node and a VUE set node. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classVUELink_aad470ebd240937bc237c824f720fe75c}{set\+Link}} (\mbox{\hyperlink{classVUEFormula}{VUEFormula}} \texorpdfstring{$\ast$}{*}node1, \mbox{\hyperlink{classVUEFormula}{VUEFormula}} \texorpdfstring{$\ast$}{*}node2)
+\begin{DoxyCompactList}\small\item\em Sets the link between two VUE formula nodes. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classVUELink_a7454499391c2b644ce0454fb4b43c715}{set\+IDs}} (int child\+ID\+\_\+, int number\+In\+Layer\+\_\+)
+\begin{DoxyCompactList}\small\item\em Sets the child ID and layer number for the link. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classVUELink_aa59f806ea4ced9ec9a5873329d706d9c}{set\+Link\+Type}} (Entity\+Base\+Type ft)
+\begin{DoxyCompactList}\small\item\em Sets the type of the link. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classVUELink_afd34c3836cb374106e41ad7d0e0235c1}\label{classVUELink_afd34c3836cb374106e41ad7d0e0235c1} 
+vector$<$ \mbox{\hyperlink{structVUEPoint}{VUEPoint}} \texorpdfstring{$\ast$}{*} $>$ {\bfseries ctrl\+Points}
+\begin{DoxyCompactList}\small\item\em A vector of control points defining the link\textquotesingle{}s shape. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A class representing a link between two VUE nodes in the VUE environment. 
+
+This class is used to model connections between nodes, including graphical properties such as position, size, stroke style, and color. It provides methods to set and manage links between different types of entities, such as nodes and formulas. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classVUELink_acdd8fdbdaf8422b5593ffc230e172032}\label{classVUELink_acdd8fdbdaf8422b5593ffc230e172032} 
+\index{VUELink@{VUELink}!VUELink@{VUELink}}
+\index{VUELink@{VUELink}!VUELink@{VUELink}}
+\doxysubsubsection{\texorpdfstring{VUELink()}{VUELink()}}
+{\footnotesize\ttfamily VUELink\+::\+VUELink (\begin{DoxyParamCaption}\item[{int}]{child\+ID\+\_\+,  }\item[{int}]{number\+In\+Layer\+\_\+ }\end{DoxyParamCaption})}
+
+
+
+Parameterized constructor for creating a \doxylink{classVUELink}{VUELink} with specified child ID and layer number. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em child\+ID\+\_\+} & The ID of the child entity. \\
+\hline
+{\em number\+In\+Layer\+\_\+} & The layer number of the link. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classVUELink_abd6680320784a3d08034944831e04df1}\label{classVUELink_abd6680320784a3d08034944831e04df1} 
+\index{VUELink@{VUELink}!print@{print}}
+\index{print@{print}!VUELink@{VUELink}}
+\doxysubsubsection{\texorpdfstring{print()}{print()}}
+{\footnotesize\ttfamily void VUELink\+::print (\begin{DoxyParamCaption}\item[{ostream \&}]{os }\end{DoxyParamCaption})}
+
+
+
+Prints the details of the \doxylink{classVUELink}{VUELink} to the given output stream. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em os} & The output stream to which the link details will be printed. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classVUELink_a7454499391c2b644ce0454fb4b43c715}\label{classVUELink_a7454499391c2b644ce0454fb4b43c715} 
+\index{VUELink@{VUELink}!setIDs@{setIDs}}
+\index{setIDs@{setIDs}!VUELink@{VUELink}}
+\doxysubsubsection{\texorpdfstring{setIDs()}{setIDs()}}
+{\footnotesize\ttfamily void VUELink\+::set\+IDs (\begin{DoxyParamCaption}\item[{int}]{child\+ID\+\_\+,  }\item[{int}]{number\+In\+Layer\+\_\+ }\end{DoxyParamCaption})}
+
+
+
+Sets the child ID and layer number for the link. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em child\+ID\+\_\+} & The ID of the child entity. \\
+\hline
+{\em number\+In\+Layer\+\_\+} & The layer number of the link. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classVUELink_aad470ebd240937bc237c824f720fe75c}\label{classVUELink_aad470ebd240937bc237c824f720fe75c} 
+\index{VUELink@{VUELink}!setLink@{setLink}}
+\index{setLink@{setLink}!VUELink@{VUELink}}
+\doxysubsubsection{\texorpdfstring{setLink()}{setLink()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily void VUELink\+::set\+Link (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classVUEFormula}{VUEFormula}} \texorpdfstring{$\ast$}{*}}]{node1,  }\item[{\mbox{\hyperlink{classVUEFormula}{VUEFormula}} \texorpdfstring{$\ast$}{*}}]{node2 }\end{DoxyParamCaption})}
+
+
+
+Sets the link between two VUE formula nodes. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em node1} & The start node of the link (a formula). \\
+\hline
+{\em node2} & The finish node of the link (a formula). \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classVUELink_a634b711b0be3bc9901d26332645f7dc7}\label{classVUELink_a634b711b0be3bc9901d26332645f7dc7} 
+\index{VUELink@{VUELink}!setLink@{setLink}}
+\index{setLink@{setLink}!VUELink@{VUELink}}
+\doxysubsubsection{\texorpdfstring{setLink()}{setLink()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily void VUELink\+::set\+Link (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classVUEFormula}{VUEFormula}} \texorpdfstring{$\ast$}{*}}]{node1,  }\item[{\mbox{\hyperlink{classVUESet}{VUESet}} \texorpdfstring{$\ast$}{*}}]{node2 }\end{DoxyParamCaption})}
+
+
+
+Sets the link between a VUE formula node and a VUE set node. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em node1} & The start node of the link (a formula). \\
+\hline
+{\em node2} & The finish node of the link (a set). \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classVUELink_ab416cf7a1c4e4360a693b536e307e2fb}\label{classVUELink_ab416cf7a1c4e4360a693b536e307e2fb} 
+\index{VUELink@{VUELink}!setLink@{setLink}}
+\index{setLink@{setLink}!VUELink@{VUELink}}
+\doxysubsubsection{\texorpdfstring{setLink()}{setLink()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily void VUELink\+::set\+Link (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classVUENode}{VUENode}} \texorpdfstring{$\ast$}{*}}]{node1,  }\item[{\mbox{\hyperlink{classVUENode}{VUENode}} \texorpdfstring{$\ast$}{*}}]{node2 }\end{DoxyParamCaption})}
+
+
+
+Sets the link between two VUE nodes. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em node1} & The start node of the link. \\
+\hline
+{\em node2} & The finish node of the link. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classVUELink_aa59f806ea4ced9ec9a5873329d706d9c}\label{classVUELink_aa59f806ea4ced9ec9a5873329d706d9c} 
+\index{VUELink@{VUELink}!setLinkType@{setLinkType}}
+\index{setLinkType@{setLinkType}!VUELink@{VUELink}}
+\doxysubsubsection{\texorpdfstring{setLinkType()}{setLinkType()}}
+{\footnotesize\ttfamily void VUELink\+::set\+Link\+Type (\begin{DoxyParamCaption}\item[{Entity\+Base\+Type}]{ft }\end{DoxyParamCaption})}
+
+
+
+Sets the type of the link. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ft} & The entity base type that determines the link type. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+VUELink.\+h\item 
+VUELink.\+cpp\end{DoxyCompactItemize}

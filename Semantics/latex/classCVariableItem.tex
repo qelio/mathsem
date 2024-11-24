@@ -1,0 +1,98 @@
+\doxysection{CVariable\+Item Class Reference}
+\hypertarget{classCVariableItem}{}\label{classCVariableItem}\index{CVariableItem@{CVariableItem}}
+
+
+Represents a variable item used in serialization.  
+
+
+
+
+{\ttfamily \#include $<$Item.\+h$>$}
+
+
+
+Inheritance diagram for CVariable\+Item\+:
+% FIG 0
+
+
+Collaboration diagram for CVariable\+Item\+:
+% FIG 1
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classCVariableItem_af795a5fd079f5c24ad70e14fca2ee152}\label{classCVariableItem_af795a5fd079f5c24ad70e14fca2ee152} 
+{\bfseries CVariable\+Item} ()
+\begin{DoxyCompactList}\small\item\em Default constructor. \end{DoxyCompactList}\item 
+\Hypertarget{classCVariableItem_a5c4d5d54193c972f6c6a16a0fd8c893a}\label{classCVariableItem_a5c4d5d54193c972f6c6a16a0fd8c893a} 
+virtual {\bfseries \texorpdfstring{$\sim$}{\string~}\+CVariable\+Item} ()
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classCVariableItem_a5d0cc7d18c4e488e237c52bd1390ec4f}{Serialize}} (CArchive \&ar)
+\begin{DoxyCompactList}\small\item\em Serialize the variable item to or from an archive. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classCVariableItem_ac46511c6cfa6b53d27d3a6becc236c7b}{CVariable\+Item}} (\mbox{\hyperlink{classEntityVariable}{Entity\+Variable}} \&ev)
+\begin{DoxyCompactList}\small\item\em Constructor that creates a variable item from an \doxylink{classEntityVariable}{Entity\+Variable}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classCVariableItem_af34d2b41fcc3ab5403ce35a267f72e79}\label{classCVariableItem_af34d2b41fcc3ab5403ce35a267f72e79} 
+Variable\+Type {\bfseries Variable}
+\begin{DoxyCompactList}\small\item\em The type of the variable. \end{DoxyCompactList}\item 
+\Hypertarget{classCVariableItem_ae7a627d8c611bd4989f7483adf84164e}\label{classCVariableItem_ae7a627d8c611bd4989f7483adf84164e} 
+CString {\bfseries Label}
+\begin{DoxyCompactList}\small\item\em The label of the variable. \end{DoxyCompactList}\item 
+\Hypertarget{classCVariableItem_a6edf25535d73814a099966b11d3a6f42}\label{classCVariableItem_a6edf25535d73814a099966b11d3a6f42} 
+CString {\bfseries Index}
+\begin{DoxyCompactList}\small\item\em The index of the variable. \end{DoxyCompactList}\item 
+\Hypertarget{classCVariableItem_a9e9e19628f655dfc50826c2ab7b10d59}\label{classCVariableItem_a9e9e19628f655dfc50826c2ab7b10d59} 
+CString {\bfseries Text}
+\begin{DoxyCompactList}\small\item\em The initial text of the variable. \end{DoxyCompactList}\item 
+\Hypertarget{classCVariableItem_a2eecd303cb0209641e86978defa7d4dc}\label{classCVariableItem_a2eecd303cb0209641e86978defa7d4dc} 
+CString {\bfseries Level}
+\begin{DoxyCompactList}\small\item\em The level of the variable. \end{DoxyCompactList}\item 
+\Hypertarget{classCVariableItem_a0e80419208bfa19ee3f12d85b796f46d}\label{classCVariableItem_a0e80419208bfa19ee3f12d85b796f46d} 
+CString {\bfseries Redefinition}
+\begin{DoxyCompactList}\small\item\em The redefinition text of the variable. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Represents a variable item used in serialization. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classCVariableItem_ac46511c6cfa6b53d27d3a6becc236c7b}\label{classCVariableItem_ac46511c6cfa6b53d27d3a6becc236c7b} 
+\index{CVariableItem@{CVariableItem}!CVariableItem@{CVariableItem}}
+\index{CVariableItem@{CVariableItem}!CVariableItem@{CVariableItem}}
+\doxysubsubsection{\texorpdfstring{CVariableItem()}{CVariableItem()}}
+{\footnotesize\ttfamily CVariable\+Item\+::\+CVariable\+Item (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classEntityVariable}{Entity\+Variable}} \&}]{ev }\end{DoxyParamCaption})}
+
+
+
+Constructor that creates a variable item from an \doxylink{classEntityVariable}{Entity\+Variable}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ev} & The \doxylink{classEntityVariable}{Entity\+Variable} to create from. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classCVariableItem_a5d0cc7d18c4e488e237c52bd1390ec4f}\label{classCVariableItem_a5d0cc7d18c4e488e237c52bd1390ec4f} 
+\index{CVariableItem@{CVariableItem}!Serialize@{Serialize}}
+\index{Serialize@{Serialize}!CVariableItem@{CVariableItem}}
+\doxysubsubsection{\texorpdfstring{Serialize()}{Serialize()}}
+{\footnotesize\ttfamily void CVariable\+Item\+::\+Serialize (\begin{DoxyParamCaption}\item[{CArchive \&}]{ar }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Serialize the variable item to or from an archive. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ar} & The archive to serialize to or from. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{Item_8h}{Item.\+h}}\item 
+Item.\+cpp\end{DoxyCompactItemize}

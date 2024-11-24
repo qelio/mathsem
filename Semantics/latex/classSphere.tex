@@ -1,0 +1,127 @@
+\doxysection{Sphere Class Reference}
+\hypertarget{classSphere}{}\label{classSphere}\index{Sphere@{Sphere}}
+
+
+This class represents a sphere with position and radius.  
+
+
+
+
+{\ttfamily \#include $<$Sphere.\+h$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classSphere_a3e0d8e6755ac2b1a094ae539fd08fcd1}\label{classSphere_a3e0d8e6755ac2b1a094ae539fd08fcd1} 
+{\bfseries Sphere} (void)
+\begin{DoxyCompactList}\small\item\em Default constructor for the \doxylink{classSphere}{Sphere} class. Initializes the position (x, y, z) and radius (r) of the sphere to default values. \end{DoxyCompactList}\item 
+\Hypertarget{classSphere_a06751e96904eb3378d3b10043530ac4a}\label{classSphere_a06751e96904eb3378d3b10043530ac4a} 
+{\bfseries \texorpdfstring{$\sim$}{\string~}\+Sphere} (void)
+\begin{DoxyCompactList}\small\item\em Destructor for the \doxylink{classSphere}{Sphere} class. Cleans up any resources used by the \doxylink{classSphere}{Sphere} object. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classSphere_a841c7e90de5ecd588123a05267d0b455}{Sphere}} (double xc, double yc, double zc, double rc)
+\begin{DoxyCompactList}\small\item\em Parameterized constructor for the \doxylink{classSphere}{Sphere} class. Initializes the sphere with the specified position (x, y, z) and radius (r). \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{classSphere_a189785a79647c9076186872856bc1e29}{ob}} ()
+\begin{DoxyCompactList}\small\item\em Calculates the volume of the sphere. The formula used is V = (4/3) \texorpdfstring{$\ast$}{*} π \texorpdfstring{$\ast$}{*} r\texorpdfstring{$^\wedge$}{\string^}3. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{classSphere_afd9144505a379b60408305024bc35699}{pov}} ()
+\begin{DoxyCompactList}\small\item\em Calculates the surface area of the sphere. The formula used is A = 4 \texorpdfstring{$\ast$}{*} π \texorpdfstring{$\ast$}{*} r\texorpdfstring{$^\wedge$}{\string^}2. \end{DoxyCompactList}\item 
+void CALLBACK \mbox{\hyperlink{classSphere_ade25f1b1e3881f8d69db4c16ff36ac10}{resize}} (int width, int height)
+\begin{DoxyCompactList}\small\item\em Resizes the Open\+GL viewport when the window is resized. \end{DoxyCompactList}\item 
+\Hypertarget{classSphere_a4d49bc1a8f285193ff0969f948de225d}\label{classSphere_a4d49bc1a8f285193ff0969f948de225d} 
+void CALLBACK {\bfseries display} (void)
+\begin{DoxyCompactList}\small\item\em Displays the sphere in the Open\+GL context. This function is called to render the sphere using Open\+GL drawing functions. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classSphere_a5efde6a4e3449fb4e722f48ac15c079d}\label{classSphere_a5efde6a4e3449fb4e722f48ac15c079d} 
+double {\bfseries x}
+\item 
+\Hypertarget{classSphere_ab16e7876cfe61d7324c793f2a75247a2}\label{classSphere_ab16e7876cfe61d7324c793f2a75247a2} 
+double {\bfseries y}
+\item 
+\Hypertarget{classSphere_a86e4cebd5c8d9b5f808850a8c43b85d1}\label{classSphere_a86e4cebd5c8d9b5f808850a8c43b85d1} 
+double {\bfseries z}
+\begin{DoxyCompactList}\small\item\em The coordinates of the center of the sphere. \end{DoxyCompactList}\item 
+\Hypertarget{classSphere_a01759812225cacb8d53ad7cfd57c80de}\label{classSphere_a01759812225cacb8d53ad7cfd57c80de} 
+double {\bfseries r}
+\begin{DoxyCompactList}\small\item\em The radius of the sphere. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This class represents a sphere with position and radius. 
+
+The class provides methods for calculating the volume and surface area of the sphere, as well as displaying and resizing the sphere in a graphical context using Open\+GL. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classSphere_a841c7e90de5ecd588123a05267d0b455}\label{classSphere_a841c7e90de5ecd588123a05267d0b455} 
+\index{Sphere@{Sphere}!Sphere@{Sphere}}
+\index{Sphere@{Sphere}!Sphere@{Sphere}}
+\doxysubsubsection{\texorpdfstring{Sphere()}{Sphere()}}
+{\footnotesize\ttfamily Sphere\+::\+Sphere (\begin{DoxyParamCaption}\item[{double}]{xc,  }\item[{double}]{yc,  }\item[{double}]{zc,  }\item[{double}]{rc }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Parameterized constructor for the \doxylink{classSphere}{Sphere} class. Initializes the sphere with the specified position (x, y, z) and radius (r). 
+
+
+\begin{DoxyParams}{Parameters}
+{\em xc} & The x-\/coordinate of the center of the sphere. \\
+\hline
+{\em yc} & The y-\/coordinate of the center of the sphere. \\
+\hline
+{\em zc} & The z-\/coordinate of the center of the sphere. \\
+\hline
+{\em rc} & The radius of the sphere. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classSphere_a189785a79647c9076186872856bc1e29}\label{classSphere_a189785a79647c9076186872856bc1e29} 
+\index{Sphere@{Sphere}!ob@{ob}}
+\index{ob@{ob}!Sphere@{Sphere}}
+\doxysubsubsection{\texorpdfstring{ob()}{ob()}}
+{\footnotesize\ttfamily double Sphere\+::ob (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Calculates the volume of the sphere. The formula used is V = (4/3) \texorpdfstring{$\ast$}{*} π \texorpdfstring{$\ast$}{*} r\texorpdfstring{$^\wedge$}{\string^}3. 
+
+\begin{DoxyReturn}{Returns}
+The volume of the sphere. 
+\end{DoxyReturn}
+\Hypertarget{classSphere_afd9144505a379b60408305024bc35699}\label{classSphere_afd9144505a379b60408305024bc35699} 
+\index{Sphere@{Sphere}!pov@{pov}}
+\index{pov@{pov}!Sphere@{Sphere}}
+\doxysubsubsection{\texorpdfstring{pov()}{pov()}}
+{\footnotesize\ttfamily double Sphere\+::pov (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Calculates the surface area of the sphere. The formula used is A = 4 \texorpdfstring{$\ast$}{*} π \texorpdfstring{$\ast$}{*} r\texorpdfstring{$^\wedge$}{\string^}2. 
+
+\begin{DoxyReturn}{Returns}
+The surface area of the sphere. 
+\end{DoxyReturn}
+\Hypertarget{classSphere_ade25f1b1e3881f8d69db4c16ff36ac10}\label{classSphere_ade25f1b1e3881f8d69db4c16ff36ac10} 
+\index{Sphere@{Sphere}!resize@{resize}}
+\index{resize@{resize}!Sphere@{Sphere}}
+\doxysubsubsection{\texorpdfstring{resize()}{resize()}}
+{\footnotesize\ttfamily void CALLBACK Sphere\+::resize (\begin{DoxyParamCaption}\item[{int}]{width,  }\item[{int}]{height }\end{DoxyParamCaption})}
+
+
+
+Resizes the Open\+GL viewport when the window is resized. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em width} & The new width of the window. \\
+\hline
+{\em height} & The new height of the window. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Sphere.\+h\item 
+Sphere.\+cpp\end{DoxyCompactItemize}

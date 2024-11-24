@@ -1,0 +1,58 @@
+\doxysection{Summary\+Dialog.\+h}
+\hypertarget{SummaryDialog_8h_source}{}\label{SummaryDialog_8h_source}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00007\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classSummaryDialog}{SummaryDialog}}\ :\ \textcolor{keyword}{public}\ CDialog}
+\DoxyCodeLine{00008\ \{}
+\DoxyCodeLine{00009\ \ \ \ \ DECLARE\_DYNAMIC(\mbox{\hyperlink{classSummaryDialog}{SummaryDialog}})}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ \ \ \ \ }
+\DoxyCodeLine{00016\ \ \ \ \ BOOL\ OnInitDialog();}
+\DoxyCodeLine{00017\ }
+\DoxyCodeLine{00023\ \ \ \ \ vector\ <EntityBase\ *>\ *\ entities;}
+\DoxyCodeLine{00024\ }
+\DoxyCodeLine{00032\ \ \ \ \ \textcolor{keywordtype}{bool}\ IfCorrectRedefinition(\mbox{\hyperlink{classEntityBase}{EntityBase}}\ *\ pbase,\ tstring\ \&\ new\_text);}
+\DoxyCodeLine{00033\ }
+\DoxyCodeLine{00034\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00040\ \ \ \ \ \mbox{\hyperlink{classSummaryDialog}{SummaryDialog}}(CWnd*\ pParent\ =\ NULL);}
+\DoxyCodeLine{00041\ }
+\DoxyCodeLine{00046\ \ \ \ \ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{classSummaryDialog_aa0640e6c50eccfdbff43c6096cbe9c6a}{\string~SummaryDialog}}();}
+\DoxyCodeLine{00047\ }
+\DoxyCodeLine{00052\ \ \ \ \ \textcolor{keyword}{enum}\ \{\ IDD\ =\ IDD\_SUMMARYDIALOG\ \};}
+\DoxyCodeLine{00053\ }
+\DoxyCodeLine{00054\ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00060\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classSummaryDialog_a8474bcdcf6ab1b059a3224252ee9313f}{DoDataExchange}}(CDataExchange*\ pDX);}
+\DoxyCodeLine{00061\ }
+\DoxyCodeLine{00065\ \ \ \ \ DECLARE\_MESSAGE\_MAP()}
+\DoxyCodeLine{00066\ }
+\DoxyCodeLine{00067\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00072\ \ \ \ \ \mbox{\hyperlink{classCMathListCtrlEx}{CMathListCtrlEx}}\ \mbox{\hyperlink{classSummaryDialog_a9013b48d7eedc9a4a1543ef7c8c70732}{m\_list}};}
+\DoxyCodeLine{00073\ }
+\DoxyCodeLine{00078\ \ \ \ \ \mbox{\hyperlink{classCMyEdit}{CMyEdit}}\ \mbox{\hyperlink{classSummaryDialog_a15cda19cdb489dfeecf52e5e0ca01793}{m\_edit}};}
+\DoxyCodeLine{00079\ }
+\DoxyCodeLine{00085\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classSummaryDialog_a534a5ba067de848c55fbd2cc363a3e67}{setFormulas}}(vector\ <EntityBase\ *>\ *\ all\_entities\ =\ NULL);}
+\DoxyCodeLine{00086\ }
+\DoxyCodeLine{00093\ \ \ \ \ \textcolor{keyword}{virtual}\ BOOL\ \mbox{\hyperlink{classSummaryDialog_afe8c76da398db0faf7bc9d203740fc38}{PreTranslateMessage}}(MSG*\ pMsg);}
+\DoxyCodeLine{00094\ }
+\DoxyCodeLine{00099\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classSummaryDialog_a20845a95d9dd522ac2aa997011ed2eae}{OnCancel}}();}
+\DoxyCodeLine{00100\ }
+\DoxyCodeLine{00105\ \ \ \ \ \textcolor{comment}{//\ virtual\ void\ OnOK();}}
+\DoxyCodeLine{00106\ }
+\DoxyCodeLine{00113\ \ \ \ \ afx\_msg\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classSummaryDialog_a0d031bfbcb04c7fe154d259d6fefbf8b}{OnMeasureItem}}(\textcolor{keywordtype}{int}\ nIDCtl,\ LPMEASUREITEMSTRUCT\ lpMeasureItemStruct);}
+\DoxyCodeLine{00114\ }
+\DoxyCodeLine{00119\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classSummaryDialog_a7277757a8745c80481026a6d0f2c39b9}{SaveAndExit}}();}
+\DoxyCodeLine{00120\ }
+\DoxyCodeLine{00125\ \ \ \ \ afx\_msg\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classSummaryDialog_a970984865468d937f5cd19709805d476}{OnBnClickedOk}}();}
+\DoxyCodeLine{00126\ }
+\DoxyCodeLine{00131\ \ \ \ \ afx\_msg\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classSummaryDialog_a45b93da7c5b38a058e2b9437d5d6f123}{OnBnClickedPereopisanie}}();}
+\DoxyCodeLine{00132\ }
+\DoxyCodeLine{00139\ \ \ \ \ afx\_msg\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classSummaryDialog_ac7e9ce86110871b51f65086ba16fa3c5}{OnLvnOdstatechangedSummarylist}}(NMHDR\ *pNMHDR,\ LRESULT\ *pResult);}
+\DoxyCodeLine{00140\ }
+\DoxyCodeLine{00145\ \ \ \ \ CButton\ \mbox{\hyperlink{classSummaryDialog_a231e26da489e1d8b2ea1d12133ddf4bd}{m\_RedefineBtn}};}
+\DoxyCodeLine{00146\ }
+\DoxyCodeLine{00153\ \ \ \ \ afx\_msg\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classSummaryDialog_a3da2e780be64bd1413003995bdd2b04c}{OnRButtonDown}}(UINT\ nFlags,\ CPoint\ point);}
+\DoxyCodeLine{00154\ \};}
+\DoxyCodeLine{00155\ }
+\DoxyCodeLine{00165\ \textcolor{keywordtype}{void}\ ReverseDefinition(vector\ <EntityBase\ *>\ *\ temp\_entities,\ vector\ <EntityBase\ *>\ *\ entities,\ \textcolor{keywordtype}{int}\ first,\ \textcolor{keywordtype}{int}\ last,\ \mbox{\hyperlink{classSummaryDialog}{SummaryDialog}}\ *psd\ =\ \textcolor{keyword}{nullptr});}
+
+\end{DoxyCode}

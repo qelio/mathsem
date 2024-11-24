@@ -1,0 +1,129 @@
+\doxysection{CXMLArchive Class Reference}
+\hypertarget{classCXMLArchive}{}\label{classCXMLArchive}\index{CXMLArchive@{CXMLArchive}}
+
+
+A class that handles the archiving and retrieval of XML data for serialization and deserialization.  
+
+
+
+
+{\ttfamily \#include $<$XMLArchive.\+h$>$}
+
+
+
+Inheritance diagram for CXMLArchive\+:
+% FIG 0
+
+
+Collaboration diagram for CXMLArchive\+:
+% FIG 1
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classCXMLArchive_a00b8f77c8cd248c10f34c21bdb35694c}{CXMLArchive}} (const CString \&file\+Name, UINT n\+Mode, IStream \texorpdfstring{$\ast$}{*}stream\+Ptr=NULL, CDocument \texorpdfstring{$\ast$}{*}doc\+Ptr=NULL)
+\begin{DoxyCompactList}\small\item\em Constructs a \doxylink{classCXMLArchive}{CXMLArchive} object for the given XML file. \end{DoxyCompactList}\item 
+\Hypertarget{classCXMLArchive_aacfc9b25de270be337d288146984c478}\label{classCXMLArchive_aacfc9b25de270be337d288146984c478} 
+virtual {\bfseries \texorpdfstring{$\sim$}{\string~}\+CXMLArchive} ()
+\begin{DoxyCompactList}\small\item\em Destructor for \doxylink{classCXMLArchive}{CXMLArchive}, cleans up resources. \end{DoxyCompactList}\item 
+\Hypertarget{classCXMLArchive_a15af537970d67fc4ea5934751215a6dd}\label{classCXMLArchive_a15af537970d67fc4ea5934751215a6dd} 
+void {\bfseries Close} ()
+\begin{DoxyCompactList}\small\item\em Closes the archive and releases any resources. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classCXMLArchiveNode}{CXMLArchive\+Node}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classCXMLArchive_ac033e49887df13187021d705b8f4cdff}{Get\+Node}} (LPCTSTR node\+Name\+Str)
+\begin{DoxyCompactList}\small\item\em Retrieves a node by name from the XML document. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classCXMLArchive_af231b17506f5aa597c5d6a2fcbbb9335}{Remove\+Node}} (\mbox{\hyperlink{classCXMLArchiveNode}{CXMLArchive\+Node}} \texorpdfstring{$\ast$}{*}xml\+Archive\+Node\+Ptr)
+\begin{DoxyCompactList}\small\item\em Removes a node from the archive. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classCXMLArchiveNode}{CXMLArchive\+Node}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classCXMLArchive_a55d555386a169d2558ca190edb977c18}{Get\+Current\+Node}} ()
+\begin{DoxyCompactList}\small\item\em Retrieves the current node from the XML archive. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classCXMLArchive_ad65bfbfcd4e15fe8131e8281d703e716}\label{classCXMLArchive_ad65bfbfcd4e15fe8131e8281d703e716} 
+const CString {\bfseries m\+\_\+file\+Name}
+\begin{DoxyCompactList}\small\item\em The name of the XML file. \end{DoxyCompactList}\item 
+\Hypertarget{classCXMLArchive_a028630e6bb6c8415a238f057616fe1ed}\label{classCXMLArchive_a028630e6bb6c8415a238f057616fe1ed} 
+MSXML\+::\+IXMLDOMDocument\+Ptr {\bfseries m\+\_\+xml\+Doc\+Ptr}
+\begin{DoxyCompactList}\small\item\em Pointer to the MSXML DOM document interface. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A class that handles the archiving and retrieval of XML data for serialization and deserialization. 
+
+This class is responsible for managing XML documents and nodes. It provides functionality for reading and writing data to an XML file, as well as traversing and manipulating XML nodes. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classCXMLArchive_a00b8f77c8cd248c10f34c21bdb35694c}\label{classCXMLArchive_a00b8f77c8cd248c10f34c21bdb35694c} 
+\index{CXMLArchive@{CXMLArchive}!CXMLArchive@{CXMLArchive}}
+\index{CXMLArchive@{CXMLArchive}!CXMLArchive@{CXMLArchive}}
+\doxysubsubsection{\texorpdfstring{CXMLArchive()}{CXMLArchive()}}
+{\footnotesize\ttfamily CXMLArchive\+::\+CXMLArchive (\begin{DoxyParamCaption}\item[{const CString \&}]{file\+Name,  }\item[{UINT}]{n\+Mode,  }\item[{IStream \texorpdfstring{$\ast$}{*}}]{stream\+Ptr = {\ttfamily NULL},  }\item[{CDocument \texorpdfstring{$\ast$}{*}}]{doc\+Ptr = {\ttfamily NULL} }\end{DoxyParamCaption})}
+
+
+
+Constructs a \doxylink{classCXMLArchive}{CXMLArchive} object for the given XML file. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em file\+Name} & The name of the XML file to archive. \\
+\hline
+{\em n\+Mode} & The mode in which to open the archive (e.\+g., read or write). \\
+\hline
+{\em stream\+Ptr} & Optional pointer to a stream interface for stream-\/based operations. \\
+\hline
+{\em doc\+Ptr} & Optional pointer to a document for additional processing. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classCXMLArchive_a55d555386a169d2558ca190edb977c18}\label{classCXMLArchive_a55d555386a169d2558ca190edb977c18} 
+\index{CXMLArchive@{CXMLArchive}!GetCurrentNode@{GetCurrentNode}}
+\index{GetCurrentNode@{GetCurrentNode}!CXMLArchive@{CXMLArchive}}
+\doxysubsubsection{\texorpdfstring{GetCurrentNode()}{GetCurrentNode()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classCXMLArchiveNode}{CXMLArchive\+Node}} \texorpdfstring{$\ast$}{*} CXMLArchive\+::\+Get\+Current\+Node (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Retrieves the current node from the XML archive. 
+
+\begin{DoxyReturn}{Returns}
+A pointer to the current XML node. 
+\end{DoxyReturn}
+\Hypertarget{classCXMLArchive_ac033e49887df13187021d705b8f4cdff}\label{classCXMLArchive_ac033e49887df13187021d705b8f4cdff} 
+\index{CXMLArchive@{CXMLArchive}!GetNode@{GetNode}}
+\index{GetNode@{GetNode}!CXMLArchive@{CXMLArchive}}
+\doxysubsubsection{\texorpdfstring{GetNode()}{GetNode()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classCXMLArchiveNode}{CXMLArchive\+Node}} \texorpdfstring{$\ast$}{*} CXMLArchive\+::\+Get\+Node (\begin{DoxyParamCaption}\item[{LPCTSTR}]{node\+Name\+Str }\end{DoxyParamCaption})}
+
+
+
+Retrieves a node by name from the XML document. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em node\+Name\+Str} & The name of the XML node to retrieve. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A pointer to the corresponding XML node. 
+\end{DoxyReturn}
+\Hypertarget{classCXMLArchive_af231b17506f5aa597c5d6a2fcbbb9335}\label{classCXMLArchive_af231b17506f5aa597c5d6a2fcbbb9335} 
+\index{CXMLArchive@{CXMLArchive}!RemoveNode@{RemoveNode}}
+\index{RemoveNode@{RemoveNode}!CXMLArchive@{CXMLArchive}}
+\doxysubsubsection{\texorpdfstring{RemoveNode()}{RemoveNode()}}
+{\footnotesize\ttfamily void CXMLArchive\+::\+Remove\+Node (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classCXMLArchiveNode}{CXMLArchive\+Node}} \texorpdfstring{$\ast$}{*}}]{xml\+Archive\+Node\+Ptr }\end{DoxyParamCaption})}
+
+
+
+Removes a node from the archive. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em xml\+Archive\+Node\+Ptr} & A pointer to the XML node to be removed. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+XMLArchive.\+h\item 
+XMLArchive.\+cpp\end{DoxyCompactItemize}

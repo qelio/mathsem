@@ -1,0 +1,102 @@
+\doxysection{Semantics\+Dlg.\+h}
+\hypertarget{SemanticsDlg_8h_source}{}\label{SemanticsDlg_8h_source}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{//\ SemanticsDlg.h\ :\ Header\ file\ for\ the\ CSemanticsDlg\ class.}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00004\ }
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}Formula.h"{}}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ "{}ScientificStatic.h"{}}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ "{}ScientificButton.h"{}}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ "{}afxeditbrowsectrl.h"{}}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ "{}VUENode.h"{}}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ "{}VUELink.h"{}}}
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ "{}afxwin.h"{}}}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ "{}resource.h"{}}}
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00014\ \textcolor{comment}{//\ Include\ for\ libxml2\ (disabled\ for\ Windows\ compilation)}}
+\DoxyCodeLine{00015\ \textcolor{comment}{//\ \#include\ <libxml\(\backslash\)parser.h>}}
+\DoxyCodeLine{00016\ \textcolor{comment}{//\ \#include\ <libxml\(\backslash\)tree.h>}}
+\DoxyCodeLine{00017\ }
+\DoxyCodeLine{00018\ \textcolor{comment}{//\ \#define\ LIBXML\_TREE\_ENABLED}}
+\DoxyCodeLine{00019\ \textcolor{comment}{//\ \#define\ LIBXML\_OUTPUT\_ENABLED}}
+\DoxyCodeLine{00020\ }
+\DoxyCodeLine{00030\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classCSemanticsDlg}{CSemanticsDlg}}\ :\ \textcolor{keyword}{public}\ CDialogEx}
+\DoxyCodeLine{00031\ \{}
+\DoxyCodeLine{00032\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00040\ \ \ \ \ \mbox{\hyperlink{classCSemanticsDlg}{CSemanticsDlg}}(CWnd*\ pParent\ =\ NULL);}
+\DoxyCodeLine{00041\ }
+\DoxyCodeLine{00047\ \ \ \ \ \mbox{\hyperlink{classCSemanticsDlg_a0afe4028bce20d97b5d88fc0df17c2a2}{\string~CSemanticsDlg}}();}
+\DoxyCodeLine{00048\ }
+\DoxyCodeLine{00054\ \ \ \ \ \textcolor{keyword}{enum}\ \{\ IDD\ =\ IDD\_SEMANTICS\_DIALOG\ \};}
+\DoxyCodeLine{00055\ }
+\DoxyCodeLine{00056\ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00065\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classCSemanticsDlg_a93d05a264714b9362c36b8d432851f8b}{DoDataExchange}}(CDataExchange*\ pDX);}
+\DoxyCodeLine{00066\ }
+\DoxyCodeLine{00067\ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00068\ \ \ \ \ HICON\ \mbox{\hyperlink{classCSemanticsDlg_aaf17fa54aafb60e8624a67718339269c}{m\_hIcon}};\ }
+\DoxyCodeLine{00078\ \ \ \ \ \textcolor{keyword}{virtual}\ BOOL\ \mbox{\hyperlink{classCSemanticsDlg_a15dbce6bcb6de0fea78e0b437a93e80e}{OnInitDialog}}();}
+\DoxyCodeLine{00079\ }
+\DoxyCodeLine{00086\ \ \ \ \ afx\_msg\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classCSemanticsDlg_a51da682cc88b1c296dd892f96a9a26f4}{OnSysCommand}}(UINT\ nID,\ LPARAM\ lParam);}
+\DoxyCodeLine{00087\ }
+\DoxyCodeLine{00091\ \ \ \ \ afx\_msg\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classCSemanticsDlg_a8eba82bc6d3e6429b8b6fcc6493ce097}{OnPaint}}();}
+\DoxyCodeLine{00092\ }
+\DoxyCodeLine{00098\ \ \ \ \ afx\_msg\ HCURSOR\ \mbox{\hyperlink{classCSemanticsDlg_ad12e238122e3623bcdad85238a4163ef}{OnQueryDragIcon}}();}
+\DoxyCodeLine{00099\ }
+\DoxyCodeLine{00100\ \ \ \ \ DECLARE\_MESSAGE\_MAP()}
+\DoxyCodeLine{00101\ }
+\DoxyCodeLine{00102\ public:}
+\DoxyCodeLine{00106\ \ \ \ \ afx\_msg\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classCSemanticsDlg_ae15bacefd67197aae4d2217b531a7759}{OnBnClickedOk}}();}
+\DoxyCodeLine{00107\ }
+\DoxyCodeLine{00111\ \ \ \ \ afx\_msg\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classCSemanticsDlg_afa3f53d99ded3324a085eacae30bdc6d}{OnBnClickedShowallformulas3}}();}
+\DoxyCodeLine{00112\ }
+\DoxyCodeLine{00116\ \ \ \ \ afx\_msg\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classCSemanticsDlg_a7d179508f07946f237a4e1b4c5342c77}{OnBnClickedAddatomformula}}();}
+\DoxyCodeLine{00117\ }
+\DoxyCodeLine{00118\ \ \ \ \ vector\ <\mbox{\hyperlink{classEntityBase}{EntityBase}}\ *>\ \mbox{\hyperlink{classCSemanticsDlg_a2c1582d6d23d499c5d89b2dfcb24da3c}{all\_entities}};\ }
+\DoxyCodeLine{00123\ \ \ \ \ afx\_msg\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classCSemanticsDlg_a950787cc6073b9a849dd93610e9fbe70}{OnBnClickedBuildformula1}}();}
+\DoxyCodeLine{00124\ \ \ \ \ afx\_msg\ \textcolor{keywordtype}{void}\ OnBnClickedBuildformula2();}
+\DoxyCodeLine{00125\ \ \ \ \ afx\_msg\ \textcolor{keywordtype}{void}\ OnBnClickedBuildformula3();}
+\DoxyCodeLine{00126\ \ \ \ \ afx\_msg\ \textcolor{keywordtype}{void}\ OnBnClickedBuildformula4();}
+\DoxyCodeLine{00127\ \ \ \ \ afx\_msg\ \textcolor{keywordtype}{void}\ OnBnClickedBuildformula5();}
+\DoxyCodeLine{00128\ \ \ \ \ afx\_msg\ \textcolor{keywordtype}{void}\ OnBnClickedShowallformulas();}
+\DoxyCodeLine{00129\ \ \ \ \ afx\_msg\ \textcolor{keywordtype}{void}\ OnBnClickedChangeNewVariable();}
+\DoxyCodeLine{00130\ \ \ \ \ afx\_msg\ \textcolor{keywordtype}{void}\ OnBnClickedHelp();}
+\DoxyCodeLine{00131\ }
+\DoxyCodeLine{00136\ \ \ \ \ \mbox{\hyperlink{classCScientificButton}{CScientificButton}}\ \mbox{\hyperlink{classCSemanticsDlg_aff0e5b8b7b1036e684cb33ec0d4a51bd}{m\_button5}};}
+\DoxyCodeLine{00137\ \ \ \ \ \mbox{\hyperlink{classCScientificButton}{CScientificButton}}\ m\_button4;}
+\DoxyCodeLine{00138\ \ \ \ \ \mbox{\hyperlink{classCScientificButton}{CScientificButton}}\ m\_button3;}
+\DoxyCodeLine{00139\ \ \ \ \ \mbox{\hyperlink{classCScientificButton}{CScientificButton}}\ m\_button2;}
+\DoxyCodeLine{00140\ \ \ \ \ \mbox{\hyperlink{classCScientificButton}{CScientificButton}}\ m\_button1;}
+\DoxyCodeLine{00141\ \ \ \ \ \mbox{\hyperlink{classCScientificButton}{CScientificButton}}\ m\_button6;}
+\DoxyCodeLine{00142\ \ \ \ \ \mbox{\hyperlink{classCScientificButton}{CScientificButton}}\ m\_button;}
+\DoxyCodeLine{00143\ \ \ \ \ CMFCEditBrowseCtrl\ m\_fileFinder;}
+\DoxyCodeLine{00144\ }
+\DoxyCodeLine{00148\ \ \ \ \ afx\_msg\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classCSemanticsDlg_ad2216bac4d390d074438c670fb00b78f}{OnBnClickedBuildformula6}}();}
+\DoxyCodeLine{00149\ }
+\DoxyCodeLine{00153\ \ \ \ \ afx\_msg\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classCSemanticsDlg_aed0f76d04e9119172dce3add3b74cc38}{OnBnClickedExport}}();}
+\DoxyCodeLine{00154\ }
+\DoxyCodeLine{00155\ \ \ \ \ CMFCEditBrowseCtrl\ \mbox{\hyperlink{classCSemanticsDlg_acff51db4d9b625a41addd9f375bcb457}{m\_fileWordExport}};\ }
+\DoxyCodeLine{00160\ \ \ \ \ afx\_msg\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classCSemanticsDlg_a983d2dc24043d701bb77f6195f0f0e74}{OnBnClickedSavescheme}}();}
+\DoxyCodeLine{00161\ }
+\DoxyCodeLine{00165\ \ \ \ \ afx\_msg\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classCSemanticsDlg_a60390b5efcd76346acddc7ccfe2ff2d7}{OnBnClickedLoadscheme}}();}
+\DoxyCodeLine{00166\ }
+\DoxyCodeLine{00170\ \ \ \ \ afx\_msg\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classCSemanticsDlg_aff5c4a9289e5b1d191bf515c42727a45}{OnBnClickedCancel}}();}
+\DoxyCodeLine{00171\ }
+\DoxyCodeLine{00175\ \ \ \ \ afx\_msg\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classCSemanticsDlg_a1cf92b8f6646f8bc17139be14575b65e}{OnEnChangeMfceditbrowse2}}();}
+\DoxyCodeLine{00176\ }
+\DoxyCodeLine{00180\ \ \ \ \ afx\_msg\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classCSemanticsDlg_a05d3e2fa3ce58fdc77d3c24747532f6a}{OnBnClickedBuildformula7}}();}
+\DoxyCodeLine{00181\ }
+\DoxyCodeLine{00182\ \ \ \ \ \mbox{\hyperlink{classCScientificButton}{CScientificButton}}\ \mbox{\hyperlink{classCSemanticsDlg_a575c2eeb740404272353380d8b5bcec5}{m\_button7}};\ }
+\DoxyCodeLine{00187\ \ \ \ \ afx\_msg\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classCSemanticsDlg_a69ae500f0ed2475b7705e593f3cdab68}{OnBnClickedBuildtuple}}();}
+\DoxyCodeLine{00188\ }
+\DoxyCodeLine{00189\ \ \ \ \ \mbox{\hyperlink{classCScientificButton}{CScientificButton}}\ \mbox{\hyperlink{classCSemanticsDlg_a0683a537666532c29918a4eea0a552e2}{m\_KortegeButton}};\ }
+\DoxyCodeLine{00194\ \ \ \ \ afx\_msg\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classCSemanticsDlg_a92aaef60ff4315627434c0d87c6e8035}{OnBnClickedChangevariable}}();}
+\DoxyCodeLine{00195\ }
+\DoxyCodeLine{00196\ \ \ \ \ \mbox{\hyperlink{classCScientificButton}{CScientificButton}}\ \mbox{\hyperlink{classCSemanticsDlg_a39c05e7f01227375587c0cb0e9429ddd}{m\_ChangeVariable}};\ }
+\DoxyCodeLine{00198\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classCSemanticsDlg_a8e57dd9d6fd804aeb9475b9d6181b9d3}{m\_rbLang}};\ }
+\DoxyCodeLine{00203\ \ \ \ \ afx\_msg\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classCSemanticsDlg_a63d7cc44d24948eb5e81baa7bd6926f8}{OnBnClickedRus}}();}
+\DoxyCodeLine{00204\ }
+\DoxyCodeLine{00208\ \ \ \ \ afx\_msg\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classCSemanticsDlg_af044b558adabe0a6396271f0f0599184}{OnBnClickedEng}}();}
+\DoxyCodeLine{00209\ \};}
+
+\end{DoxyCode}

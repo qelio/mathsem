@@ -1,0 +1,325 @@
+\doxysection{Formula\+Set Class Reference}
+\hypertarget{classFormulaSet}{}\label{classFormulaSet}\index{FormulaSet@{FormulaSet}}
+
+
+Inheritance diagram for Formula\+Set\+:
+% FIG 0
+
+
+Collaboration diagram for Formula\+Set\+:
+% FIG 1
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classFormulaSet_ad32e2a5a3e35afbd06f83a5daefc84f8}\label{classFormulaSet_ad32e2a5a3e35afbd06f83a5daefc84f8} 
+{\bfseries Formula\+Set} (void)
+\begin{DoxyCompactList}\small\item\em Default constructor for \doxylink{classFormulaSet}{Formula\+Set}. \end{DoxyCompactList}\item 
+\Hypertarget{classFormulaSet_af1d5061c0456cce897623f48a03cee71}\label{classFormulaSet_af1d5061c0456cce897623f48a03cee71} 
+{\bfseries \texorpdfstring{$\sim$}{\string~}\+Formula\+Set} (void)
+\begin{DoxyCompactList}\small\item\em Destructor for \doxylink{classFormulaSet}{Formula\+Set}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classFormulaSet_a49ee986b1c7f0b1132ea8ce39002f825}{Formula\+Set}} (\mbox{\hyperlink{classFormula}{Formula}} \texorpdfstring{$\ast$}{*}parent, vector$<$ \mbox{\hyperlink{classEntityVariable}{Entity\+Variable}} \texorpdfstring{$\ast$}{*} $>$ \texorpdfstring{$\ast$}{*}variables, \mbox{\hyperlink{classEntityVariable}{Entity\+Variable}} \texorpdfstring{$\ast$}{*}naming\+\_\+)
+\begin{DoxyCompactList}\small\item\em Constructor to initialize \doxylink{classFormulaSet}{Formula\+Set} with a parent \doxylink{classFormula}{Formula}, a list of variables, and a naming variable. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classFormulaSet_ab688effee2d060ebef9df7e68f70f299}{Formula\+Set}} (const \mbox{\hyperlink{classCSetItem}{CSet\+Item}} \&item)
+\begin{DoxyCompactList}\small\item\em Constructor that initializes \doxylink{classFormulaSet}{Formula\+Set} from an XML item. \end{DoxyCompactList}\item 
+\Hypertarget{classFormulaSet_a983f32db5c926ba504c6bcff9b5a5e83}\label{classFormulaSet_a983f32db5c926ba504c6bcff9b5a5e83} 
+void {\bfseries set\+Text} ()
+\begin{DoxyCompactList}\small\item\em Sets the text for the \doxylink{classFormulaSet}{Formula\+Set}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classFormulaSet_aa7d851ac323110918385ef481097b131}{set\+Text}} (tstring tvars)
+\begin{DoxyCompactList}\small\item\em Sets the text for the \doxylink{classFormulaSet}{Formula\+Set} using the provided variable string. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classFormulaSet_ac885837b2bd674b78187131e09c30c15}{set\+Text}} (vector$<$ \mbox{\hyperlink{classEntityBase}{Entity\+Base}} \texorpdfstring{$\ast$}{*} $>$ \texorpdfstring{$\ast$}{*}entities)
+\begin{DoxyCompactList}\small\item\em Sets the text for the \doxylink{classFormulaSet}{Formula\+Set} from a list of \doxylink{classEntityBase}{Entity\+Base} objects. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classFormula}{Formula}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classFormulaSet_a60e03c24d159b53d092c7dc99e765d48}{get\+Parent\+Formula}} ()
+\begin{DoxyCompactList}\small\item\em Gets the parent \doxylink{classFormula}{Formula} of the \doxylink{classFormulaSet}{Formula\+Set}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classFormulaSet_a51a2cfc09ac0ca3d3a1afeb19b7af8fa}{set\+Parent\+Formula}} (\mbox{\hyperlink{classFormula}{Formula}} \texorpdfstring{$\ast$}{*}parent)
+\begin{DoxyCompactList}\small\item\em Sets the parent \doxylink{classFormula}{Formula} of the \doxylink{classFormulaSet}{Formula\+Set}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classFormulaSet_ad94b06820c779b1948d22a457d28da11}{Set\+Label}} (vector$<$ \mbox{\hyperlink{classEntityBase}{Entity\+Base}} \texorpdfstring{$\ast$}{*} $>$ \texorpdfstring{$\ast$}{*}entities)
+\begin{DoxyCompactList}\small\item\em Sets a label for the \doxylink{classFormulaSet}{Formula\+Set} using a list of entities. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classFormulaSet_ae08d7776a374e9636e55f49011a0c499}{is\+Variable\+Based}} ()
+\begin{DoxyCompactList}\small\item\em Checks if the \doxylink{classFormulaSet}{Formula\+Set} is based on variables. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classFormulaSet_a577686b14caae7cd894a332667e1f9f8}{is\+Set\+Based}} ()
+\begin{DoxyCompactList}\small\item\em Checks if the \doxylink{classFormulaSet}{Formula\+Set} is based on other sets. \end{DoxyCompactList}\item 
+vector$<$ \mbox{\hyperlink{classEntityVariable}{Entity\+Variable}} \texorpdfstring{$\ast$}{*} $>$ \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classFormulaSet_a31275f1f35b157e31b06bdcf72ac1901}{get\+Base\+Variables}} ()
+\begin{DoxyCompactList}\small\item\em Gets the list of base variables for the \doxylink{classFormulaSet}{Formula\+Set}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classEntityVariable}{Entity\+Variable}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classFormulaSet_a159f5222f5a00ab0fbc7879f89c9d8ee}{get\+Naming}} ()
+\begin{DoxyCompactList}\small\item\em Gets the naming variable for the \doxylink{classFormulaSet}{Formula\+Set}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classFormulaSet_a5bc23f09e5580cc5bfdc6a319e89012c}{set\+Naming}} (\mbox{\hyperlink{classEntityVariable}{Entity\+Variable}} \texorpdfstring{$\ast$}{*}pev)
+\begin{DoxyCompactList}\small\item\em Sets the naming variable for the \doxylink{classFormulaSet}{Formula\+Set}. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classFormulaSet_a23bfea3163549228cdee106135456151}{is\+Exclusion}} (\mbox{\hyperlink{classFormula}{Formula}} \texorpdfstring{$\ast$}{*}parent)
+\begin{DoxyCompactList}\small\item\em Checks if the \doxylink{classFormulaSet}{Formula\+Set} is an exclusion formula. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classFormulaSet_a730559f8f47e181e489eea1d74ee2d17}{proccess\+Exclusion}} (\mbox{\hyperlink{classFormula}{Formula}} \texorpdfstring{$\ast$}{*}parent, vector$<$ \mbox{\hyperlink{classEntityVariable}{Entity\+Variable}} \texorpdfstring{$\ast$}{*} $>$ \texorpdfstring{$\ast$}{*}variables, tstring \&tvars, tstring \&tlevel, bool produce\+Text=TRUE)
+\begin{DoxyCompactList}\small\item\em Processes exclusion for the \doxylink{classFormulaSet}{Formula\+Set}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classEntityBase}{Entity\+Base}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classEntityBase_a27bec3b7dfba14d691809b1f00a9dcb6}{Entity\+Base}} (void)
+\item 
+\mbox{\hyperlink{classEntityBase_a30e418726b63d4ceeabb66694442f670}{\texorpdfstring{$\sim$}{\string~}\+Entity\+Base}} (void)
+\item 
+vector$<$ \mbox{\hyperlink{classEntityVariable}{Entity\+Variable}} \texorpdfstring{$\ast$}{*} $>$ \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classEntityBase_a0e91a1c0e1505076892420fb220613db}{get\+Free\+Variables}} ()
+\item 
+vector$<$ \mbox{\hyperlink{classEntityVariable}{Entity\+Variable}} \texorpdfstring{$\ast$}{*} $>$ \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classEntityBase_a6d97330c6d4baa832f7b14e714883912}{get\+Linked\+Variables}} ()
+\item 
+tstring \& \mbox{\hyperlink{classEntityBase_a214bd3f0cf94abbcbfaff08c9ac4e1f5}{get\+Text}} ()
+\item 
+tstring \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classEntityBase_aa09e55fa4507ce954fa7679cb2ef3be5}{get\+Description}} ()
+\item 
+tstring \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classEntityBase_a22143b2bfde1b9936eaecbd45a1d30cd}{get\+Add\+Ons}} ()
+\item 
+void \mbox{\hyperlink{classEntityBase_acb5e136b1304a5e34477c788aee7c0d2}{Set\+Text}} (LPCTSTR lpctstr)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{classEntityBase}{Entity\+Base}}}
+\begin{DoxyCompactItemize}
+\item 
+vector$<$ \mbox{\hyperlink{classEntityVariable}{Entity\+Variable}} \texorpdfstring{$\ast$}{*} $>$ {\bfseries free\+Variables}
+\begin{DoxyCompactList}\small\item\em List of free variables. \end{DoxyCompactList}\item 
+vector$<$ \mbox{\hyperlink{classEntityVariable}{Entity\+Variable}} \texorpdfstring{$\ast$}{*} $>$ {\bfseries linked\+Variables}
+\begin{DoxyCompactList}\small\item\em List of linked variables. \end{DoxyCompactList}\item 
+tstring {\bfseries description}
+\begin{DoxyCompactList}\small\item\em Description of the entity. \end{DoxyCompactList}\item 
+tstring {\bfseries addons}
+\begin{DoxyCompactList}\small\item\em Addons related to the entity. \end{DoxyCompactList}\item 
+tstring {\bfseries label}
+\begin{DoxyCompactList}\small\item\em Label associated with the entity. \end{DoxyCompactList}\item 
+tstring {\bfseries text}
+\begin{DoxyCompactList}\small\item\em Text associated with the entity. \end{DoxyCompactList}\item 
+Entity\+Base\+Type {\bfseries type}
+\begin{DoxyCompactList}\small\item\em Type of the entity, from Entity\+Base\+Type enum. \end{DoxyCompactList}\item 
+tstring {\bfseries redefined\+\_\+text}
+\begin{DoxyCompactList}\small\item\em Redefined text, if any. \end{DoxyCompactList}\item 
+bool {\bfseries redefined}
+\begin{DoxyCompactList}\small\item\em Flag indicating if the entity has been redefined. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classEntityBase}{Entity\+Base}} \texorpdfstring{$\ast$}{*} {\bfseries replaced\+\_\+base}
+\begin{DoxyCompactList}\small\item\em Pointer to the replaced base entity, or nullptr. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classEntityVariable}{Entity\+Variable}} \texorpdfstring{$\ast$}{*} {\bfseries initial\+\_\+variable}
+\begin{DoxyCompactList}\small\item\em Initial variable, or nullptr. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classEntityVariable}{Entity\+Variable}} \texorpdfstring{$\ast$}{*} {\bfseries new\+\_\+variable}
+\begin{DoxyCompactList}\small\item\em New variable, or nullptr. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classFormulaSet_a49ee986b1c7f0b1132ea8ce39002f825}\label{classFormulaSet_a49ee986b1c7f0b1132ea8ce39002f825} 
+\index{FormulaSet@{FormulaSet}!FormulaSet@{FormulaSet}}
+\index{FormulaSet@{FormulaSet}!FormulaSet@{FormulaSet}}
+\doxysubsubsection{\texorpdfstring{FormulaSet()}{FormulaSet()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Formula\+Set\+::\+Formula\+Set (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classFormula}{Formula}} \texorpdfstring{$\ast$}{*}}]{parent,  }\item[{vector$<$ \mbox{\hyperlink{classEntityVariable}{Entity\+Variable}} \texorpdfstring{$\ast$}{*} $>$ \texorpdfstring{$\ast$}{*}}]{variables,  }\item[{\mbox{\hyperlink{classEntityVariable}{Entity\+Variable}} \texorpdfstring{$\ast$}{*}}]{naming\+\_\+ }\end{DoxyParamCaption})}
+
+
+
+Constructor to initialize \doxylink{classFormulaSet}{Formula\+Set} with a parent \doxylink{classFormula}{Formula}, a list of variables, and a naming variable. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em parent} & Pointer to the parent \doxylink{classFormula}{Formula} \\
+\hline
+{\em variables} & Pointer to a vector of \doxylink{classEntityVariable}{Entity\+Variable} objects \\
+\hline
+{\em naming} & Pointer to the naming \doxylink{classEntityVariable}{Entity\+Variable} \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classFormulaSet_ab688effee2d060ebef9df7e68f70f299}\label{classFormulaSet_ab688effee2d060ebef9df7e68f70f299} 
+\index{FormulaSet@{FormulaSet}!FormulaSet@{FormulaSet}}
+\index{FormulaSet@{FormulaSet}!FormulaSet@{FormulaSet}}
+\doxysubsubsection{\texorpdfstring{FormulaSet()}{FormulaSet()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Formula\+Set\+::\+Formula\+Set (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classCSetItem}{CSet\+Item}} \&}]{item }\end{DoxyParamCaption})}
+
+
+
+Constructor that initializes \doxylink{classFormulaSet}{Formula\+Set} from an XML item. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em item} & The XML item representing the \doxylink{classFormulaSet}{Formula\+Set} \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classFormulaSet_a31275f1f35b157e31b06bdcf72ac1901}\label{classFormulaSet_a31275f1f35b157e31b06bdcf72ac1901} 
+\index{FormulaSet@{FormulaSet}!getBaseVariables@{getBaseVariables}}
+\index{getBaseVariables@{getBaseVariables}!FormulaSet@{FormulaSet}}
+\doxysubsubsection{\texorpdfstring{getBaseVariables()}{getBaseVariables()}}
+{\footnotesize\ttfamily vector$<$ \mbox{\hyperlink{classEntityVariable}{Entity\+Variable}} \texorpdfstring{$\ast$}{*} $>$ \texorpdfstring{$\ast$}{*} Formula\+Set\+::get\+Base\+Variables (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Gets the list of base variables for the \doxylink{classFormulaSet}{Formula\+Set}. 
+
+\begin{DoxyReturn}{Returns}
+Pointer to the vector of base variables. 
+\end{DoxyReturn}
+\Hypertarget{classFormulaSet_a159f5222f5a00ab0fbc7879f89c9d8ee}\label{classFormulaSet_a159f5222f5a00ab0fbc7879f89c9d8ee} 
+\index{FormulaSet@{FormulaSet}!getNaming@{getNaming}}
+\index{getNaming@{getNaming}!FormulaSet@{FormulaSet}}
+\doxysubsubsection{\texorpdfstring{getNaming()}{getNaming()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classEntityVariable}{Entity\+Variable}} \texorpdfstring{$\ast$}{*} Formula\+Set\+::get\+Naming (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Gets the naming variable for the \doxylink{classFormulaSet}{Formula\+Set}. 
+
+\begin{DoxyReturn}{Returns}
+Pointer to the naming \doxylink{classEntityVariable}{Entity\+Variable}. 
+\end{DoxyReturn}
+\Hypertarget{classFormulaSet_a60e03c24d159b53d092c7dc99e765d48}\label{classFormulaSet_a60e03c24d159b53d092c7dc99e765d48} 
+\index{FormulaSet@{FormulaSet}!getParentFormula@{getParentFormula}}
+\index{getParentFormula@{getParentFormula}!FormulaSet@{FormulaSet}}
+\doxysubsubsection{\texorpdfstring{getParentFormula()}{getParentFormula()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classFormula}{Formula}} \texorpdfstring{$\ast$}{*} Formula\+Set\+::get\+Parent\+Formula (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Gets the parent \doxylink{classFormula}{Formula} of the \doxylink{classFormulaSet}{Formula\+Set}. 
+
+\begin{DoxyReturn}{Returns}
+Pointer to the parent \doxylink{classFormula}{Formula} object. 
+\end{DoxyReturn}
+\Hypertarget{classFormulaSet_a23bfea3163549228cdee106135456151}\label{classFormulaSet_a23bfea3163549228cdee106135456151} 
+\index{FormulaSet@{FormulaSet}!isExclusion@{isExclusion}}
+\index{isExclusion@{isExclusion}!FormulaSet@{FormulaSet}}
+\doxysubsubsection{\texorpdfstring{isExclusion()}{isExclusion()}}
+{\footnotesize\ttfamily bool Formula\+Set\+::is\+Exclusion (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classFormula}{Formula}} \texorpdfstring{$\ast$}{*}}]{parent }\end{DoxyParamCaption})}
+
+
+
+Checks if the \doxylink{classFormulaSet}{Formula\+Set} is an exclusion formula. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em parent} & Pointer to the parent \doxylink{classFormula}{Formula}. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if the \doxylink{classFormulaSet}{Formula\+Set} is an exclusion, false otherwise. 
+\end{DoxyReturn}
+\Hypertarget{classFormulaSet_a577686b14caae7cd894a332667e1f9f8}\label{classFormulaSet_a577686b14caae7cd894a332667e1f9f8} 
+\index{FormulaSet@{FormulaSet}!isSetBased@{isSetBased}}
+\index{isSetBased@{isSetBased}!FormulaSet@{FormulaSet}}
+\doxysubsubsection{\texorpdfstring{isSetBased()}{isSetBased()}}
+{\footnotesize\ttfamily bool Formula\+Set\+::is\+Set\+Based (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Checks if the \doxylink{classFormulaSet}{Formula\+Set} is based on other sets. 
+
+\begin{DoxyReturn}{Returns}
+True if based on sets, false otherwise. 
+\end{DoxyReturn}
+\Hypertarget{classFormulaSet_ae08d7776a374e9636e55f49011a0c499}\label{classFormulaSet_ae08d7776a374e9636e55f49011a0c499} 
+\index{FormulaSet@{FormulaSet}!isVariableBased@{isVariableBased}}
+\index{isVariableBased@{isVariableBased}!FormulaSet@{FormulaSet}}
+\doxysubsubsection{\texorpdfstring{isVariableBased()}{isVariableBased()}}
+{\footnotesize\ttfamily bool Formula\+Set\+::is\+Variable\+Based (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Checks if the \doxylink{classFormulaSet}{Formula\+Set} is based on variables. 
+
+\begin{DoxyReturn}{Returns}
+True if based on variables, false otherwise. 
+\end{DoxyReturn}
+\Hypertarget{classFormulaSet_a730559f8f47e181e489eea1d74ee2d17}\label{classFormulaSet_a730559f8f47e181e489eea1d74ee2d17} 
+\index{FormulaSet@{FormulaSet}!proccessExclusion@{proccessExclusion}}
+\index{proccessExclusion@{proccessExclusion}!FormulaSet@{FormulaSet}}
+\doxysubsubsection{\texorpdfstring{proccessExclusion()}{proccessExclusion()}}
+{\footnotesize\ttfamily void Formula\+Set\+::proccess\+Exclusion (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classFormula}{Formula}} \texorpdfstring{$\ast$}{*}}]{parent,  }\item[{vector$<$ \mbox{\hyperlink{classEntityVariable}{Entity\+Variable}} \texorpdfstring{$\ast$}{*} $>$ \texorpdfstring{$\ast$}{*}}]{variables,  }\item[{tstring \&}]{tvars,  }\item[{tstring \&}]{tlevel,  }\item[{bool}]{produce\+Text = {\ttfamily TRUE} }\end{DoxyParamCaption})}
+
+
+
+Processes exclusion for the \doxylink{classFormulaSet}{Formula\+Set}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em parent} & Pointer to the parent \doxylink{classFormula}{Formula}. \\
+\hline
+{\em variables} & Pointer to a vector of variables. \\
+\hline
+{\em tvars} & String to store text variables. \\
+\hline
+{\em tlevel} & String to store the text level. \\
+\hline
+{\em produce\+Text} & Boolean flag to determine if text should be produced (default is true). \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classFormulaSet_ad94b06820c779b1948d22a457d28da11}\label{classFormulaSet_ad94b06820c779b1948d22a457d28da11} 
+\index{FormulaSet@{FormulaSet}!SetLabel@{SetLabel}}
+\index{SetLabel@{SetLabel}!FormulaSet@{FormulaSet}}
+\doxysubsubsection{\texorpdfstring{SetLabel()}{SetLabel()}}
+{\footnotesize\ttfamily void Formula\+Set\+::\+Set\+Label (\begin{DoxyParamCaption}\item[{vector$<$ \mbox{\hyperlink{classEntityBase}{Entity\+Base}} \texorpdfstring{$\ast$}{*} $>$ \texorpdfstring{$\ast$}{*}}]{entities }\end{DoxyParamCaption})}
+
+
+
+Sets a label for the \doxylink{classFormulaSet}{Formula\+Set} using a list of entities. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em entities} & Pointer to a vector of \doxylink{classEntityBase}{Entity\+Base} objects. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classFormulaSet_a5bc23f09e5580cc5bfdc6a319e89012c}\label{classFormulaSet_a5bc23f09e5580cc5bfdc6a319e89012c} 
+\index{FormulaSet@{FormulaSet}!setNaming@{setNaming}}
+\index{setNaming@{setNaming}!FormulaSet@{FormulaSet}}
+\doxysubsubsection{\texorpdfstring{setNaming()}{setNaming()}}
+{\footnotesize\ttfamily void Formula\+Set\+::set\+Naming (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classEntityVariable}{Entity\+Variable}} \texorpdfstring{$\ast$}{*}}]{pev }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Sets the naming variable for the \doxylink{classFormulaSet}{Formula\+Set}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pev} & Pointer to the \doxylink{classEntityVariable}{Entity\+Variable} to set as the naming variable. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classFormulaSet_a51a2cfc09ac0ca3d3a1afeb19b7af8fa}\label{classFormulaSet_a51a2cfc09ac0ca3d3a1afeb19b7af8fa} 
+\index{FormulaSet@{FormulaSet}!setParentFormula@{setParentFormula}}
+\index{setParentFormula@{setParentFormula}!FormulaSet@{FormulaSet}}
+\doxysubsubsection{\texorpdfstring{setParentFormula()}{setParentFormula()}}
+{\footnotesize\ttfamily void Formula\+Set\+::set\+Parent\+Formula (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classFormula}{Formula}} \texorpdfstring{$\ast$}{*}}]{parent }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Sets the parent \doxylink{classFormula}{Formula} of the \doxylink{classFormulaSet}{Formula\+Set}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em parent} & Pointer to the parent \doxylink{classFormula}{Formula} object. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classFormulaSet_aa7d851ac323110918385ef481097b131}\label{classFormulaSet_aa7d851ac323110918385ef481097b131} 
+\index{FormulaSet@{FormulaSet}!setText@{setText}}
+\index{setText@{setText}!FormulaSet@{FormulaSet}}
+\doxysubsubsection{\texorpdfstring{setText()}{setText()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void Formula\+Set\+::set\+Text (\begin{DoxyParamCaption}\item[{tstring}]{tvars }\end{DoxyParamCaption})}
+
+
+
+Sets the text for the \doxylink{classFormulaSet}{Formula\+Set} using the provided variable string. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em tvars} & String representing the variables to use in the text. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classFormulaSet_ac885837b2bd674b78187131e09c30c15}\label{classFormulaSet_ac885837b2bd674b78187131e09c30c15} 
+\index{FormulaSet@{FormulaSet}!setText@{setText}}
+\index{setText@{setText}!FormulaSet@{FormulaSet}}
+\doxysubsubsection{\texorpdfstring{setText()}{setText()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void Formula\+Set\+::set\+Text (\begin{DoxyParamCaption}\item[{vector$<$ \mbox{\hyperlink{classEntityBase}{Entity\+Base}} \texorpdfstring{$\ast$}{*} $>$ \texorpdfstring{$\ast$}{*}}]{entities }\end{DoxyParamCaption})}
+
+
+
+Sets the text for the \doxylink{classFormulaSet}{Formula\+Set} from a list of \doxylink{classEntityBase}{Entity\+Base} objects. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em entities} & Pointer to a vector of \doxylink{classEntityBase}{Entity\+Base} objects. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Formula.\+h\item 
+Formula.\+cpp\item 
+Item.\+cpp\end{DoxyCompactItemize}

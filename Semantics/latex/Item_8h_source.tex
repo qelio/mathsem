@@ -1,0 +1,275 @@
+\doxysection{Item.\+h}
+\hypertarget{Item_8h_source}{}\label{Item_8h_source}\mbox{\hyperlink{Item_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{//\ \ {\ucr}{\ucr}{\ucr}{\ucr}{\ucr}\ {\ucr}{\ucr}{\ucr}{\ucr}:\ {\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}\ {\ucr}.{\ucr}.,\ akizelokro@mail.ru\ ,\ 2013-\/2014}}
+\DoxyCodeLine{00002\ \textcolor{comment}{//\ \ Author:\ Tatarintsev\ V.V.,\ akizelokro@mail.ru,\ 2013-\/2014}}
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#if\ !defined(AFX\_ITEM\_H\_\_9DD28C1C\_C5C2\_4CDB\_9D09\_D54FA75B418E\_\_INCLUDED\_)}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#define\ AFX\_ITEM\_H\_\_9DD28C1C\_C5C2\_4CDB\_9D09\_D54FA75B418E\_\_INCLUDED\_}}
+\DoxyCodeLine{00005\ }
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ <objbase.h>}}
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#include\ <msxml6.h>}}
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#include\ "{}Formula.h"{}}}
+\DoxyCodeLine{00015\ \textcolor{preprocessor}{\#include\ "{}common\_functions.h"{}}}
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00017\ \textcolor{preprocessor}{\#if\ \_MSC\_VER\ >\ 1000}}
+\DoxyCodeLine{00018\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00019\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ \_MSC\_VER\ >\ 1000}}
+\DoxyCodeLine{00020\ \textcolor{comment}{//\ Item.h\ :\ header\ file}}
+\DoxyCodeLine{00021\ \textcolor{comment}{//}}
+\DoxyCodeLine{00022\ }
+\DoxyCodeLine{00023\ }
+\DoxyCodeLine{00024\ }
+\DoxyCodeLine{00026\ \textcolor{comment}{//\ CItem\ -\/\ {\ucr}{\ucr}{\ucr}{\ucr}{\ucr}\ {\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}\ xml-\/{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}\ {\ucr}{\ucr}{\ucr}\ {\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}\ {\ucr}{\ucr}{\ucr}{\ucr}{\ucr}\ (.fms)}}
+\DoxyCodeLine{00027\ \textcolor{comment}{//}}
+\DoxyCodeLine{00028\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classCItem}{CItem}}\ :\ \textcolor{keyword}{public}\ CObject}
+\DoxyCodeLine{00029\ \{}
+\DoxyCodeLine{00030\ \ \ \ \ \textcolor{comment}{//\ {\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}\ {\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}\ {\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}}}
+\DoxyCodeLine{00031\ \ \ \ \ \mbox{\hyperlink{classCItem_a6f0808b3a6dae62051445aaf72f51513}{CItem}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classCItem}{CItem}}\&\ src);}
+\DoxyCodeLine{00032\ \ \ \ \ \textcolor{keywordtype}{void}\ operator=(\textcolor{keyword}{const}\ \mbox{\hyperlink{classCItem}{CItem}}\&\ src);}
+\DoxyCodeLine{00033\ }
+\DoxyCodeLine{00034\ \ \ \ \ DECLARE\_XMLSERIAL(\mbox{\hyperlink{classCItem}{CItem}})}
+\DoxyCodeLine{00035\ }
+\DoxyCodeLine{00036\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00040\ \textcolor{comment}{//\ {\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}}}
+\DoxyCodeLine{00041\ \ \ \ \ \mbox{\hyperlink{classCItem_a6f0808b3a6dae62051445aaf72f51513}{CItem}}();}
+\DoxyCodeLine{00042\ }
+\DoxyCodeLine{00043\ }
+\DoxyCodeLine{00044\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00048\ \ \ \ \ CTime\ \ \ \ \ \ \ \mbox{\hyperlink{classCItem_aa738f2f5428cc3b06dbe6411687453eb}{DateOfCreation}};\ \ \ \ \textcolor{comment}{//\ {\ucr}{\ucr}{\ucr}{\ucr}\ {\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}\ {\ucr}{\ucr}{\ucr}{\ucr}{\ucr}}}
+\DoxyCodeLine{00052\ \ \ \ \ CString\ \ \ \ \ \mbox{\hyperlink{classCItem_adb8daafcf708373edbeed8f13d194f8c}{Version}};\ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ {\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}\ {\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr},\ {\ucr}{\ucr}{\ucr}{\ucr}\ {\ucr}{\ucr}{\ucr}{\ucr}\ "{}1.0"{}}}
+\DoxyCodeLine{00053\ \textcolor{comment}{//\ {\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}\ {\ucr}{\ucr}{\ucr}\ {\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}\ {\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}\ {\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}\ {\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}}}
+\DoxyCodeLine{00054\ \textcolor{comment}{//\ \ bool\ \ \ \ \ \ \ \ m\_boolAtribute;}}
+\DoxyCodeLine{00055\ \textcolor{comment}{//\ \ double\ \ \ \ \ \ m\_doubleAttribute;}}
+\DoxyCodeLine{00056\ \textcolor{comment}{//\ \ CStringArray\ m\_stringArrayAttribute;}}
+\DoxyCodeLine{00057\ }
+\DoxyCodeLine{00058\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00059\ \ \ \ \ \textcolor{comment}{//\ {\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}}}
+\DoxyCodeLine{00063\ \ \ \ \ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{classCItem_a2487c6e822ed0e850544f1745b43f584}{\string~CItem}}();}
+\DoxyCodeLine{00064\ \ \ \ \ \textcolor{comment}{//\ {\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}\ {\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}\ ({\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}\ {\ucr}\ {\ucr}{\ucr}{\ucr}{\ucr}/{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}\ {\ucr}{\ucr}\ {\ucr}{\ucr}{\ucr}{\ucr}{\ucr})}}
+\DoxyCodeLine{00069\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classCItem_a025961ca35edb2258b6c6afd5540dece}{Serialize}}(CArchive\ \&ar);}
+\DoxyCodeLine{00070\ }
+\DoxyCodeLine{00071\ \};}
+\DoxyCodeLine{00072\ }
+\DoxyCodeLine{00074\ \textcolor{comment}{//\ CDerivedItem\ {\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}\ {\ucr}{\ucr}{\ucr}{\ucr}{\ucr}\ {\ucr}{\ucr}\ CItem}}
+\DoxyCodeLine{00075\ \textcolor{comment}{//}}
+\DoxyCodeLine{00076\ }
+\DoxyCodeLine{00080\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classCDerivedItem}{CDerivedItem}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classCItem}{CItem}}}
+\DoxyCodeLine{00081\ \{}
+\DoxyCodeLine{00082\ \ \ \ \ \textcolor{comment}{//\ {\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}\ {\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}\ {\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}}}
+\DoxyCodeLine{00083\ \ \ \ \ \mbox{\hyperlink{classCDerivedItem_a675fda31c90b7147a352e7d832eff4f8}{CDerivedItem}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classCDerivedItem}{CDerivedItem}}\&\ src);}
+\DoxyCodeLine{00084\ \ \ \ \ \textcolor{keywordtype}{void}\ operator=(\textcolor{keyword}{const}\ \mbox{\hyperlink{classCDerivedItem}{CDerivedItem}}\&\ src);}
+\DoxyCodeLine{00085\ }
+\DoxyCodeLine{00086\ \ \ \ \ DECLARE\_XMLSERIAL(\mbox{\hyperlink{classCDerivedItem}{CDerivedItem}})}
+\DoxyCodeLine{00087\ }
+\DoxyCodeLine{00088\ }
+\DoxyCodeLine{00089\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00093\ \ \ \ \ \textcolor{comment}{//\ {\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}}}
+\DoxyCodeLine{00094\ \ \ \ \ \mbox{\hyperlink{classCDerivedItem_a675fda31c90b7147a352e7d832eff4f8}{CDerivedItem}}();}
+\DoxyCodeLine{00095\ }
+\DoxyCodeLine{00096\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00100\ \ \ \ \ \textcolor{keyword}{enum}\ \{\ eFIRST,\ eSECOND\ \}\ \mbox{\hyperlink{classCDerivedItem_a9339fbfe8f3a0dccf19b798e12ed6538}{m\_enumAttribute}};}
+\DoxyCodeLine{00101\ }
+\DoxyCodeLine{00102\ \textcolor{comment}{//\ Implementation}}
+\DoxyCodeLine{00103\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00104\ }
+\DoxyCodeLine{00108\ \ \ \ \ \textcolor{comment}{//\ {\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}}}
+\DoxyCodeLine{00109\ \ \ \ \ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{classCDerivedItem_ad0be8402850a8b2cdada1201151f1f06}{\string~CDerivedItem}}();}
+\DoxyCodeLine{00114\ \ \ \ \ \textcolor{comment}{//\ {\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}\ {\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}\ ({\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}\ {\ucr}\ {\ucr}{\ucr}{\ucr}{\ucr}/{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}\ {\ucr}{\ucr}\ {\ucr}{\ucr}{\ucr}{\ucr}{\ucr})}}
+\DoxyCodeLine{00115\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classCDerivedItem_a4de0e25e409092802aa590e01c298ebb}{Serialize}}(CArchive\ \&ar);}
+\DoxyCodeLine{00116\ }
+\DoxyCodeLine{00117\ \};}
+\DoxyCodeLine{00118\ }
+\DoxyCodeLine{00119\ }
+\DoxyCodeLine{00121\ \textcolor{comment}{//\ CVariableItem\ -\/\ {\ucr}{\ucr}{\ucr}{\ucr}{\ucr}\ {\ucr}{\ucr}{\ucr}\ {\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}\ {\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}\ EntityVariable,\ {\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}\ {\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}}}
+\DoxyCodeLine{00122\ \textcolor{comment}{//}}
+\DoxyCodeLine{00126\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classCVariableItem}{CVariableItem}}\ :\ \textcolor{keyword}{public}\ CObject}
+\DoxyCodeLine{00127\ \{}
+\DoxyCodeLine{00128\ \ \ \ \ \textcolor{comment}{//\ {\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}\ {\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}\ {\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}}}
+\DoxyCodeLine{00129\ \ \ \ \ \mbox{\hyperlink{classCVariableItem_af795a5fd079f5c24ad70e14fca2ee152}{CVariableItem}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classCVariableItem}{CVariableItem}}\&\ src);}
+\DoxyCodeLine{00130\ \ \ \ \ \textcolor{keywordtype}{void}\ operator=(\textcolor{keyword}{const}\ \mbox{\hyperlink{classCVariableItem}{CVariableItem}}\&\ src);}
+\DoxyCodeLine{00131\ }
+\DoxyCodeLine{00132\ \ \ \ \ DECLARE\_XMLSERIAL(\mbox{\hyperlink{classCVariableItem}{CVariableItem}})}
+\DoxyCodeLine{00133\ }
+\DoxyCodeLine{00134\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00138\ \ \ \ \ \textcolor{comment}{//\ {\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}}}
+\DoxyCodeLine{00139\ \ \ \ \ \mbox{\hyperlink{classCVariableItem_af795a5fd079f5c24ad70e14fca2ee152}{CVariableItem}}();}
+\DoxyCodeLine{00140\ }
+\DoxyCodeLine{00141\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00145\ \ \ \ \ VariableType\ \mbox{\hyperlink{classCVariableItem_af34d2b41fcc3ab5403ce35a267f72e79}{Variable}};}
+\DoxyCodeLine{00146\ }
+\DoxyCodeLine{00150\ \ \ \ \ CString\ \mbox{\hyperlink{classCVariableItem_ae7a627d8c611bd4989f7483adf84164e}{Label}};}
+\DoxyCodeLine{00151\ }
+\DoxyCodeLine{00155\ \ \ \ \ CString\ \mbox{\hyperlink{classCVariableItem_a6edf25535d73814a099966b11d3a6f42}{Index}};}
+\DoxyCodeLine{00156\ }
+\DoxyCodeLine{00160\ \ \ \ \ CString\ \mbox{\hyperlink{classCVariableItem_a9e9e19628f655dfc50826c2ab7b10d59}{Text}};}
+\DoxyCodeLine{00161\ }
+\DoxyCodeLine{00165\ \ \ \ \ CString\ \mbox{\hyperlink{classCVariableItem_a2eecd303cb0209641e86978defa7d4dc}{Level}};}
+\DoxyCodeLine{00166\ }
+\DoxyCodeLine{00170\ \ \ \ \ CString\ \mbox{\hyperlink{classCVariableItem_a0e80419208bfa19ee3f12d85b796f46d}{Redefinition}};}
+\DoxyCodeLine{00171\ }
+\DoxyCodeLine{00172\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00176\ \ \ \ \ \textcolor{comment}{//\ {\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}}}
+\DoxyCodeLine{00177\ \ \ \ \ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{classCVariableItem_a5c4d5d54193c972f6c6a16a0fd8c893a}{\string~CVariableItem}}();}
+\DoxyCodeLine{00182\ \ \ \ \ \textcolor{comment}{//\ {\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}\ {\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}\ ({\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}\ {\ucr}\ {\ucr}{\ucr}{\ucr}{\ucr}/{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}\ {\ucr}{\ucr}\ {\ucr}{\ucr}{\ucr}{\ucr}{\ucr})}}
+\DoxyCodeLine{00183\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classCVariableItem_a5d0cc7d18c4e488e237c52bd1390ec4f}{Serialize}}(CArchive\ \&ar);}
+\DoxyCodeLine{00188\ \ \ \ \ \textcolor{comment}{//\ {\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr},\ {\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}\ {\ucr}\ {\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}\ {\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}\ {\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}\ {\ucr}{\ucr}\ {\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}\ EntityVariable}}
+\DoxyCodeLine{00189\ \ \ \ \ \mbox{\hyperlink{classCVariableItem_af795a5fd079f5c24ad70e14fca2ee152}{CVariableItem}}(\mbox{\hyperlink{classEntityVariable}{EntityVariable}}\&\ ev);}
+\DoxyCodeLine{00190\ }
+\DoxyCodeLine{00191\ \};}
+\DoxyCodeLine{00192\ }
+\DoxyCodeLine{00193\ }
+\DoxyCodeLine{00195\ \textcolor{comment}{//\ CParentLinkItem\ -\/\ {\ucr}{\ucr}{\ucr}{\ucr}{\ucr}\ {\ucr}{\ucr}{\ucr}\ {\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}\ {\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}\ {\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}\ ParentLink}}
+\DoxyCodeLine{00196\ \textcolor{comment}{//}}
+\DoxyCodeLine{00200\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classCParentLinkItem}{CParentLinkItem}}\ :\ \textcolor{keyword}{public}\ CObject}
+\DoxyCodeLine{00201\ \{}
+\DoxyCodeLine{00202\ \ \ \ \ \textcolor{comment}{//\ {\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}\ {\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}\ {\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}}}
+\DoxyCodeLine{00203\ \ \ \ \ \mbox{\hyperlink{classCParentLinkItem_aaed0d592cffb1642ed9b660c9fa84edc}{CParentLinkItem}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classCParentLinkItem}{CParentLinkItem}}\&\ src);}
+\DoxyCodeLine{00204\ \ \ \ \ \textcolor{keywordtype}{void}\ operator=(\textcolor{keyword}{const}\ \mbox{\hyperlink{classCParentLinkItem}{CParentLinkItem}}\&\ src);}
+\DoxyCodeLine{00205\ }
+\DoxyCodeLine{00206\ \ \ \ \ DECLARE\_XMLSERIAL(\mbox{\hyperlink{classCParentLinkItem}{CParentLinkItem}})}
+\DoxyCodeLine{00207\ }
+\DoxyCodeLine{00208\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00212\ \ \ \ \ \textcolor{comment}{//\ {\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}\ {\ucr}{\ucr}\ {\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}}}
+\DoxyCodeLine{00213\ \ \ \ \ \mbox{\hyperlink{classCParentLinkItem_aaed0d592cffb1642ed9b660c9fa84edc}{CParentLinkItem}}();}
+\DoxyCodeLine{00214\ }
+\DoxyCodeLine{00215\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00219\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classCParentLinkItem_a5051fccb1d1e683b508311d3c9c95f19}{FormulaNumber}};\ \ \ \ \textcolor{comment}{//\ {\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}\ {\ucr}{\ucr}{\ucr}{\ucr}{\ucr}\ {\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}\ {\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}}}
+\DoxyCodeLine{00223\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classCParentLinkItem_a96ccdd546802f15adc0bd9ddb96fbabd}{VariableNumber}};\ \ \ \ \textcolor{comment}{//\ {\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}\ {\ucr}{\ucr}{\ucr}{\ucr}{\ucr}\ {\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}\ {\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}}}
+\DoxyCodeLine{00224\ }
+\DoxyCodeLine{00225\ \textcolor{comment}{//\ Implementation}}
+\DoxyCodeLine{00226\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00230\ \ \ \ \ \textcolor{comment}{//\ {\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}}}
+\DoxyCodeLine{00231\ \ \ \ \ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{classCParentLinkItem_ae142de29eeadfbf07302281078f7c7a0}{\string~CParentLinkItem}}();}
+\DoxyCodeLine{00236\ \ \ \ \ \textcolor{comment}{//\ {\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}\ {\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}\ ({\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}\ {\ucr}\ {\ucr}{\ucr}{\ucr}{\ucr}/{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}\ {\ucr}{\ucr}\ {\ucr}{\ucr}{\ucr}{\ucr}{\ucr})}}
+\DoxyCodeLine{00237\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classCParentLinkItem_a84d9308bf2f97c66eee39a01ad71a259}{Serialize}}(CArchive\ \&ar);}
+\DoxyCodeLine{00243\ \ \ \ \ \textcolor{comment}{//\ {\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr},\ {\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}\ {\ucr}\ {\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}\ {\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}\ {\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}\ {\ucr}{\ucr}{\ucr}{\ucr}{\ucr}\ {\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}\ {\ucr}\ {\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}\ {\ucr}{\ucr}{\ucr}{\ucr}{\ucr}\ {\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}\ {\ucr}{\ucr}{\ucr}\ {\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}\ {\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}\ {\ucr}{\ucr}{\ucr}{\ucr}{\ucr}}}
+\DoxyCodeLine{00244\ \ \ \ \ \mbox{\hyperlink{classCParentLinkItem_aaed0d592cffb1642ed9b660c9fa84edc}{CParentLinkItem}}(\textcolor{keywordtype}{int}\ FormulaNumber\_,\ \textcolor{keywordtype}{int}\ VariableNumber\_);}
+\DoxyCodeLine{00245\ }
+\DoxyCodeLine{00246\ \};}
+\DoxyCodeLine{00247\ }
+\DoxyCodeLine{00248\ }
+\DoxyCodeLine{00249\ }
+\DoxyCodeLine{00251\ \textcolor{comment}{//\ CFormulaItem\ -\/\ {\ucr}{\ucr}{\ucr}{\ucr}{\ucr}\ {\ucr}{\ucr}{\ucr}\ {\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}\ {\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}\ Formula,\ {\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}\ {\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}}}
+\DoxyCodeLine{00252\ \textcolor{comment}{//}}
+\DoxyCodeLine{00256\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classCFormulaItem}{CFormulaItem}}\ :\ \textcolor{keyword}{public}\ CObject}
+\DoxyCodeLine{00257\ \{}
+\DoxyCodeLine{00258\ \ \ \ \ \textcolor{comment}{//\ {\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}\ {\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}\ {\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}}}
+\DoxyCodeLine{00259\ \ \ \ \ \mbox{\hyperlink{classCFormulaItem_a9f3188a2f262680e2835ee4548404efc}{CFormulaItem}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classCFormulaItem}{CFormulaItem}}\&\ src);}
+\DoxyCodeLine{00260\ \ \ \ \ \textcolor{keywordtype}{void}\ operator=(\textcolor{keyword}{const}\ \mbox{\hyperlink{classCFormulaItem}{CFormulaItem}}\&\ src);}
+\DoxyCodeLine{00261\ }
+\DoxyCodeLine{00262\ \ \ \ \ DECLARE\_XMLSERIAL(\mbox{\hyperlink{classCFormulaItem}{CFormulaItem}})}
+\DoxyCodeLine{00263\ }
+\DoxyCodeLine{00264\ }
+\DoxyCodeLine{00265\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00269\ \ \ \ \ \textcolor{comment}{//\ {\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}}}
+\DoxyCodeLine{00270\ \ \ \ \ \mbox{\hyperlink{classCFormulaItem_a9f3188a2f262680e2835ee4548404efc}{CFormulaItem}}();}
+\DoxyCodeLine{00271\ }
+\DoxyCodeLine{00272\ \textcolor{comment}{//\ Attributes}}
+\DoxyCodeLine{00273\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00277\ \ \ \ \ Formula\_Feature\ \mbox{\hyperlink{classCFormulaItem_ac21e04fb60100dcf587f13ef6cea65bb}{Feature}};}
+\DoxyCodeLine{00278\ }
+\DoxyCodeLine{00282\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classCFormulaItem_ab0df148bfcfab0814d6e95b3954eade3}{Number}};}
+\DoxyCodeLine{00283\ }
+\DoxyCodeLine{00287\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classCFormulaItem_a926ca600b348d25d0415462d657701cf}{ParentSetNumber}};}
+\DoxyCodeLine{00288\ }
+\DoxyCodeLine{00292\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classCFormulaItem_a5d6b7afcd17ec084560b5dc8056ef9de}{ReplacedNumber}};}
+\DoxyCodeLine{00293\ }
+\DoxyCodeLine{00297\ \ \ \ \ CArrayXML\ <CVariableItem*,\ CVariableItem*>\ \mbox{\hyperlink{classCFormulaItem_a807c0976b3deccbb1049e895208960aa}{FreeVariables}};}
+\DoxyCodeLine{00298\ }
+\DoxyCodeLine{00302\ \ \ \ \ CArrayXML\ <CVariableItem*,\ CVariableItem*>\ \mbox{\hyperlink{classCFormulaItem_a6905b53cf798caad5543c7ea52658e5c}{LinkedVariables}};}
+\DoxyCodeLine{00303\ }
+\DoxyCodeLine{00307\ \ \ \ \ CArrayXML\ <CParentLinkItem*,\ CParentLinkItem*>\ \mbox{\hyperlink{classCFormulaItem_a4611cd8397eedc6043bdc948c49ae67a}{ParentLinks}};}
+\DoxyCodeLine{00308\ }
+\DoxyCodeLine{00312\ \ \ \ \ CArrayXML\ <CVariableItem*,\ CVariableItem*>\ \mbox{\hyperlink{classCFormulaItem_ae345f09c3d869571eb08c59494c0c5e4}{ReplaceVariables}};}
+\DoxyCodeLine{00313\ }
+\DoxyCodeLine{00317\ \ \ \ \ CString\ \mbox{\hyperlink{classCFormulaItem_aa781540533e27e3a6a6ac49efdfe7376}{Description}};}
+\DoxyCodeLine{00318\ }
+\DoxyCodeLine{00322\ \ \ \ \ CString\ \mbox{\hyperlink{classCFormulaItem_ac7b3424e66878bd842f622d756ac7248}{Addons}};}
+\DoxyCodeLine{00323\ }
+\DoxyCodeLine{00327\ \ \ \ \ CString\ \mbox{\hyperlink{classCFormulaItem_afab67f1066b8b7b449d4a9ef7ab48b60}{Label}};}
+\DoxyCodeLine{00328\ }
+\DoxyCodeLine{00332\ \ \ \ \ CString\ \mbox{\hyperlink{classCFormulaItem_a42fff8309c0511266b1e642d987b06f3}{Text}};}
+\DoxyCodeLine{00333\ }
+\DoxyCodeLine{00337\ \ \ \ \ CString\ \mbox{\hyperlink{classCFormulaItem_aa4f85e081a297dc757fa14af61110e68}{Redefined}};}
+\DoxyCodeLine{00338\ }
+\DoxyCodeLine{00342\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classCFormulaItem_a6fbef81750bbc6c3d11848910545841d}{Redefined\_Flag}};}
+\DoxyCodeLine{00343\ }
+\DoxyCodeLine{00347\ \ \ \ \ EntityBaseType\ \mbox{\hyperlink{classCFormulaItem_a3c6e8e2116ed602c3df09380331bdad9}{EntityType}};\ \textcolor{comment}{//\ {\ucr}{\ucr}{\ucr}\ c{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr},\ {\ucr}{\ucr}{\ucr}{\ucr}\ {\ucr}{\ucr}\ {\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}\ enum\ EntityBaseType::}}
+\DoxyCodeLine{00348\ }
+\DoxyCodeLine{00349\ \textcolor{comment}{//\ Implementation}}
+\DoxyCodeLine{00350\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00354\ \ \ \ \ \textcolor{comment}{//\ {\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}}}
+\DoxyCodeLine{00355\ \ \ \ \ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{classCFormulaItem_ae7ef27d5f173bb6dea35e2243c75bc88}{\string~CFormulaItem}}();}
+\DoxyCodeLine{00360\ \ \ \ \ \textcolor{comment}{//\ {\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}\ {\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}\ ({\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}\ {\ucr}\ {\ucr}{\ucr}{\ucr}{\ucr}/{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}\ {\ucr}{\ucr}\ {\ucr}{\ucr}{\ucr}{\ucr}{\ucr})}}
+\DoxyCodeLine{00361\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classCFormulaItem_a69ca2bed273e8f64e542dec1c06fe990}{Serialize}}(CArchive\ \&ar);}
+\DoxyCodeLine{00366\ \ \ \ \ \textcolor{comment}{//\ \ {\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr},\ {\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}\ {\ucr}\ {\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}\ {\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}\ {\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}\ {\ucr}{\ucr}\ {\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}\ Formula}}
+\DoxyCodeLine{00367\ \ \ \ \ \mbox{\hyperlink{classCFormulaItem_a9f3188a2f262680e2835ee4548404efc}{CFormulaItem}}(\mbox{\hyperlink{classFormula}{Formula}}\&\ ev);}
+\DoxyCodeLine{00372\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classCFormulaItem_ad2da382800a79e7483e5995da63ebfc1}{SetNumber}}(\textcolor{keywordtype}{int}\ number)\ \{\ \mbox{\hyperlink{classCFormulaItem_ab0df148bfcfab0814d6e95b3954eade3}{Number}}\ =\ number;\ \};}
+\DoxyCodeLine{00373\ \ \ \ \ \textcolor{keywordtype}{void}\ SetParentSetNumber(\textcolor{keywordtype}{int}\ number)\ \{\ \mbox{\hyperlink{classCFormulaItem_a926ca600b348d25d0415462d657701cf}{ParentSetNumber}}\ =\ number;\ \};}
+\DoxyCodeLine{00374\ \};}
+\DoxyCodeLine{00375\ }
+\DoxyCodeLine{00376\ }
+\DoxyCodeLine{00378\ \textcolor{comment}{//\ CSetItem\ -\/\ {\ucr}{\ucr}{\ucr}{\ucr}{\ucr}\ {\ucr}{\ucr}{\ucr}\ {\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}\ {\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}\ FormulaSet,\ {\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}\ {\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}\ {\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}}}
+\DoxyCodeLine{00379\ \textcolor{comment}{//}}
+\DoxyCodeLine{00383\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classCSetItem}{CSetItem}}\ :\ \textcolor{keyword}{public}\ CObject}
+\DoxyCodeLine{00384\ \{}
+\DoxyCodeLine{00385\ \ \ \ \ \mbox{\hyperlink{classCSetItem_a2738342296c3a94b46073b6bbf3d176b}{CSetItem}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classCSetItem}{CSetItem}}\&\ src);}
+\DoxyCodeLine{00386\ \ \ \ \ \textcolor{keywordtype}{void}\ operator=(\textcolor{keyword}{const}\ \mbox{\hyperlink{classCSetItem}{CSetItem}}\&\ src);}
+\DoxyCodeLine{00387\ }
+\DoxyCodeLine{00388\ \ \ \ \ DECLARE\_XMLSERIAL(\mbox{\hyperlink{classCSetItem}{CSetItem}})}
+\DoxyCodeLine{00389\ }
+\DoxyCodeLine{00390\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00394\ \ \ \ \ \textcolor{comment}{//\ {\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}}}
+\DoxyCodeLine{00395\ \ \ \ \ \mbox{\hyperlink{classCSetItem_a2738342296c3a94b46073b6bbf3d176b}{CSetItem}}();}
+\DoxyCodeLine{00396\ }
+\DoxyCodeLine{00397\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00401\ \ \ \ \ Formula\_Feature\ \mbox{\hyperlink{classCSetItem_a5ebcc143596e2adbed2cad2c4bc4e4ef}{Feature}};}
+\DoxyCodeLine{00402\ }
+\DoxyCodeLine{00406\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classCSetItem_a7dc06f7258f2e176cd30dc66e24ecede}{Number}};}
+\DoxyCodeLine{00407\ }
+\DoxyCodeLine{00411\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classCSetItem_ab7b25e218a267ee7b168cb1834768a96}{ParentSetNumber}};}
+\DoxyCodeLine{00412\ }
+\DoxyCodeLine{00416\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classCSetItem_a07037b1bd633c8ff4b56bbb476d60acc}{ReplacedNumber}};}
+\DoxyCodeLine{00417\ }
+\DoxyCodeLine{00421\ \ \ \ \ CArrayXML\ <CFormulaItem*,\ CFormulaItem*>\ \mbox{\hyperlink{classCSetItem_a50da0d848d362a72becc50cbce836144}{Formulas}};}
+\DoxyCodeLine{00422\ }
+\DoxyCodeLine{00426\ \ \ \ \ CArrayXML\ <CVariableItem*,\ CVariableItem*>\ \mbox{\hyperlink{classCSetItem_a091fa9c4aadcb2e2653cc3e74da8a77d}{ReplaceVariables}};}
+\DoxyCodeLine{00427\ }
+\DoxyCodeLine{00431\ \ \ \ \ CString\ \mbox{\hyperlink{classCSetItem_a9c35d3028061b759a07d040062cfecc6}{Description}};}
+\DoxyCodeLine{00432\ }
+\DoxyCodeLine{00436\ \ \ \ \ CString\ \mbox{\hyperlink{classCSetItem_a1daf08cadb7cda19ec0ebedd7ce84cf7}{Addons}};}
+\DoxyCodeLine{00437\ }
+\DoxyCodeLine{00441\ \ \ \ \ CString\ \mbox{\hyperlink{classCSetItem_a7919adaa93c732b4288f34c207e8c2fc}{Label}};}
+\DoxyCodeLine{00442\ }
+\DoxyCodeLine{00446\ \ \ \ \ CString\ \mbox{\hyperlink{classCSetItem_ac39cd556523b106b4b09cf170dd5c836}{Text}};}
+\DoxyCodeLine{00447\ }
+\DoxyCodeLine{00451\ \ \ \ \ CString\ \mbox{\hyperlink{classCSetItem_ae4e1acd5df463589edf20d39e3cfb910}{Redefined}};}
+\DoxyCodeLine{00452\ }
+\DoxyCodeLine{00456\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classCSetItem_aa2a3685fe55a1e37f2a7f6e876c2108e}{Redefined\_Flag}};}
+\DoxyCodeLine{00457\ }
+\DoxyCodeLine{00461\ \ \ \ \ EntityBaseType\ \mbox{\hyperlink{classCSetItem_a2f9fed264c1f7bf06229ceb4e6963e69}{EntityType}};\ \textcolor{comment}{//\ {\ucr}{\ucr}{\ucr}\ c{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr},\ {\ucr}{\ucr}{\ucr}{\ucr}\ {\ucr}{\ucr}\ {\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}\ enum\ EntityBaseType::}}
+\DoxyCodeLine{00462\ }
+\DoxyCodeLine{00463\ \textcolor{comment}{//\ Implementation}}
+\DoxyCodeLine{00464\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00468\ \ \ \ \ \textcolor{comment}{//\ {\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}}}
+\DoxyCodeLine{00469\ \ \ \ \ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{classCSetItem_a1cc5085aedbc4a3ec876ae954dd2fa96}{\string~CSetItem}}();}
+\DoxyCodeLine{00474\ \ \ \ \ \textcolor{comment}{//\ {\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}\ {\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}\ ({\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}\ {\ucr}\ {\ucr}{\ucr}{\ucr}{\ucr}/{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}\ {\ucr}{\ucr}\ {\ucr}{\ucr}{\ucr}{\ucr}{\ucr})}}
+\DoxyCodeLine{00475\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classCSetItem_aebaabbcb9393d34d6197333989c85a2e}{Serialize}}(CArchive\ \&ar);}
+\DoxyCodeLine{00476\ }
+\DoxyCodeLine{00481\ \ \ \ \ \textcolor{comment}{//\ \ {\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr},\ {\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}\ {\ucr}\ {\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}\ {\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}\ {\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}\ {\ucr}{\ucr}\ {\ucr}{\ucr}{\ucr}{\ucr}{\ucr}{\ucr}\ FormulaSet}}
+\DoxyCodeLine{00482\ \ \ \ \ \mbox{\hyperlink{classCSetItem_a2738342296c3a94b46073b6bbf3d176b}{CSetItem}}(\mbox{\hyperlink{classFormulaSet}{FormulaSet}}\&\ ev);}
+\DoxyCodeLine{00483\ \ \ \ \ \textcolor{keywordtype}{void}\ SetNumber(\textcolor{keywordtype}{int}\ number)\ \{\ \mbox{\hyperlink{classCSetItem_a7dc06f7258f2e176cd30dc66e24ecede}{Number}}\ =\ number;\ \};}
+\DoxyCodeLine{00484\ \};}
+\DoxyCodeLine{00485\ }
+\DoxyCodeLine{00486\ }
+\DoxyCodeLine{00488\ }
+\DoxyCodeLine{00489\ }
+\DoxyCodeLine{00490\ }
+\DoxyCodeLine{00491\ }
+\DoxyCodeLine{00492\ \textcolor{comment}{//\{\{AFX\_INSERT\_LOCATION\}\}}}
+\DoxyCodeLine{00493\ \textcolor{comment}{//\ Microsoft\ Visual\ C++\ will\ insert\ additional\ declarations\ immediately\ before\ the\ previous\ line.}}
+\DoxyCodeLine{00494\ }
+\DoxyCodeLine{00495\ }
+\DoxyCodeLine{00496\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ !defined(AFX\_ITEM\_H\_\_9DD28C1C\_C5C2\_4CDB\_9D09\_D54FA75B418E\_\_INCLUDED\_)}}
+
+\end{DoxyCode}

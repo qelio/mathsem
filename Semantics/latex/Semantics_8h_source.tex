@@ -1,0 +1,36 @@
+\doxysection{Semantics.\+h}
+\hypertarget{Semantics_8h_source}{}\label{Semantics_8h_source}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{//\ Semantics.h\ :\ Header\ file\ for\ the\ CSemanticsApp\ class\ in\ the\ PROJECT\_NAME\ application.}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00004\ }
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#ifndef\ \_\_AFXWIN\_H\_\_}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\ \ \ \ \#error\ "{}Include\ 'stdafx.h'\ before\ including\ this\ file\ for\ PCH."{}}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ "{}resource.h"{}}\ \ \ \ \textcolor{comment}{//\ Resource\ file}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00012\ \textcolor{comment}{//\ A\ global\ variable\ to\ store\ the\ current\ language\ setting\ of\ the\ application}}
+\DoxyCodeLine{00013\ \_\_declspec(selectany)\ std::string\ CURRENT\_LANG\_OF(\textcolor{stringliteral}{"{}eng"{}});}
+\DoxyCodeLine{00014\ }
+\DoxyCodeLine{00022\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classCSemanticsApp}{CSemanticsApp}}\ :\ \textcolor{keyword}{public}\ CWinApp}
+\DoxyCodeLine{00023\ \{}
+\DoxyCodeLine{00024\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00031\ \ \ \ \ \mbox{\hyperlink{classCSemanticsApp_a68b1619cce4fd3c6405224be5307d034}{CSemanticsApp}}();}
+\DoxyCodeLine{00032\ }
+\DoxyCodeLine{00033\ \ \ \ \ \textcolor{comment}{//\ Initialization}}
+\DoxyCodeLine{00034\ }
+\DoxyCodeLine{00035\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00044\ \ \ \ \ \textcolor{keyword}{virtual}\ BOOL\ \mbox{\hyperlink{classCSemanticsApp_a882c2bbcf65c1e0b56b3d5ff9d53a2b4}{InitInstance}}();}
+\DoxyCodeLine{00045\ }
+\DoxyCodeLine{00046\ \ \ \ \ \textcolor{comment}{//\ Implementation}}
+\DoxyCodeLine{00047\ }
+\DoxyCodeLine{00054\ \ \ \ \ DECLARE\_MESSAGE\_MAP()}
+\DoxyCodeLine{00055\ \};}
+\DoxyCodeLine{00056\ }
+\DoxyCodeLine{00057\ \textcolor{comment}{//\ A\ global\ instance\ of\ the\ CSemanticsApp\ class}}
+\DoxyCodeLine{00058\ \textcolor{keyword}{extern}\ \mbox{\hyperlink{classCSemanticsApp}{CSemanticsApp}}\ theApp;}
+
+\end{DoxyCode}

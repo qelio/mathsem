@@ -1,0 +1,105 @@
+\doxysection{Math\+List\+Ctrl\+Ex.\+h}
+\hypertarget{MathListCtrlEx_8h_source}{}\label{MathListCtrlEx_8h_source}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00009\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classCMathListCtrlEx}{CMathListCtrlEx}}\ :\ \textcolor{keyword}{public}\ CListCtrl}
+\DoxyCodeLine{00010\ \{}
+\DoxyCodeLine{00011\ \ \ \ \ DECLARE\_DYNAMIC(\mbox{\hyperlink{classCMathListCtrlEx}{CMathListCtrlEx}})}
+\DoxyCodeLine{00012\ }
+\DoxyCodeLine{00013\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00017\ \ \ \ \ \mbox{\hyperlink{classCMathListCtrlEx_ae32898a343cf458211a54a11445636b4}{CMathListCtrlEx}}();}
+\DoxyCodeLine{00018\ }
+\DoxyCodeLine{00022\ \ \ \ \ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{classCMathListCtrlEx_a1de2fe228e38af6dd3745be63f9ec6bc}{\string~CMathListCtrlEx}}();}
+\DoxyCodeLine{00023\ }
+\DoxyCodeLine{00029\ \ \ \ \ DWORD\_PTR\ \mbox{\hyperlink{classCMathListCtrlEx_a7eeb1055919ab8a7a18d2d6f16df9c2f}{GetItemData}}(\textcolor{keywordtype}{int}\ nItem)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00030\ }
+\DoxyCodeLine{00036\ \ \ \ \ DWORD\_PTR\ \mbox{\hyperlink{classCMathListCtrlEx_a1294eaab42ab076f77363fb86d4ebf0e}{GetItemDataInternal}}(\textcolor{keywordtype}{int}\ nItem)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00037\ }
+\DoxyCodeLine{00044\ \ \ \ \ BOOL\ \mbox{\hyperlink{classCMathListCtrlEx_aef33b500107e99fc94d42464eeb98cd0}{SetItemData}}(\textcolor{keywordtype}{int}\ nItem,\ DWORD\_PTR\ dwData);}
+\DoxyCodeLine{00045\ }
+\DoxyCodeLine{00051\ \ \ \ \ BOOL\ \mbox{\hyperlink{classCMathListCtrlEx_aee21ee538bf54f40fb0aa9af25684bc9}{DeleteItem}}(\textcolor{keywordtype}{int}\ nItem);}
+\DoxyCodeLine{00052\ }
+\DoxyCodeLine{00057\ \ \ \ \ BOOL\ \mbox{\hyperlink{classCMathListCtrlEx_ace35261217c884a4b87889bb9a5b9c74}{DeleteAllItems}}();}
+\DoxyCodeLine{00058\ }
+\DoxyCodeLine{00065\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classCMathListCtrlEx_af07825f744d4d16b6466cec414d02231}{FindItem}}(LVFINDINFO*\ pFindInfo,\ \textcolor{keywordtype}{int}\ nStart\ =\ -\/1)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00066\ }
+\DoxyCodeLine{00073\ \ \ \ \ BOOL\ \mbox{\hyperlink{classCMathListCtrlEx_a8674737e1538d17fc230147a80fdc330}{SortItems}}(PFNLVCOMPARE\ pfnCompare,\ DWORD\_PTR\ dwData);}
+\DoxyCodeLine{00074\ }
+\DoxyCodeLine{00080\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classCMathListCtrlEx_a64e66b3f1542892fd3b48eec26a19b1a}{InsertItem}}(\textcolor{keyword}{const}\ LVITEM*\ pItem);}
+\DoxyCodeLine{00081\ }
+\DoxyCodeLine{00088\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classCMathListCtrlEx_a64e66b3f1542892fd3b48eec26a19b1a}{InsertItem}}(\textcolor{keywordtype}{int}\ nItem,\ LPCTSTR\ lpszItem);}
+\DoxyCodeLine{00089\ }
+\DoxyCodeLine{00097\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classCMathListCtrlEx_a64e66b3f1542892fd3b48eec26a19b1a}{InsertItem}}(\textcolor{keywordtype}{int}\ nItem,\ LPCTSTR\ lpszItem,\ \textcolor{keywordtype}{int}\ nImage);}
+\DoxyCodeLine{00098\ }
+\DoxyCodeLine{00106\ \ \ \ \ BOOL\ \mbox{\hyperlink{classCMathListCtrlEx_a67e654caaaa9758bf72cc506112ea0fe}{EnsureSubItemVisible}}(\textcolor{keywordtype}{int}\ nItem,\ \textcolor{keywordtype}{int}\ nSubItem,\ CRect\ *pRect\ =\ NULL);}
+\DoxyCodeLine{00107\ }
+\DoxyCodeLine{00111\ \ \ \ \ \textcolor{keyword}{typedef}\ \textcolor{keyword}{enum}\ \mbox{\hyperlink{classCMathListCtrlEx_a956b5c9d43558b4193c89ce2d28eb9ce}{Sort}}}
+\DoxyCodeLine{00112\ \ \ \ \ \{}
+\DoxyCodeLine{00113\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classCMathListCtrlEx_a956b5c9d43558b4193c89ce2d28eb9cead0835f1812f3e485bb90525fb1b810d9}{None}}\ =\ 0,\ }
+\DoxyCodeLine{00114\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classCMathListCtrlEx_a956b5c9d43558b4193c89ce2d28eb9cea9ba3dcb643263438118f882aca30010a}{Ascending}}\ =\ 1,\ }
+\DoxyCodeLine{00115\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classCMathListCtrlEx_a956b5c9d43558b4193c89ce2d28eb9ceabcad7b4141d5b3f88908db2d5d0b86e6}{Descending}}\ =\ 2,\ }
+\DoxyCodeLine{00116\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classCMathListCtrlEx_a956b5c9d43558b4193c89ce2d28eb9cea51d1c2a1e1c70a716c12cc2479535fc8}{Auto}}\ =\ 4,\ }
+\DoxyCodeLine{00117\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classCMathListCtrlEx_a956b5c9d43558b4193c89ce2d28eb9cea76271bb228658e13fbbb9417a66a3103}{SortBits}}\ =\ 7\ }
+\DoxyCodeLine{00118\ \ \ \ \ \}\ \mbox{\hyperlink{classCMathListCtrlEx_a956b5c9d43558b4193c89ce2d28eb9ce}{Sort}};}
+\DoxyCodeLine{00119\ }
+\DoxyCodeLine{00123\ \ \ \ \ \textcolor{keyword}{typedef}\ \textcolor{keyword}{enum}\ \mbox{\hyperlink{classCMathListCtrlEx_a81424f2ec3528545d889bd16917fc64b}{Comparer}}}
+\DoxyCodeLine{00124\ \ \ \ \ \{}
+\DoxyCodeLine{00125\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classCMathListCtrlEx_a81424f2ec3528545d889bd16917fc64ba8890eb9fb85ecd4ed762f76032bd649a}{NotSet}},\ }
+\DoxyCodeLine{00126\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classCMathListCtrlEx_a81424f2ec3528545d889bd16917fc64ba034c9eaca8266fb983b2f92374b80266}{Int}},\ }
+\DoxyCodeLine{00127\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classCMathListCtrlEx_a81424f2ec3528545d889bd16917fc64ba38ee37c320fc3d41bf2c6e146ecd3e38}{Double}},\ }
+\DoxyCodeLine{00128\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classCMathListCtrlEx_a81424f2ec3528545d889bd16917fc64ba74230e30af1d97c9199bdf7d1fab3456}{String}},\ }
+\DoxyCodeLine{00129\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classCMathListCtrlEx_a81424f2ec3528545d889bd16917fc64ba276402ec0bd53781781ac23b87ca6c49}{StringNumber}},\ }
+\DoxyCodeLine{00130\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classCMathListCtrlEx_a81424f2ec3528545d889bd16917fc64ba55316b2639f7eccd8eba9393af5b376f}{StringNoCase}},\ }
+\DoxyCodeLine{00131\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classCMathListCtrlEx_a81424f2ec3528545d889bd16917fc64baf4b7fb9eb6beb2826cdd63f879b1dfd5}{StringNumberNoCase}},\ }
+\DoxyCodeLine{00132\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classCMathListCtrlEx_a81424f2ec3528545d889bd16917fc64ba0b282631c8d18d2abcd1e9dbf65a3064}{Date}}\ }
+\DoxyCodeLine{00133\ \ \ \ \ \}\ \mbox{\hyperlink{classCMathListCtrlEx_a81424f2ec3528545d889bd16917fc64b}{Comparer}};}
+\DoxyCodeLine{00134\ }
+\DoxyCodeLine{00135\ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00143\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{int}\ CALLBACK\ \mbox{\hyperlink{classCMathListCtrlEx_a4ffec835344b7dd79238ced0dce84c99}{CompareProc}}(LPARAM\ lParam1,\ LPARAM\ lParam2,\ LPARAM\ lParamSort);}
+\DoxyCodeLine{00144\ }
+\DoxyCodeLine{00152\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classCMathListCtrlEx_aaecd2697526980441ec450ba6dce34f4}{Compare}}(LPARAM\ lParam1,\ LPARAM\ lParam2,\ LPARAM\ lParamSort);}
+\DoxyCodeLine{00153\ }
+\DoxyCodeLine{00160\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classCMathListCtrlEx_a732685e84dd92ab2d4e84ee0a3387b9a}{CompareInt}}(LPCTSTR\ pLeftText,\ LPCTSTR\ pRightText);}
+\DoxyCodeLine{00161\ }
+\DoxyCodeLine{00168\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classCMathListCtrlEx_a9b786d8154b0ee734de0ebe2a1a948e0}{CompareDouble}}(LPCTSTR\ pLeftText,\ LPCTSTR\ pRightText);}
+\DoxyCodeLine{00169\ }
+\DoxyCodeLine{00176\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classCMathListCtrlEx_abe8ddea3025304b36d582c8cad9c467c}{CompareString}}(LPCTSTR\ pLeftText,\ LPCTSTR\ pRightText);}
+\DoxyCodeLine{00177\ }
+\DoxyCodeLine{00184\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classCMathListCtrlEx_a5e5d83e4be9736c3edd1f94ff10abd32}{CompareNumberString}}(LPCTSTR\ pLeftText,\ LPCTSTR\ pRightText);}
+\DoxyCodeLine{00185\ }
+\DoxyCodeLine{00192\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classCMathListCtrlEx_a7115b747a3005126de2cabb7ea9ae18b}{CompareNumberStringNoCase}}(LPCTSTR\ pLeftText,\ LPCTSTR\ pRightText);}
+\DoxyCodeLine{00193\ }
+\DoxyCodeLine{00200\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classCMathListCtrlEx_a98492aef1ee003f5972d38e3bf44e730}{CompareStringNoCase}}(LPCTSTR\ pLeftText,\ LPCTSTR\ pRightText);}
+\DoxyCodeLine{00201\ }
+\DoxyCodeLine{00208\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classCMathListCtrlEx_ad2a8421ccacfb2ce96f36cb09311bc6b}{CompareDate}}(LPCTSTR\ pLeftText,\ LPCTSTR\ pRightText);}
+\DoxyCodeLine{00209\ }
+\DoxyCodeLine{00211\ \ \ \ \ CCriticalSection\ \mbox{\hyperlink{classCMathListCtrlEx_a1a5697c4eaef6ab979e8bf7046f41834}{m\_oLock}};}
+\DoxyCodeLine{00212\ }
+\DoxyCodeLine{00213\ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00214\ \ \ \ \ DECLARE\_MESSAGE\_MAP()}
+\DoxyCodeLine{00215\ }
+\DoxyCodeLine{00216\ \ \ \ \ }
+\DoxyCodeLine{00219\ \ \ \ \ typedef\ struct\ \mbox{\hyperlink{structCMathListCtrlEx_1_1EditorInfo}{EditorInfo}}}
+\DoxyCodeLine{00220\ \ \ \ \ \{}
+\DoxyCodeLine{00221\ \ \ \ \ \ \ \ \ PFNEDITORCALLBACK\ \mbox{\hyperlink{structCMathListCtrlEx_1_1EditorInfo_a259776c0f65a9be8d397420b3a19f1f5}{m\_pfnInitEditor}};\ }
+\DoxyCodeLine{00222\ \ \ \ \ \ \ \ \ PFNEDITORCALLBACK\ \mbox{\hyperlink{structCMathListCtrlEx_1_1EditorInfo_a102d8a9257d5c8792f707847f3d07b74}{m\_pfnEndEditor}};\ }
+\DoxyCodeLine{00223\ \ \ \ \ \ \ \ \ CWnd\ *\mbox{\hyperlink{structCMathListCtrlEx_1_1EditorInfo_a6043be5dd09035110d06519aefab33bd}{m\_pWnd}};\ }
+\DoxyCodeLine{00224\ \ \ \ \ \ \ \ \ BOOL\ \mbox{\hyperlink{structCMathListCtrlEx_1_1EditorInfo_aba76867d8eb30a20e4a66e3ba506eca6}{m\_bReadOnly}};\ }
+\DoxyCodeLine{00225\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structCMathListCtrlEx_1_1EditorInfo}{EditorInfo}}();\ }
+\DoxyCodeLine{00226\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structCMathListCtrlEx_1_1EditorInfo}{EditorInfo}}(PFNEDITORCALLBACK\ pfnInitEditor,\ PFNEDITORCALLBACK\ pfnEndEditor,\ CWnd\ *pWnd\ =\ NULL);\ }
+\DoxyCodeLine{00227\ \ \ \ \ \ \ \ \ \textcolor{keyword}{inline}\ BOOL\ \mbox{\hyperlink{structCMathListCtrlEx_1_1EditorInfo_a7ddf6ef848636ab65c56458280bebd2f}{IsSet}}()\{\textcolor{keywordflow}{return}\ (m\_pfnInitEditor\ ||\ m\_pWnd);\}\ }
+\DoxyCodeLine{00228\ \ \ \ \ \}\ EditorInfo;}
+\DoxyCodeLine{00229\ }
+\DoxyCodeLine{00231\ \ \ \ \ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structCMathListCtrlEx_1_1CellInfo}{CellInfo}}}
+\DoxyCodeLine{00232\ \ \ \ \ \{}
+\DoxyCodeLine{00233\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structCMathListCtrlEx_1_1EditorInfo}{EditorInfo}}\ \mbox{\hyperlink{structCMathListCtrlEx_1_1CellInfo_a4044531705c64f47a98fa4094ba3687a}{m\_eiEditor}};\ }
+\DoxyCodeLine{00234\ \ \ \ \ \ \ \ \ COLORREF\ \mbox{\hyperlink{structCMathListCtrlEx_1_1CellInfo_a1c9596ba45d0417769c18c4a5ccd9984}{m\_clrBack}};\ }
+\DoxyCodeLine{00235\ \ \ \ \ \ \ \ \ COLORREF\ \mbox{\hyperlink{structCMathListCtrlEx_1_1CellInfo_a548f7e0ba0290d5305007d5f7c2057e6}{m\_clrText}};\ }
+\DoxyCodeLine{00236\ \ \ \ \ \ \ \ \ DWORD\_PTR\ \mbox{\hyperlink{structCMathListCtrlEx_1_1CellInfo_ad99eb402e8da06714b3c5abde56f08fe}{m\_dwData}};\ }
+\DoxyCodeLine{00237\ \ \ \ \ \ \ \ \ BOOL\ \mbox{\hyperlink{structCMathListCtrlEx_1_1CellInfo_a32a143f189a363a206181b2ee9763278}{m\_bReadOnly}};\ }
+\DoxyCodeLine{00238\ \ \ \ \ \}\ CellInfo;}
+\DoxyCodeLine{00239\ }
+\DoxyCodeLine{00241\ \ \ \ \ CArray<CellInfo>\ \mbox{\hyperlink{classCMathListCtrlEx_a85bb75033abfa3a70edc3f2d02e482dd}{m\_arrCellInfo}};}
+\DoxyCodeLine{00242\ \};}
+
+\end{DoxyCode}

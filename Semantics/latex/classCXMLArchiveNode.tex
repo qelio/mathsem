@@ -1,0 +1,281 @@
+\doxysection{CXMLArchive\+Node Class Reference}
+\hypertarget{classCXMLArchiveNode}{}\label{classCXMLArchiveNode}\index{CXMLArchiveNode@{CXMLArchiveNode}}
+
+
+A class representing an XML node in the \doxylink{classCXMLArchive}{CXMLArchive}.  
+
+
+
+
+{\ttfamily \#include $<$XMLArchive.\+h$>$}
+
+
+
+Collaboration diagram for CXMLArchive\+Node\+:
+% FIG 0
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classCXMLArchiveNode_a15d09ae1a051aacd9c53ee2eed11b601}\label{classCXMLArchiveNode_a15d09ae1a051aacd9c53ee2eed11b601} 
+virtual {\bfseries \texorpdfstring{$\sim$}{\string~}\+CXMLArchive\+Node} ()
+\begin{DoxyCompactList}\small\item\em Destructor for \doxylink{classCXMLArchiveNode}{CXMLArchive\+Node}, cleans up resources. \end{DoxyCompactList}\item 
+MSXML\+::\+IXMLDOMNode\+Ptr \mbox{\hyperlink{classCXMLArchiveNode_ab59752eacecf542e6921334e34169467}{Create\+Data\+Node}} (LPCTSTR attr\+Name, CString attr\+Value)
+\begin{DoxyCompactList}\small\item\em Creates a new data node in the XML document. \end{DoxyCompactList}\item 
+MSXML\+::\+IXMLDOMNode\+Ptr \mbox{\hyperlink{classCXMLArchiveNode_a1c2cfeefbd73867d2f1bb5856a95d5ef}{Get\+Data\+Node}} (LPCTSTR node\+Name, CString \&node\+Text)
+\begin{DoxyCompactList}\small\item\em Retrieves the data node for a given name from the XML document. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classCXMLArchiveNode_aec73a30848a9487e185bc3fede9b36dc}{Get\+No\+Children}} ()
+\begin{DoxyCompactList}\small\item\em Retrieves the number of children for the current node. \end{DoxyCompactList}\item 
+CString \mbox{\hyperlink{classCXMLArchiveNode_abfb63d87c72c3957ed926d31c3920ee6}{Get\+Child\+Name}} (int child\+Index)
+\begin{DoxyCompactList}\small\item\em Retrieves the name of a child node at a specific index. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classCXMLArchiveNode_a1cb6aa0d3cf678e3916ca17e7cefdde4}{Get\+Next\+Child\+Index}} ()
+\begin{DoxyCompactList}\small\item\em Retrieves the next child index for iterating over children. \end{DoxyCompactList}\item 
+\Hypertarget{classCXMLArchiveNode_afc0e988033c6879b5d2e2ba4b25ecaa3}\label{classCXMLArchiveNode_afc0e988033c6879b5d2e2ba4b25ecaa3} 
+void {\bfseries Close} ()
+\begin{DoxyCompactList}\small\item\em Closes the current node, ending its processing. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classCXMLArchiveNode_a7007e0bd67102f9a829e7ce8829a88d4}{Data\+Node}} (LPCTSTR attr\+Name, CTime \&attr\+Value)
+\begin{DoxyCompactList}\small\item\em Sets data for an attribute with various types. \end{DoxyCompactList}\item 
+\Hypertarget{classCXMLArchiveNode_abc238a6a4f5742054bbe65f4b5d5587d}\label{classCXMLArchiveNode_abc238a6a4f5742054bbe65f4b5d5587d} 
+void {\bfseries Data\+Node} (LPCTSTR attr\+Name, CTime\+Span \&attr\+Value)
+\item 
+\Hypertarget{classCXMLArchiveNode_a3401ce28598178539b3f07f9daf37602}\label{classCXMLArchiveNode_a3401ce28598178539b3f07f9daf37602} 
+void {\bfseries Data\+Node} (LPCTSTR attr\+Name, CString \&attr\+Value)
+\item 
+\Hypertarget{classCXMLArchiveNode_a9514061e211134f605a398f995048411}\label{classCXMLArchiveNode_a9514061e211134f605a398f995048411} 
+void {\bfseries Data\+Node} (LPCTSTR attr\+Name, bool \&attr\+Value)
+\item 
+\Hypertarget{classCXMLArchiveNode_a3919aa06d4b819a0f8d0b4344101900c}\label{classCXMLArchiveNode_a3919aa06d4b819a0f8d0b4344101900c} 
+void {\bfseries Data\+Node} (LPCTSTR attr\+Name, int \&attr\+Value)
+\item 
+\Hypertarget{classCXMLArchiveNode_a26b6c93440bda09b4c6cba61fa97e9fb}\label{classCXMLArchiveNode_a26b6c93440bda09b4c6cba61fa97e9fb} 
+void {\bfseries Data\+Node} (LPCTSTR attr\+Name, double \&attr\+Value)
+\item 
+\Hypertarget{classCXMLArchiveNode_a32fd9ca4158cf3928e72a0d46576dce2}\label{classCXMLArchiveNode_a32fd9ca4158cf3928e72a0d46576dce2} 
+void {\bfseries Data\+Node} (LPCTSTR attr\+Name, LONG \&attr\+Value)
+\item 
+\Hypertarget{classCXMLArchiveNode_a2f3afcef971a584e32b5a73d2f1f977a}\label{classCXMLArchiveNode_a2f3afcef971a584e32b5a73d2f1f977a} 
+void {\bfseries Data\+Node} (LPCTSTR attr\+Name, BYTE \&attr\+Value)
+\item 
+\Hypertarget{classCXMLArchiveNode_a1f8c8613656a001c008da3b615574a87}\label{classCXMLArchiveNode_a1f8c8613656a001c008da3b615574a87} 
+void {\bfseries Data\+Node} (LPCTSTR attr\+Name, UINT \&attr\+Value)
+\item 
+\Hypertarget{classCXMLArchiveNode_afd53bb464a96d141c6784b218d3de57d}\label{classCXMLArchiveNode_afd53bb464a96d141c6784b218d3de57d} 
+void {\bfseries Data\+Node} (LPCTSTR attr\+Name, CMap\+String\+To\+Ptr \&pointer\+Map)
+\item 
+\Hypertarget{classCXMLArchiveNode_a9239843f5b99310e0b8608a7e5f5e41b}\label{classCXMLArchiveNode_a9239843f5b99310e0b8608a7e5f5e41b} 
+void {\bfseries Data\+Node} (LPCTSTR attr\+Name, CMap\+String\+To\+String \&string\+Map)
+\item 
+\Hypertarget{classCXMLArchiveNode_a3fd9860c3bd425d89497d1dac5b45275}\label{classCXMLArchiveNode_a3fd9860c3bd425d89497d1dac5b45275} 
+void {\bfseries Data\+Node} (LPCTSTR attr\+Name, CString\+Array \&string\+Array)
+\item 
+\Hypertarget{classCXMLArchiveNode_a287ab824ddcf950331ae74f26d8e09ba}\label{classCXMLArchiveNode_a287ab824ddcf950331ae74f26d8e09ba} 
+void {\bfseries Data\+Node} (LPCTSTR attr\+Name, CByte\+Array \&byte\+Array)
+\item 
+\Hypertarget{classCXMLArchiveNode_a8086e89e1ea7d8eb094eb75b8d2aac3a}\label{classCXMLArchiveNode_a8086e89e1ea7d8eb094eb75b8d2aac3a} 
+void {\bfseries Data\+Node} (LPCTSTR attr\+Name, CDWord\+Array \&word\+Array)
+\item 
+void \mbox{\hyperlink{classCXMLArchiveNode_a914410afa741f4e8c5b0c7a05e4963b1}{Data\+Node}} (LPCTSTR attr\+Name, CObject \&object)
+\begin{DoxyCompactList}\small\item\em Loads data into an existing object. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classCXMLArchiveNode_adcb43dc8a2b73e052c1e98bbc3739585}{Data\+Node}} (LPCTSTR attr\+Name, CObject \texorpdfstring{$\ast$}{*}\&object\+Ptr)
+\begin{DoxyCompactList}\small\item\em Creates a new object when loading data. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static CObject \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classCXMLArchiveNode_a054926d55c1d5c2829ea882e832e49e4}{Create\+Object}} (const CString \&class\+Name)
+\begin{DoxyCompactList}\small\item\em Creates a new object based on the node\textquotesingle{}s name. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classCXMLArchiveNode_a1b4a37e14943c1cbf72feab52fb2753a}\label{classCXMLArchiveNode_a1b4a37e14943c1cbf72feab52fb2753a} 
+MSXML\+::\+IXMLDOMElement\+Ptr const {\bfseries m\+\_\+node\+Ptr}
+\begin{DoxyCompactList}\small\item\em Pointer to the DOM element for this node. \end{DoxyCompactList}\item 
+\Hypertarget{classCXMLArchiveNode_a3e2af0a4e458c0dec5c8b375035dc276}\label{classCXMLArchiveNode_a3e2af0a4e458c0dec5c8b375035dc276} 
+MSXML\+::\+IXMLDOMNode\+Ptr const {\bfseries m\+\_\+father\+Node\+Ptr}
+\begin{DoxyCompactList}\small\item\em Pointer to the parent node. \end{DoxyCompactList}\item 
+\Hypertarget{classCXMLArchiveNode_a7e41b71814d5080a06549771c3082bca}\label{classCXMLArchiveNode_a7e41b71814d5080a06549771c3082bca} 
+\mbox{\hyperlink{classCXMLArchive}{CXMLArchive}} \texorpdfstring{$\ast$}{*}const {\bfseries m\+\_\+archive\+Ptr}
+\begin{DoxyCompactList}\small\item\em Pointer to the \doxylink{classCXMLArchive}{CXMLArchive} instance. \end{DoxyCompactList}\item 
+\Hypertarget{classCXMLArchiveNode_a0dedd141ca60c2bf62b832f3d72da2ec}\label{classCXMLArchiveNode_a0dedd141ca60c2bf62b832f3d72da2ec} 
+MSXML\+::\+IXMLDOMNode\+List\+Ptr {\bfseries m\+\_\+child\+Node\+List\+Ptr}
+\begin{DoxyCompactList}\small\item\em Pointer to the list of child nodes. \end{DoxyCompactList}\item 
+\Hypertarget{classCXMLArchiveNode_ad96b3cd17353eda66b91bd994d87cc23}\label{classCXMLArchiveNode_ad96b3cd17353eda66b91bd994d87cc23} 
+int {\bfseries m\+\_\+child\+Index}
+\begin{DoxyCompactList}\small\item\em Index of the current child node. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classCXMLArchiveNode_ab2e695a4fbb866660c5433d7c0c54a1e}\label{classCXMLArchiveNode_ab2e695a4fbb866660c5433d7c0c54a1e} 
+static CMap\+String\+To\+Ptr {\bfseries m\+\_\+class\+Map}
+\begin{DoxyCompactList}\small\item\em Cache for RUNTIME\+\_\+\+CLASS to speed up object creation. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classCXMLArchiveNode_a785fa945df5a28e980696bc8388e7528}\label{classCXMLArchiveNode_a785fa945df5a28e980696bc8388e7528} 
+class \mbox{\hyperlink{classCXMLArchiveNode_a785fa945df5a28e980696bc8388e7528}{CXMLArchive}}
+\begin{DoxyCompactList}\small\item\em Allows \doxylink{classCXMLArchive}{CXMLArchive} to access private members. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A class representing an XML node in the \doxylink{classCXMLArchive}{CXMLArchive}. 
+
+This class provides methods for manipulating individual XML nodes, such as retrieving child nodes, setting data, and creating new nodes. It can be used to interact with XML nodes within an archive, either as a parent or child node. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classCXMLArchiveNode_ab59752eacecf542e6921334e34169467}\label{classCXMLArchiveNode_ab59752eacecf542e6921334e34169467} 
+\index{CXMLArchiveNode@{CXMLArchiveNode}!CreateDataNode@{CreateDataNode}}
+\index{CreateDataNode@{CreateDataNode}!CXMLArchiveNode@{CXMLArchiveNode}}
+\doxysubsubsection{\texorpdfstring{CreateDataNode()}{CreateDataNode()}}
+{\footnotesize\ttfamily MSXML\+::\+IXMLDOMNode\+Ptr CXMLArchive\+Node\+::\+Create\+Data\+Node (\begin{DoxyParamCaption}\item[{LPCTSTR}]{attr\+Name,  }\item[{CString}]{attr\+Value }\end{DoxyParamCaption})}
+
+
+
+Creates a new data node in the XML document. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em attr\+Name} & The name of the data attribute. \\
+\hline
+{\em attr\+Value} & The value of the attribute. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A pointer to the created data node. 
+\end{DoxyReturn}
+\Hypertarget{classCXMLArchiveNode_a054926d55c1d5c2829ea882e832e49e4}\label{classCXMLArchiveNode_a054926d55c1d5c2829ea882e832e49e4} 
+\index{CXMLArchiveNode@{CXMLArchiveNode}!CreateObject@{CreateObject}}
+\index{CreateObject@{CreateObject}!CXMLArchiveNode@{CXMLArchiveNode}}
+\doxysubsubsection{\texorpdfstring{CreateObject()}{CreateObject()}}
+{\footnotesize\ttfamily CObject \texorpdfstring{$\ast$}{*} CXMLArchive\+Node\+::\+Create\+Object (\begin{DoxyParamCaption}\item[{const CString \&}]{class\+Name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Creates a new object based on the node\textquotesingle{}s name. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em class\+Name} & The class name used to create the object. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A pointer to the created object. 
+\end{DoxyReturn}
+\Hypertarget{classCXMLArchiveNode_a914410afa741f4e8c5b0c7a05e4963b1}\label{classCXMLArchiveNode_a914410afa741f4e8c5b0c7a05e4963b1} 
+\index{CXMLArchiveNode@{CXMLArchiveNode}!DataNode@{DataNode}}
+\index{DataNode@{DataNode}!CXMLArchiveNode@{CXMLArchiveNode}}
+\doxysubsubsection{\texorpdfstring{DataNode()}{DataNode()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily void CXMLArchive\+Node\+::\+Data\+Node (\begin{DoxyParamCaption}\item[{LPCTSTR}]{attr\+Name,  }\item[{CObject \&}]{object }\end{DoxyParamCaption})}
+
+
+
+Loads data into an existing object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em attr\+Name} & The name of the attribute. \\
+\hline
+{\em object} & The object to load data into. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classCXMLArchiveNode_adcb43dc8a2b73e052c1e98bbc3739585}\label{classCXMLArchiveNode_adcb43dc8a2b73e052c1e98bbc3739585} 
+\index{CXMLArchiveNode@{CXMLArchiveNode}!DataNode@{DataNode}}
+\index{DataNode@{DataNode}!CXMLArchiveNode@{CXMLArchiveNode}}
+\doxysubsubsection{\texorpdfstring{DataNode()}{DataNode()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily void CXMLArchive\+Node\+::\+Data\+Node (\begin{DoxyParamCaption}\item[{LPCTSTR}]{attr\+Name,  }\item[{CObject \texorpdfstring{$\ast$}{*}\&}]{object\+Ptr }\end{DoxyParamCaption})}
+
+
+
+Creates a new object when loading data. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em attr\+Name} & The name of the attribute. \\
+\hline
+{\em object\+Ptr} & A pointer to the object to be created. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classCXMLArchiveNode_a7007e0bd67102f9a829e7ce8829a88d4}\label{classCXMLArchiveNode_a7007e0bd67102f9a829e7ce8829a88d4} 
+\index{CXMLArchiveNode@{CXMLArchiveNode}!DataNode@{DataNode}}
+\index{DataNode@{DataNode}!CXMLArchiveNode@{CXMLArchiveNode}}
+\doxysubsubsection{\texorpdfstring{DataNode()}{DataNode()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily void CXMLArchive\+Node\+::\+Data\+Node (\begin{DoxyParamCaption}\item[{LPCTSTR}]{attr\+Name,  }\item[{CTime \&}]{attr\+Value }\end{DoxyParamCaption})}
+
+
+
+Sets data for an attribute with various types. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em attr\+Name} & The name of the attribute. \\
+\hline
+{\em attr\+Value} & The value of the attribute. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classCXMLArchiveNode_abfb63d87c72c3957ed926d31c3920ee6}\label{classCXMLArchiveNode_abfb63d87c72c3957ed926d31c3920ee6} 
+\index{CXMLArchiveNode@{CXMLArchiveNode}!GetChildName@{GetChildName}}
+\index{GetChildName@{GetChildName}!CXMLArchiveNode@{CXMLArchiveNode}}
+\doxysubsubsection{\texorpdfstring{GetChildName()}{GetChildName()}}
+{\footnotesize\ttfamily CString CXMLArchive\+Node\+::\+Get\+Child\+Name (\begin{DoxyParamCaption}\item[{int}]{child\+Index }\end{DoxyParamCaption})}
+
+
+
+Retrieves the name of a child node at a specific index. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em child\+Index} & The index of the child node. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The name of the child node. 
+\end{DoxyReturn}
+\Hypertarget{classCXMLArchiveNode_a1c2cfeefbd73867d2f1bb5856a95d5ef}\label{classCXMLArchiveNode_a1c2cfeefbd73867d2f1bb5856a95d5ef} 
+\index{CXMLArchiveNode@{CXMLArchiveNode}!GetDataNode@{GetDataNode}}
+\index{GetDataNode@{GetDataNode}!CXMLArchiveNode@{CXMLArchiveNode}}
+\doxysubsubsection{\texorpdfstring{GetDataNode()}{GetDataNode()}}
+{\footnotesize\ttfamily MSXML\+::\+IXMLDOMNode\+Ptr CXMLArchive\+Node\+::\+Get\+Data\+Node (\begin{DoxyParamCaption}\item[{LPCTSTR}]{node\+Name,  }\item[{CString \&}]{node\+Text }\end{DoxyParamCaption})}
+
+
+
+Retrieves the data node for a given name from the XML document. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em node\+Name} & The name of the data node. \\
+\hline
+{\em node\+Text} & A reference to store the node\textquotesingle{}s text value. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A pointer to the data node. 
+\end{DoxyReturn}
+\Hypertarget{classCXMLArchiveNode_a1cb6aa0d3cf678e3916ca17e7cefdde4}\label{classCXMLArchiveNode_a1cb6aa0d3cf678e3916ca17e7cefdde4} 
+\index{CXMLArchiveNode@{CXMLArchiveNode}!GetNextChildIndex@{GetNextChildIndex}}
+\index{GetNextChildIndex@{GetNextChildIndex}!CXMLArchiveNode@{CXMLArchiveNode}}
+\doxysubsubsection{\texorpdfstring{GetNextChildIndex()}{GetNextChildIndex()}}
+{\footnotesize\ttfamily int CXMLArchive\+Node\+::\+Get\+Next\+Child\+Index (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Retrieves the next child index for iterating over children. 
+
+\begin{DoxyReturn}{Returns}
+The next child index. 
+\end{DoxyReturn}
+\Hypertarget{classCXMLArchiveNode_aec73a30848a9487e185bc3fede9b36dc}\label{classCXMLArchiveNode_aec73a30848a9487e185bc3fede9b36dc} 
+\index{CXMLArchiveNode@{CXMLArchiveNode}!GetNoChildren@{GetNoChildren}}
+\index{GetNoChildren@{GetNoChildren}!CXMLArchiveNode@{CXMLArchiveNode}}
+\doxysubsubsection{\texorpdfstring{GetNoChildren()}{GetNoChildren()}}
+{\footnotesize\ttfamily int CXMLArchive\+Node\+::\+Get\+No\+Children (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Retrieves the number of children for the current node. 
+
+\begin{DoxyReturn}{Returns}
+The number of child nodes. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+XMLArchive.\+h\item 
+XMLArchive.\+cpp\end{DoxyCompactItemize}

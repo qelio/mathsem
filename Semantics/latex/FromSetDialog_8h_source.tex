@@ -1,0 +1,45 @@
+\doxysection{From\+Set\+Dialog.\+h}
+\hypertarget{FromSetDialog_8h_source}{}\label{FromSetDialog_8h_source}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#include\ "{}afxwin.h"{}}}
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ "{}afxbutton.h"{}}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}ScientificListBox.h"{}}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}Formula.h"{}}}
+\DoxyCodeLine{00006\ \textcolor{comment}{//\#include\ "{}ScientificStatic.h"{}}}
+\DoxyCodeLine{00007\ \textcolor{comment}{//\#include\ "{}afxcmn.h"{}}}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00017\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classFromSetDialog}{FromSetDialog}}\ :\ \textcolor{keyword}{public}\ CDialogEx}
+\DoxyCodeLine{00018\ \{}
+\DoxyCodeLine{00019\ \ \ \ \ DECLARE\_DYNAMIC(\mbox{\hyperlink{classFromSetDialog}{FromSetDialog}})}
+\DoxyCodeLine{00020\ }
+\DoxyCodeLine{00021\ \ \ \ \ }
+\DoxyCodeLine{00024\ \ \ \ \ vector\ <FormulaSet\ *>\ *\ sets;}
+\DoxyCodeLine{00025\ }
+\DoxyCodeLine{00029\ \ \ \ \ vector\ <EntityBase\ *>\ *\ allEntities;}
+\DoxyCodeLine{00030\ }
+\DoxyCodeLine{00031\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00036\ \ \ \ \ \mbox{\hyperlink{classFromSetDialog}{FromSetDialog}}(CWnd*\ pParent\ =\ NULL);}
+\DoxyCodeLine{00037\ }
+\DoxyCodeLine{00041\ \ \ \ \ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{classFromSetDialog_a1e61d963df7b52d550904a73e4a7d7f1}{\string~FromSetDialog}}();}
+\DoxyCodeLine{00042\ }
+\DoxyCodeLine{00047\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classFromSetDialog_a0002d4cb34a720e7054693b785bced37}{DoDataExchange}}(CDataExchange*\ pDX);}
+\DoxyCodeLine{00048\ }
+\DoxyCodeLine{00054\ \ \ \ \ \textcolor{keyword}{virtual}\ BOOL\ \mbox{\hyperlink{classFromSetDialog_a87d58199a39689f1b2914f9eda672b71}{OnInitDialog}}();}
+\DoxyCodeLine{00055\ }
+\DoxyCodeLine{00060\ \ \ \ \ afx\_msg\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classFromSetDialog_ad04171e7bc5812e97bb04b93acbbd20f}{OnLbnSelchangeSetlist1}}();}
+\DoxyCodeLine{00061\ }
+\DoxyCodeLine{00066\ \ \ \ \ afx\_msg\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classFromSetDialog_ae2412bb7a441b2a7be194506bf55b68f}{OnBnClickedOk}}();}
+\DoxyCodeLine{00067\ }
+\DoxyCodeLine{00072\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classFromSetDialog_addaa05904893be79fbbf527dd760110c}{setEntities}}(vector\ <EntityBase\ *>\ *\ all\_entities\_\ =\ NULL)\ \{\ allEntities\ =\ all\_entities\_;\ \};}
+\DoxyCodeLine{00073\ }
+\DoxyCodeLine{00074\ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00078\ \ \ \ \ DECLARE\_MESSAGE\_MAP()}
+\DoxyCodeLine{00079\ }
+\DoxyCodeLine{00080\ \ \ \ \ }
+\DoxyCodeLine{00083\ \ \ \ \ \mbox{\hyperlink{classScientificListBox}{ScientificListBox}}\ \mbox{\hyperlink{classFromSetDialog_a417c19fc70bdd0f6cdef73cf013e5f69}{m\_ListBoxSource}};}
+\DoxyCodeLine{00084\ }
+\DoxyCodeLine{00088\ \ \ \ \ CButton\ \mbox{\hyperlink{classFromSetDialog_a6476c239147297177a6b10218d41d968}{m\_ButtonOK}};}
+\DoxyCodeLine{00089\ \};}
+
+\end{DoxyCode}

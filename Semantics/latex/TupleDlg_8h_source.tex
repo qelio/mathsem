@@ -1,0 +1,47 @@
+\doxysection{Tuple\+Dlg.\+h}
+\hypertarget{TupleDlg_8h_source}{}\label{TupleDlg_8h_source}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#include\ "{}afxwin.h"{}}}
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ "{}Formula.h"{}}}
+\DoxyCodeLine{00004\ }
+\DoxyCodeLine{00011\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classCTupleDlg}{CTupleDlg}}\ :\ \textcolor{keyword}{public}\ CDialog}
+\DoxyCodeLine{00012\ \{}
+\DoxyCodeLine{00018\ \ \ \ \ vector\ <EntityBase\ *>\ \ *all\_entities;}
+\DoxyCodeLine{00019\ }
+\DoxyCodeLine{00020\ \ \ \ \ DECLARE\_DYNAMIC(\mbox{\hyperlink{classCTupleDlg}{CTupleDlg}})}
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00022\ \ \ \ \ }
+\DoxyCodeLine{00027\ \ \ \ \ BOOL\ OnInitDialog();}
+\DoxyCodeLine{00028\ }
+\DoxyCodeLine{00029\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00035\ \ \ \ \ \mbox{\hyperlink{classCTupleDlg}{CTupleDlg}}(CWnd*\ pParent\ =\ NULL);}
+\DoxyCodeLine{00036\ }
+\DoxyCodeLine{00041\ \ \ \ \ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{classCTupleDlg_ae311163f872a32ebde8d9c1a28c34e00}{\string~CTupleDlg}}();}
+\DoxyCodeLine{00042\ }
+\DoxyCodeLine{00047\ \ \ \ \ \textcolor{keyword}{enum}\ \{\ IDD\ =\ IDD\_TUPLEDIALOG\ \};}
+\DoxyCodeLine{00048\ }
+\DoxyCodeLine{00049\ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00055\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classCTupleDlg_a973481570cd70b21dde727cdb5ad07bc}{DoDataExchange}}(CDataExchange*\ pDX);}
+\DoxyCodeLine{00056\ }
+\DoxyCodeLine{00060\ \ \ \ \ DECLARE\_MESSAGE\_MAP()}
+\DoxyCodeLine{00061\ }
+\DoxyCodeLine{00062\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00067\ \ \ \ \ CComboBox\ \mbox{\hyperlink{classCTupleDlg_a1c62121618b749b2c62f38da8a2237a4}{combo1}};}
+\DoxyCodeLine{00068\ }
+\DoxyCodeLine{00073\ \ \ \ \ CComboBox\ \mbox{\hyperlink{classCTupleDlg_a3b9ee114de5682bb0f2547eec73c2417}{combo2}};}
+\DoxyCodeLine{00074\ }
+\DoxyCodeLine{00079\ \ \ \ \ afx\_msg\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classCTupleDlg_ace3d97d975125499b5347788fe8e0a8c}{OnBnClickedOk}}();}
+\DoxyCodeLine{00080\ }
+\DoxyCodeLine{00085\ \ \ \ \ CComboBox\ \mbox{\hyperlink{classCTupleDlg_aa6d2b09ac84ec9574f572bae874c43ee}{combo3}};}
+\DoxyCodeLine{00086\ }
+\DoxyCodeLine{00091\ \ \ \ \ CEdit\ \mbox{\hyperlink{classCTupleDlg_a3453069d432c93b169a759a8af147f72}{m\_lowindex1}};}
+\DoxyCodeLine{00092\ }
+\DoxyCodeLine{00097\ \ \ \ \ CEdit\ \mbox{\hyperlink{classCTupleDlg_a365c72abeaa8ece049f26c57a521e765}{m\_lowindex2}};}
+\DoxyCodeLine{00098\ }
+\DoxyCodeLine{00103\ \ \ \ \ CEdit\ \mbox{\hyperlink{classCTupleDlg_afd5b0ff8fdc51abc08ed94a6d2f351a5}{m\_lowindex3}};}
+\DoxyCodeLine{00104\ }
+\DoxyCodeLine{00110\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classCTupleDlg_a7f187f0e8bc1705905d4394e85012c8a}{SetEntities}}(vector\ <EntityBase\ *>\ *ent)\ \{all\_entities\ =\ ent;\ \};}
+\DoxyCodeLine{00111\ \};}
+
+\end{DoxyCode}

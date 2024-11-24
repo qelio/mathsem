@@ -1,0 +1,125 @@
+\doxysection{stdafx.\+h}
+\hypertarget{stdafx_8h_source}{}\label{stdafx_8h_source}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00002\ \textcolor{comment}{//\ stdafx.h:\ включите\ файл\ для\ добавления\ стандартных\ системных файлов}}
+\DoxyCodeLine{00003\ \textcolor{comment}{//или\ конкретных\ файлов проектов,\ часто используемых,}}
+\DoxyCodeLine{00004\ \textcolor{comment}{//\ но редко изменяемых}}
+\DoxyCodeLine{00005\ }
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#ifndef\ \_SECURE\_ATL}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#define\ \_SECURE\_ATL\ 1}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#ifndef\ VC\_EXTRALEAN}}
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#define\ VC\_EXTRALEAN\ \ \ \ \ \ \ \ \ \ \ \ }\textcolor{comment}{//\ Исключите\ редко используемые компоненты\ из заголовков Windows}}
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00015\ }
+\DoxyCodeLine{00016\ \textcolor{preprocessor}{\#include\ "{}targetver.h"{}}}
+\DoxyCodeLine{00017\ }
+\DoxyCodeLine{00018\ \textcolor{preprocessor}{\#define\ \_ATL\_CSTRING\_EXPLICIT\_CONSTRUCTORS\ \ \ \ \ \ }\textcolor{comment}{//\ некоторые конструкторы CString\ будут явными}}
+\DoxyCodeLine{00019\ }
+\DoxyCodeLine{00020\ \textcolor{comment}{//\ отключает\ функцию скрытия некоторых общих и часто пропускаемых\ предупреждений MFC}}
+\DoxyCodeLine{00021\ \textcolor{preprocessor}{\#define\ \_AFX\_ALL\_WARNINGS}}
+\DoxyCodeLine{00022\ }
+\DoxyCodeLine{00023\ \textcolor{preprocessor}{\#include\ <afxwin.h>}\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ основные и стандартные\ компоненты MFC}}
+\DoxyCodeLine{00024\ \textcolor{preprocessor}{\#include\ <afxext.h>}\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ расширения\ MFC}}
+\DoxyCodeLine{00025\ }
+\DoxyCodeLine{00026\ }
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00028\ }
+\DoxyCodeLine{00029\ }
+\DoxyCodeLine{00030\ \textcolor{preprocessor}{\#ifndef\ \_AFX\_NO\_OLE\_SUPPORT}}
+\DoxyCodeLine{00031\ \textcolor{preprocessor}{\#include\ <afxdtctl.h>}\ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ поддержка\ MFC\ для\ типовых\ элементов управления\ Internet\ Explorer\ 4}}
+\DoxyCodeLine{00032\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00033\ \textcolor{preprocessor}{\#ifndef\ \_AFX\_NO\_AFXCMN\_SUPPORT}}
+\DoxyCodeLine{00034\ \textcolor{preprocessor}{\#include\ <afxcmn.h>}\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ поддержка\ MFC\ для\ типовых\ элементов управления\ Windows}}
+\DoxyCodeLine{00035\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ \_AFX\_NO\_AFXCMN\_SUPPORT}}
+\DoxyCodeLine{00036\ }
+\DoxyCodeLine{00037\ \textcolor{preprocessor}{\#include\ <afxcontrolbars.h>}\ \ \ \ \ \textcolor{comment}{//\ поддержка\ MFC\ для\ лент и панелей управления}}
+\DoxyCodeLine{00038\ }
+\DoxyCodeLine{00039\ }
+\DoxyCodeLine{00040\ }
+\DoxyCodeLine{00041\ }
+\DoxyCodeLine{00042\ }
+\DoxyCodeLine{00043\ }
+\DoxyCodeLine{00044\ }
+\DoxyCodeLine{00045\ }
+\DoxyCodeLine{00046\ }
+\DoxyCodeLine{00047\ \textcolor{preprocessor}{\#ifdef\ \_UNICODE}}
+\DoxyCodeLine{00048\ \textcolor{preprocessor}{\#if\ defined\ \_M\_IX86}}
+\DoxyCodeLine{00049\ \textcolor{preprocessor}{\#pragma\ comment(linker,"{}/manifestdependency:\(\backslash\)"{}type='win32'\ name='Microsoft.Windows.Common-\/Controls'\ version='6.0.0.0'\ processorArchitecture='x86'\ publicKeyToken='6595b64144ccf1df'\ language='*'\(\backslash\)"{}"{})}}
+\DoxyCodeLine{00050\ \textcolor{preprocessor}{\#elif\ defined\ \_M\_X64}}
+\DoxyCodeLine{00051\ \textcolor{preprocessor}{\#pragma\ comment(linker,"{}/manifestdependency:\(\backslash\)"{}type='win32'\ name='Microsoft.Windows.Common-\/Controls'\ version='6.0.0.0'\ processorArchitecture='amd64'\ publicKeyToken='6595b64144ccf1df'\ language='*'\(\backslash\)"{}"{})}}
+\DoxyCodeLine{00052\ \textcolor{preprocessor}{\#else}}
+\DoxyCodeLine{00053\ \textcolor{preprocessor}{\#pragma\ comment(linker,"{}/manifestdependency:\(\backslash\)"{}type='win32'\ name='Microsoft.Windows.Common-\/Controls'\ version='6.0.0.0'\ processorArchitecture='*'\ publicKeyToken='6595b64144ccf1df'\ language='*'\(\backslash\)"{}"{})}}
+\DoxyCodeLine{00054\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00055\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00056\ }
+\DoxyCodeLine{00057\ \textcolor{preprocessor}{\#include\ <afxdisp.h>}\ \ \ \ \ \ \ \ \textcolor{comment}{//\ MFC\ Automation\ classes}}
+\DoxyCodeLine{00058\ }
+\DoxyCodeLine{00060\ \textcolor{comment}{//\ Start\ XML\ Archive\ support}}
+\DoxyCodeLine{00061\ }
+\DoxyCodeLine{00062\ \textcolor{preprocessor}{\#define\ NON\_SIMPLE\_MSXML}}
+\DoxyCodeLine{00063\ \textcolor{preprocessor}{\#ifdef\ NON\_SIMPLE\_MSXML}}
+\DoxyCodeLine{00064\ \textcolor{preprocessor}{\#import\ <msxml3.dll>}}
+\DoxyCodeLine{00065\ \textcolor{preprocessor}{\#else}}
+\DoxyCodeLine{00066\ \textcolor{preprocessor}{\#import\ <msxml.dll>}}
+\DoxyCodeLine{00067\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00068\ }
+\DoxyCodeLine{00069\ \textcolor{preprocessor}{\#define\ DECLARE\_XMLSERIAL(className)\ DECLARE\_SERIAL(className)\(\backslash\)}}
+\DoxyCodeLine{00070\ \textcolor{preprocessor}{\ \ \ \ CRuntimeClass*\ GetActualClass()\ \{\ return\ className::GetRuntimeClass();\ \};\ }}
+\DoxyCodeLine{00071\ \textcolor{preprocessor}{\#define\ IMPLEMENT\_XMLSERIAL(className,\ baseName)\ IMPLEMENT\_SERIAL(className,\ baseName,\ 1)}}
+\DoxyCodeLine{00072\ }
+\DoxyCodeLine{00073\ \textcolor{comment}{//}}
+\DoxyCodeLine{00074\ \textcolor{comment}{//\ Example\ of\ serialization\ of\ CArray\ using\ derived\ CArrayXML\ template\ class\ that\ implements}}
+\DoxyCodeLine{00075\ \textcolor{comment}{//\ XML\ serialization}}
+\DoxyCodeLine{00076\ \textcolor{comment}{//}}
+\DoxyCodeLine{00077\ \textcolor{preprocessor}{\#include\ <afxtempl.h>}}
+\DoxyCodeLine{00078\ }
+\DoxyCodeLine{00079\ \textcolor{keyword}{template}<\textcolor{keyword}{class}\ TYPE,\ \textcolor{keyword}{class}\ ARG\_TYPE\ =\ const\ TYPE\&>}
+\DoxyCodeLine{00080\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classCArrayXML}{CArrayXML}}\ :\ \textcolor{keyword}{public}\ CArray<TYPE,\ ARG\_TYPE>}
+\DoxyCodeLine{00081\ \{}
+\DoxyCodeLine{00082\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00083\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ Serialize(CArchive\&\ ar)}
+\DoxyCodeLine{00084\ \ \ \ \ \{}
+\DoxyCodeLine{00085\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classCXMLArchive}{CXMLArchive}}\&\ xmlArchive\ =\ \textcolor{keyword}{static\_cast<}\mbox{\hyperlink{classCXMLArchive}{CXMLArchive}}\&\textcolor{keyword}{>}(ar);}
+\DoxyCodeLine{00086\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classCXMLArchiveNode}{CXMLArchiveNode}}*\ curNodePtr\ =\ xmlArchive.\mbox{\hyperlink{classCXMLArchive_a55d555386a169d2558ca190edb977c18}{GetCurrentNode}}();}
+\DoxyCodeLine{00087\ }
+\DoxyCodeLine{00088\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (xmlArchive.IsStoring())}
+\DoxyCodeLine{00089\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00090\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Storing}}
+\DoxyCodeLine{00091\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ arrayIndex\ =\ 0;\ arrayIndex\ <\ GetSize();\ arrayIndex++)}
+\DoxyCodeLine{00092\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00093\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ GetAt(arrayIndex)-\/>Serialize(xmlArchive);}
+\DoxyCodeLine{00094\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00095\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00096\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{00097\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00098\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Loading}}
+\DoxyCodeLine{00099\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ numberObjects\ =\ curNodePtr-\/>\mbox{\hyperlink{classCXMLArchiveNode_aec73a30848a9487e185bc3fede9b36dc}{GetNoChildren}}();}
+\DoxyCodeLine{00100\ }
+\DoxyCodeLine{00101\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ numberObjects;\ i++,\ curNodePtr-\/>\mbox{\hyperlink{classCXMLArchiveNode_a1cb6aa0d3cf678e3916ca17e7cefdde4}{GetNextChildIndex}}())}
+\DoxyCodeLine{00102\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00103\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ CString\ childNodeName\ =\ curNodePtr-\/>\mbox{\hyperlink{classCXMLArchiveNode_abfb63d87c72c3957ed926d31c3920ee6}{GetChildName}}(i);}
+\DoxyCodeLine{00104\ }
+\DoxyCodeLine{00105\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ CObject*\ newItemPtr\ =\ \mbox{\hyperlink{classCXMLArchiveNode_a054926d55c1d5c2829ea882e832e49e4}{CXMLArchiveNode::CreateObject}}(childNodeName);}
+\DoxyCodeLine{00106\ }
+\DoxyCodeLine{00107\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (newItemPtr\ ==\ NULL)}
+\DoxyCodeLine{00108\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00109\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{continue};}
+\DoxyCodeLine{00110\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00111\ }
+\DoxyCodeLine{00112\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ newItemPtr-\/>Serialize(xmlArchive);}
+\DoxyCodeLine{00113\ }
+\DoxyCodeLine{00114\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Add(\textcolor{keyword}{static\_cast<}TYPE\textcolor{keyword}{>}(newItemPtr));}
+\DoxyCodeLine{00115\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00116\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00117\ \ \ \ \ \}}
+\DoxyCodeLine{00118\ \};}
+\DoxyCodeLine{00119\ }
+\DoxyCodeLine{00120\ \textcolor{comment}{//\ End\ XML\ Archive\ support}}
+\DoxyCodeLine{00121\ }
+
+\end{DoxyCode}

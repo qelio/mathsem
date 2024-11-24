@@ -1,0 +1,76 @@
+\doxysection{Replace\+Variable\+Dialog.\+h}
+\hypertarget{ReplaceVariableDialog_8h_source}{}\label{ReplaceVariableDialog_8h_source}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{//\ \ Author:\ Tatarintsev\ V.V.,\ tatarintsev\_vv@mail.ru,\ 2013-\/2017}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}afxwin.h"{}}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}Formula.h"{}}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ "{}ScientificListBox.h"{}}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00016\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classReplaceVariableDialog}{ReplaceVariableDialog}}\ :\ \textcolor{keyword}{public}\ CDialogEx}
+\DoxyCodeLine{00017\ \{}
+\DoxyCodeLine{00018\ \ \ \ \ DECLARE\_DYNAMIC(\mbox{\hyperlink{classReplaceVariableDialog}{ReplaceVariableDialog}})}
+\DoxyCodeLine{00019\ }
+\DoxyCodeLine{00020\ \ \ \ \ }
+\DoxyCodeLine{00025\ \ \ \ \ vector\ <EntityBase\ *>\ *\ entities;}
+\DoxyCodeLine{00026\ }
+\DoxyCodeLine{00027\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00035\ \ \ \ \ \mbox{\hyperlink{classReplaceVariableDialog}{ReplaceVariableDialog}}(CWnd*\ pParent\ =\ NULL);}
+\DoxyCodeLine{00036\ }
+\DoxyCodeLine{00042\ \ \ \ \ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{classReplaceVariableDialog_aaf83911db9ae4809dc749901dc874849}{\string~ReplaceVariableDialog}}();}
+\DoxyCodeLine{00043\ }
+\DoxyCodeLine{00045\ \ \ \ \ \textcolor{keyword}{enum}\ \{\ IDD\ =\ IDD\_REPLACEVARIABLE\ \};}
+\DoxyCodeLine{00046\ }
+\DoxyCodeLine{00047\ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00055\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classReplaceVariableDialog_aea15b701907d7dbfd4e401410124f9d4}{DoDataExchange}}(CDataExchange*\ pDX);}
+\DoxyCodeLine{00056\ }
+\DoxyCodeLine{00057\ \ \ \ \ DECLARE\_MESSAGE\_MAP()}
+\DoxyCodeLine{00058\ }
+\DoxyCodeLine{00059\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00066\ \ \ \ \ afx\_msg\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classReplaceVariableDialog_af572c2dbd200339d4ba193db3e5ab17f}{OnBnClickedOk}}();}
+\DoxyCodeLine{00067\ }
+\DoxyCodeLine{00069\ \ \ \ \ CFont\ *\ \mbox{\hyperlink{classReplaceVariableDialog_acecb0525153bf24a16afb909c99e346f}{m\_fIndexes}};}
+\DoxyCodeLine{00070\ }
+\DoxyCodeLine{00072\ \ \ \ \ CFont\ *\ \mbox{\hyperlink{classReplaceVariableDialog_a9939d259bce7c8b0e252b62d1011165c}{m\_fSymbol}};}
+\DoxyCodeLine{00073\ }
+\DoxyCodeLine{00075\ \ \ \ \ CEdit\ \mbox{\hyperlink{classReplaceVariableDialog_a5be077a04e36382fe9f4fa1ae9c64e29}{m\_editIndex}};}
+\DoxyCodeLine{00076\ }
+\DoxyCodeLine{00078\ \ \ \ \ \mbox{\hyperlink{classScientificListBox}{ScientificListBox}}\ \mbox{\hyperlink{classReplaceVariableDialog_aeeb8c081f43bdeaa7b2ea85b964416f0}{m\_list}};}
+\DoxyCodeLine{00079\ }
+\DoxyCodeLine{00081\ \ \ \ \ \mbox{\hyperlink{classScientificListBox}{ScientificListBox}}\ \mbox{\hyperlink{classReplaceVariableDialog_a091b1e0ee2830d9642927dc78f5ba19d}{m\_listFreeVariables}};}
+\DoxyCodeLine{00082\ }
+\DoxyCodeLine{00084\ \ \ \ \ \mbox{\hyperlink{classScientificListBox}{ScientificListBox}}\ \mbox{\hyperlink{classReplaceVariableDialog_a30579c282640aa73de565a8853ff7983}{m\_listVariables}};}
+\DoxyCodeLine{00085\ }
+\DoxyCodeLine{00087\ \ \ \ \ CComboBox\ \mbox{\hyperlink{classReplaceVariableDialog_af135652a1ab6ad044e55ef21291f21a7}{m\_comboName}};}
+\DoxyCodeLine{00088\ }
+\DoxyCodeLine{00097\ \ \ \ \ \textcolor{keyword}{virtual}\ BOOL\ \mbox{\hyperlink{classReplaceVariableDialog_a89821698525c87f27e566f827feeca83}{OnInitDialog}}();}
+\DoxyCodeLine{00098\ }
+\DoxyCodeLine{00107\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classReplaceVariableDialog_a314f533f2b45e0b2e30e88c4c0fc67bd}{setEntities}}(vector\ <EntityBase\ *>\ *\ all\_entities\ =\ NULL)\ \{entities\ =\ all\_entities;\ \};}
+\DoxyCodeLine{00108\ }
+\DoxyCodeLine{00114\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classReplaceVariableDialog_a7a64e922147881df3b45977b97c66d33}{ShowFreeVariables}}();}
+\DoxyCodeLine{00115\ }
+\DoxyCodeLine{00121\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classReplaceVariableDialog_a5bf2ec6e13db4c1c8eadd5aa32214ce9}{HideFreeVariables}}();}
+\DoxyCodeLine{00122\ }
+\DoxyCodeLine{00128\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classReplaceVariableDialog_a8127410c6d48fa38b4509120d858879c}{ShowVariables}}();}
+\DoxyCodeLine{00129\ }
+\DoxyCodeLine{00135\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classReplaceVariableDialog_a35ec5ee0d2721d7c02d5cbf7bd6ff41d}{HideVariables}}();}
+\DoxyCodeLine{00136\ }
+\DoxyCodeLine{00145\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classReplaceVariableDialog_a03c81d6188595e9d33ce77a9347b9122}{ResetComboNames}}(TCHAR\ symbol);}
+\DoxyCodeLine{00146\ }
+\DoxyCodeLine{00148\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classReplaceVariableDialog_ac2505497934e17373db1fcbb921a1321}{m\_dataRadio}};}
+\DoxyCodeLine{00149\ }
+\DoxyCodeLine{00151\ \ \ \ \ vector\ <EntityVariable\ *>\ \mbox{\hyperlink{classReplaceVariableDialog_ad432358fbbf49dfe383a365d7a8d4ac6}{pev\_new}};}
+\DoxyCodeLine{00152\ }
+\DoxyCodeLine{00154\ \ \ \ \ CButton\ \mbox{\hyperlink{classReplaceVariableDialog_a570854528f2cb6a76f5a9fe70976cde1}{m\_buttonOK}};}
+\DoxyCodeLine{00155\ }
+\DoxyCodeLine{00161\ \ \ \ \ afx\_msg\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classReplaceVariableDialog_a7859fe8bcdf28abc3c1b9251174c1f90}{OnSelchangeSetlist1}}();}
+\DoxyCodeLine{00162\ }
+\DoxyCodeLine{00168\ \ \ \ \ afx\_msg\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classReplaceVariableDialog_ac35427eb6ee831e98af3bd118e1d059f}{OnSelchangeSetlist2}}();}
+\DoxyCodeLine{00169\ }
+\DoxyCodeLine{00175\ \ \ \ \ afx\_msg\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classReplaceVariableDialog_ae3f6c224f8f2205bff459312702903b0}{OnBnClickedRadioinputtext}}();}
+\DoxyCodeLine{00176\ }
+\DoxyCodeLine{00182\ \ \ \ \ afx\_msg\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classReplaceVariableDialog_aefee3255aeb85c5a0283a87ebd3dfff6}{OnBnClickedRadioselectvariable}}();}
+\DoxyCodeLine{00183\ \};}
+
+\end{DoxyCode}

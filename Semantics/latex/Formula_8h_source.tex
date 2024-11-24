@@ -1,0 +1,411 @@
+\doxysection{Formula.\+h}
+\hypertarget{Formula_8h_source}{}\label{Formula_8h_source}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ "{}common\_functions.h"{}}}
+\DoxyCodeLine{00004\ \textcolor{comment}{//\#include\ <stdint.h>}}
+\DoxyCodeLine{00005\ }
+\DoxyCodeLine{00010\ \textcolor{keyword}{enum}\ EntityBaseType\ \{}
+\DoxyCodeLine{00011\ \ \ \ \ NONE\_FORMULA,\ }
+\DoxyCodeLine{00012\ \ \ \ \ ATOMIC\_FORMULA\ =\ 1,\ }
+\DoxyCodeLine{00013\ \ \ \ \ NEGATIVE\_OPERATION\ =\ 2,\ }
+\DoxyCodeLine{00014\ \ \ \ \ QUANTIFIER1\_OPERATION\ =\ 3,\ }
+\DoxyCodeLine{00015\ \ \ \ \ QUANTIFIER2\_OPERATION\ =\ 4,\ }
+\DoxyCodeLine{00016\ \ \ \ \ AND\_OPERATION\ =\ 5,\ \ }
+\DoxyCodeLine{00017\ \ \ \ \ OR\_OPERATION\ =\ 6,\ \ }
+\DoxyCodeLine{00018\ \ \ \ \ FORMULA\_SET\ =\ 7,\ \ }
+\DoxyCodeLine{00019\ \ \ \ \ BELONGING\_PREDICATE\ =\ 8,\ }
+\DoxyCodeLine{00020\ \ \ \ \ TUPLE\ =\ 9,\ }
+\DoxyCodeLine{00021\ \ \ \ \ SUBSET\ =\ 10,\ }
+\DoxyCodeLine{00022\ \ \ \ \ REPLACE\_VARIABLE\ =\ 11,\ }
+\DoxyCodeLine{00023\ \};}
+\DoxyCodeLine{00024\ }
+\DoxyCodeLine{00029\ \textcolor{keyword}{enum}\ Formula\_Feature\ \{}
+\DoxyCodeLine{00030\ \ \ \ \ NONE\_FEATURE,\ \ }
+\DoxyCodeLine{00031\ \ \ \ \ TRUTH\_FEATURE\ =\ 1,\ }
+\DoxyCodeLine{00032\ \ \ \ \ FALSE\_FEATURE\ =\ 2,\ }
+\DoxyCodeLine{00033\ \ \ \ \ PERFORMED\_FEATURE\ =\ 3,\ \ }
+\DoxyCodeLine{00034\ \ \ \ \ ATOMARN\_FEATURE\ =\ 4\ }
+\DoxyCodeLine{00035\ \};}
+\DoxyCodeLine{00036\ }
+\DoxyCodeLine{00041\ \textcolor{keyword}{enum}\ VariableType\ \{}
+\DoxyCodeLine{00042\ \ \ \ \ NONE\_VARIABLE,\ }
+\DoxyCodeLine{00043\ \ \ \ \ VARIABLE\ =\ 1,\ }
+\DoxyCodeLine{00044\ \ \ \ \ SET\ =\ 2\ }
+\DoxyCodeLine{00045\ \};}
+\DoxyCodeLine{00046\ }
+\DoxyCodeLine{00047\ \textcolor{preprocessor}{\#if\ defined(LIBXML\_TREE\_ENABLED)\ \&\&\ defined(LIBXML\_OUTPUT\_ENABLED)}}
+\DoxyCodeLine{00048\ \textcolor{comment}{//\ If\ libxml2\ is\ enabled,\ handle\ XML\ serialization/deserialization\ here.}}
+\DoxyCodeLine{00049\ \textcolor{preprocessor}{\#else}}
+\DoxyCodeLine{00050\ \textcolor{comment}{//\ Classes\ representing\ variable\ and\ formula\ items\ if\ libxml\ is\ not\ used.}}
+\DoxyCodeLine{00051\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classCVariableItem}{CVariableItem}};\ \ }
+\DoxyCodeLine{00052\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classCFormulaItem}{CFormulaItem}};\ \ }
+\DoxyCodeLine{00053\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classCSetItem}{CSetItem}};\ \ \ \ }
+\DoxyCodeLine{00054\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00055\ }
+\DoxyCodeLine{00062\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classLevel}{Level}}}
+\DoxyCodeLine{00063\ \{}
+\DoxyCodeLine{00064\ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00065\ \ \ \ \ tstring\ \mbox{\hyperlink{classLevel_ac27feb4d323c984b227be3fbf5e6fbd3}{level}};\ }
+\DoxyCodeLine{00066\ }
+\DoxyCodeLine{00067\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00071\ \ \ \ \ \mbox{\hyperlink{classLevel_a7a696c928ca5d5354db6e50e46d0f67d}{Level}}()\ \{\ \mbox{\hyperlink{classLevel_ac27feb4d323c984b227be3fbf5e6fbd3}{level}}\ =\ \_T(\textcolor{stringliteral}{"{}0"{}});\ \}}
+\DoxyCodeLine{00072\ }
+\DoxyCodeLine{00077\ \ \ \ \ \mbox{\hyperlink{classLevel_a886f3a94be901722021c5c1a1cf372a7}{Level}}(tstring\ \&\ tstr)\ \{\ \mbox{\hyperlink{classLevel_ac27feb4d323c984b227be3fbf5e6fbd3}{level}}\ =\ tstr;\ \}}
+\DoxyCodeLine{00078\ }
+\DoxyCodeLine{00082\ \ \ \ \ \mbox{\hyperlink{classLevel_a249eac1e8f19ff44134efa5e986feaca}{\string~Level}}()\ \{\}}
+\DoxyCodeLine{00083\ }
+\DoxyCodeLine{00088\ \ \ \ \ tstring\ \&\ \mbox{\hyperlink{classLevel_a5d92c8fa26b2e641c4236a07a273ba23}{GetLevel}}()\ \{\ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{classLevel_ac27feb4d323c984b227be3fbf5e6fbd3}{level}};\ \}}
+\DoxyCodeLine{00089\ }
+\DoxyCodeLine{00094\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classLevel_ac4be66ffd2986f4049b67cdeb09fe113}{SetLevel}}(tstring\ \&\ tstr)\ \{\ \mbox{\hyperlink{classLevel_ac27feb4d323c984b227be3fbf5e6fbd3}{level}}\ =\ tstr;\ \}}
+\DoxyCodeLine{00095\ }
+\DoxyCodeLine{00101\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classLevel_a336e1ef5ac4f3ae3450fe48d8449cd1f}{compare}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classLevel}{Level}}\&\ l)\ \{\ \textcolor{keywordflow}{return}\ !\mbox{\hyperlink{classLevel_ac27feb4d323c984b227be3fbf5e6fbd3}{level}}.compare(l.\mbox{\hyperlink{classLevel_ac27feb4d323c984b227be3fbf5e6fbd3}{level}});\ \}}
+\DoxyCodeLine{00102\ \};}
+\DoxyCodeLine{00103\ }
+\DoxyCodeLine{00110\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classEntityVariable}{EntityVariable}}:\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classLevel}{Level}}}
+\DoxyCodeLine{00111\ \{}
+\DoxyCodeLine{00112\ \ \ \ \ VariableType\ type;\ }
+\DoxyCodeLine{00113\ \ \ \ \ tstring\ label;\ }
+\DoxyCodeLine{00114\ \ \ \ \ tstring\ index;\ }
+\DoxyCodeLine{00115\ \ \ \ \ tstring\ redefinition;\ }
+\DoxyCodeLine{00116\ \ \ \ \ tstring\ text;\ }
+\DoxyCodeLine{00117\ }
+\DoxyCodeLine{00118\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00122\ \ \ \ \ \mbox{\hyperlink{classEntityVariable_a8b34709abfacafbe7415407e42a5acaa}{EntityVariable}}()\ \{\ type\ =\ VARIABLE;\ label\ =\ \_T(\textcolor{stringliteral}{"{}x"{}});\ index\ =\ \_T(\textcolor{stringliteral}{"{}"{}});\ SetText();\ \}}
+\DoxyCodeLine{00123\ }
+\DoxyCodeLine{00127\ \ \ \ \ \mbox{\hyperlink{classEntityVariable_a618126084462aa9450fecd9b9fc966ba}{\string~EntityVariable}}()\ \{\}}
+\DoxyCodeLine{00128\ }
+\DoxyCodeLine{00135\ \ \ \ \ \mbox{\hyperlink{classEntityVariable_a305888fbfb75297d63d1e62be2176761}{EntityVariable}}(\textcolor{keyword}{const}\ tstring\ \&\ str,\ \textcolor{keyword}{const}\ tstring\ \&\ index\_,\ VariableType\ type\_)}
+\DoxyCodeLine{00136\ \ \ \ \ \ \ \ \ \{\ label\ =\ str;\ index\ =\ index\_;\ type\ =\ type\_;\ SetText();\ \}}
+\DoxyCodeLine{00137\ }
+\DoxyCodeLine{00142\ \ \ \ \ \mbox{\hyperlink{classEntityVariable_ab9781b8ede360e307aa929ede648e669}{EntityVariable}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classEntityVariable}{EntityVariable}}\ \&\ ev)\ \{}
+\DoxyCodeLine{00143\ \ \ \ \ \ \ \ \ type\ =\ ev.type;}
+\DoxyCodeLine{00144\ \ \ \ \ \ \ \ \ label\ =\ ev.label;}
+\DoxyCodeLine{00145\ \ \ \ \ \ \ \ \ index\ =\ ev.index;}
+\DoxyCodeLine{00146\ \ \ \ \ \ \ \ \ SetText();}
+\DoxyCodeLine{00147\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classLevel}{Level}}\ *\ pl\ =\ (\mbox{\hyperlink{classLevel}{Level}}\ *)\&ev;}
+\DoxyCodeLine{00148\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classLevel_ac4be66ffd2986f4049b67cdeb09fe113}{SetLevel}}(pl-\/>\mbox{\hyperlink{classLevel_a5d92c8fa26b2e641c4236a07a273ba23}{GetLevel}}());}
+\DoxyCodeLine{00149\ \ \ \ \ \ \ \ \ redefinition\ =\ ev.redefinition;}
+\DoxyCodeLine{00150\ \ \ \ \ \}}
+\DoxyCodeLine{00151\ }
+\DoxyCodeLine{00152\ \textcolor{preprocessor}{\#if\ defined(LIBXML\_TREE\_ENABLED)\ \&\&\ defined(LIBXML\_OUTPUT\_ENABLED)}}
+\DoxyCodeLine{00153\ \ \ \ \ \textcolor{comment}{//\ XML\ serialization\ logic\ goes\ here\ if\ libxml2\ is\ enabled.}}
+\DoxyCodeLine{00154\ \textcolor{preprocessor}{\#else}}
+\DoxyCodeLine{00159\ \ \ \ \ \mbox{\hyperlink{classEntityVariable_a8b34709abfacafbe7415407e42a5acaa}{EntityVariable}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classCVariableItem}{CVariableItem}}\&\ vi);}
+\DoxyCodeLine{00160\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00161\ \};}
+\DoxyCodeLine{00162\ }
+\DoxyCodeLine{00163\ }
+\DoxyCodeLine{00164\ }
+\DoxyCodeLine{00165\ }
+\DoxyCodeLine{00166\ }
+\DoxyCodeLine{00167\ }
+\DoxyCodeLine{00168\ }
+\DoxyCodeLine{00169\ }
+\DoxyCodeLine{00170\ }
+\DoxyCodeLine{00171\ }
+\DoxyCodeLine{00172\ }
+\DoxyCodeLine{00173\ }
+\DoxyCodeLine{00174\ }
+\DoxyCodeLine{00175\ }
+\DoxyCodeLine{00176\ }
+\DoxyCodeLine{00177\ }
+\DoxyCodeLine{00178\ }
+\DoxyCodeLine{00179\ }
+\DoxyCodeLine{00180\ }
+\DoxyCodeLine{00181\ }
+\DoxyCodeLine{00182\ }
+\DoxyCodeLine{00183\ }
+\DoxyCodeLine{00184\ }
+\DoxyCodeLine{00192\ tstring\ *\ GetText()\ \{\ \textcolor{keywordflow}{if}(redefinition.length()\ >\ 0)\ \textcolor{keywordflow}{return}\ \&redefinition;\ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{return}\ \&text;\ \};}
+\DoxyCodeLine{00193\ }
+\DoxyCodeLine{00199\ tstring\ *\ GetInitialText()\ \{\ \textcolor{keywordflow}{return}\ \&text;\ \};}
+\DoxyCodeLine{00200\ }
+\DoxyCodeLine{00207\ \textcolor{keywordtype}{void}\ SetText()}
+\DoxyCodeLine{00208\ \{}
+\DoxyCodeLine{00209\ \ \ \ \ text\ =\ label;}
+\DoxyCodeLine{00210\ \ \ \ \ \textcolor{keywordflow}{for}(\textcolor{keywordtype}{size\_t}\ i\ =\ 0;\ i\ <\ index.length();\ i++)}
+\DoxyCodeLine{00211\ \ \ \ \ \{}
+\DoxyCodeLine{00212\ \ \ \ \ \ \ \ \ text\ +=\ \_T(\textcolor{stringliteral}{"{}<Symbol=/low>"{}});}
+\DoxyCodeLine{00213\ \ \ \ \ \ \ \ \ text\ +=\ index.at(i);}
+\DoxyCodeLine{00214\ \ \ \ \ \}}
+\DoxyCodeLine{00215\ \};}
+\DoxyCodeLine{00216\ }
+\DoxyCodeLine{00222\ \textcolor{keywordtype}{void}\ SetRedefinition(tstring\ \&\ new\_text)\ \{redefinition\ =\ new\_text;\ \};}
+\DoxyCodeLine{00223\ }
+\DoxyCodeLine{00229\ tstring\ \&\ GetRedefinition()\ \{\ \textcolor{keywordflow}{return}\ redefinition;\ \};}
+\DoxyCodeLine{00230\ }
+\DoxyCodeLine{00237\ \textcolor{keywordtype}{bool}\ compare(\textcolor{keyword}{const}\ \mbox{\hyperlink{classEntityVariable}{EntityVariable}}\&);}
+\DoxyCodeLine{00238\ }
+\DoxyCodeLine{00244\ \textcolor{keywordtype}{bool}\ isSet()\ \{\ \textcolor{keywordtype}{bool}\ res\ =\ \textcolor{keyword}{false};\ (type\ ==\ SET)\ ?\ res=\textcolor{keyword}{true}\ :\ res\ =\ false;\ \textcolor{keywordflow}{return}\ res;\ \};}
+\DoxyCodeLine{00245\ }
+\DoxyCodeLine{00251\ \textcolor{keywordtype}{bool}\ isVariable()\ \{\ \textcolor{keywordtype}{bool}\ res;\ (type\ ==\ VARIABLE)\ ?\ res=\textcolor{keyword}{true}\ :\ res=false;\ \textcolor{keywordflow}{return}\ res;\ \};}
+\DoxyCodeLine{00252\ }
+\DoxyCodeLine{00258\ tstring\ \&\ GetLabel()\ \{\ \textcolor{keywordflow}{return}\ label;\ \};}
+\DoxyCodeLine{00259\ }
+\DoxyCodeLine{00265\ tstring\ \&\ GetIndex()\ \{\ \textcolor{keywordflow}{return}\ index;\ \};}
+\DoxyCodeLine{00266\ }
+\DoxyCodeLine{00272\ VariableType\ GetType()\ \{\ \textcolor{keywordflow}{return}\ type;\ \};}
+\DoxyCodeLine{00273\ }
+\DoxyCodeLine{00279\ \textcolor{keywordtype}{void}\ SetIndex(tstring\ \&\ ind)\ \{\ index\ =\ ind;\ \};}
+\DoxyCodeLine{00280\ }
+\DoxyCodeLine{00286\ \textcolor{keywordtype}{void}\ SetLabel(tstring\ \&\ lab)\ \{\ label\ =\ lab;\ \};}
+\DoxyCodeLine{00287\ }
+\DoxyCodeLine{00293\ \textcolor{keywordtype}{void}\ SetType(VariableType\ type\_)\ \{\ type\ =\ type\_;\ \};}
+\DoxyCodeLine{00294\ }
+\DoxyCodeLine{00302\ \textcolor{keywordtype}{bool}\ operator\ ==\ (\mbox{\hyperlink{classEntityVariable}{EntityVariable}}\&\ ev1,\ \mbox{\hyperlink{classEntityVariable}{EntityVariable}}\&\ ev2);}
+\DoxyCodeLine{00303\ }
+\DoxyCodeLine{00308\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classEntityBase}{EntityBase}}}
+\DoxyCodeLine{00309\ \{}
+\DoxyCodeLine{00310\ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00311\ \ \ \ \ vector\ <EntityVariable\ *>\ \mbox{\hyperlink{classEntityBase_a74c83c99d68b1a57d19ef9528caf7eb7}{freeVariables}};\ \ }
+\DoxyCodeLine{00312\ \ \ \ \ vector\ <EntityVariable\ *>\ \mbox{\hyperlink{classEntityBase_ac10a1c7826ee45c4feda21a168d8f433}{linkedVariables}};\ \ }
+\DoxyCodeLine{00313\ \ \ \ \ tstring\ \mbox{\hyperlink{classEntityBase_ac06d95415f22f1a886909eaead172fbc}{description}};\ \ }
+\DoxyCodeLine{00314\ \ \ \ \ tstring\ \mbox{\hyperlink{classEntityBase_a98d9e38aabae0396581eb30bf5ed0abb}{addons}};\ \ }
+\DoxyCodeLine{00315\ \ \ \ \ tstring\ \mbox{\hyperlink{classEntityBase_abdf5dbea187af2510de461149f21eb62}{label}};\ }
+\DoxyCodeLine{00316\ \ \ \ \ tstring\ \mbox{\hyperlink{classEntityBase_a48895882eddf6f235feea8f7644d01e9}{text}};\ }
+\DoxyCodeLine{00317\ \ \ \ \ EntityBaseType\ \mbox{\hyperlink{classEntityBase_acbbc575b5955a572cc15083529407359}{type}};\ }
+\DoxyCodeLine{00318\ \ \ \ \ tstring\ \mbox{\hyperlink{classEntityBase_ad79064b5c9dc20d03df63f9ec793c996}{redefined\_text}};\ }
+\DoxyCodeLine{00319\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classEntityBase_ac08b94518b25029019ecb06c0e4043d3}{redefined}};\ }
+\DoxyCodeLine{00320\ \ \ \ \ \mbox{\hyperlink{classEntityBase}{EntityBase}}\ *\ \mbox{\hyperlink{classEntityBase_aeba69ce31dab9cfc9a6c026658f538a5}{replaced\_base}};\ }
+\DoxyCodeLine{00321\ \ \ \ \ \mbox{\hyperlink{classEntityVariable}{EntityVariable}}\ *\ \mbox{\hyperlink{classEntityBase_a196752e75adeedf14a06f1c2545a82c0}{initial\_variable}};\ }
+\DoxyCodeLine{00322\ \ \ \ \ \mbox{\hyperlink{classEntityVariable}{EntityVariable}}\ *\ \mbox{\hyperlink{classEntityBase_aa5ec30f38c66bce3f7cfa00069de4bf3}{new\_variable}};\ }
+\DoxyCodeLine{00323\ }
+\DoxyCodeLine{00324\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00328\ \ \ \ \ \mbox{\hyperlink{classEntityBase_a27bec3b7dfba14d691809b1f00a9dcb6}{EntityBase}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{00329\ }
+\DoxyCodeLine{00333\ \ \ \ \ \mbox{\hyperlink{classEntityBase_a30e418726b63d4ceeabb66694442f670}{\string~EntityBase}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{00334\ }
+\DoxyCodeLine{00340\ \ \ \ \ vector\ <EntityVariable\ *>\ *\ \mbox{\hyperlink{classEntityBase_a0e91a1c0e1505076892420fb220613db}{getFreeVariables}}()\ \{\ \textcolor{keywordflow}{return}\ \&\mbox{\hyperlink{classEntityBase_a74c83c99d68b1a57d19ef9528caf7eb7}{freeVariables}};\ \};}
+\DoxyCodeLine{00341\ }
+\DoxyCodeLine{00347\ \ \ \ \ vector\ <EntityVariable\ *>\ *\ \mbox{\hyperlink{classEntityBase_a6d97330c6d4baa832f7b14e714883912}{getLinkedVariables}}()\ \{\ \textcolor{keywordflow}{return}\ \&\mbox{\hyperlink{classEntityBase_ac10a1c7826ee45c4feda21a168d8f433}{linkedVariables}};\ \};}
+\DoxyCodeLine{00348\ }
+\DoxyCodeLine{00354\ \ \ \ \ tstring\ \&\ \mbox{\hyperlink{classEntityBase_a214bd3f0cf94abbcbfaff08c9ac4e1f5}{getText}}()\ \{\ \textcolor{keywordflow}{if}(\mbox{\hyperlink{classEntityBase_ad79064b5c9dc20d03df63f9ec793c996}{redefined\_text}}.length()\ >\ 0)\ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{classEntityBase_ad79064b5c9dc20d03df63f9ec793c996}{redefined\_text}};\ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{classEntityBase_a48895882eddf6f235feea8f7644d01e9}{text}};\ \};}
+\DoxyCodeLine{00355\ }
+\DoxyCodeLine{00361\ \ \ \ \ tstring\ *\ \mbox{\hyperlink{classEntityBase_aa09e55fa4507ce954fa7679cb2ef3be5}{getDescription}}()\ \{\ \textcolor{keywordflow}{return}\ \&\mbox{\hyperlink{classEntityBase_ac06d95415f22f1a886909eaead172fbc}{description}};\ \};}
+\DoxyCodeLine{00362\ }
+\DoxyCodeLine{00368\ \ \ \ \ tstring\ *\ \mbox{\hyperlink{classEntityBase_a22143b2bfde1b9936eaecbd45a1d30cd}{getAddOns}}()\ \{\ \textcolor{keywordflow}{return}\ \&\mbox{\hyperlink{classEntityBase_a98d9e38aabae0396581eb30bf5ed0abb}{addons}};\ \};}
+\DoxyCodeLine{00369\ }
+\DoxyCodeLine{00375\ \ \ \ \ \textcolor{keywordtype}{void}\ SetText(LPCTSTR\ lpctstr);}
+\DoxyCodeLine{00376\ }
+\DoxyCodeLine{00382\ \ \ \ \ \textcolor{comment}{//void\ SetIRedefinedText(LPCTSTR\ lpctstr)\ \{\ redefined\_text\ =\ lpctstr;\ \};}}
+\DoxyCodeLine{00383\ \};}
+\DoxyCodeLine{00384\ }
+\DoxyCodeLine{00385\ }
+\DoxyCodeLine{00386\ }
+\DoxyCodeLine{00387\ }
+\DoxyCodeLine{00388\ }
+\DoxyCodeLine{00389\ }
+\DoxyCodeLine{00390\ }
+\DoxyCodeLine{00391\ }
+\DoxyCodeLine{00397\ \textcolor{keywordtype}{void}\ SetDescription(LPCTSTR\ lpctstr)\ \{\ description\ =\ lpctstr;\ \};}
+\DoxyCodeLine{00398\ }
+\DoxyCodeLine{00404\ \textcolor{keywordtype}{void}\ SetAddons(LPCTSTR\ lpctstr)\ \{\ addons\ =\ lpctstr;\ \};}
+\DoxyCodeLine{00405\ }
+\DoxyCodeLine{00411\ tstring\ *\ getLabel()\ \{\ \textcolor{keywordflow}{return}\ \&label;\ \};}
+\DoxyCodeLine{00412\ }
+\DoxyCodeLine{00418\ tstring\ *\ getInitialText()\ \{\ \textcolor{keywordflow}{return}\ \&text;\ \};}
+\DoxyCodeLine{00419\ }
+\DoxyCodeLine{00425\ tstring\ *\ getRedefinedText()\ \{\ \textcolor{keywordflow}{return}\ \&redefined\_text;\ \};}
+\DoxyCodeLine{00426\ }
+\DoxyCodeLine{00432\ EntityBaseType\ getType()\ \{\ \textcolor{keywordflow}{if}\ ((type\ !=\ FORMULA\_SET)\ \&\&\ isRedefined())\ \textcolor{keywordflow}{return}\ ATOMIC\_FORMULA;\ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{return}\ type;\ \};}
+\DoxyCodeLine{00433\ }
+\DoxyCodeLine{00439\ EntityBaseType\ getReplacedType();}
+\DoxyCodeLine{00440\ }
+\DoxyCodeLine{00446\ \textcolor{keywordtype}{void}\ setType(EntityBaseType\ type\_)\ \{\ type\ =\ type\_;\ \};}
+\DoxyCodeLine{00447\ }
+\DoxyCodeLine{00453\ \textcolor{keywordtype}{bool}\ isFormula()\ \{\ \textcolor{keywordflow}{return}\ ((type\ !=\ FORMULA\_SET)\ \&\&\ !((type\ ==\ REPLACE\_VARIABLE)\ \&\&\ (replaced\_base\ !=\ \textcolor{keyword}{nullptr})\ \&\&\ replaced\_base-\/>isSet()));\ \};}
+\DoxyCodeLine{00454\ }
+\DoxyCodeLine{00460\ \textcolor{keywordtype}{bool}\ isSet()\ \{\ \textcolor{keywordtype}{bool}\ res\ =\ \textcolor{keyword}{false};\ ((type\ ==\ FORMULA\_SET)\ ||\ ((type\ ==\ REPLACE\_VARIABLE)\ \&\&\ (replaced\_base\ !=\ \textcolor{keyword}{nullptr})\ \&\&\ replaced\_base-\/>isSet()))\ ?\ res\ =\ true\ :\ res\ =\ \textcolor{keyword}{false};\ \textcolor{keywordflow}{return}\ res;\ \};}
+\DoxyCodeLine{00461\ }
+\DoxyCodeLine{00467\ \textcolor{keywordtype}{bool}\ isSubset()\ \{\ \textcolor{keywordflow}{if}\ (type\ ==\ SUBSET)\ \textcolor{keywordflow}{return}\ \textcolor{keyword}{true};\ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};\ \};}
+\DoxyCodeLine{00468\ }
+\DoxyCodeLine{00474\ \textcolor{keywordtype}{bool}\ isRedefined()\ \{\ \textcolor{keywordflow}{return}\ redefined;\ \};}
+\DoxyCodeLine{00475\ }
+\DoxyCodeLine{00479\ \textcolor{keywordtype}{void}\ setRedefined()\ \{\ redefined\ =\ \textcolor{keyword}{true};\ \};}
+\DoxyCodeLine{00480\ }
+\DoxyCodeLine{00484\ \textcolor{keywordtype}{void}\ setTemporarilyUnredefined()\ \{\ redefined\ =\ \textcolor{keyword}{false};\ \};}
+\DoxyCodeLine{00485\ }
+\DoxyCodeLine{00493\ \textcolor{keywordtype}{void}\ SetReplacing(\mbox{\hyperlink{classEntityBase}{EntityBase}}\ *\ base\_,\ \mbox{\hyperlink{classEntityVariable}{EntityVariable}}\ *\ initial\_,\ \mbox{\hyperlink{classEntityVariable}{EntityVariable}}\ *\ new\_);}
+\DoxyCodeLine{00494\ }
+\DoxyCodeLine{00500\ \textcolor{keywordtype}{void}\ setReplacedBase(\mbox{\hyperlink{classEntityBase}{EntityBase}}\ *\ preplaced)\ \{\ replaced\_base\ =\ preplaced;\ \};}
+\DoxyCodeLine{00501\ }
+\DoxyCodeLine{00507\ \mbox{\hyperlink{classEntityBase}{EntityBase}}\ *\ getReplacedBase()\ \{\ \textcolor{keywordflow}{return}\ replaced\_base;\ \};}
+\DoxyCodeLine{00508\ }
+\DoxyCodeLine{00514\ \mbox{\hyperlink{classEntityVariable}{EntityVariable}}\ *\ getInitialVariable()\ \{\ \textcolor{keywordflow}{return}\ initial\_variable;\ \};}
+\DoxyCodeLine{00515\ }
+\DoxyCodeLine{00521\ \mbox{\hyperlink{classEntityVariable}{EntityVariable}}\ *\ getNewVariable()\ \{\ \textcolor{keywordflow}{return}\ new\_variable;\ \};}
+\DoxyCodeLine{00522\ }
+\DoxyCodeLine{00529\ SetGroup\ isPartOfSetGroup(vector\ <EntityBase\ *>\ *\ pentities);}
+\DoxyCodeLine{00530\ }
+\DoxyCodeLine{00532\ \textcolor{comment}{//\ \ Class\ Formula,\ representing\ a\ formula\ entity.}}
+\DoxyCodeLine{00533\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classFormula}{Formula}}:\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classEntityBase}{EntityBase}}}
+\DoxyCodeLine{00534\ \{}
+\DoxyCodeLine{00535\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00541\ \ \ \ \ \textcolor{keywordtype}{void}\ SetSubsetText(vector\ <EntityBase\ *>\ *\ entities);}
+\DoxyCodeLine{00542\ }
+\DoxyCodeLine{00548\ \ \ \ \ \textcolor{keywordtype}{void}\ SetSubsetLabel(vector\ <EntityBase\ *>\ *\ entities);}
+\DoxyCodeLine{00549\ }
+\DoxyCodeLine{00550\ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00551\ \ \ \ \ Formula\_Feature\ \mbox{\hyperlink{classFormula_a7f5692b2cedd0e13123b8aeda17cdaaf}{feature}};\ \ }
+\DoxyCodeLine{00552\ }
+\DoxyCodeLine{00553\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00554\ \ \ \ \ vector\ <ParentLink\ *>\ \mbox{\hyperlink{classFormula_a388723adc317772285c3421886b385dd}{parents}};\ \ }
+\DoxyCodeLine{00555\ \ \ \ \ vector\ <EntityVariable\ *>\ \mbox{\hyperlink{classFormula_aa713de1e3b67ae408f60bbb1ad58b735}{possibleVariables}};\ }
+\DoxyCodeLine{00556\ \ \ \ \ vector\ <Formula*>\ \mbox{\hyperlink{classFormula_a35ba2e15af4f1aeb69c672e51170d439}{possibleFormulas}};\ }
+\DoxyCodeLine{00557\ }
+\DoxyCodeLine{00558\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00562\ \ \ \ \ \mbox{\hyperlink{classFormula_a73f44866ccb6f67986bc1aafa5c19375}{Formula}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{00563\ }
+\DoxyCodeLine{00567\ \ \ \ \ \mbox{\hyperlink{classFormula_a3b15cad2eac08bc53d7186940f5018d7}{\string~Formula}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{00568\ }
+\DoxyCodeLine{00569\ \textcolor{preprocessor}{\ \ \ \ \#if\ defined(LIBXML\_TREE\_ENABLED)\ \&\&\ defined(LIBXML\_OUTPUT\_ENABLED)}}
+\DoxyCodeLine{00570\ \textcolor{preprocessor}{\ \ \ \ \#else}}
+\DoxyCodeLine{00576\ \ \ \ \ \mbox{\hyperlink{classFormula_a73f44866ccb6f67986bc1aafa5c19375}{Formula}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classCFormulaItem}{CFormulaItem}}\&\ );}
+\DoxyCodeLine{00577\ \textcolor{preprocessor}{\ \ \ \ \#endif}}
+\DoxyCodeLine{00578\ \};}
+\DoxyCodeLine{00587\ \textcolor{keywordtype}{void}\ unsetFreeVariables(vector\ <EntityVariable\ *>\ *\ unset);}
+\DoxyCodeLine{00588\ }
+\DoxyCodeLine{00597\ Formula\_Feature\ getFeature()\ \{\ \textcolor{keywordflow}{return}\ feature;\ \};}
+\DoxyCodeLine{00598\ }
+\DoxyCodeLine{00607\ \textcolor{keywordtype}{void}\ setFeature(Formula\_Feature\ feature\_)\ \{\ feature\ =\ feature\_;\ \};}
+\DoxyCodeLine{00608\ }
+\DoxyCodeLine{00617\ tstring\ *\ getQuantifierPrefix()\ \{\ \textcolor{keywordflow}{return}\ \&quantifierPrefix;\ \};}
+\DoxyCodeLine{00618\ }
+\DoxyCodeLine{00628\ \textcolor{keyword}{friend}\ \textcolor{keywordtype}{void}\ joinAllFormulas(vector\ <EntityBase\ *>\ *\ entities,\ EntityBaseType\ type);}
+\DoxyCodeLine{00629\ }
+\DoxyCodeLine{00642\ \textcolor{keyword}{friend}\ \mbox{\hyperlink{classFormula}{Formula}}\ *\ joinFormula(vector\ <EntityBase\ *>\ *\ entities,\ EntityBaseType\ type,\ \mbox{\hyperlink{classFormula}{Formula}}\ *\ first,\ \mbox{\hyperlink{classFormula}{Formula}}\ *\ second);}
+\DoxyCodeLine{00643\ }
+\DoxyCodeLine{00653\ \textcolor{keywordtype}{void}\ quantifierFormula(vector\ <EntityBase\ *>\ *\ entities,\ EntityBaseType\ type);}
+\DoxyCodeLine{00654\ }
+\DoxyCodeLine{00664\ \textcolor{keywordtype}{void}\ setAtomFormula(\textcolor{keyword}{const}\ \mbox{\hyperlink{classEntityVariable}{EntityVariable}}\ \&\ ev1,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classEntityVariable}{EntityVariable}}\ \&\ ev2);}
+\DoxyCodeLine{00665\ }
+\DoxyCodeLine{00677\ \textcolor{keywordtype}{bool}\ setAtomFormula(vector\ <EntityBase\ *>\ *\ entities,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classEntityVariable}{EntityVariable}}\ \&\ ev1,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classEntityVariable}{EntityVariable}}\ \&\ ev2);}
+\DoxyCodeLine{00678\ }
+\DoxyCodeLine{00690\ \mbox{\hyperlink{classFormula}{Formula}}*\ quantifierFormula(vector\ <EntityBase\ *>\ *\ entities,\ EntityBaseType\ type,\ \mbox{\hyperlink{classEntityVariable}{EntityVariable}}\ *\ freeVariable);}
+\DoxyCodeLine{00691\ }
+\DoxyCodeLine{00702\ \mbox{\hyperlink{classFormula}{Formula}}*\ quantifierFormula(EntityBaseType\ type,\ \mbox{\hyperlink{classEntityVariable}{EntityVariable}}\ *\ freeVariable);}
+\DoxyCodeLine{00703\ }
+\DoxyCodeLine{00713\ \textcolor{keyword}{friend}\ \textcolor{keywordtype}{void}\ quantifierAllFormulas(vector\ <EntityBase\ *>\ *\ entities,\ EntityBaseType\ type);}
+\DoxyCodeLine{00714\ }
+\DoxyCodeLine{00723\ \textcolor{keyword}{friend}\ \textcolor{keywordtype}{void}\ negativeAllFormulas(vector\ <EntityBase\ *>\ *\ entities);}
+\DoxyCodeLine{00724\ }
+\DoxyCodeLine{00733\ \mbox{\hyperlink{classFormula}{Formula}}*\ \ negativeFormula(vector\ <EntityBase\ *>\ *\ entities);}
+\DoxyCodeLine{00734\ }
+\DoxyCodeLine{00745\ \mbox{\hyperlink{classFormula}{Formula}}*\ \ negativeFormula(vector\ <EntityBase\ *>\ *\ entities,\ \textcolor{keywordtype}{int}\ i);}
+\DoxyCodeLine{00746\ }
+\DoxyCodeLine{00759\ \textcolor{keywordtype}{bool}\ predicateBelonging(vector\ <EntityBase\ *>\ *\ entities,\ \mbox{\hyperlink{classFormula}{Formula}}\ *\ parent,\ \mbox{\hyperlink{classFormulaSet}{FormulaSet}}\ *\ set,\ tstring\ *\ ptvars\ =\ \textcolor{keyword}{nullptr});}
+\DoxyCodeLine{00760\ }
+\DoxyCodeLine{00770\ \textcolor{keywordtype}{void}\ SetPredicateText(\mbox{\hyperlink{classFormula}{Formula}}\ *\ parent,\ tstring\ *\ ptvars);}
+\DoxyCodeLine{00771\ }
+\DoxyCodeLine{00780\ \textcolor{keywordtype}{void}\ SetPredicateText(tstring\ \&\ set\_text);}
+\DoxyCodeLine{00781\ }
+\DoxyCodeLine{00790\ \textcolor{keywordtype}{void}\ SetSubsetText(tstring\ \&\ set\_text);}
+\DoxyCodeLine{00791\ }
+\DoxyCodeLine{00803\ \textcolor{keywordtype}{bool}\ subset(vector\ <EntityBase\ *>\ *\ entities,\ \mbox{\hyperlink{classFormulaSet}{FormulaSet}}\ *\ set,\ vector\ <EntityVariable\ *>\ *\ variables);}
+\DoxyCodeLine{00804\ }
+\DoxyCodeLine{00812\ \textcolor{keywordtype}{bool}\ isAtom()\ \{\ \textcolor{keywordflow}{return}\ (type\ ==\ ATOMIC\_FORMULA);\ \};}
+\DoxyCodeLine{00813\ }
+\DoxyCodeLine{00821\ \textcolor{keywordtype}{bool}\ isNegative()\ \{\ \textcolor{keywordflow}{if}(\ isRedefined())\ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};\ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{return}\ (type\ ==\ NEGATIVE\_OPERATION);\ \};}
+\DoxyCodeLine{00822\ }
+\DoxyCodeLine{00830\ \textcolor{keywordtype}{bool}\ isQuantifier()\ \{\ \textcolor{keywordflow}{if}(\ isRedefined())\ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};\ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}((type\ ==\ QUANTIFIER1\_OPERATION)\ ||\ (type\ ==\ QUANTIFIER2\_OPERATION))\ \textcolor{keywordflow}{return}\ \textcolor{keyword}{true};\ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};\ \};}
+\DoxyCodeLine{00831\ }
+\DoxyCodeLine{00839\ \textcolor{keywordtype}{bool}\ isBelongingPredicate()\ \{\ \textcolor{keywordflow}{return}\ (type\ ==\ BELONGING\_PREDICATE);\ \};}
+\DoxyCodeLine{00841\ \textcolor{comment}{//\ \ class\ FormulaSet\ -\/\ Represents\ a\ set\ of\ formulas,\ potentially\ nested,\ with\ variable-\/based\ and\ set-\/based\ properties}}
+\DoxyCodeLine{00842\ \textcolor{comment}{//}}
+\DoxyCodeLine{00843\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classFormulaSet}{FormulaSet}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classEntityBase}{EntityBase}}\ \textcolor{comment}{//,\ public\ Level}}
+\DoxyCodeLine{00844\ \{}
+\DoxyCodeLine{00845\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00846\ \ \ \ \ \mbox{\hyperlink{classFormula}{Formula}}\ *formula;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00847\ \ \ \ \ \mbox{\hyperlink{classFormulaSet}{FormulaSet}}\ *set;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00848\ \ \ \ \ vector\ <EntityVariable\ *>\ baseVariables;\ \ }
+\DoxyCodeLine{00849\ \ \ \ \ \mbox{\hyperlink{classEntityVariable}{EntityVariable}}\ *pnaming;\ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00850\ }
+\DoxyCodeLine{00851\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00855\ \ \ \ \ \mbox{\hyperlink{classFormulaSet_ad32e2a5a3e35afbd06f83a5daefc84f8}{FormulaSet}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{00856\ }
+\DoxyCodeLine{00860\ \ \ \ \ \mbox{\hyperlink{classFormulaSet_af1d5061c0456cce897623f48a03cee71}{\string~FormulaSet}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{00861\ }
+\DoxyCodeLine{00868\ \ \ \ \ \mbox{\hyperlink{classFormulaSet_ad32e2a5a3e35afbd06f83a5daefc84f8}{FormulaSet}}(\mbox{\hyperlink{classFormula}{Formula}}\ *parent,\ vector\ <EntityVariable\ *>\ *variables,\ \mbox{\hyperlink{classEntityVariable}{EntityVariable}}\ *naming\_);}
+\DoxyCodeLine{00869\ }
+\DoxyCodeLine{00870\ \textcolor{preprocessor}{\#if\ defined(LIBXML\_TREE\_ENABLED)\ \&\&\ defined(LIBXML\_OUTPUT\_ENABLED)}}
+\DoxyCodeLine{00871\ \ \ \ \ \textcolor{comment}{//\ Additional\ constructors\ can\ be\ added\ here\ for\ XML-\/based\ initialization}}
+\DoxyCodeLine{00872\ \textcolor{preprocessor}{\#else}}
+\DoxyCodeLine{00877\ \ \ \ \ \mbox{\hyperlink{classFormulaSet_ad32e2a5a3e35afbd06f83a5daefc84f8}{FormulaSet}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classCSetItem}{CSetItem}}\&\ item);}
+\DoxyCodeLine{00878\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00879\ }
+\DoxyCodeLine{00883\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classFormulaSet_a983f32db5c926ba504c6bcff9b5a5e83}{setText}}();}
+\DoxyCodeLine{00884\ }
+\DoxyCodeLine{00889\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classFormulaSet_a983f32db5c926ba504c6bcff9b5a5e83}{setText}}(tstring\ tvars);}
+\DoxyCodeLine{00890\ }
+\DoxyCodeLine{00895\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classFormulaSet_ac885837b2bd674b78187131e09c30c15}{setText}}(vector\ <EntityBase\ *>\ *entities);}
+\DoxyCodeLine{00896\ }
+\DoxyCodeLine{00901\ \ \ \ \ \mbox{\hyperlink{classFormula}{Formula}}\ *\mbox{\hyperlink{classFormulaSet_a60e03c24d159b53d092c7dc99e765d48}{getParentFormula}}()\ \{\ \textcolor{keywordflow}{return}\ formula;\ \}}
+\DoxyCodeLine{00902\ }
+\DoxyCodeLine{00907\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classFormulaSet_a51a2cfc09ac0ca3d3a1afeb19b7af8fa}{setParentFormula}}(\mbox{\hyperlink{classFormula}{Formula}}\ *parent)\ \{\ formula\ =\ parent;\ \}}
+\DoxyCodeLine{00908\ }
+\DoxyCodeLine{00913\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classFormulaSet_ad94b06820c779b1948d22a457d28da11}{SetLabel}}(vector\ <EntityBase\ *>\ *entities);}
+\DoxyCodeLine{00914\ }
+\DoxyCodeLine{00919\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classFormulaSet_ae08d7776a374e9636e55f49011a0c499}{isVariableBased}}();}
+\DoxyCodeLine{00920\ }
+\DoxyCodeLine{00925\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classFormulaSet_a577686b14caae7cd894a332667e1f9f8}{isSetBased}}();}
+\DoxyCodeLine{00926\ }
+\DoxyCodeLine{00931\ \ \ \ \ vector\ <EntityVariable\ *>\ *\mbox{\hyperlink{classFormulaSet_a31275f1f35b157e31b06bdcf72ac1901}{getBaseVariables}}()\ \{\ \textcolor{keywordflow}{return}\ \&baseVariables;\ \}}
+\DoxyCodeLine{00932\ }
+\DoxyCodeLine{00937\ \ \ \ \ \mbox{\hyperlink{classEntityVariable}{EntityVariable}}\ *\mbox{\hyperlink{classFormulaSet_a159f5222f5a00ab0fbc7879f89c9d8ee}{getNaming}}()\ \{\ \textcolor{keywordflow}{return}\ pnaming;\ \}}
+\DoxyCodeLine{00938\ }
+\DoxyCodeLine{00943\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classFormulaSet_a5bc23f09e5580cc5bfdc6a319e89012c}{setNaming}}(\mbox{\hyperlink{classEntityVariable}{EntityVariable}}\ *pev)\ \{\ pnaming\ =\ pev;\ \}}
+\DoxyCodeLine{00944\ }
+\DoxyCodeLine{00950\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classFormulaSet_a23bfea3163549228cdee106135456151}{isExclusion}}(\mbox{\hyperlink{classFormula}{Formula}}\ *parent);}
+\DoxyCodeLine{00951\ }
+\DoxyCodeLine{00960\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classFormulaSet_a730559f8f47e181e489eea1d74ee2d17}{proccessExclusion}}(\mbox{\hyperlink{classFormula}{Formula}}\ *parent,\ vector\ <EntityVariable\ *>\ *variables,\ tstring\ \&tvars,\ tstring\ \&tlevel,\ \textcolor{keywordtype}{bool}\ produceText\ =\ TRUE);}
+\DoxyCodeLine{00961\ \};}
+\DoxyCodeLine{00962\ }
+\DoxyCodeLine{00964\ \textcolor{comment}{//\ \ class\ Tuple\ -\/\ Represents\ a\ tuple\ of\ variables\ within\ a\ formula}}
+\DoxyCodeLine{00965\ \textcolor{comment}{//}}
+\DoxyCodeLine{00966\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classTuple}{Tuple}}:\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classFormula}{Formula}}}
+\DoxyCodeLine{00967\ \{}
+\DoxyCodeLine{00968\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00969\ \ \ \ \ \textcolor{keywordtype}{int}\ level;\ \ }
+\DoxyCodeLine{00970\ }
+\DoxyCodeLine{00971\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00975\ \ \ \ \ \mbox{\hyperlink{classTuple_aaa3d1b792144c7f14b099ddf5d575d63}{Tuple}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{00976\ }
+\DoxyCodeLine{00982\ \ \ \ \ \mbox{\hyperlink{classTuple_aaa3d1b792144c7f14b099ddf5d575d63}{Tuple}}(\mbox{\hyperlink{classEntityVariable}{EntityVariable}}\ \&ev1,\ \mbox{\hyperlink{classEntityVariable}{EntityVariable}}\ \&set);}
+\DoxyCodeLine{00983\ }
+\DoxyCodeLine{00990\ \ \ \ \ \mbox{\hyperlink{classTuple_aaa3d1b792144c7f14b099ddf5d575d63}{Tuple}}(\mbox{\hyperlink{classEntityVariable}{EntityVariable}}\ \&ev1,\ \mbox{\hyperlink{classEntityVariable}{EntityVariable}}\ \&ev2,\ \mbox{\hyperlink{classEntityVariable}{EntityVariable}}\ \&set);}
+\DoxyCodeLine{00991\ }
+\DoxyCodeLine{00997\ \ \ \ \ \mbox{\hyperlink{classTuple_aaa3d1b792144c7f14b099ddf5d575d63}{Tuple}}(vector\ <EntityVariable\ *>\ *pev,\ \mbox{\hyperlink{classEntityVariable}{EntityVariable}}\ \&set);}
+\DoxyCodeLine{00998\ }
+\DoxyCodeLine{01003\ \ \ \ \ \mbox{\hyperlink{classTuple_aaa3d1b792144c7f14b099ddf5d575d63}{Tuple}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classCFormulaItem}{CFormulaItem}}\&\ fi);}
+\DoxyCodeLine{01004\ }
+\DoxyCodeLine{01008\ \ \ \ \ \mbox{\hyperlink{classTuple_aad6937db049398362dd5242a17a46547}{\string~Tuple}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{01009\ }
+\DoxyCodeLine{01014\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classTuple_a7bc6cf60a9a85dfa29f84dfd35676b9d}{SetLevel}}(\textcolor{keywordtype}{int}\ l)\ \{\ level\ =\ l;\ \}}
+\DoxyCodeLine{01015\ }
+\DoxyCodeLine{01021\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classTuple_a5883a02b1e20e986d77c26a85b4b0982}{SetTupleText}}(vector\ <EntityVariable\ *>\ *depending\ =\ \textcolor{keyword}{nullptr},\ tstring\ *ptvars\ =\ \textcolor{keyword}{nullptr});}
+\DoxyCodeLine{01022\ }
+\DoxyCodeLine{01027\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classTuple_a0cf3514bd1de0776ada0e19000f694c5}{SetTupleText}}(tstring\ \&tstr)\ \{\ \mbox{\hyperlink{classEntityBase_a48895882eddf6f235feea8f7644d01e9}{text}}\ =\ tstr;\ \}}
+\DoxyCodeLine{01028\ }
+\DoxyCodeLine{01033\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classTuple_a3bfd643673cdaefc0efd647eb1f607de}{SetTupleLabel}}(tstring\ \&tstr)\ \{\ \mbox{\hyperlink{classEntityBase_abdf5dbea187af2510de461149f21eb62}{label}}\ =\ tstr;\ \}}
+\DoxyCodeLine{01034\ }
+\DoxyCodeLine{01040\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classTuple_ac134fc25c167cc0c9b5f82ff836f1e8d}{compare}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classEntityVariable}{EntityVariable}}\&\ ev);}
+\DoxyCodeLine{01041\ \};}
+\DoxyCodeLine{01042\ }
+\DoxyCodeLine{01043\ \textcolor{comment}{//\ Auxiliary\ functions}}
+\DoxyCodeLine{01044\ }
+\DoxyCodeLine{01051\ \textcolor{keywordtype}{bool}\ myentity\_compare(\mbox{\hyperlink{classEntityVariable}{EntityVariable}}\ *ev,\ \mbox{\hyperlink{classEntityVariable}{EntityVariable}}\ *evcomp);}
+\DoxyCodeLine{01052\ }
+\DoxyCodeLine{01060\ \textcolor{keywordtype}{bool}\ isExistVariable(tstring\ \&symbol,\ tstring\ \&index,\ vector\ <EntityBase\ *>\ *entities);}
+\DoxyCodeLine{01061\ }
+\DoxyCodeLine{01069\ \textcolor{keywordtype}{bool}\ isExistNaming(tstring\ \&symbol,\ tstring\ \&index,\ vector\ <EntityBase\ *>\ *entities);}
+\DoxyCodeLine{01070\ }
+\DoxyCodeLine{01078\ \mbox{\hyperlink{classFormulaSet}{FormulaSet}}\ *isExistFormulaSet(tstring\ \&symbol,\ tstring\ \&index,\ vector\ <EntityBase\ *>\ *entities);}
+\DoxyCodeLine{01079\ }
+\DoxyCodeLine{01085\ \textcolor{keywordtype}{bool}\ isTextOfVariable(tstring\ \&text);}
+\DoxyCodeLine{01086\ }
+\DoxyCodeLine{01093\ tstring\ makeVarPartOfLabel(vector\ <EntityBase\ *>\ *entities,\ \mbox{\hyperlink{classEntityBase}{EntityBase}}\ *base);}
+\DoxyCodeLine{01094\ }
+
+\end{DoxyCode}

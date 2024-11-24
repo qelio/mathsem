@@ -1,0 +1,187 @@
+\doxysection{Scientific\+List\+Box Class Reference}
+\hypertarget{classScientificListBox}{}\label{classScientificListBox}\index{ScientificListBox@{ScientificListBox}}
+
+
+A custom list box class used to display scientific items with special formatting for mathematical symbols and indices.  
+
+
+
+
+{\ttfamily \#include $<$Scientific\+List\+Box.\+h$>$}
+
+
+
+Inheritance diagram for Scientific\+List\+Box\+:
+% FIG 0
+
+
+Collaboration diagram for Scientific\+List\+Box\+:
+% FIG 1
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classScientificListBox_aa1bc8b13e9ea6f3883f3ca57b559a403}{Scientific\+List\+Box}} ()
+\begin{DoxyCompactList}\small\item\em Constructor for the \doxylink{classScientificListBox}{Scientific\+List\+Box} class. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{classScientificListBox_ae66e37f10b090d50e0082fa7952db4a7}{\texorpdfstring{$\sim$}{\string~}\+Scientific\+List\+Box}} ()
+\begin{DoxyCompactList}\small\item\em Destructor for the \doxylink{classScientificListBox}{Scientific\+List\+Box} class. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classScientificListBox_a9b1a3f32e0cb32cb70645a81180c0c59}{Draw\+Item}} (LPDRAWITEMSTRUCT)
+\begin{DoxyCompactList}\small\item\em Custom method for drawing list items. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classScientificListBox_a1bcd4e33bf9caee7f7914e9696de2ea4}{Set\+Indexes\+Font}} (CFont \texorpdfstring{$\ast$}{*}m\+\_\+f\+Indexes\+\_\+)
+\begin{DoxyCompactList}\small\item\em Sets the font for rendering indexes in the list box. \end{DoxyCompactList}\item 
+virtual int \mbox{\hyperlink{classScientificListBox_ae4a8b59dedc59c746a52ee042221dd65}{Compare\+Item}} (LPCOMPAREITEMSTRUCT)
+\begin{DoxyCompactList}\small\item\em Compares two list items for sorting. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classScientificListBox_a4b6165f05d7d4cfdcd03cf723f023ff5}{Set\+Sorting}} (bool to\+Sort=false)
+\begin{DoxyCompactList}\small\item\em Sets whether the list should be sorted. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+vector$<$ \mbox{\hyperlink{classSemanticString}{Semantic\+String}} \texorpdfstring{$\ast$}{*} $>$ \mbox{\hyperlink{classScientificListBox_ae5229aa8e292df239f3237a512569b46}{DCU}}
+\begin{DoxyCompactList}\small\item\em A vector of \doxylink{classSemanticString}{Semantic\+String} pointers. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+CFont \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classScientificListBox_a4092de0aa8218c66a25ea45612f65448}{m\+\_\+f\+Symbol}}
+\begin{DoxyCompactList}\small\item\em Font for rendering mathematical symbols in the list box. \end{DoxyCompactList}\item 
+CFont \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classScientificListBox_a89dbe7a9d14fc3cb9f4c49509a87de5f}{m\+\_\+f\+Indexes}}
+\begin{DoxyCompactList}\small\item\em Font for rendering indexes (subscripts or superscripts) in the list box. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A custom list box class used to display scientific items with special formatting for mathematical symbols and indices. 
+
+This class extends from CList\+Box and allows for customized drawing and sorting of list items, particularly for displaying mathematical symbols and expressions. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classScientificListBox_aa1bc8b13e9ea6f3883f3ca57b559a403}\label{classScientificListBox_aa1bc8b13e9ea6f3883f3ca57b559a403} 
+\index{ScientificListBox@{ScientificListBox}!ScientificListBox@{ScientificListBox}}
+\index{ScientificListBox@{ScientificListBox}!ScientificListBox@{ScientificListBox}}
+\doxysubsubsection{\texorpdfstring{ScientificListBox()}{ScientificListBox()}}
+{\footnotesize\ttfamily Scientific\+List\+Box\+::\+Scientific\+List\+Box (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Constructor for the \doxylink{classScientificListBox}{Scientific\+List\+Box} class. 
+
+Initializes the scientific list box, setting up the necessary properties and states. \Hypertarget{classScientificListBox_ae66e37f10b090d50e0082fa7952db4a7}\label{classScientificListBox_ae66e37f10b090d50e0082fa7952db4a7} 
+\index{ScientificListBox@{ScientificListBox}!````~ScientificListBox@{\texorpdfstring{$\sim$}{\string~}ScientificListBox}}
+\index{````~ScientificListBox@{\texorpdfstring{$\sim$}{\string~}ScientificListBox}!ScientificListBox@{ScientificListBox}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}ScientificListBox()}{\string~ScientificListBox()}}
+{\footnotesize\ttfamily Scientific\+List\+Box\+::\texorpdfstring{$\sim$}{\string~}\+Scientific\+List\+Box (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Destructor for the \doxylink{classScientificListBox}{Scientific\+List\+Box} class. 
+
+Cleans up any resources used by the scientific list box. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classScientificListBox_ae4a8b59dedc59c746a52ee042221dd65}\label{classScientificListBox_ae4a8b59dedc59c746a52ee042221dd65} 
+\index{ScientificListBox@{ScientificListBox}!CompareItem@{CompareItem}}
+\index{CompareItem@{CompareItem}!ScientificListBox@{ScientificListBox}}
+\doxysubsubsection{\texorpdfstring{CompareItem()}{CompareItem()}}
+{\footnotesize\ttfamily int Scientific\+List\+Box\+::\+Compare\+Item (\begin{DoxyParamCaption}\item[{LPCOMPAREITEMSTRUCT}]{lp\+Compare\+Item\+Struct }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Compares two list items for sorting. 
+
+This method provides a comparison function used for sorting the list items in the list box.
+
+
+\begin{DoxyParams}{Parameters}
+{\em lp\+Compare\+Item\+Struct} & Pointer to the COMPAREITEMSTRUCT that contains information about the items to be compared. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A value that indicates the relative order of the two items (negative, zero, or positive). 
+\end{DoxyReturn}
+\Hypertarget{classScientificListBox_a9b1a3f32e0cb32cb70645a81180c0c59}\label{classScientificListBox_a9b1a3f32e0cb32cb70645a81180c0c59} 
+\index{ScientificListBox@{ScientificListBox}!DrawItem@{DrawItem}}
+\index{DrawItem@{DrawItem}!ScientificListBox@{ScientificListBox}}
+\doxysubsubsection{\texorpdfstring{DrawItem()}{DrawItem()}}
+{\footnotesize\ttfamily void Scientific\+List\+Box\+::\+Draw\+Item (\begin{DoxyParamCaption}\item[{LPDRAWITEMSTRUCT}]{lp\+Draw\+Item\+Struct }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Custom method for drawing list items. 
+
+This method overrides the default drawing behavior of the list box items, enabling the drawing of mathematical symbols and expressions with appropriate fonts.
+
+
+\begin{DoxyParams}{Parameters}
+{\em lp\+Draw\+Item\+Struct} & Pointer to the DRAWITEMSTRUCT that contains information about the item to be drawn. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classScientificListBox_a1bcd4e33bf9caee7f7914e9696de2ea4}\label{classScientificListBox_a1bcd4e33bf9caee7f7914e9696de2ea4} 
+\index{ScientificListBox@{ScientificListBox}!SetIndexesFont@{SetIndexesFont}}
+\index{SetIndexesFont@{SetIndexesFont}!ScientificListBox@{ScientificListBox}}
+\doxysubsubsection{\texorpdfstring{SetIndexesFont()}{SetIndexesFont()}}
+{\footnotesize\ttfamily void Scientific\+List\+Box\+::\+Set\+Indexes\+Font (\begin{DoxyParamCaption}\item[{CFont \texorpdfstring{$\ast$}{*}}]{m\+\_\+f\+Indexes\+\_\+ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Sets the font for rendering indexes in the list box. 
+
+This method sets the font to be used for rendering subscript and superscript indexes in the list box.
+
+
+\begin{DoxyParams}{Parameters}
+{\em m\+\_\+f\+Indexes\+\_\+} & A pointer to the CFont to be used for indexes. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classScientificListBox_a4b6165f05d7d4cfdcd03cf723f023ff5}\label{classScientificListBox_a4b6165f05d7d4cfdcd03cf723f023ff5} 
+\index{ScientificListBox@{ScientificListBox}!SetSorting@{SetSorting}}
+\index{SetSorting@{SetSorting}!ScientificListBox@{ScientificListBox}}
+\doxysubsubsection{\texorpdfstring{SetSorting()}{SetSorting()}}
+{\footnotesize\ttfamily void Scientific\+List\+Box\+::\+Set\+Sorting (\begin{DoxyParamCaption}\item[{bool}]{to\+Sort = {\ttfamily false} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Sets whether the list should be sorted. 
+
+This method allows enabling or disabling sorting for the list of items in the list box.
+
+
+\begin{DoxyParams}{Parameters}
+{\em to\+Sort} & A boolean value indicating whether sorting should be enabled (true) or disabled (false). \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{classScientificListBox_ae5229aa8e292df239f3237a512569b46}\label{classScientificListBox_ae5229aa8e292df239f3237a512569b46} 
+\index{ScientificListBox@{ScientificListBox}!DCU@{DCU}}
+\index{DCU@{DCU}!ScientificListBox@{ScientificListBox}}
+\doxysubsubsection{\texorpdfstring{DCU}{DCU}}
+{\footnotesize\ttfamily vector$<$\mbox{\hyperlink{classSemanticString}{Semantic\+String}} \texorpdfstring{$\ast$}{*}$>$ Scientific\+List\+Box\+::\+DCU}
+
+
+
+A vector of \doxylink{classSemanticString}{Semantic\+String} pointers. 
+
+This vector stores semantic strings, which can represent mathematical expressions or symbols in the list. \Hypertarget{classScientificListBox_a89dbe7a9d14fc3cb9f4c49509a87de5f}\label{classScientificListBox_a89dbe7a9d14fc3cb9f4c49509a87de5f} 
+\index{ScientificListBox@{ScientificListBox}!m\_fIndexes@{m\_fIndexes}}
+\index{m\_fIndexes@{m\_fIndexes}!ScientificListBox@{ScientificListBox}}
+\doxysubsubsection{\texorpdfstring{m\_fIndexes}{m\_fIndexes}}
+{\footnotesize\ttfamily CFont\texorpdfstring{$\ast$}{*} Scientific\+List\+Box\+::m\+\_\+f\+Indexes\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Font for rendering indexes (subscripts or superscripts) in the list box. 
+
+This font is used to render indexes in the list box, providing subscript and superscript functionality. \Hypertarget{classScientificListBox_a4092de0aa8218c66a25ea45612f65448}\label{classScientificListBox_a4092de0aa8218c66a25ea45612f65448} 
+\index{ScientificListBox@{ScientificListBox}!m\_fSymbol@{m\_fSymbol}}
+\index{m\_fSymbol@{m\_fSymbol}!ScientificListBox@{ScientificListBox}}
+\doxysubsubsection{\texorpdfstring{m\_fSymbol}{m\_fSymbol}}
+{\footnotesize\ttfamily CFont\texorpdfstring{$\ast$}{*} Scientific\+List\+Box\+::m\+\_\+f\+Symbol\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Font for rendering mathematical symbols in the list box. 
+
+This font is used to render mathematical symbols in the list box. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Scientific\+List\+Box.\+h\item 
+Scientific\+List\+Box.\+cpp\end{DoxyCompactItemize}

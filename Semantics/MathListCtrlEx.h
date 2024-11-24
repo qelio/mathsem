@@ -1,232 +1,242 @@
-//  Автор кода: Татаринцев В.В., akizelokro@mail.ru , 2013-2014
-//  Author: Tatarintsev V.V., akizelokro@mail.ru, 2013-2014
-#pragma once
-#include "MsgHook.h"
-#include <Afxmt.h>
-#include "common_functions.h"
-#include "Formula.h"
-#include "SemanticString.h"
-
-
-// CMathListCtrlEx
-typedef BOOL (*PFNEDITORCALLBACK)(CWnd** pWnd, int nRow, int nColumn, CString& strSubItemText, DWORD_PTR dwItemData, void* pThis, BOOL bUpdate);
-
-
-
-
-
-
-
+/**
+ * @class CMathListCtrlEx
+ * @brief A custom list control with advanced sorting, editing, and item management features.
+ *
+ * This class extends the CListCtrl and adds functionality for custom item editing,
+ * sorting, and management. It provides methods for adding, removing, and sorting
+ * items, as well as setting custom editors for specific columns, rows, or cells.
+ */
 class CMathListCtrlEx : public CListCtrl
 {
 	DECLARE_DYNAMIC(CMathListCtrlEx)
 
 public:
+	/**
+	 * @brief Default constructor for CMathListCtrlEx.
+	 */
 	CMathListCtrlEx();
+
+	/**
+	 * @brief Destructor for CMathListCtrlEx.
+	 */
 	virtual ~CMathListCtrlEx();
-	// Retrieves the data (lParam) associated with a particular item.
+
+	/**
+	 * @brief Retrieves the data (lParam) associated with a particular item.
+	 * @param nItem The index of the item.
+	 * @return The item data (lParam).
+	 */
 	DWORD_PTR GetItemData(int nItem) const;
-	// Retrieves the data (lParam) associated with a particular item.
+
+	/**
+	 * @brief Retrieves the internal data associated with a particular item.
+	 * @param nItem The index of the item.
+	 * @return The item data (lParam).
+	 */
 	DWORD_PTR GetItemDataInternal(int nItem) const;
-	// Sets the data (lParam) associated with a particular item.
-	BOOL SetItemData(int nItem, DWORD_PTR dwData);	
-	// Removes a single item from the control.
+
+	/**
+	 * @brief Sets the data (lParam) associated with a particular item.
+	 * @param nItem The index of the item.
+	 * @param dwData The data to set.
+	 * @return TRUE if the data was successfully set.
+	 */
+	BOOL SetItemData(int nItem, DWORD_PTR dwData);
+
+	/**
+	 * @brief Removes a single item from the control.
+	 * @param nItem The index of the item to remove.
+	 * @return TRUE if the item was successfully removed.
+	 */
 	BOOL DeleteItem(int nItem);
-	// Removes all items from the control.
+
+	/**
+	 * @brief Removes all items from the control.
+	 * @return TRUE if all items were successfully removed.
+	 */
 	BOOL DeleteAllItems();
-	// Finds an item in the control matching the specified criteria.  
+
+	/**
+	 * @brief Finds an item that matches the specified search criteria.
+	 * @param pFindInfo The search criteria.
+	 * @param nStart The starting index for the search.
+	 * @return The index of the found item, or -1 if no item matches.
+	 */
 	int FindItem(LVFINDINFO* pFindInfo, int nStart = -1) const;
-	// Call to sort items using a custom comparison function.
+
+	/**
+	 * @brief Sorts the items in the control using a custom comparison function.
+	 * @param pfnCompare The custom comparison function.
+	 * @param dwData Additional data to pass to the comparison function.
+	 * @return TRUE if the sorting was successful.
+	 */
 	BOOL SortItems(PFNLVCOMPARE pfnCompare, DWORD_PTR dwData);
-	// Adds an item to the control.
+
+	/**
+	 * @brief Adds an item to the control.
+	 * @param pItem The item to insert.
+	 * @return The index of the newly inserted item.
+	 */
 	int InsertItem(const LVITEM* pItem);
+
+	/**
+	 * @brief Adds an item to the control with a specified index and label.
+	 * @param nItem The index of the item.
+	 * @param lpszItem The label of the item.
+	 * @return The index of the newly inserted item.
+	 */
 	int InsertItem(int nItem, LPCTSTR lpszItem);
+
+	/**
+	 * @brief Adds an item to the control with a specified index, label, and image index.
+	 * @param nItem The index of the item.
+	 * @param lpszItem The label of the item.
+	 * @param nImage The index of the image associated with the item.
+	 * @return The index of the newly inserted item.
+	 */
 	int InsertItem(int nItem, LPCTSTR lpszItem, int nImage);
 
+	/**
+	 * @brief Ensures that a specific subitem is visible.
+	 * @param nItem The index of the item.
+	 * @param nSubItem The index of the subitem.
+	 * @param pRect The rectangle representing the area of the subitem.
+	 * @return TRUE if the subitem is successfully made visible.
+	 */
 	BOOL EnsureSubItemVisible(int nItem, int nSubItem, CRect *pRect = NULL);
+
+	/**
+	 * @brief Defines the sorting states for columns.
+	 */
 	typedef enum Sort
 	{
-		None = 0,
-		Ascending = 1,
-		Descending = 2,
-		Auto = 4,
-		SortBits = 7
-	}Sort;
+		None = 0, /**< No sorting. */
+		Ascending = 1, /**< Ascending order. */
+		Descending = 2, /**< Descending order. */
+		Auto = 4, /**< Automatic sorting. */
+		SortBits = 7 /**< All possible sorting states. */
+	} Sort;
+
+	/**
+	 * @brief Defines the comparison types for column sorting.
+	 */
 	typedef enum Comparer
 	{
-		NotSet,
-		Int,
-		Double,
-		String,
-		StringNumber,
-		StringNoCase,
-		StringNumberNoCase,
-		Date
-	}Comparer;
+		NotSet, /**< No comparison set. */
+		Int, /**< Integer comparison. */
+		Double, /**< Double comparison. */
+		String, /**< String comparison. */
+		StringNumber, /**< String number comparison. */
+		StringNoCase, /**< Case-insensitive string comparison. */
+		StringNumberNoCase, /**< Case-insensitive string number comparison. */
+		Date /**< Date comparison. */
+	} Comparer;
+
 protected:
+	/**
+	 * @brief Static callback function used for item comparison during sorting.
+	 * @param lParam1 The first item to compare.
+	 * @param lParam2 The second item to compare.
+	 * @param lParamSort Sorting data.
+	 * @return A value indicating the result of the comparison.
+	 */
 	static int CALLBACK CompareProc(LPARAM lParam1, LPARAM lParam2, LPARAM lParamSort);
+
+	/**
+	 * @brief Performs the actual comparison of two items.
+	 * @param lParam1 The first item to compare.
+	 * @param lParam2 The second item to compare.
+	 * @param lParamSort Sorting data.
+	 * @return A value indicating the result of the comparison.
+	 */
 	static int Compare(LPARAM lParam1, LPARAM lParam2, LPARAM lParamSort);
+
+	/**
+	 * @brief Compares two items as integers.
+	 * @param pLeftText The first text to compare.
+	 * @param pRightText The second text to compare.
+	 * @return A value indicating the result of the comparison.
+	 */
 	static int CompareInt(LPCTSTR pLeftText, LPCTSTR pRightText);
+
+	/**
+	 * @brief Compares two items as doubles.
+	 * @param pLeftText The first text to compare.
+	 * @param pRightText The second text to compare.
+	 * @return A value indicating the result of the comparison.
+	 */
 	static int CompareDouble(LPCTSTR pLeftText, LPCTSTR pRightText);
+
+	/**
+	 * @brief Compares two items as strings.
+	 * @param pLeftText The first text to compare.
+	 * @param pRightText The second text to compare.
+	 * @return A value indicating the result of the comparison.
+	 */
 	static int CompareString(LPCTSTR pLeftText, LPCTSTR pRightText);
+
+	/**
+	 * @brief Compares two items as number strings.
+	 * @param pLeftText The first text to compare.
+	 * @param pRightText The second text to compare.
+	 * @return A value indicating the result of the comparison.
+	 */
 	static int CompareNumberString(LPCTSTR pLeftText, LPCTSTR pRightText);
+
+	/**
+	 * @brief Compares two items as case-insensitive number strings.
+	 * @param pLeftText The first text to compare.
+	 * @param pRightText The second text to compare.
+	 * @return A value indicating the result of the comparison.
+	 */
 	static int CompareNumberStringNoCase(LPCTSTR pLeftText, LPCTSTR pRightText);
+
+	/**
+	 * @brief Compares two items as case-insensitive strings.
+	 * @param pLeftText The first text to compare.
+	 * @param pRightText The second text to compare.
+	 * @return A value indicating the result of the comparison.
+	 */
 	static int CompareStringNoCase(LPCTSTR pLeftText, LPCTSTR pRightText);
+
+	/**
+	 * @brief Compares two items as dates.
+	 * @param pLeftText The first text to compare.
+	 * @param pRightText The second text to compare.
+	 * @return A value indicating the result of the comparison.
+	 */
 	static int CompareDate(LPCTSTR pLeftText, LPCTSTR pRightText);
+
+	/** Critical section for thread-safety. */
 	CCriticalSection m_oLock;
+
 protected:
 	DECLARE_MESSAGE_MAP()
-protected:
+
+	/**
+	 * @brief The editor information structure.
+	 */
 	typedef struct EditorInfo
 	{
-		PFNEDITORCALLBACK m_pfnInitEditor;
-		PFNEDITORCALLBACK m_pfnEndEditor;
-		CWnd *m_pWnd;
-		BOOL m_bReadOnly;
-		EditorInfo();
-		EditorInfo(PFNEDITORCALLBACK pfnInitEditor, PFNEDITORCALLBACK pfnEndEditor, CWnd *pWnd = NULL);
-		inline BOOL IsSet(){return (m_pfnInitEditor || m_pWnd);}
-	}EditorInfo;
-	
+		PFNEDITORCALLBACK m_pfnInitEditor; /**< Function to initialize the editor. */
+		PFNEDITORCALLBACK m_pfnEndEditor; /**< Function to end the editor. */
+		CWnd *m_pWnd; /**< The window associated with the editor. */
+		BOOL m_bReadOnly; /**< Whether the editor is read-only. */
+		EditorInfo(); /**< Default constructor. */
+		EditorInfo(PFNEDITORCALLBACK pfnInitEditor, PFNEDITORCALLBACK pfnEndEditor, CWnd *pWnd = NULL); /**< Parameterized constructor. */
+		inline BOOL IsSet(){return (m_pfnInitEditor || m_pWnd);} /**< Checks if the editor is set. */
+	} EditorInfo;
+
+	/** Structure representing cell information. */
 	typedef struct CellInfo
-	{	
-		EditorInfo m_eiEditor;
-		COLORREF m_clrBack;
-		COLORREF m_clrText;	
-		DWORD_PTR	m_dwUserData;
-		int m_nColumn;
-		CellInfo(int nColumn);
-		CellInfo(int nColumn, COLORREF clrBack, COLORREF clrText, DWORD_PTR dwUserData = NULL);
-		CellInfo(int nColumn, EditorInfo eiEditor, COLORREF clrBack, COLORREF clrText, DWORD_PTR dwUserData = NULL);
-		CellInfo(int nColumn, EditorInfo eiEditor, DWORD_PTR dwUserData = NULL);
-	}CellInfo;
-	
-	typedef struct ColumnInfo
 	{
-		EditorInfo m_eiEditor;
-		int m_nColumn;
-		COLORREF m_clrBack;
-		COLORREF m_clrText;	
-		Sort m_eSort;
-		Comparer m_eCompare;
-		PFNLVCOMPARE m_fnCompare;
-		ColumnInfo(int nColumn);
-		ColumnInfo(int nColumn, PFNEDITORCALLBACK pfnInitEditor, PFNEDITORCALLBACK pfnEndEditor, CWnd *pWnd = NULL);
-	}ColumnInfo;
-	
-	typedef struct ItemData
-	{
-		EditorInfo m_eiEditor;
-		CArray<CellInfo*> m_aCellInfo;
-		COLORREF m_clrBack;
-		COLORREF m_clrText;		
-		DWORD_PTR	m_dwUserData;
-		ItemData(DWORD_PTR dwUserData = NULL);
-		ItemData(COLORREF clrBack, COLORREF clrText, DWORD_PTR dwUserData = NULL);
-		inline BOOL IsSet()
-		{
-			return (m_dwUserData || m_clrBack != -1 || m_clrText != -1 || !m_aCellInfo.IsEmpty());
-		}		
-		virtual ~ItemData();
-	}ItemData;
+		EditorInfo m_eiEditor; /**< The editor for the cell. */
+		COLORREF m_clrBack; /**< The background color of the cell. */
+		COLORREF m_clrText; /**< The text color of the cell. */
+		DWORD_PTR m_dwData; /**< The data associated with the cell. */
+		BOOL m_bReadOnly; /**< Whether the cell is read-only. */
+	} CellInfo;
 
-	CPtrArray m_aItemData;
-	CPtrArray m_aColumnInfo;
-	
-	BOOL DeleteItemData(int nItem);
-	BOOL DeleteAllItemsData( );
-	BOOL DeleteAllColumnInfo( );
-	BOOL DeleteColumnInfo(int nIndex );
-	EditorInfo *m_pEditor;
-	EditorInfo m_eiDefEditor;
-	int m_nEditingRow;
-	int m_nEditingColumn;
-	int m_nRow;
-	int m_nColumn;
-	COLORREF m_clrDefBack;
-	COLORREF m_clrDefText;
-	CMsgHook m_msgHook;
-	BOOL m_bHandleDelete;
-	int m_nSortColumn;
-	PFNLVCOMPARE m_fnCompare;
-	DWORD_PTR m_dwSortData;
-public:
-	///////////////////////////////////////////////////////////////////////////
-	//Editor stuff
-	///////////////////////////////////////////////////////////////////////////
-	void SetColumnEditor(int nColumn, PFNEDITORCALLBACK pfnInitEditor, PFNEDITORCALLBACK m_pfnEndEditor = NULL,  CWnd* pWnd = NULL);
-	void SetColumnEditor(int nColumn, CWnd* pWnd);
-	void SetCellEditor(int nRow, int nColumn, PFNEDITORCALLBACK pfnInitEditor, PFNEDITORCALLBACK m_pfnEndEditor = NULL,  CWnd* pWnd = NULL);
-	void SetCellEditor(int nRow, int nColumn, CWnd* pWnd);
-	void SetRowEditor(int nRow, PFNEDITORCALLBACK pfnInitEditor, PFNEDITORCALLBACK m_pfnEndEditor = NULL,  CWnd* pWnd = NULL);
-	void SetRowEditor(int nRow, CWnd* pWnd);
-	void SetDefaultEditor(PFNEDITORCALLBACK pfnInitEditor, PFNEDITORCALLBACK m_pfnEndEditor = NULL,  CWnd* pWnd = NULL);
-	void SetDefaultEditor(CWnd* pWnd);
-	void SetColumnReadOnly(int nColumn, bool bReadOnly = true);
-	void SetCellReadOnly(int nRow, int nColumn, bool bReadOnly = true);
-	void SetRowReadOnly(int nRow, bool bReadOnly = true);
-	BOOL IsColumnReadOnly(int nColumn);
-	BOOL IsRowReadOnly(int nRow);
-	BOOL IsCellReadOnly(int nRow, int nColumn);
-
-	BOOL DisplayEditor(int nItem, int nSubItem);
-	void HideEditor(BOOL bUpdate = TRUE);
-
-	int GetColumnCount(void);
-
-	///////////////////////////////////////////////////////////////////////////
-	//Display stuff
-	///////////////////////////////////////////////////////////////////////////
-	void SetRowColors(int nItem, COLORREF clrBk, COLORREF clrText);
-	void SetColumnColors(int nColumn, COLORREF clrBack, COLORREF clrText);
-	void SetCellColors(int nRow, int nColumn, COLORREF clrBack, COLORREF clrText);
-
-	///////////////////////////////////////////////////////////////////////////
-	//Item stuff
-	///////////////////////////////////////////////////////////////////////////
-	BOOL AddItem(int ItemIndex, int SubItemIndex, LPCTSTR ItemText, int ImageIndex=-1);
-	void DeleteSelectedItems(void);
-	void HandleDeleteKey(BOOL bHandle = TRUE);
-	void SelectItem(int nItem, BOOL bSelect);
-	BOOL DeleteAllColumns(void);
-	BOOL Reset(void);
-	
-	///////////////////////////////////////////////////////////////////////////
-	//Sorting stuff
-	///////////////////////////////////////////////////////////////////////////
-	void SetColumnSorting(int nColumn, Sort eSort, Comparer eSortType = String);
-	void SetColumnSorting(int nColumn, Sort eSort, PFNLVCOMPARE fnCallBack);
-	BOOL SortOnColumn(int nColumn, BOOL bChangeOrder = FALSE);
-
-
-protected:
-	afx_msg BOOL OnNMDblclk(NMHDR *pNMHDR, LRESULT *pResult);
-	virtual LRESULT WindowProc(UINT message, WPARAM wParam, LPARAM lParam);
-	virtual void PreSubclassWindow();
-	virtual BOOL PreCreateWindow(CREATESTRUCT& cs);
-	virtual BOOL PreTranslateMessage(MSG* pMsg);
-	afx_msg BOOL OnNMCustomdraw(NMHDR *pNMHDR, LRESULT *pResult);
-	afx_msg void OnHdnItemclick(NMHDR *pNMHDR, LRESULT *pResult);
-
-	int GetItemIndexFromData(DWORD_PTR dwData);
-
-	CMathListCtrlEx::ColumnInfo* GetColumnInfo(int nColumn);
-	CellInfo* GetCellInfo(int nItem, int nSubItem);
-	BOOL SetCellData(int nItem, int nSubItem, DWORD_PTR dwData);
-	DWORD_PTR GetCellData(int nRow, int nColumn);
-	virtual BOOL OnAddNew(void){return FALSE;}
-	BOOL m_bInvokeAddNew;
-public:
-	HACCEL m_hAccel;
-
-	virtual void DrawItem(LPDRAWITEMSTRUCT /*lpDrawItemStruct*/);
-	CFont * m_fSymbol;
-	CFont * m_fIndexes;
-	bool PrepareSubItemData(tstring & tstr, SemanticString * dsi);
-//	afx_msg void OnMeasureItem(int nIDCtl, LPMEASUREITEMSTRUCT lpMeasureItemStruct);
-	vector <SemanticString *> DCU;
-	void SetIndexesFont(CFont * m_fIndexes_)  { m_fIndexes = m_fIndexes_; };
-	int GetItemText(int nItem, int nSubItem, LPTSTR lpszText, int nLen);
-	BOOL SetItemText( int nItem, int nSubItem, LPCTSTR lpszText);
-	CString GetItemText(int nItem, int nSubItem);
+	/** Array to store cell information for each item and subitem. */
+	CArray<CellInfo> m_arrCellInfo;
 };

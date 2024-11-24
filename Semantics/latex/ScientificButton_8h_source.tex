@@ -1,0 +1,56 @@
+\doxysection{Scientific\+Button.\+h}
+\hypertarget{ScientificButton_8h_source}{}\label{ScientificButton_8h_source}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{//\ \ Author:\ Tatarintsev\ V.V.,\ akizelokro@mail.ru,\ 2013-\/2014}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}common\_functions.h"{}}}
+\DoxyCodeLine{00005\ }
+\DoxyCodeLine{00007\ \textcolor{comment}{//\ \ @class\ CScientificButton}}
+\DoxyCodeLine{00008\ \textcolor{comment}{//\ \ @brief\ This\ class\ defines\ a\ button\ for\ scientific\ characters\ with\ various\ actions}}
+\DoxyCodeLine{00009\ \textcolor{comment}{//\ \ \ \ \ \ \ \ \ for\ different\ mathematical\ symbols.\ This\ class\ is\ deprecated\ and\ intended}}
+\DoxyCodeLine{00010\ \textcolor{comment}{//\ \ \ \ \ \ \ \ \ for\ handling\ the\ drawing\ and\ actions\ related\ to\ scientific\ characters.}}
+\DoxyCodeLine{00011\ \textcolor{comment}{//}}
+\DoxyCodeLine{00012\ \textcolor{comment}{//\ \ @note\ The\ functionality\ includes\ handling\ quantifiers,\ indices,\ and\ mathematical\ symbols.}}
+\DoxyCodeLine{00014\ }
+\DoxyCodeLine{00015\ \textcolor{comment}{//\ Enum\ for\ defining\ the\ actions\ related\ to\ scientific\ characters\ on\ the\ button}}
+\DoxyCodeLine{00022\ \textcolor{keyword}{enum}\ ScientificCharacterAction}
+\DoxyCodeLine{00023\ \{}
+\DoxyCodeLine{00024\ \ \ \ \ NONE\ =\ 0,\ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00025\ \ \ \ \ FirstQuantor\ =\ 1,\ \ \ \ }
+\DoxyCodeLine{00026\ \ \ \ \ SecondQuantor\ =\ 2,\ \ \ }
+\DoxyCodeLine{00027\ \ \ \ \ LowerIndex\ =\ 3,\ \ \ \ \ \ }
+\DoxyCodeLine{00028\ \ \ \ \ UpperIndex\ =\ 4\ \ \ \ \ \ \ }
+\DoxyCodeLine{00029\ \};}
+\DoxyCodeLine{00030\ }
+\DoxyCodeLine{00031\ \textcolor{comment}{//\ CScientificButton\ class\ declaration}}
+\DoxyCodeLine{00040\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classCScientificButton}{CScientificButton}}\ :\ \textcolor{keyword}{public}\ CMFCButton}
+\DoxyCodeLine{00041\ \{}
+\DoxyCodeLine{00042\ \ \ \ \ DECLARE\_DYNAMIC(\mbox{\hyperlink{classCScientificButton}{CScientificButton}})}
+\DoxyCodeLine{00043\ }
+\DoxyCodeLine{00044\ \ \ \ \ }
+\DoxyCodeLine{00050\ \ \ \ \ \textcolor{keyword}{typedef}\ map<int,\ ScientificCharacterAction,\ less<int>>\ SciCharMap;}
+\DoxyCodeLine{00051\ }
+\DoxyCodeLine{00058\ \ \ \ \ \textcolor{keyword}{typedef}\ SciCharMap::iterator\ SciCharMapIterator;}
+\DoxyCodeLine{00059\ }
+\DoxyCodeLine{00065\ \ \ \ \ SciCharMap\ m\_SciChars;}
+\DoxyCodeLine{00066\ }
+\DoxyCodeLine{00072\ \ \ \ \ CFont\ m\_fSymbol;}
+\DoxyCodeLine{00073\ }
+\DoxyCodeLine{00074\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00080\ \ \ \ \ \mbox{\hyperlink{classCScientificButton_ab246cf2c2ed0869f7f1858ee0d946b09}{CScientificButton}}();}
+\DoxyCodeLine{00081\ }
+\DoxyCodeLine{00087\ \ \ \ \ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{classCScientificButton_a105c29af5e0a7e8b4a52e4aadfd5585c}{\string~CScientificButton}}();}
+\DoxyCodeLine{00088\ }
+\DoxyCodeLine{00089\ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00090\ \ \ \ \ DECLARE\_MESSAGE\_MAP()}
+\DoxyCodeLine{00091\ }
+\DoxyCodeLine{00092\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00102\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classCScientificButton_ac3931e833d26b08499013e0ae4c46a69}{addSciCharAction}}(\textcolor{keywordtype}{int}\ pos,\ ScientificCharacterAction\ scichar)\ \{\ m\_SciChars[pos]\ =\ scichar;\ \};}
+\DoxyCodeLine{00103\ }
+\DoxyCodeLine{00111\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classCScientificButton_a9853f28cb185373b3ee2dadbf6743853}{setSciFont}}(LOGFONT\ *\ lf)\ \{\ m\_fSymbol.CreateFontIndirectW(lf);\ \};}
+\DoxyCodeLine{00112\ }
+\DoxyCodeLine{00125\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classCScientificButton_a9d54b7b9ef1a8e4e06de093d73739dce}{OnDrawText}}(CDC*\ pDC,\ \textcolor{keyword}{const}\ CRect\&\ rect,\ \textcolor{keyword}{const}\ CString\&\ strText,\ UINT\ uiDTFlags,\ UINT\ uiState);}
+\DoxyCodeLine{00126\ \};}
+
+\end{DoxyCode}

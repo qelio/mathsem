@@ -1,0 +1,41 @@
+\doxysection{Scientific\+List\+Box.\+h}
+\hypertarget{ScientificListBox_8h_source}{}\label{ScientificListBox_8h_source}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{//\ \ Author:\ Tatarintsev\ V.V.,\ akizelokro@mail.ru,\ 2013-\/2014}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ "{}MathListCtrlEx.h"{}}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}common\_functions.h"{}}}
+\DoxyCodeLine{00005\ }
+\DoxyCodeLine{00013\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classScientificListBox}{ScientificListBox}}\ :\ \textcolor{keyword}{public}\ CListBox}
+\DoxyCodeLine{00014\ \{}
+\DoxyCodeLine{00015\ \ \ \ \ DECLARE\_DYNAMIC(\mbox{\hyperlink{classScientificListBox}{ScientificListBox}})}
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00017\ \ \ \ \ }
+\DoxyCodeLine{00022\ \ \ \ \ \textcolor{keywordtype}{bool}\ isSorted;}
+\DoxyCodeLine{00023\ }
+\DoxyCodeLine{00024\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00030\ \ \ \ \ \mbox{\hyperlink{classScientificListBox_aa1bc8b13e9ea6f3883f3ca57b559a403}{ScientificListBox}}();}
+\DoxyCodeLine{00031\ }
+\DoxyCodeLine{00037\ \ \ \ \ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{classScientificListBox_ae66e37f10b090d50e0082fa7952db4a7}{\string~ScientificListBox}}();}
+\DoxyCodeLine{00038\ }
+\DoxyCodeLine{00039\ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00040\ \ \ \ \ DECLARE\_MESSAGE\_MAP()}
+\DoxyCodeLine{00041\ }
+\DoxyCodeLine{00042\ \ \ \ \ }
+\DoxyCodeLine{00047\ \ \ \ \ CFont\ *\ \mbox{\hyperlink{classScientificListBox_a4092de0aa8218c66a25ea45612f65448}{m\_fSymbol}};}
+\DoxyCodeLine{00048\ }
+\DoxyCodeLine{00054\ \ \ \ \ CFont\ *\ \mbox{\hyperlink{classScientificListBox_a89dbe7a9d14fc3cb9f4c49509a87de5f}{m\_fIndexes}};}
+\DoxyCodeLine{00055\ }
+\DoxyCodeLine{00056\ public:}
+\DoxyCodeLine{00065\ \ \ \ \ virtual\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classScientificListBox_a9b1a3f32e0cb32cb70645a81180c0c59}{DrawItem}}(LPDRAWITEMSTRUCT\ \textcolor{comment}{/*lpDrawItemStruct*/});}
+\DoxyCodeLine{00066\ }
+\DoxyCodeLine{00072\ \ \ \ \ vector\ <\mbox{\hyperlink{classSemanticString}{SemanticString}}\ *>\ \mbox{\hyperlink{classScientificListBox_ae5229aa8e292df239f3237a512569b46}{DCU}};}
+\DoxyCodeLine{00073\ }
+\DoxyCodeLine{00081\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classScientificListBox_a1bcd4e33bf9caee7f7914e9696de2ea4}{SetIndexesFont}}(CFont\ *\ m\_fIndexes\_)\ \{\ \mbox{\hyperlink{classScientificListBox_a89dbe7a9d14fc3cb9f4c49509a87de5f}{m\_fIndexes}}\ =\ m\_fIndexes\_;\ \};}
+\DoxyCodeLine{00082\ }
+\DoxyCodeLine{00091\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classScientificListBox_ae4a8b59dedc59c746a52ee042221dd65}{CompareItem}}(LPCOMPAREITEMSTRUCT\ \textcolor{comment}{/*lpCompareItemStruct*/});}
+\DoxyCodeLine{00092\ }
+\DoxyCodeLine{00100\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classScientificListBox_a4b6165f05d7d4cfdcd03cf723f023ff5}{SetSorting}}(\textcolor{keywordtype}{bool}\ toSort\ =\ \textcolor{keyword}{false})\ \{\ isSorted\ =\ toSort;\ \};}
+\DoxyCodeLine{00101\ \};}
+
+\end{DoxyCode}

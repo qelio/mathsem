@@ -1,0 +1,39 @@
+\doxysection{Msg\+Hook.\+h}
+\hypertarget{MsgHook_8h_source}{}\label{MsgHook_8h_source}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#define\ UM\_HIDEEDITOR\ (WM\_USER+10)}}
+\DoxyCodeLine{00004\ }
+\DoxyCodeLine{00012\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classCMsgHook}{CMsgHook}}}
+\DoxyCodeLine{00013\ \{}
+\DoxyCodeLine{00014\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00018\ \ \ \ \ \mbox{\hyperlink{classCMsgHook_ac1f270be28f9022330e01999bc6c83c0}{CMsgHook}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{00019\ }
+\DoxyCodeLine{00023\ \ \ \ \ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{classCMsgHook_a84f098285b4c0dec8b7c8162f5dbffac}{\string~CMsgHook}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{00024\ }
+\DoxyCodeLine{00032\ \ \ \ \ BOOL\ \mbox{\hyperlink{classCMsgHook_a34147b373a144c507da1c22f7636ab85}{Attach}}(HWND\ hWnd,\ HWND\ hParent,\ HWND\ hNotify\ =\ NULL);}
+\DoxyCodeLine{00033\ }
+\DoxyCodeLine{00038\ \ \ \ \ BOOL\ \mbox{\hyperlink{classCMsgHook_a109264f808b934a50a4ab021b1c519a3}{Detach}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{00039\ }
+\DoxyCodeLine{00044\ \ \ \ \ \textcolor{keyword}{inline}\ BOOL\ \mbox{\hyperlink{classCMsgHook_ab81a13a800f2ce29e4b574f1ec32f2b8}{IsAttached}}()\ \{\ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{classCMsgHook_a9f150daa0c3a808bce2bea61026f8fda}{m\_hWnd}}\ !=\ NULL;\ \}}
+\DoxyCodeLine{00045\ }
+\DoxyCodeLine{00046\ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00054\ \ \ \ \ \textcolor{keyword}{static}\ LRESULT\ CALLBACK\ \mbox{\hyperlink{classCMsgHook_ac64913935fb5953b5c79de3d01e98190}{CallWndRetProc}}(\textcolor{keywordtype}{int}\ nCode,\ WPARAM\ wParam,\ LPARAM\ lParam);}
+\DoxyCodeLine{00055\ }
+\DoxyCodeLine{00057\ \ \ \ \ \textcolor{keyword}{static}\ HHOOK\ \mbox{\hyperlink{classCMsgHook_a1903e58ceafc027253965fe3151c51eb}{m\_hHook}};}
+\DoxyCodeLine{00058\ }
+\DoxyCodeLine{00060\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classCMsgHook_a81e799634e1540c632f5481765fac314}{m\_nInstances}};}
+\DoxyCodeLine{00061\ }
+\DoxyCodeLine{00066\ \ \ \ \ \textcolor{keyword}{static}\ CMap<HWND,\ HWND\&,\ CMsgHook*,\ CMsgHook*\&>\ \mbox{\hyperlink{classCMsgHook_ac7d3a64340f9db6ea399edb01080935e}{m\_mapHookedWindows}};}
+\DoxyCodeLine{00067\ }
+\DoxyCodeLine{00069\ \ \ \ \ HWND\ \mbox{\hyperlink{classCMsgHook_a9f150daa0c3a808bce2bea61026f8fda}{m\_hWnd}};}
+\DoxyCodeLine{00070\ }
+\DoxyCodeLine{00072\ \ \ \ \ HWND\ \mbox{\hyperlink{classCMsgHook_ad530365165bf1d29737a78b3f11df910}{m\_hParent}};}
+\DoxyCodeLine{00073\ }
+\DoxyCodeLine{00075\ \ \ \ \ HWND\ \mbox{\hyperlink{classCMsgHook_af56b7535aa033a6d8fb691e4e466a212}{m\_hNotify}};}
+\DoxyCodeLine{00076\ }
+\DoxyCodeLine{00078\ \ \ \ \ BOOL\ \mbox{\hyperlink{classCMsgHook_aed76911f3301d4354b2dd3c3f671f2a0}{m\_bDropDown}};}
+\DoxyCodeLine{00079\ \};}
+
+\end{DoxyCode}

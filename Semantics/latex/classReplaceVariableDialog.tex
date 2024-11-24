@@ -1,0 +1,354 @@
+\doxysection{Replace\+Variable\+Dialog Class Reference}
+\hypertarget{classReplaceVariableDialog}{}\label{classReplaceVariableDialog}\index{ReplaceVariableDialog@{ReplaceVariableDialog}}
+
+
+A dialog box for replacing variables in a formula.  
+
+
+
+
+{\ttfamily \#include $<$Replace\+Variable\+Dialog.\+h$>$}
+
+
+
+Inheritance diagram for Replace\+Variable\+Dialog\+:
+% FIG 0
+
+
+Collaboration diagram for Replace\+Variable\+Dialog\+:
+% FIG 1
+\doxysubsubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \{ {\bfseries IDD} = IDD\+\_\+\+REPLACEVARIABLE
+ \}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classReplaceVariableDialog_a10c06c6e58d7defb4ee56d8e66a82dde}{Replace\+Variable\+Dialog}} (CWnd \texorpdfstring{$\ast$}{*}p\+Parent=NULL)
+\begin{DoxyCompactList}\small\item\em Constructor for the \doxylink{classReplaceVariableDialog}{Replace\+Variable\+Dialog} class. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{classReplaceVariableDialog_aaf83911db9ae4809dc749901dc874849}{\texorpdfstring{$\sim$}{\string~}\+Replace\+Variable\+Dialog}} ()
+\begin{DoxyCompactList}\small\item\em Destructor for the \doxylink{classReplaceVariableDialog}{Replace\+Variable\+Dialog} class. \end{DoxyCompactList}\item 
+afx\+\_\+msg void \mbox{\hyperlink{classReplaceVariableDialog_af572c2dbd200339d4ba193db3e5ab17f}{On\+Bn\+Clicked\+Ok}} ()
+\begin{DoxyCompactList}\small\item\em Called when the OK button is clicked. \end{DoxyCompactList}\item 
+virtual BOOL \mbox{\hyperlink{classReplaceVariableDialog_a89821698525c87f27e566f827feeca83}{On\+Init\+Dialog}} ()
+\begin{DoxyCompactList}\small\item\em Initializes the dialog. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classReplaceVariableDialog_a314f533f2b45e0b2e30e88c4c0fc67bd}{set\+Entities}} (vector$<$ \mbox{\hyperlink{classEntityBase}{Entity\+Base}} \texorpdfstring{$\ast$}{*} $>$ \texorpdfstring{$\ast$}{*}all\+\_\+entities=NULL)
+\begin{DoxyCompactList}\small\item\em Sets the list of entities for the dialog. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classReplaceVariableDialog_a7a64e922147881df3b45977b97c66d33}{Show\+Free\+Variables}} ()
+\begin{DoxyCompactList}\small\item\em Displays the list of free variables. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classReplaceVariableDialog_a5bf2ec6e13db4c1c8eadd5aa32214ce9}{Hide\+Free\+Variables}} ()
+\begin{DoxyCompactList}\small\item\em Hides the list of free variables. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classReplaceVariableDialog_a8127410c6d48fa38b4509120d858879c}{Show\+Variables}} ()
+\begin{DoxyCompactList}\small\item\em Displays the list of existing variables. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classReplaceVariableDialog_a35ec5ee0d2721d7c02d5cbf7bd6ff41d}{Hide\+Variables}} ()
+\begin{DoxyCompactList}\small\item\em Hides the list of variables. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classReplaceVariableDialog_a03c81d6188595e9d33ce77a9347b9122}{Reset\+Combo\+Names}} (TCHAR symbol)
+\begin{DoxyCompactList}\small\item\em Resets the names in the combo box. \end{DoxyCompactList}\item 
+afx\+\_\+msg void \mbox{\hyperlink{classReplaceVariableDialog_a7859fe8bcdf28abc3c1b9251174c1f90}{On\+Selchange\+Setlist1}} ()
+\begin{DoxyCompactList}\small\item\em Called when the first set list selection changes. \end{DoxyCompactList}\item 
+afx\+\_\+msg void \mbox{\hyperlink{classReplaceVariableDialog_ac35427eb6ee831e98af3bd118e1d059f}{On\+Selchange\+Setlist2}} ()
+\begin{DoxyCompactList}\small\item\em Called when the second set list selection changes. \end{DoxyCompactList}\item 
+afx\+\_\+msg void \mbox{\hyperlink{classReplaceVariableDialog_ae3f6c224f8f2205bff459312702903b0}{On\+Bn\+Clicked\+Radioinputtext}} ()
+\begin{DoxyCompactList}\small\item\em Called when the input text radio button is clicked. \end{DoxyCompactList}\item 
+afx\+\_\+msg void \mbox{\hyperlink{classReplaceVariableDialog_aefee3255aeb85c5a0283a87ebd3dfff6}{On\+Bn\+Clicked\+Radioselectvariable}} ()
+\begin{DoxyCompactList}\small\item\em Called when the "{}select variable"{} radio button is clicked. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+CFont \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classReplaceVariableDialog_acecb0525153bf24a16afb909c99e346f}{m\+\_\+f\+Indexes}}
+\item 
+CFont \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classReplaceVariableDialog_a9939d259bce7c8b0e252b62d1011165c}{m\+\_\+f\+Symbol}}
+\item 
+CEdit \mbox{\hyperlink{classReplaceVariableDialog_a5be077a04e36382fe9f4fa1ae9c64e29}{m\+\_\+edit\+Index}}
+\item 
+\mbox{\hyperlink{classScientificListBox}{Scientific\+List\+Box}} \mbox{\hyperlink{classReplaceVariableDialog_aeeb8c081f43bdeaa7b2ea85b964416f0}{m\+\_\+list}}
+\item 
+\mbox{\hyperlink{classScientificListBox}{Scientific\+List\+Box}} \mbox{\hyperlink{classReplaceVariableDialog_a091b1e0ee2830d9642927dc78f5ba19d}{m\+\_\+list\+Free\+Variables}}
+\item 
+\mbox{\hyperlink{classScientificListBox}{Scientific\+List\+Box}} \mbox{\hyperlink{classReplaceVariableDialog_a30579c282640aa73de565a8853ff7983}{m\+\_\+list\+Variables}}
+\item 
+CCombo\+Box \mbox{\hyperlink{classReplaceVariableDialog_af135652a1ab6ad044e55ef21291f21a7}{m\+\_\+combo\+Name}}
+\item 
+int \mbox{\hyperlink{classReplaceVariableDialog_ac2505497934e17373db1fcbb921a1321}{m\+\_\+data\+Radio}}
+\item 
+vector$<$ \mbox{\hyperlink{classEntityVariable}{Entity\+Variable}} \texorpdfstring{$\ast$}{*} $>$ \mbox{\hyperlink{classReplaceVariableDialog_ad432358fbbf49dfe383a365d7a8d4ac6}{pev\+\_\+new}}
+\item 
+CButton \mbox{\hyperlink{classReplaceVariableDialog_a570854528f2cb6a76f5a9fe70976cde1}{m\+\_\+button\+OK}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{classReplaceVariableDialog_aea15b701907d7dbfd4e401410124f9d4}{Do\+Data\+Exchange}} (CData\+Exchange \texorpdfstring{$\ast$}{*}p\+DX)
+\begin{DoxyCompactList}\small\item\em Exchanges data between the dialog and the controls. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A dialog box for replacing variables in a formula. 
+
+This class provides functionality for managing and replacing variables in a formula. It includes list boxes for displaying variables and free variables, combo boxes for selecting names, and methods to handle variable replacement logic. 
+
+\doxysubsection{Member Enumeration Documentation}
+\Hypertarget{classReplaceVariableDialog_a5e1d585bc62b0297db1ce0fb3fd61c4e}\label{classReplaceVariableDialog_a5e1d585bc62b0297db1ce0fb3fd61c4e} 
+\doxysubsubsection{\texorpdfstring{anonymous enum}{anonymous enum}}
+{\footnotesize\ttfamily anonymous enum}
+
+Dialog Data 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classReplaceVariableDialog_a10c06c6e58d7defb4ee56d8e66a82dde}\label{classReplaceVariableDialog_a10c06c6e58d7defb4ee56d8e66a82dde} 
+\index{ReplaceVariableDialog@{ReplaceVariableDialog}!ReplaceVariableDialog@{ReplaceVariableDialog}}
+\index{ReplaceVariableDialog@{ReplaceVariableDialog}!ReplaceVariableDialog@{ReplaceVariableDialog}}
+\doxysubsubsection{\texorpdfstring{ReplaceVariableDialog()}{ReplaceVariableDialog()}}
+{\footnotesize\ttfamily Replace\+Variable\+Dialog\+::\+Replace\+Variable\+Dialog (\begin{DoxyParamCaption}\item[{CWnd \texorpdfstring{$\ast$}{*}}]{p\+Parent = {\ttfamily NULL} }\end{DoxyParamCaption})}
+
+
+
+Constructor for the \doxylink{classReplaceVariableDialog}{Replace\+Variable\+Dialog} class. 
+
+Initializes the dialog, setting the parent window to {\ttfamily p\+Parent} if specified.
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+Parent} & The parent window for the dialog (default is NULL). \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classReplaceVariableDialog_aaf83911db9ae4809dc749901dc874849}\label{classReplaceVariableDialog_aaf83911db9ae4809dc749901dc874849} 
+\index{ReplaceVariableDialog@{ReplaceVariableDialog}!````~ReplaceVariableDialog@{\texorpdfstring{$\sim$}{\string~}ReplaceVariableDialog}}
+\index{````~ReplaceVariableDialog@{\texorpdfstring{$\sim$}{\string~}ReplaceVariableDialog}!ReplaceVariableDialog@{ReplaceVariableDialog}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}ReplaceVariableDialog()}{\string~ReplaceVariableDialog()}}
+{\footnotesize\ttfamily Replace\+Variable\+Dialog\+::\texorpdfstring{$\sim$}{\string~}\+Replace\+Variable\+Dialog (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Destructor for the \doxylink{classReplaceVariableDialog}{Replace\+Variable\+Dialog} class. 
+
+Cleans up any resources used by the dialog. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classReplaceVariableDialog_aea15b701907d7dbfd4e401410124f9d4}\label{classReplaceVariableDialog_aea15b701907d7dbfd4e401410124f9d4} 
+\index{ReplaceVariableDialog@{ReplaceVariableDialog}!DoDataExchange@{DoDataExchange}}
+\index{DoDataExchange@{DoDataExchange}!ReplaceVariableDialog@{ReplaceVariableDialog}}
+\doxysubsubsection{\texorpdfstring{DoDataExchange()}{DoDataExchange()}}
+{\footnotesize\ttfamily void Replace\+Variable\+Dialog\+::\+Do\+Data\+Exchange (\begin{DoxyParamCaption}\item[{CData\+Exchange \texorpdfstring{$\ast$}{*}}]{p\+DX }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Exchanges data between the dialog and the controls. 
+
+This method is used to transfer data to and from the controls in the dialog box.
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+DX} & The data exchange object. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classReplaceVariableDialog_a5bf2ec6e13db4c1c8eadd5aa32214ce9}\label{classReplaceVariableDialog_a5bf2ec6e13db4c1c8eadd5aa32214ce9} 
+\index{ReplaceVariableDialog@{ReplaceVariableDialog}!HideFreeVariables@{HideFreeVariables}}
+\index{HideFreeVariables@{HideFreeVariables}!ReplaceVariableDialog@{ReplaceVariableDialog}}
+\doxysubsubsection{\texorpdfstring{HideFreeVariables()}{HideFreeVariables()}}
+{\footnotesize\ttfamily void Replace\+Variable\+Dialog\+::\+Hide\+Free\+Variables (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Hides the list of free variables. 
+
+This method hides the list of free variables from the dialog. \Hypertarget{classReplaceVariableDialog_a35ec5ee0d2721d7c02d5cbf7bd6ff41d}\label{classReplaceVariableDialog_a35ec5ee0d2721d7c02d5cbf7bd6ff41d} 
+\index{ReplaceVariableDialog@{ReplaceVariableDialog}!HideVariables@{HideVariables}}
+\index{HideVariables@{HideVariables}!ReplaceVariableDialog@{ReplaceVariableDialog}}
+\doxysubsubsection{\texorpdfstring{HideVariables()}{HideVariables()}}
+{\footnotesize\ttfamily void Replace\+Variable\+Dialog\+::\+Hide\+Variables (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Hides the list of variables. 
+
+This method hides the list of variables from the dialog. \Hypertarget{classReplaceVariableDialog_af572c2dbd200339d4ba193db3e5ab17f}\label{classReplaceVariableDialog_af572c2dbd200339d4ba193db3e5ab17f} 
+\index{ReplaceVariableDialog@{ReplaceVariableDialog}!OnBnClickedOk@{OnBnClickedOk}}
+\index{OnBnClickedOk@{OnBnClickedOk}!ReplaceVariableDialog@{ReplaceVariableDialog}}
+\doxysubsubsection{\texorpdfstring{OnBnClickedOk()}{OnBnClickedOk()}}
+{\footnotesize\ttfamily void Replace\+Variable\+Dialog\+::\+On\+Bn\+Clicked\+Ok (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Called when the OK button is clicked. 
+
+This method handles the logic to finalize the replacement of variables when the user clicks the "{}\+OK"{} button. \Hypertarget{classReplaceVariableDialog_ae3f6c224f8f2205bff459312702903b0}\label{classReplaceVariableDialog_ae3f6c224f8f2205bff459312702903b0} 
+\index{ReplaceVariableDialog@{ReplaceVariableDialog}!OnBnClickedRadioinputtext@{OnBnClickedRadioinputtext}}
+\index{OnBnClickedRadioinputtext@{OnBnClickedRadioinputtext}!ReplaceVariableDialog@{ReplaceVariableDialog}}
+\doxysubsubsection{\texorpdfstring{OnBnClickedRadioinputtext()}{OnBnClickedRadioinputtext()}}
+{\footnotesize\ttfamily void Replace\+Variable\+Dialog\+::\+On\+Bn\+Clicked\+Radioinputtext (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Called when the input text radio button is clicked. 
+
+This method handles logic when the "{}input text"{} radio button is selected. \Hypertarget{classReplaceVariableDialog_aefee3255aeb85c5a0283a87ebd3dfff6}\label{classReplaceVariableDialog_aefee3255aeb85c5a0283a87ebd3dfff6} 
+\index{ReplaceVariableDialog@{ReplaceVariableDialog}!OnBnClickedRadioselectvariable@{OnBnClickedRadioselectvariable}}
+\index{OnBnClickedRadioselectvariable@{OnBnClickedRadioselectvariable}!ReplaceVariableDialog@{ReplaceVariableDialog}}
+\doxysubsubsection{\texorpdfstring{OnBnClickedRadioselectvariable()}{OnBnClickedRadioselectvariable()}}
+{\footnotesize\ttfamily void Replace\+Variable\+Dialog\+::\+On\+Bn\+Clicked\+Radioselectvariable (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Called when the "{}select variable"{} radio button is clicked. 
+
+This method handles logic when the "{}select variable"{} radio button is selected. \Hypertarget{classReplaceVariableDialog_a89821698525c87f27e566f827feeca83}\label{classReplaceVariableDialog_a89821698525c87f27e566f827feeca83} 
+\index{ReplaceVariableDialog@{ReplaceVariableDialog}!OnInitDialog@{OnInitDialog}}
+\index{OnInitDialog@{OnInitDialog}!ReplaceVariableDialog@{ReplaceVariableDialog}}
+\doxysubsubsection{\texorpdfstring{OnInitDialog()}{OnInitDialog()}}
+{\footnotesize\ttfamily BOOL Replace\+Variable\+Dialog\+::\+On\+Init\+Dialog (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Initializes the dialog. 
+
+This method is called when the dialog is initialized to set up the initial state of controls such as list boxes and combo boxes.
+
+\begin{DoxyReturn}{Returns}
+TRUE if initialization is successful, otherwise FALSE. 
+\end{DoxyReturn}
+\Hypertarget{classReplaceVariableDialog_a7859fe8bcdf28abc3c1b9251174c1f90}\label{classReplaceVariableDialog_a7859fe8bcdf28abc3c1b9251174c1f90} 
+\index{ReplaceVariableDialog@{ReplaceVariableDialog}!OnSelchangeSetlist1@{OnSelchangeSetlist1}}
+\index{OnSelchangeSetlist1@{OnSelchangeSetlist1}!ReplaceVariableDialog@{ReplaceVariableDialog}}
+\doxysubsubsection{\texorpdfstring{OnSelchangeSetlist1()}{OnSelchangeSetlist1()}}
+{\footnotesize\ttfamily void Replace\+Variable\+Dialog\+::\+On\+Selchange\+Setlist1 (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Called when the first set list selection changes. 
+
+This method handles changes to the selection in the first set list. \Hypertarget{classReplaceVariableDialog_ac35427eb6ee831e98af3bd118e1d059f}\label{classReplaceVariableDialog_ac35427eb6ee831e98af3bd118e1d059f} 
+\index{ReplaceVariableDialog@{ReplaceVariableDialog}!OnSelchangeSetlist2@{OnSelchangeSetlist2}}
+\index{OnSelchangeSetlist2@{OnSelchangeSetlist2}!ReplaceVariableDialog@{ReplaceVariableDialog}}
+\doxysubsubsection{\texorpdfstring{OnSelchangeSetlist2()}{OnSelchangeSetlist2()}}
+{\footnotesize\ttfamily void Replace\+Variable\+Dialog\+::\+On\+Selchange\+Setlist2 (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Called when the second set list selection changes. 
+
+This method handles changes to the selection in the second set list. \Hypertarget{classReplaceVariableDialog_a03c81d6188595e9d33ce77a9347b9122}\label{classReplaceVariableDialog_a03c81d6188595e9d33ce77a9347b9122} 
+\index{ReplaceVariableDialog@{ReplaceVariableDialog}!ResetComboNames@{ResetComboNames}}
+\index{ResetComboNames@{ResetComboNames}!ReplaceVariableDialog@{ReplaceVariableDialog}}
+\doxysubsubsection{\texorpdfstring{ResetComboNames()}{ResetComboNames()}}
+{\footnotesize\ttfamily void Replace\+Variable\+Dialog\+::\+Reset\+Combo\+Names (\begin{DoxyParamCaption}\item[{TCHAR}]{symbol }\end{DoxyParamCaption})}
+
+
+
+Resets the names in the combo box. 
+
+This method updates the combo box with names based on the given symbol. It ensures that the displayed names are synchronized with the selected symbol.
+
+
+\begin{DoxyParams}{Parameters}
+{\em symbol} & The symbol used to filter or reset the names in the combo box. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classReplaceVariableDialog_a314f533f2b45e0b2e30e88c4c0fc67bd}\label{classReplaceVariableDialog_a314f533f2b45e0b2e30e88c4c0fc67bd} 
+\index{ReplaceVariableDialog@{ReplaceVariableDialog}!setEntities@{setEntities}}
+\index{setEntities@{setEntities}!ReplaceVariableDialog@{ReplaceVariableDialog}}
+\doxysubsubsection{\texorpdfstring{setEntities()}{setEntities()}}
+{\footnotesize\ttfamily void Replace\+Variable\+Dialog\+::set\+Entities (\begin{DoxyParamCaption}\item[{vector$<$ \mbox{\hyperlink{classEntityBase}{Entity\+Base}} \texorpdfstring{$\ast$}{*} $>$ \texorpdfstring{$\ast$}{*}}]{all\+\_\+entities = {\ttfamily NULL} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Sets the list of entities for the dialog. 
+
+This method sets the list of all available entities, which can be used to populate the dialog with the appropriate data for variable replacement.
+
+
+\begin{DoxyParams}{Parameters}
+{\em all\+\_\+entities} & The list of entities to set (default is NULL). \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classReplaceVariableDialog_a7a64e922147881df3b45977b97c66d33}\label{classReplaceVariableDialog_a7a64e922147881df3b45977b97c66d33} 
+\index{ReplaceVariableDialog@{ReplaceVariableDialog}!ShowFreeVariables@{ShowFreeVariables}}
+\index{ShowFreeVariables@{ShowFreeVariables}!ReplaceVariableDialog@{ReplaceVariableDialog}}
+\doxysubsubsection{\texorpdfstring{ShowFreeVariables()}{ShowFreeVariables()}}
+{\footnotesize\ttfamily void Replace\+Variable\+Dialog\+::\+Show\+Free\+Variables (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Displays the list of free variables. 
+
+This method populates the list of free variables and makes it visible in the dialog. \Hypertarget{classReplaceVariableDialog_a8127410c6d48fa38b4509120d858879c}\label{classReplaceVariableDialog_a8127410c6d48fa38b4509120d858879c} 
+\index{ReplaceVariableDialog@{ReplaceVariableDialog}!ShowVariables@{ShowVariables}}
+\index{ShowVariables@{ShowVariables}!ReplaceVariableDialog@{ReplaceVariableDialog}}
+\doxysubsubsection{\texorpdfstring{ShowVariables()}{ShowVariables()}}
+{\footnotesize\ttfamily void Replace\+Variable\+Dialog\+::\+Show\+Variables (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Displays the list of existing variables. 
+
+This method populates the list of variables and makes it visible in the dialog. 
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{classReplaceVariableDialog_a570854528f2cb6a76f5a9fe70976cde1}\label{classReplaceVariableDialog_a570854528f2cb6a76f5a9fe70976cde1} 
+\index{ReplaceVariableDialog@{ReplaceVariableDialog}!m\_buttonOK@{m\_buttonOK}}
+\index{m\_buttonOK@{m\_buttonOK}!ReplaceVariableDialog@{ReplaceVariableDialog}}
+\doxysubsubsection{\texorpdfstring{m\_buttonOK}{m\_buttonOK}}
+{\footnotesize\ttfamily CButton Replace\+Variable\+Dialog\+::m\+\_\+button\+OK}
+
+Button for confirming the variable replacement \Hypertarget{classReplaceVariableDialog_af135652a1ab6ad044e55ef21291f21a7}\label{classReplaceVariableDialog_af135652a1ab6ad044e55ef21291f21a7} 
+\index{ReplaceVariableDialog@{ReplaceVariableDialog}!m\_comboName@{m\_comboName}}
+\index{m\_comboName@{m\_comboName}!ReplaceVariableDialog@{ReplaceVariableDialog}}
+\doxysubsubsection{\texorpdfstring{m\_comboName}{m\_comboName}}
+{\footnotesize\ttfamily CCombo\+Box Replace\+Variable\+Dialog\+::m\+\_\+combo\+Name}
+
+Combo box for selecting the name of the variable \Hypertarget{classReplaceVariableDialog_ac2505497934e17373db1fcbb921a1321}\label{classReplaceVariableDialog_ac2505497934e17373db1fcbb921a1321} 
+\index{ReplaceVariableDialog@{ReplaceVariableDialog}!m\_dataRadio@{m\_dataRadio}}
+\index{m\_dataRadio@{m\_dataRadio}!ReplaceVariableDialog@{ReplaceVariableDialog}}
+\doxysubsubsection{\texorpdfstring{m\_dataRadio}{m\_dataRadio}}
+{\footnotesize\ttfamily int Replace\+Variable\+Dialog\+::m\+\_\+data\+Radio}
+
+Data for radio buttons \Hypertarget{classReplaceVariableDialog_a5be077a04e36382fe9f4fa1ae9c64e29}\label{classReplaceVariableDialog_a5be077a04e36382fe9f4fa1ae9c64e29} 
+\index{ReplaceVariableDialog@{ReplaceVariableDialog}!m\_editIndex@{m\_editIndex}}
+\index{m\_editIndex@{m\_editIndex}!ReplaceVariableDialog@{ReplaceVariableDialog}}
+\doxysubsubsection{\texorpdfstring{m\_editIndex}{m\_editIndex}}
+{\footnotesize\ttfamily CEdit Replace\+Variable\+Dialog\+::m\+\_\+edit\+Index}
+
+Edit control for entering the index \Hypertarget{classReplaceVariableDialog_acecb0525153bf24a16afb909c99e346f}\label{classReplaceVariableDialog_acecb0525153bf24a16afb909c99e346f} 
+\index{ReplaceVariableDialog@{ReplaceVariableDialog}!m\_fIndexes@{m\_fIndexes}}
+\index{m\_fIndexes@{m\_fIndexes}!ReplaceVariableDialog@{ReplaceVariableDialog}}
+\doxysubsubsection{\texorpdfstring{m\_fIndexes}{m\_fIndexes}}
+{\footnotesize\ttfamily CFont\texorpdfstring{$\ast$}{*} Replace\+Variable\+Dialog\+::m\+\_\+f\+Indexes}
+
+Font for indexes \Hypertarget{classReplaceVariableDialog_a9939d259bce7c8b0e252b62d1011165c}\label{classReplaceVariableDialog_a9939d259bce7c8b0e252b62d1011165c} 
+\index{ReplaceVariableDialog@{ReplaceVariableDialog}!m\_fSymbol@{m\_fSymbol}}
+\index{m\_fSymbol@{m\_fSymbol}!ReplaceVariableDialog@{ReplaceVariableDialog}}
+\doxysubsubsection{\texorpdfstring{m\_fSymbol}{m\_fSymbol}}
+{\footnotesize\ttfamily CFont\texorpdfstring{$\ast$}{*} Replace\+Variable\+Dialog\+::m\+\_\+f\+Symbol}
+
+Font for symbols (using the Symbol font) \Hypertarget{classReplaceVariableDialog_aeeb8c081f43bdeaa7b2ea85b964416f0}\label{classReplaceVariableDialog_aeeb8c081f43bdeaa7b2ea85b964416f0} 
+\index{ReplaceVariableDialog@{ReplaceVariableDialog}!m\_list@{m\_list}}
+\index{m\_list@{m\_list}!ReplaceVariableDialog@{ReplaceVariableDialog}}
+\doxysubsubsection{\texorpdfstring{m\_list}{m\_list}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classScientificListBox}{Scientific\+List\+Box}} Replace\+Variable\+Dialog\+::m\+\_\+list}
+
+List box for displaying scientific items \Hypertarget{classReplaceVariableDialog_a091b1e0ee2830d9642927dc78f5ba19d}\label{classReplaceVariableDialog_a091b1e0ee2830d9642927dc78f5ba19d} 
+\index{ReplaceVariableDialog@{ReplaceVariableDialog}!m\_listFreeVariables@{m\_listFreeVariables}}
+\index{m\_listFreeVariables@{m\_listFreeVariables}!ReplaceVariableDialog@{ReplaceVariableDialog}}
+\doxysubsubsection{\texorpdfstring{m\_listFreeVariables}{m\_listFreeVariables}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classScientificListBox}{Scientific\+List\+Box}} Replace\+Variable\+Dialog\+::m\+\_\+list\+Free\+Variables}
+
+List box for displaying free variables \Hypertarget{classReplaceVariableDialog_a30579c282640aa73de565a8853ff7983}\label{classReplaceVariableDialog_a30579c282640aa73de565a8853ff7983} 
+\index{ReplaceVariableDialog@{ReplaceVariableDialog}!m\_listVariables@{m\_listVariables}}
+\index{m\_listVariables@{m\_listVariables}!ReplaceVariableDialog@{ReplaceVariableDialog}}
+\doxysubsubsection{\texorpdfstring{m\_listVariables}{m\_listVariables}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classScientificListBox}{Scientific\+List\+Box}} Replace\+Variable\+Dialog\+::m\+\_\+list\+Variables}
+
+List box for displaying existing variables \Hypertarget{classReplaceVariableDialog_ad432358fbbf49dfe383a365d7a8d4ac6}\label{classReplaceVariableDialog_ad432358fbbf49dfe383a365d7a8d4ac6} 
+\index{ReplaceVariableDialog@{ReplaceVariableDialog}!pev\_new@{pev\_new}}
+\index{pev\_new@{pev\_new}!ReplaceVariableDialog@{ReplaceVariableDialog}}
+\doxysubsubsection{\texorpdfstring{pev\_new}{pev\_new}}
+{\footnotesize\ttfamily vector$<$\mbox{\hyperlink{classEntityVariable}{Entity\+Variable}} \texorpdfstring{$\ast$}{*}$>$ Replace\+Variable\+Dialog\+::pev\+\_\+new}
+
+Vector of new entity variables 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Replace\+Variable\+Dialog.\+h\item 
+Replace\+Variable\+Dialog.\+cpp\end{DoxyCompactItemize}

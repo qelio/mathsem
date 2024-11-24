@@ -1,0 +1,117 @@
+\doxysection{CScientific\+Static Class Reference}
+\hypertarget{classCScientificStatic}{}\label{classCScientificStatic}\index{CScientificStatic@{CScientificStatic}}
+
+
+A custom static control class for rendering mathematical expressions with special formatting for symbols and indices.  
+
+
+
+
+{\ttfamily \#include $<$Scientific\+Static.\+h$>$}
+
+
+
+Inheritance diagram for CScientific\+Static\+:
+% FIG 0
+
+
+Collaboration diagram for CScientific\+Static\+:
+% FIG 1
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classCScientificStatic_a570af75fe173294eac703fce51c53a2e}{CScientific\+Static}} ()
+\begin{DoxyCompactList}\small\item\em Default constructor for \doxylink{classCScientificStatic}{CScientific\+Static} class. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{classCScientificStatic_a84572a987de5f56ad3d5b6824dcbea12}{\texorpdfstring{$\sim$}{\string~}\+CScientific\+Static}} ()
+\begin{DoxyCompactList}\small\item\em Destructor for \doxylink{classCScientificStatic}{CScientific\+Static} class. \end{DoxyCompactList}\item 
+afx\+\_\+msg void \mbox{\hyperlink{classCScientificStatic_a5a121a416204dcc8b0c7ca359076cee5}{On\+Paint}} ()
+\begin{DoxyCompactList}\small\item\em Paints the content of the static control. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classSemanticString}{Semantic\+String}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classCScientificStatic_a6c5dd1122582305dc1358f31bf06a482}{dsi}}
+\begin{DoxyCompactList}\small\item\em Pointer to a \doxylink{classSemanticString}{Semantic\+String} object. \end{DoxyCompactList}\item 
+CFont \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classCScientificStatic_a9192e9f09ad2d7fc2073c4a83da10a73}{m\+\_\+f\+Symbol}}
+\begin{DoxyCompactList}\small\item\em Font used for rendering mathematical symbols in the static control. \end{DoxyCompactList}\item 
+CFont \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classCScientificStatic_a8b5e2d05d3cc883fb62c931f7228cdab}{m\+\_\+f\+Indexes}}
+\begin{DoxyCompactList}\small\item\em Font used for rendering subscripts and superscripts in the static control. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A custom static control class for rendering mathematical expressions with special formatting for symbols and indices. 
+
+This class extends from CStatic and is used to display static text that may include mathematical symbols, subscripts, and superscripts, with customizable font settings. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classCScientificStatic_a570af75fe173294eac703fce51c53a2e}\label{classCScientificStatic_a570af75fe173294eac703fce51c53a2e} 
+\index{CScientificStatic@{CScientificStatic}!CScientificStatic@{CScientificStatic}}
+\index{CScientificStatic@{CScientificStatic}!CScientificStatic@{CScientificStatic}}
+\doxysubsubsection{\texorpdfstring{CScientificStatic()}{CScientificStatic()}}
+{\footnotesize\ttfamily CScientific\+Static\+::\+CScientific\+Static (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Default constructor for \doxylink{classCScientificStatic}{CScientific\+Static} class. 
+
+Initializes the \doxylink{classCScientificStatic}{CScientific\+Static} object, setting up the necessary properties and states for rendering. \Hypertarget{classCScientificStatic_a84572a987de5f56ad3d5b6824dcbea12}\label{classCScientificStatic_a84572a987de5f56ad3d5b6824dcbea12} 
+\index{CScientificStatic@{CScientificStatic}!````~CScientificStatic@{\texorpdfstring{$\sim$}{\string~}CScientificStatic}}
+\index{````~CScientificStatic@{\texorpdfstring{$\sim$}{\string~}CScientificStatic}!CScientificStatic@{CScientificStatic}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}CScientificStatic()}{\string~CScientificStatic()}}
+{\footnotesize\ttfamily CScientific\+Static\+::\texorpdfstring{$\sim$}{\string~}\+CScientific\+Static (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Destructor for \doxylink{classCScientificStatic}{CScientific\+Static} class. 
+
+Cleans up any resources used by the \doxylink{classCScientificStatic}{CScientific\+Static} object. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classCScientificStatic_a5a121a416204dcc8b0c7ca359076cee5}\label{classCScientificStatic_a5a121a416204dcc8b0c7ca359076cee5} 
+\index{CScientificStatic@{CScientificStatic}!OnPaint@{OnPaint}}
+\index{OnPaint@{OnPaint}!CScientificStatic@{CScientificStatic}}
+\doxysubsubsection{\texorpdfstring{OnPaint()}{OnPaint()}}
+{\footnotesize\ttfamily void CScientific\+Static\+::\+On\+Paint (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Paints the content of the static control. 
+
+This method is called to paint or redraw the content of the static control, rendering mathematical symbols and expressions with the appropriate fonts (symbols, subscripts, superscripts). 
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{classCScientificStatic_a6c5dd1122582305dc1358f31bf06a482}\label{classCScientificStatic_a6c5dd1122582305dc1358f31bf06a482} 
+\index{CScientificStatic@{CScientificStatic}!dsi@{dsi}}
+\index{dsi@{dsi}!CScientificStatic@{CScientificStatic}}
+\doxysubsubsection{\texorpdfstring{dsi}{dsi}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classSemanticString}{Semantic\+String}}\texorpdfstring{$\ast$}{*} CScientific\+Static\+::dsi}
+
+
+
+Pointer to a \doxylink{classSemanticString}{Semantic\+String} object. 
+
+This pointer holds a reference to a \doxylink{classSemanticString}{Semantic\+String}, which can represent a mathematical expression or symbol that is rendered in the static control. \Hypertarget{classCScientificStatic_a8b5e2d05d3cc883fb62c931f7228cdab}\label{classCScientificStatic_a8b5e2d05d3cc883fb62c931f7228cdab} 
+\index{CScientificStatic@{CScientificStatic}!m\_fIndexes@{m\_fIndexes}}
+\index{m\_fIndexes@{m\_fIndexes}!CScientificStatic@{CScientificStatic}}
+\doxysubsubsection{\texorpdfstring{m\_fIndexes}{m\_fIndexes}}
+{\footnotesize\ttfamily CFont\texorpdfstring{$\ast$}{*} CScientific\+Static\+::m\+\_\+f\+Indexes}
+
+
+
+Font used for rendering subscripts and superscripts in the static control. 
+
+This font is used for rendering subscript and superscript elements in the static control, allowing for proper formatting of mathematical expressions. \Hypertarget{classCScientificStatic_a9192e9f09ad2d7fc2073c4a83da10a73}\label{classCScientificStatic_a9192e9f09ad2d7fc2073c4a83da10a73} 
+\index{CScientificStatic@{CScientificStatic}!m\_fSymbol@{m\_fSymbol}}
+\index{m\_fSymbol@{m\_fSymbol}!CScientificStatic@{CScientificStatic}}
+\doxysubsubsection{\texorpdfstring{m\_fSymbol}{m\_fSymbol}}
+{\footnotesize\ttfamily CFont\texorpdfstring{$\ast$}{*} CScientific\+Static\+::m\+\_\+f\+Symbol}
+
+
+
+Font used for rendering mathematical symbols in the static control. 
+
+This font is used to display the mathematical symbols in the static control. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Scientific\+Static.\+h\item 
+Scientific\+Static.\+cpp\end{DoxyCompactItemize}

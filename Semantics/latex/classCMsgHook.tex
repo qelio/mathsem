@@ -1,0 +1,175 @@
+\doxysection{CMsg\+Hook Class Reference}
+\hypertarget{classCMsgHook}{}\label{classCMsgHook}\index{CMsgHook@{CMsgHook}}
+
+
+A class for handling message hooks for windows and their parent-\/child relationships.  
+
+
+
+
+{\ttfamily \#include $<$Msg\+Hook.\+h$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classCMsgHook_ac1f270be28f9022330e01999bc6c83c0}\label{classCMsgHook_ac1f270be28f9022330e01999bc6c83c0} 
+{\bfseries CMsg\+Hook} (void)
+\begin{DoxyCompactList}\small\item\em Default constructor for \doxylink{classCMsgHook}{CMsg\+Hook}. \end{DoxyCompactList}\item 
+\Hypertarget{classCMsgHook_a84f098285b4c0dec8b7c8162f5dbffac}\label{classCMsgHook_a84f098285b4c0dec8b7c8162f5dbffac} 
+virtual {\bfseries \texorpdfstring{$\sim$}{\string~}\+CMsg\+Hook} (void)
+\begin{DoxyCompactList}\small\item\em Destructor for \doxylink{classCMsgHook}{CMsg\+Hook}. \end{DoxyCompactList}\item 
+BOOL \mbox{\hyperlink{classCMsgHook_a34147b373a144c507da1c22f7636ab85}{Attach}} (HWND h\+Wnd, HWND h\+Parent, HWND h\+Notify=NULL)
+\begin{DoxyCompactList}\small\item\em Attaches a hook to a specific window. \end{DoxyCompactList}\item 
+BOOL \mbox{\hyperlink{classCMsgHook_a109264f808b934a50a4ab021b1c519a3}{Detach}} (void)
+\begin{DoxyCompactList}\small\item\em Detaches the hook from the window. \end{DoxyCompactList}\item 
+BOOL \mbox{\hyperlink{classCMsgHook_ab81a13a800f2ce29e4b574f1ec32f2b8}{Is\+Attached}} ()
+\begin{DoxyCompactList}\small\item\em Checks if the hook is currently attached to a window. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static LRESULT CALLBACK \mbox{\hyperlink{classCMsgHook_ac64913935fb5953b5c79de3d01e98190}{Call\+Wnd\+Ret\+Proc}} (int n\+Code, WPARAM w\+Param, LPARAM l\+Param)
+\begin{DoxyCompactList}\small\item\em Callback procedure that processes hook messages. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+HWND \mbox{\hyperlink{classCMsgHook_a9f150daa0c3a808bce2bea61026f8fda}{m\+\_\+h\+Wnd}}
+\item 
+HWND \mbox{\hyperlink{classCMsgHook_ad530365165bf1d29737a78b3f11df910}{m\+\_\+h\+Parent}}
+\item 
+HWND \mbox{\hyperlink{classCMsgHook_af56b7535aa033a6d8fb691e4e466a212}{m\+\_\+h\+Notify}}
+\item 
+BOOL \mbox{\hyperlink{classCMsgHook_aed76911f3301d4354b2dd3c3f671f2a0}{m\+\_\+b\+Drop\+Down}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static HHOOK \mbox{\hyperlink{classCMsgHook_a1903e58ceafc027253965fe3151c51eb}{m\+\_\+h\+Hook}} = NULL
+\item 
+static int \mbox{\hyperlink{classCMsgHook_a81e799634e1540c632f5481765fac314}{m\+\_\+n\+Instances}} = 0
+\item 
+\Hypertarget{classCMsgHook_ac7d3a64340f9db6ea399edb01080935e}\label{classCMsgHook_ac7d3a64340f9db6ea399edb01080935e} 
+static CMap$<$ HWND, HWND \&, \mbox{\hyperlink{classCMsgHook}{CMsg\+Hook}} \texorpdfstring{$\ast$}{*}, \mbox{\hyperlink{classCMsgHook}{CMsg\+Hook}} \texorpdfstring{$\ast$}{*}\& $>$ {\bfseries m\+\_\+map\+Hooked\+Windows}
+\begin{DoxyCompactList}\small\item\em A map associating windows with their hooks. This map stores a mapping between the window handle (HWND) and the corresponding \doxylink{classCMsgHook}{CMsg\+Hook} instance. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A class for handling message hooks for windows and their parent-\/child relationships. 
+
+This class provides functionality for attaching and detaching hooks to/from windows. It manages the interaction between the hook and the associated windows. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classCMsgHook_a34147b373a144c507da1c22f7636ab85}\label{classCMsgHook_a34147b373a144c507da1c22f7636ab85} 
+\index{CMsgHook@{CMsgHook}!Attach@{Attach}}
+\index{Attach@{Attach}!CMsgHook@{CMsgHook}}
+\doxysubsubsection{\texorpdfstring{Attach()}{Attach()}}
+{\footnotesize\ttfamily BOOL CMsg\+Hook\+::\+Attach (\begin{DoxyParamCaption}\item[{HWND}]{h\+Wnd,  }\item[{HWND}]{h\+Parent,  }\item[{HWND}]{h\+Notify = {\ttfamily NULL} }\end{DoxyParamCaption})}
+
+
+
+Attaches a hook to a specific window. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em h\+Wnd} & The handle of the window to attach the hook to. \\
+\hline
+{\em h\+Parent} & The handle of the parent window. \\
+\hline
+{\em h\+Notify} & Optional handle of a notification window (default is NULL). \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+TRUE if the hook was successfully attached, FALSE otherwise. 
+\end{DoxyReturn}
+\Hypertarget{classCMsgHook_ac64913935fb5953b5c79de3d01e98190}\label{classCMsgHook_ac64913935fb5953b5c79de3d01e98190} 
+\index{CMsgHook@{CMsgHook}!CallWndRetProc@{CallWndRetProc}}
+\index{CallWndRetProc@{CallWndRetProc}!CMsgHook@{CMsgHook}}
+\doxysubsubsection{\texorpdfstring{CallWndRetProc()}{CallWndRetProc()}}
+{\footnotesize\ttfamily LRESULT CALLBACK CMsg\+Hook\+::\+Call\+Wnd\+Ret\+Proc (\begin{DoxyParamCaption}\item[{int}]{n\+Code,  }\item[{WPARAM}]{w\+Param,  }\item[{LPARAM}]{l\+Param }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [protected]}}
+
+
+
+Callback procedure that processes hook messages. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em n\+Code} & The hook code. \\
+\hline
+{\em w\+Param} & Additional message-\/specific information. \\
+\hline
+{\em l\+Param} & Additional message-\/specific information. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The result of the message processing. 
+\end{DoxyReturn}
+\Hypertarget{classCMsgHook_a109264f808b934a50a4ab021b1c519a3}\label{classCMsgHook_a109264f808b934a50a4ab021b1c519a3} 
+\index{CMsgHook@{CMsgHook}!Detach@{Detach}}
+\index{Detach@{Detach}!CMsgHook@{CMsgHook}}
+\doxysubsubsection{\texorpdfstring{Detach()}{Detach()}}
+{\footnotesize\ttfamily BOOL CMsg\+Hook\+::\+Detach (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Detaches the hook from the window. 
+
+\begin{DoxyReturn}{Returns}
+TRUE if the hook was successfully detached, FALSE otherwise. 
+\end{DoxyReturn}
+\Hypertarget{classCMsgHook_ab81a13a800f2ce29e4b574f1ec32f2b8}\label{classCMsgHook_ab81a13a800f2ce29e4b574f1ec32f2b8} 
+\index{CMsgHook@{CMsgHook}!IsAttached@{IsAttached}}
+\index{IsAttached@{IsAttached}!CMsgHook@{CMsgHook}}
+\doxysubsubsection{\texorpdfstring{IsAttached()}{IsAttached()}}
+{\footnotesize\ttfamily BOOL CMsg\+Hook\+::\+Is\+Attached (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Checks if the hook is currently attached to a window. 
+
+\begin{DoxyReturn}{Returns}
+TRUE if the hook is attached, FALSE otherwise. 
+\end{DoxyReturn}
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{classCMsgHook_aed76911f3301d4354b2dd3c3f671f2a0}\label{classCMsgHook_aed76911f3301d4354b2dd3c3f671f2a0} 
+\index{CMsgHook@{CMsgHook}!m\_bDropDown@{m\_bDropDown}}
+\index{m\_bDropDown@{m\_bDropDown}!CMsgHook@{CMsgHook}}
+\doxysubsubsection{\texorpdfstring{m\_bDropDown}{m\_bDropDown}}
+{\footnotesize\ttfamily BOOL CMsg\+Hook\+::m\+\_\+b\+Drop\+Down\hspace{0.3cm}{\ttfamily [protected]}}
+
+A flag indicating if the dropdown is active. \Hypertarget{classCMsgHook_a1903e58ceafc027253965fe3151c51eb}\label{classCMsgHook_a1903e58ceafc027253965fe3151c51eb} 
+\index{CMsgHook@{CMsgHook}!m\_hHook@{m\_hHook}}
+\index{m\_hHook@{m\_hHook}!CMsgHook@{CMsgHook}}
+\doxysubsubsection{\texorpdfstring{m\_hHook}{m\_hHook}}
+{\footnotesize\ttfamily HHOOK CMsg\+Hook\+::m\+\_\+h\+Hook = NULL\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [protected]}}
+
+Static hook handle for the global hook. \Hypertarget{classCMsgHook_af56b7535aa033a6d8fb691e4e466a212}\label{classCMsgHook_af56b7535aa033a6d8fb691e4e466a212} 
+\index{CMsgHook@{CMsgHook}!m\_hNotify@{m\_hNotify}}
+\index{m\_hNotify@{m\_hNotify}!CMsgHook@{CMsgHook}}
+\doxysubsubsection{\texorpdfstring{m\_hNotify}{m\_hNotify}}
+{\footnotesize\ttfamily HWND CMsg\+Hook\+::m\+\_\+h\+Notify\hspace{0.3cm}{\ttfamily [protected]}}
+
+Handle to the notification window. \Hypertarget{classCMsgHook_ad530365165bf1d29737a78b3f11df910}\label{classCMsgHook_ad530365165bf1d29737a78b3f11df910} 
+\index{CMsgHook@{CMsgHook}!m\_hParent@{m\_hParent}}
+\index{m\_hParent@{m\_hParent}!CMsgHook@{CMsgHook}}
+\doxysubsubsection{\texorpdfstring{m\_hParent}{m\_hParent}}
+{\footnotesize\ttfamily HWND CMsg\+Hook\+::m\+\_\+h\+Parent\hspace{0.3cm}{\ttfamily [protected]}}
+
+Handle to the parent window of the hooked window. \Hypertarget{classCMsgHook_a9f150daa0c3a808bce2bea61026f8fda}\label{classCMsgHook_a9f150daa0c3a808bce2bea61026f8fda} 
+\index{CMsgHook@{CMsgHook}!m\_hWnd@{m\_hWnd}}
+\index{m\_hWnd@{m\_hWnd}!CMsgHook@{CMsgHook}}
+\doxysubsubsection{\texorpdfstring{m\_hWnd}{m\_hWnd}}
+{\footnotesize\ttfamily HWND CMsg\+Hook\+::m\+\_\+h\+Wnd\hspace{0.3cm}{\ttfamily [protected]}}
+
+Handle to the window that the hook is attached to. \Hypertarget{classCMsgHook_a81e799634e1540c632f5481765fac314}\label{classCMsgHook_a81e799634e1540c632f5481765fac314} 
+\index{CMsgHook@{CMsgHook}!m\_nInstances@{m\_nInstances}}
+\index{m\_nInstances@{m\_nInstances}!CMsgHook@{CMsgHook}}
+\doxysubsubsection{\texorpdfstring{m\_nInstances}{m\_nInstances}}
+{\footnotesize\ttfamily int CMsg\+Hook\+::m\+\_\+n\+Instances = 0\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [protected]}}
+
+The number of instances of active hooks. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Msg\+Hook.\+h\item 
+Msg\+Hook.\+cpp\end{DoxyCompactItemize}

@@ -1,0 +1,42 @@
+\doxysection{Operation\+Dlg.\+h}
+\hypertarget{OperationDlg_8h_source}{}\label{OperationDlg_8h_source}\mbox{\hyperlink{OperationDlg_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ "{}afxwin.h"{}}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ "{}afxbutton.h"{}}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ "{}ScientificListBox.h"{}}}
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ "{}Formula.h"{}}}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ "{}ScientificStatic.h"{}}}
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#include\ "{}afxcmn.h"{}}}
+\DoxyCodeLine{00014\ }
+\DoxyCodeLine{00018\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classOperationDlg}{OperationDlg}}\ :\ \textcolor{keyword}{public}\ CDialogEx}
+\DoxyCodeLine{00019\ \{}
+\DoxyCodeLine{00020\ \ \ \ \ DECLARE\_DYNAMIC(\mbox{\hyperlink{classOperationDlg}{OperationDlg}})}
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00022\ \ \ \ \ }
+\DoxyCodeLine{00025\ \ \ \ \ \textcolor{keywordtype}{void}\ SetOperationState();}
+\DoxyCodeLine{00026\ }
+\DoxyCodeLine{00032\ \ \ \ \ \textcolor{keywordtype}{void}\ MoveSelected(\mbox{\hyperlink{classScientificListBox}{ScientificListBox}}\&\ Source,\ \mbox{\hyperlink{classScientificListBox}{ScientificListBox}}\&\ Destination);}
+\DoxyCodeLine{00033\ }
+\DoxyCodeLine{00039\ \ \ \ \ \textcolor{keywordtype}{void}\ MoveAll(\mbox{\hyperlink{classScientificListBox}{ScientificListBox}}\&\ Source,\ \mbox{\hyperlink{classScientificListBox}{ScientificListBox}}\&\ Destination);}
+\DoxyCodeLine{00040\ }
+\DoxyCodeLine{00044\ \ \ \ \ std::vector<Formula*>*\ formulas;}
+\DoxyCodeLine{00045\ }
+\DoxyCodeLine{00049\ \ \ \ \ std::vector<EntityBase*>*\ allEntities;}
+\DoxyCodeLine{00050\ }
+\DoxyCodeLine{00051\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00056\ \ \ \ \ \mbox{\hyperlink{classOperationDlg}{OperationDlg}}(CWnd*\ pParent\ =\ NULL);}
+\DoxyCodeLine{00057\ }
+\DoxyCodeLine{00061\ \ \ \ \ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{classOperationDlg_af212cc1bb28ab0df0ea11fed522e462e}{\string~OperationDlg}}();}
+\DoxyCodeLine{00062\ }
+\DoxyCodeLine{00066\ \ \ \ \ \textcolor{keyword}{enum}\ \{\ IDD\ =\ IDD\_CHOOSEDIALOG\ \};}
+\DoxyCodeLine{00067\ }
+\DoxyCodeLine{00068\ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00073\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classOperationDlg_a2f8ca5cfd58a0c315d8b6df89e2a8ad0}{DoDataExchange}}(CDataExchange*\ pDX);}
+\DoxyCodeLine{00074\ }
+\DoxyCodeLine{00075\ \ \ \ \ DECLARE\_MESSAGE\_MAP()}
+\DoxyCodeLine{00076\ \};}
+
+\end{DoxyCode}

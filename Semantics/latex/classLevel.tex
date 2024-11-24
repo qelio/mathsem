@@ -1,0 +1,117 @@
+\doxysection{Level Class Reference}
+\hypertarget{classLevel}{}\label{classLevel}\index{Level@{Level}}
+
+
+Class for set item representing formula sets.  
+
+
+
+
+{\ttfamily \#include $<$Formula.\+h$>$}
+
+
+
+Inheritance diagram for Level\+:
+% FIG 0
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classLevel_a7a696c928ca5d5354db6e50e46d0f67d}\label{classLevel_a7a696c928ca5d5354db6e50e46d0f67d} 
+{\bfseries Level} ()
+\begin{DoxyCompactList}\small\item\em Default constructor, initializes the level to "{}0"{}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classLevel_a886f3a94be901722021c5c1a1cf372a7}{Level}} (tstring \&tstr)
+\begin{DoxyCompactList}\small\item\em Parameterized constructor, initializes the level with the given string. \end{DoxyCompactList}\item 
+\Hypertarget{classLevel_a249eac1e8f19ff44134efa5e986feaca}\label{classLevel_a249eac1e8f19ff44134efa5e986feaca} 
+{\bfseries \texorpdfstring{$\sim$}{\string~}\+Level} ()
+\begin{DoxyCompactList}\small\item\em Destructor for cleaning up the \doxylink{classLevel}{Level} object. \end{DoxyCompactList}\item 
+tstring \& \mbox{\hyperlink{classLevel_a5d92c8fa26b2e641c4236a07a273ba23}{Get\+Level}} ()
+\begin{DoxyCompactList}\small\item\em Retrieves the current level string. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classLevel_ac4be66ffd2986f4049b67cdeb09fe113}{Set\+Level}} (tstring \&tstr)
+\begin{DoxyCompactList}\small\item\em Sets the level to the specified string. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classLevel_a336e1ef5ac4f3ae3450fe48d8449cd1f}{compare}} (const \mbox{\hyperlink{classLevel}{Level}} \&l)
+\begin{DoxyCompactList}\small\item\em Compares the current level with another level. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classLevel_ac27feb4d323c984b227be3fbf5e6fbd3}\label{classLevel_ac27feb4d323c984b227be3fbf5e6fbd3} 
+tstring {\bfseries level}
+\begin{DoxyCompactList}\small\item\em The string representing the level. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Class for set item representing formula sets. 
+
+Class representing the level or context for a variable or formula.
+
+This class is used to encapsulate the level of a variable or formula, which can be used for comparison or contextual manipulation. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classLevel_a886f3a94be901722021c5c1a1cf372a7}\label{classLevel_a886f3a94be901722021c5c1a1cf372a7} 
+\index{Level@{Level}!Level@{Level}}
+\index{Level@{Level}!Level@{Level}}
+\doxysubsubsection{\texorpdfstring{Level()}{Level()}}
+{\footnotesize\ttfamily Level\+::\+Level (\begin{DoxyParamCaption}\item[{tstring \&}]{tstr }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Parameterized constructor, initializes the level with the given string. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em tstr} & The level string to initialize. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classLevel_a336e1ef5ac4f3ae3450fe48d8449cd1f}\label{classLevel_a336e1ef5ac4f3ae3450fe48d8449cd1f} 
+\index{Level@{Level}!compare@{compare}}
+\index{compare@{compare}!Level@{Level}}
+\doxysubsubsection{\texorpdfstring{compare()}{compare()}}
+{\footnotesize\ttfamily bool Level\+::compare (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classLevel}{Level}} \&}]{l }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Compares the current level with another level. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em l} & The other level to compare. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if levels are equal, otherwise false. 
+\end{DoxyReturn}
+\Hypertarget{classLevel_a5d92c8fa26b2e641c4236a07a273ba23}\label{classLevel_a5d92c8fa26b2e641c4236a07a273ba23} 
+\index{Level@{Level}!GetLevel@{GetLevel}}
+\index{GetLevel@{GetLevel}!Level@{Level}}
+\doxysubsubsection{\texorpdfstring{GetLevel()}{GetLevel()}}
+{\footnotesize\ttfamily tstring \& Level\+::\+Get\+Level (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Retrieves the current level string. 
+
+\begin{DoxyReturn}{Returns}
+The level string. 
+\end{DoxyReturn}
+\Hypertarget{classLevel_ac4be66ffd2986f4049b67cdeb09fe113}\label{classLevel_ac4be66ffd2986f4049b67cdeb09fe113} 
+\index{Level@{Level}!SetLevel@{SetLevel}}
+\index{SetLevel@{SetLevel}!Level@{Level}}
+\doxysubsubsection{\texorpdfstring{SetLevel()}{SetLevel()}}
+{\footnotesize\ttfamily void Level\+::\+Set\+Level (\begin{DoxyParamCaption}\item[{tstring \&}]{tstr }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Sets the level to the specified string. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em tstr} & The string to set as the level. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Formula.\+h\end{DoxyCompactItemize}

@@ -1,0 +1,74 @@
+\doxysection{Set\+Dialog.\+h}
+\hypertarget{SetDialog_8h_source}{}\label{SetDialog_8h_source}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00010\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classSetDialog}{SetDialog}}\ :\ \textcolor{keyword}{public}\ CDialogEx}
+\DoxyCodeLine{00011\ \{}
+\DoxyCodeLine{00012\ \ \ \ \ DECLARE\_DYNAMIC(\mbox{\hyperlink{classSetDialog}{SetDialog}})}
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00014\ \ \ \ \ }
+\DoxyCodeLine{00019\ \ \ \ \ vector\ <EntityBase\ *>\ *\ entities;}
+\DoxyCodeLine{00020\ }
+\DoxyCodeLine{00021\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00026\ \ \ \ \ \mbox{\hyperlink{classSetDialog}{SetDialog}}(CWnd*\ pParent\ =\ NULL);}
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00031\ \ \ \ \ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{classSetDialog_a8ad5d49ca510efe7925b614cd847c510}{\string~SetDialog}}();}
+\DoxyCodeLine{00032\ }
+\DoxyCodeLine{00036\ \ \ \ \ \textcolor{keyword}{enum}\ \{\ IDD\ =\ IDD\_SETDIALOG\ \};}
+\DoxyCodeLine{00037\ }
+\DoxyCodeLine{00038\ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00043\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classSetDialog_a96b54f653e919abc937d6038023c8c5b}{DoDataExchange}}(CDataExchange*\ pDX);}
+\DoxyCodeLine{00044\ }
+\DoxyCodeLine{00045\ \ \ \ \ DECLARE\_MESSAGE\_MAP()}
+\DoxyCodeLine{00046\ }
+\DoxyCodeLine{00047\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00052\ \ \ \ \ \mbox{\hyperlink{classScientificListBox}{ScientificListBox}}\ \mbox{\hyperlink{classSetDialog_a00a9ca22998a91e985f873629e120d6b}{m\_list}};}
+\DoxyCodeLine{00053\ }
+\DoxyCodeLine{00058\ \ \ \ \ CFont\ *\ \mbox{\hyperlink{classSetDialog_a61146fb7e40787bc5dc79954e067342a}{m\_fIndexes}};}
+\DoxyCodeLine{00059\ }
+\DoxyCodeLine{00064\ \ \ \ \ CFont\ *\ \mbox{\hyperlink{classSetDialog_a96580963bc9fbc63ade15eb8a7f6fdc6}{m\_fSymbol}};}
+\DoxyCodeLine{00065\ }
+\DoxyCodeLine{00070\ \ \ \ \ \mbox{\hyperlink{classScientificListBox}{ScientificListBox}}\ \mbox{\hyperlink{classSetDialog_a2de706b3a70e2b88f9b0ff8c3a290630}{m\_listVariables}};}
+\DoxyCodeLine{00071\ }
+\DoxyCodeLine{00076\ \ \ \ \ CButton\ \mbox{\hyperlink{classSetDialog_a18cf21a06fa90e065706bf7f4ab1a12f}{m\_buttonOK}};}
+\DoxyCodeLine{00077\ }
+\DoxyCodeLine{00081\ \ \ \ \ afx\_msg\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classSetDialog_af4431eb92f6d22f65856f5e949a8cd80}{OnBnClickedOk}}();}
+\DoxyCodeLine{00082\ }
+\DoxyCodeLine{00087\ \ \ \ \ \textcolor{keyword}{virtual}\ BOOL\ \mbox{\hyperlink{classSetDialog_a2df2837934a663e0cb55094cbfc96256}{OnInitDialog}}();}
+\DoxyCodeLine{00088\ }
+\DoxyCodeLine{00093\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classSetDialog_a1841a454a2240ca3455246418e2a846c}{setEntities}}(vector\ <EntityBase\ *>\ *\ all\_entities\ =\ NULL)\ \{\ entities\ =\ all\_entities;\ \};}
+\DoxyCodeLine{00094\ }
+\DoxyCodeLine{00098\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classSetDialog_a98d915b5a49f209d843b229309d7e99c}{ShowFreeVariables}}();}
+\DoxyCodeLine{00099\ }
+\DoxyCodeLine{00103\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classSetDialog_a343f9facf1e5e9558570495e30a75f2f}{HideFreeVariables}}();}
+\DoxyCodeLine{00104\ }
+\DoxyCodeLine{00108\ \ \ \ \ afx\_msg\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classSetDialog_a97d82c235c2aec155b7cc851ff0b742a}{OnSelchangeSetlist1}}();}
+\DoxyCodeLine{00109\ }
+\DoxyCodeLine{00114\ \ \ \ \ CButton\ \mbox{\hyperlink{classSetDialog_a69e570cbc5f29922571affab7fe003f9}{m\_CheckBelonging}};}
+\DoxyCodeLine{00115\ }
+\DoxyCodeLine{00120\ \ \ \ \ CButton\ \mbox{\hyperlink{classSetDialog_a285541a58bb82fba9e36fe9c3ae61020}{m\_CheckSubSet}};}
+\DoxyCodeLine{00121\ }
+\DoxyCodeLine{00125\ \ \ \ \ afx\_msg\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classSetDialog_a584328a48b9bb20d0fea8638e8c3ce7c}{OnClickedBuildsubset}}();}
+\DoxyCodeLine{00126\ }
+\DoxyCodeLine{00131\ \ \ \ \ CComboBox\ \mbox{\hyperlink{classSetDialog_a0faf55aabb531b2817b76d315a2ddff9}{m\_ComboSubSet}};}
+\DoxyCodeLine{00132\ }
+\DoxyCodeLine{00137\ \ \ \ \ CEdit\ \mbox{\hyperlink{classSetDialog_af68dc1baeac57801d798d68062781595}{m\_IndexSubSet}};}
+\DoxyCodeLine{00138\ }
+\DoxyCodeLine{00143\ \ \ \ \ CComboBox\ \mbox{\hyperlink{classSetDialog_a73600990886b414ac0d1776959976ebc}{m\_comboSet}};}
+\DoxyCodeLine{00144\ }
+\DoxyCodeLine{00149\ \ \ \ \ CEdit\ \mbox{\hyperlink{classSetDialog_a068b77d025d42daa5f50a0f900a95886}{m\_indexSet}};}
+\DoxyCodeLine{00150\ }
+\DoxyCodeLine{00155\ \ \ \ \ \mbox{\hyperlink{classCScientificStatic}{CScientificStatic}}\ \mbox{\hyperlink{classSetDialog_aef26896ac3cb9c072768273c4876bd34}{m\_label}};}
+\DoxyCodeLine{00156\ }
+\DoxyCodeLine{00161\ \ \ \ \ \mbox{\hyperlink{classCScientificStatic}{CScientificStatic}}\ \mbox{\hyperlink{classSetDialog_acbcb2347a6cc25f2ad47e20ab0dded02}{m\_level}};}
+\DoxyCodeLine{00162\ }
+\DoxyCodeLine{00166\ \ \ \ \ afx\_msg\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classSetDialog_a2363130cd31279bd2bcea9888f559a96}{OnSelchangeSetlist2}}();}
+\DoxyCodeLine{00167\ }
+\DoxyCodeLine{00171\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classSetDialog_a5d092cc5bd7f394cc504c99c7dd4bcd0}{CheckSelection}}();}
+\DoxyCodeLine{00172\ }
+\DoxyCodeLine{00176\ \ \ \ \ afx\_msg\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classSetDialog_a4360e4b4c920fb34c1cc3ac24db2cb63}{OnSelchangeSetcombo}}();}
+\DoxyCodeLine{00177\ }
+\DoxyCodeLine{00181\ \ \ \ \ afx\_msg\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classSetDialog_ae469e4d80a089fbf0a97e9a160099f44}{OnChangeSetindex}}();}
+\DoxyCodeLine{00182\ \};}
+
+\end{DoxyCode}
