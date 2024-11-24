@@ -1,41 +1,41 @@
-//  Author: Tatarintsev V.V., akizelokro@mail.ru, 2013-2014
+// Автор: Татаринцев В.В., akizelokro@mail.ru, 2013-2014
 #pragma once
 
 #include "common_functions.h"
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 //  @class CScientificButton
-//  @brief This class defines a button for scientific characters with various actions
-//         for different mathematical symbols. This class is deprecated and intended
-//         for handling the drawing and actions related to scientific characters.
+//  @brief Этот класс определяет кнопку для научных символов с различными действиями
+//         для различных математических символов. Класс устарел и предназначен
+//         для обработки отрисовки и действий, связанных с научными символами.
 //
-//  @note The functionality includes handling quantifiers, indices, and mathematical symbols.
+//  @note Функциональность включает обработку кванторов, индексов и математических символов.
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-// Enum for defining the actions related to scientific characters on the button
+// Перечисление для определения действий, связанных с научными символами на кнопке
 /**
  * @enum ScientificCharacterAction
- * @brief Enum defining the possible actions associated with a scientific character button.
+ * @brief Перечисление, определяющее возможные действия, связанные с кнопкой научного символа.
  *
- * This enum is used to determine the specific action or behavior a button represents.
+ * Это перечисление используется для определения конкретного действия или поведения, которое представляет кнопка.
  */
 enum ScientificCharacterAction
 {
-    NONE = 0,            /**< No action */
-    FirstQuantor = 1,    /**< First quantifier (for universal quantification) */
-    SecondQuantor = 2,   /**< Second quantifier (for existential quantification) */
-    LowerIndex = 3,      /**< Lower index */
-    UpperIndex = 4       /**< Upper index (subscript or superscript) */
+    NONE = 0,            /**< Нет действия */
+    FirstQuantor = 1,    /**< Первый квантор (для универсальной квантификации) */
+    SecondQuantor = 2,   /**< Второй квантор (для существующей квантификации) */
+    LowerIndex = 3,      /**< Нижний индекс */
+    UpperIndex = 4       /**< Верхний индекс (подстрочный или надстрочный) */
 };
 
-// CScientificButton class declaration
+// Объявление класса CScientificButton
 /**
  * @class CScientificButton
- * @brief Represents a button that can display and interact with scientific characters.
+ * @brief Представляет кнопку, которая может отображать и взаимодействовать с научными символами.
  *
- * This class extends from CMFCButton and adds functionality for handling different scientific characters,
- * such as quantifiers and indices, through various actions. It is used for creating customized scientific buttons
- * with special drawing and behavior.
+ * Этот класс расширяет CMFCButton и добавляет функциональность для обработки различных научных символов,
+ * таких как кванторы и индексы, через различные действия. Он используется для создания настраиваемых научных кнопок
+ * со специальной отрисовкой и поведением.
  */
 class CScientificButton : public CMFCButton
 {
@@ -43,46 +43,46 @@ class CScientificButton : public CMFCButton
 
     /**
      * @typedef SciCharMap
-     * @brief Type alias for a map that associates a position with a scientific character action.
+     * @brief Псевдоним типа для карты, которая связывает позицию с действием научного символа.
      *
-     * The map holds positions as keys and the corresponding scientific character actions as values.
+     * Карта содержит позиции в качестве ключей и соответствующие действия научных символов в качестве значений.
      */
     typedef map<int, ScientificCharacterAction, less<int>> SciCharMap;
 
     /**
      * @typedef SciCharMapIterator
-     * @brief Type alias for an iterator for the SciCharMap.
+     * @brief Псевдоним типа для итератора для SciCharMap.
      *
-     * This alias is used to iterate over the map that associates positions with scientific actions.
+     * Этот псевдоним используется для итерации по карте, которая связывает позиции с научными действиями.
      */
     typedef SciCharMap::iterator SciCharMapIterator;
 
     /**
-     * @brief A map that stores scientific character actions for each button position.
+     * @brief Карта, которая хранит действия научных символов для каждой позиции кнопки.
      *
-     * The map associates button positions with specific scientific actions such as quantifiers, indices, etc.
+     * Карта связывает позиции кнопок с конкретными научными действиями, такими как кванторы, индексы и т.д.
      */
     SciCharMap m_SciChars;
 
     /**
-     * @brief Font used for rendering symbols in the scientific button.
+     * @brief Шрифт, используемый для отрисовки символов на научной кнопке.
      *
-     * This font is used to display mathematical symbols in the button, using the Symbol font.
+     * Этот шрифт используется для отображения математических символов на кнопке с использованием шрифта Symbol.
      */
     CFont m_fSymbol;
 
 public:
     /**
-     * @brief Constructor for the CScientificButton class.
+     * @brief Конструктор класса CScientificButton.
      *
-     * Initializes the scientific button, setting up the necessary properties and states.
+     * Инициализирует научную кнопку, настраивая необходимые свойства и состояния.
      */
     CScientificButton();
 
     /**
-     * @brief Destructor for the CScientificButton class.
+     * @brief Деструктор класса CScientificButton.
      *
-     * Cleans up any resources used by the scientific button.
+     * Очищает любые ресурсы, используемые научной кнопкой.
      */
     virtual ~CScientificButton();
 
@@ -91,36 +91,36 @@ protected:
 
 public:
     /**
-     * @brief Adds a scientific character action to the button at a specific position.
+     * @brief Добавляет действие научного символа к кнопке на определенной позиции.
      *
-     * This method allows associating a scientific character action with a given button position.
-     * For example, a quantifier or index can be added for a specific button position.
+     * Этот метод позволяет связать действие научного символа с заданной позицией кнопки.
+     * Например, квантор или индекс могут быть добавлены для определенной позиции кнопки.
      *
-     * @param pos The position on the button where the scientific action is assigned.
-     * @param scichar The scientific character action to be assigned to the position.
+     * @param pos Позиция на кнопке, на которой назначено научное действие.
+     * @param scichar Действие научного символа, которое назначено позиции.
      */
     void addSciCharAction(int pos, ScientificCharacterAction scichar) { m_SciChars[pos] = scichar; };
 
     /**
-     * @brief Sets the font for rendering scientific characters on the button.
+     * @brief Устанавливает шрифт для отрисовки научных символов на кнопке.
      *
-     * This method allows setting a custom font for rendering scientific symbols, based on the provided LOGFONT structure.
+     * Этот метод позволяет установить настраиваемый шрифт для отображения научных символов на основе предоставленной структуры LOGFONT.
      *
-     * @param lf The LOGFONT structure that defines the font to be used.
+     * @param lf Структура LOGFONT, которая определяет используемый шрифт.
      */
     void setSciFont(LOGFONT * lf) { m_fSymbol.CreateFontIndirectW(lf); };
 
     /**
-     * @brief Custom drawing method to render text on the button.
+     * @brief Специальный метод отрисовки для отображения текста на кнопке.
      *
-     * This method overrides the default text drawing behavior to customize the appearance of the button text,
-     * especially for rendering scientific characters using the defined font.
+     * Этот метод переопределяет поведение отрисовки текста по умолчанию, чтобы кастомизировать внешний вид текста кнопки,
+     * особенно для отображения научных символов с использованием определенного шрифта.
      *
-     * @param pDC The device context to draw on.
-     * @param rect The rectangle in which the text is to be drawn.
-     * @param strText The text to be drawn.
-     * @param uiDTFlags The flags controlling text drawing options.
-     * @param uiState The state of the button (e.g., normal, pressed).
+     * @param pDC Контекст устройства, на котором производится рисование.
+     * @param rect Прямоугольник, в котором должен быть нарисован текст.
+     * @param strText Текст, который должен быть нарисован.
+     * @param uiDTFlags Флаги, управляющие параметрами отрисовки текста.
+     * @param uiState Состояние кнопки (например, нормальное, нажатое).
      */
     virtual void OnDrawText(CDC* pDC, const CRect& rect, const CString& strText, UINT uiDTFlags, UINT uiState);
 };

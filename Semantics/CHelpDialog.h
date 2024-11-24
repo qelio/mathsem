@@ -4,11 +4,11 @@
 
 /**
  * @class CHelpDialog
- * @brief This class represents the Help dialog in the application.
+ * @brief Этот класс представляет диалог "Помощь" в приложении.
  *
- * The CHelpDialog class provides a dialog window for displaying help information
- * to the user. It is a part of the application's UI and is derived from the
- * CDialogEx class to handle the dialog behavior and data exchange.
+ * Класс CHelpDialog предоставляет диалоговое окно для отображения информации
+ * справки пользователю. Он является частью пользовательского интерфейса приложения
+ * и наследуется от класса CDialogEx для обработки поведения диалога и обмена данными.
  */
 class CHelpDialog : public CDialogEx
 {
@@ -16,25 +16,25 @@ class CHelpDialog : public CDialogEx
 
 public:
     /**
-     * @brief Constructor for the CHelpDialog class.
+     * @brief Конструктор класса CHelpDialog.
      *
-     * Initializes the dialog with the specified parent window.
+     * Инициализирует диалог с указанным родительским окном.
      *
-     * @param pParent The parent window for the dialog (default is nullptr).
+     * @param pParent Родительское окно для диалога (по умолчанию nullptr).
      */
     CHelpDialog(CWnd* pParent = nullptr);
 
-    // Dialog Data
-    enum { IDD = IDD_DIALOG4 }; /**< Dialog resource ID. */
+    // Данные диалога
+    enum { IDD = IDD_DIALOG4 }; /**< ID ресурса диалога. */
 
 protected:
     /**
-     * @brief Handles data exchange between the dialog controls and the variables.
+     * @brief Обрабатывает обмен данными между элементами управления диалога и переменными.
      *
-     * This function binds the dialog controls to class member variables for
-     * proper data transfer when the dialog is initialized or updated.
+     * Эта функция связывает элементы управления диалога с переменными-членами класса для
+     * правильной передачи данных при инициализации или обновлении диалога.
      *
-     * @param pDX Data exchange object that facilitates data binding.
+     * @param pDX Объект обмена данными, который облегчает связывание данных.
      */
     virtual void DoDataExchange(CDataExchange* pDX);
 

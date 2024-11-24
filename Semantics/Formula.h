@@ -5,139 +5,139 @@
 
 /**
  * @enum EntityBaseType
- * @brief Enumeration for the types of entities used in logical formulas.
+ * @brief Перечисление типов сущностей, используемых в логических формулах.
  */
 enum EntityBaseType {
-    NONE_FORMULA, ///< Undefined entity type.
-    ATOMIC_FORMULA = 1, ///< Atomic formula type.
-    NEGATIVE_OPERATION = 2, ///< Negation operation (NOT).
-    QUANTIFIER1_OPERATION = 3, ///< Quantifier operation type 1 (e.g., for universal quantification).
-    QUANTIFIER2_OPERATION = 4, ///< Quantifier operation type 2 (e.g., for existential quantification).
-    AND_OPERATION = 5,  ///< AND logical operation.
-    OR_OPERATION = 6,  ///< OR logical operation.
-    FORMULA_SET = 7,  ///< Set of formulas.
-    BELONGING_PREDICATE = 8, ///< Predicate for membership in a set.
-    TUPLE = 9, ///< Tuple entity.
-    SUBSET = 10, ///< Subset operation.
-    REPLACE_VARIABLE = 11, ///< Variable replacement operation.
+    NONE_FORMULA, ///< Неопределенный тип сущности.
+    ATOMIC_FORMULA = 1, ///< Тип атомарной формулы.
+    NEGATIVE_OPERATION = 2, ///< Операция отрицания (НЕ).
+    QUANTIFIER1_OPERATION = 3, ///< Операция квантора типа 1 (например, для всеобщей квантификации).
+    QUANTIFIER2_OPERATION = 4, ///< Операция квантора типа 2 (например, для существующей квантификации).
+    AND_OPERATION = 5,  ///< Логическая операция И.
+    OR_OPERATION = 6,  ///< Логическая операция ИЛИ.
+    FORMULA_SET = 7,  ///< Набор формул.
+    BELONGING_PREDICATE = 8, ///< Предикат принадлежности множеству.
+    TUPLE = 9, ///< Сущность кортежа.
+    SUBSET = 10, ///< Операция подмножества.
+    REPLACE_VARIABLE = 11, ///< Операция замены переменной.
 };
 
 /**
  * @enum Formula_Feature
- * @brief Enumeration for the possible features or states of a formula.
+ * @brief Перечисление возможных характеристик или состояний формулы.
  */
 enum Formula_Feature {
-    NONE_FEATURE,  ///< No specific feature.
-    TRUTH_FEATURE = 1, ///< Formula is true.
-    FALSE_FEATURE = 2, ///< Formula is false.
-    PERFORMED_FEATURE = 3,  ///< Formula has been executed.
-    ATOMARN_FEATURE = 4 ///< Formula is atomic.
+    NONE_FEATURE,  ///< Без особых характеристик.
+    TRUTH_FEATURE = 1, ///< Формула истинна.
+    FALSE_FEATURE = 2, ///< Формула ложна.
+    PERFORMED_FEATURE = 3,  ///< Формула выполнена.
+    ATOMARN_FEATURE = 4 ///< Формула атомарная.
 };
 
 /**
  * @enum VariableType
- * @brief Enumeration for the types of variables used in logical formulas.
+ * @brief Перечисление типов переменных, используемых в логических формулах.
  */
 enum VariableType {
-    NONE_VARIABLE, ///< Undefined variable type.
-    VARIABLE = 1, ///< Standard variable type.
-    SET = 2 ///< Set variable type.
+    NONE_VARIABLE, ///< Неопределенный тип переменной.
+    VARIABLE = 1, ///< Стандартный тип переменной.
+    SET = 2 ///< Тип переменной множества.
 };
 
 #if defined(LIBXML_TREE_ENABLED) && defined(LIBXML_OUTPUT_ENABLED)
-// If libxml2 is enabled, handle XML serialization/deserialization here.
+// Если libxml2 включен, здесь обрабатывается сериализация/десериализация XML.
 #else
-// Classes representing variable and formula items if libxml is not used.
-class CVariableItem;  ///< Class for variable item representing logical variables.
-class CFormulaItem;  ///< Class for formula item, part of the logical formula representation.
-class CSetItem;    ///< Class for set item representing formula sets.
+// Классы, представляющие элементы переменных и формул, если libxml не используется.
+class CVariableItem;  ///< Класс для элемента переменной, представляющий логические переменные.
+class CFormulaItem;  ///< Класс для элемента формулы, часть представления логической формулы.
+class CSetItem;    ///< Класс для элемента множества, представляющий множества формул.
 #endif
 
 /**
  * @class Level
- * @brief Class representing the level or context for a variable or formula.
+ * @brief Класс, представляющий уровень или контекст для переменной или формулы.
  *
- * This class is used to encapsulate the level of a variable or formula, which can be used for comparison or contextual manipulation.
+ * Этот класс используется для инкапсуляции уровня переменной или формулы, который может быть использован для сравнения или контекстной манипуляции.
  */
 class Level
 {
 protected:
-    tstring level; ///< The string representing the level.
+    tstring level; ///< Строка, представляющая уровень.
 
 public:
     /**
-     * @brief Default constructor, initializes the level to "0".
+     * @brief Конструктор по умолчанию, инициализирует уровень значением "0".
      */
     Level() { level = _T("0"); }
 
     /**
-     * @brief Parameterized constructor, initializes the level with the given string.
-     * @param tstr The level string to initialize.
+     * @brief Параметризованный конструктор, инициализирует уровень заданной строкой.
+     * @param tstr Строка уровня для инициализации.
      */
     Level(tstring & tstr) { level = tstr; }
 
     /**
-     * @brief Destructor for cleaning up the Level object.
+     * @brief Деструктор для очистки объекта Level.
      */
     ~Level() {}
 
     /**
-     * @brief Retrieves the current level string.
-     * @return The level string.
+     * @brief Получает текущую строку уровня.
+     * @return Строка уровня.
      */
     tstring & GetLevel() { return level; }
 
     /**
-     * @brief Sets the level to the specified string.
-     * @param tstr The string to set as the level.
+     * @brief Задает уровень указанной строкой.
+     * @param tstr Строка для установки в качестве уровня.
      */
     void SetLevel(tstring & tstr) { level = tstr; }
 
     /**
-     * @brief Compares the current level with another level.
-     * @param l The other level to compare.
-     * @return True if levels are equal, otherwise false.
+     * @brief Сравнивает текущий уровень с другим уровнем.
+     * @param l Другой уровень для сравнения.
+     * @return True, если уровни равны, иначе false.
      */
     bool compare(const Level& l) { return !level.compare(l.level); }
 };
 
 /**
  * @class EntityVariable
- * @brief Class representing a variable entity within a logical formula.
+ * @brief Класс, представляющий переменную сущность в логической формуле.
  *
- * The class is used to handle variables, including their types, labels, and indices, and provides methods for manipulation and comparison.
+ * Этот класс используется для обработки переменных, включая их типы, метки и индексы, а также предоставляет методы для манипуляции и сравнения.
  */
 class EntityVariable: public Level
 {
-    VariableType type; ///< Type of the variable (standard variable or set).
-    tstring label; ///< Label representing the variable.
-    tstring index; ///< Index for distinguishing different instances of the same variable.
-    tstring redefinition; ///< Redefinition of the variable (if any).
-    tstring text; ///< Textual representation of the variable.
+    VariableType type; ///< Тип переменной (стандартная переменная или множество).
+    tstring label; ///< Метка, представляющая переменную.
+    tstring index; ///< Индекс для различения разных экземпляров одной и той же переменной.
+    tstring redefinition; ///< Переопределение переменной (если необходимо).
+    tstring text; ///< Текстовое представление переменной.
 
 public:
     /**
-     * @brief Default constructor, initializes the variable with default values.
+     * @brief Конструктор по умолчанию, инициализирующий переменную значениями по умолчанию.
      */
     EntityVariable() { type = VARIABLE; label = _T("x"); index = _T(""); SetText(); }
 
     /**
-     * @brief Destructor for cleaning up the EntityVariable object.
+     * @brief Деструктор для очистки объекта EntityVariable.
      */
     ~EntityVariable() {}
 
     /**
-     * @brief Constructor with initialization parameters for variable type, label, and index.
-     * @param str The variable label.
-     * @param index_ The index of the variable.
-     * @param type_ The type of the variable (either VARIABLE or SET).
+     * @brief Конструктор с параметрами для инициализации типа переменной, метки и индекса.
+     * @param str Метка переменной.
+     * @param index_ Индекс переменной.
+     * @param type_ Тип переменной (либо VARIABLE, либо SET).
      */
     EntityVariable(const tstring & str, const tstring & index_, VariableType type_)
         { label = str; index = index_; type = type_; SetText(); }
 
     /**
-     * @brief Copy constructor to create a new EntityVariable from an existing one.
-     * @param ev The EntityVariable to copy.
+     * @brief Конструктор копирования для создания новой EntityVariable из существующей.
+     * @param ev EntityVariable, которую нужно скопировать.
      */
     EntityVariable(const EntityVariable & ev) {
         type = ev.type;
@@ -150,11 +150,11 @@ public:
     }
 
 #if defined(LIBXML_TREE_ENABLED) && defined(LIBXML_OUTPUT_ENABLED)
-    // XML serialization logic goes here if libxml2 is enabled.
+    // Логика сериализации XML здесь, если libxml2 включен.
 #else
     /**
-     * @brief Constructor from a variable item in the case where libxml2 is not used.
-     * @param vi The variable item to initialize from.
+     * @brief Конструктор из элемента переменной в случае, если libxml2 не используется.
+     * @param vi Элемент переменной для инициализации.
      */
     EntityVariable(const CVariableItem& vi);
 #endif
@@ -180,29 +180,27 @@ public:
 
 
 
-
-
 /**
- * Returns the text, considering redefinition if available.
- * If redefinition is set, it will return the redefined text,
- * otherwise, it will return the original text.
+ * Возвращает текст, учитывая переопределение, если оно доступно.
+ * Если переопределение установлено, вернет переопределенный текст,
+ * иначе вернет оригинальный текст.
  *
- * @return A pointer to the current text (either redefined or original).
+ * @return Указатель на текущий текст (либо переопределенный, либо оригинальный).
  */
 tstring * GetText() { if(redefinition.length() > 0) return &redefinition; else return &text; };
 
 /**
- * Returns the initial (original) text without considering redefinition.
+ * Возвращает начальный (оригинальный) текст, не учитывая переопределение.
  *
- * @return A pointer to the original text.
+ * @return Указатель на оригинальный текст.
  */
 tstring * GetInitialText() { return &text; };
 
 /**
- * Sets the text for the label and appends the index with special formatting.
- * This method combines the label with the formatted index, if any.
+ * Устанавливает текст для метки и добавляет индекс с специальным форматированием.
+ * Этот метод объединяет метку с отформатированным индексом, если он есть.
  *
- * @note The method does not currently append the index, as the code is commented out.
+ * @note Метод в настоящее время не добавляет индекс, так как код закомментирован.
  */
 void SetText()
 {
@@ -215,880 +213,868 @@ void SetText()
 };
 
 /**
- * Sets the redefinition text.
+ * Устанавливает текст переопределения.
  *
- * @param new_text The new text to set as redefinition.
+ * @param new_text Новый текст для установки в качестве переопределения.
  */
-void SetRedefinition(tstring & new_text) {redefinition = new_text; };
+void SetRedefinition(tstring & new_text) { redefinition = new_text; };
 
 /**
- * Returns the redefinition text.
+ * Возвращает текст переопределения.
  *
- * @return A reference to the redefinition text.
+ * @return Ссылка на текст переопределения.
  */
 tstring & GetRedefinition() { return redefinition; };
 
 /**
- * Compares the current variable with another one.
+ * Сравнивает текущую переменную с другой.
  *
- * @param ev The EntityVariable to compare with.
- * @return true if the variables are equal, false otherwise.
+ * @param ev EntityVariable для сравнения.
+ * @return true, если переменные равны, иначе false.
  */
 bool compare(const EntityVariable&);
 
 /**
- * Checks if the variable is set.
+ * Проверяет, является ли переменная множеством.
  *
- * @return true if the type is SET, false otherwise.
+ * @return true, если тип SET, иначе false.
  */
-bool isSet() { bool res = false; (type == SET) ? res=true : res = false; return res; };
+bool isSet() { bool res = false; (type == SET) ? res = true : res = false; return res; };
 
 /**
- * Checks if the variable is of type VARIABLE.
+ * Проверяет, является ли переменная типа VARIABLE.
  *
- * @return true if the type is VARIABLE, false otherwise.
+ * @return true, если тип VARIABLE, иначе false.
  */
-bool isVariable() { bool res; (type == VARIABLE) ? res=true : res=false; return res; };
+bool isVariable() { bool res; (type == VARIABLE) ? res = true : res = false; return res; };
 
 /**
- * Returns the label of the entity variable.
+ * Возвращает метку переменной сущности.
  *
- * @return A reference to the label.
+ * @return Ссылка на метку.
  */
 tstring & GetLabel() { return label; };
 
 /**
- * Returns the index of the entity variable.
+ * Возвращает индекс переменной сущности.
  *
- * @return A reference to the index.
+ * @return Ссылка на индекс.
  */
 tstring & GetIndex() { return index; };
 
 /**
- * Returns the type of the variable.
+ * Возвращает тип переменной.
  *
- * @return The type of the variable as a VariableType.
+ * @return Тип переменной как VariableType.
  */
 VariableType GetType() { return type; };
 
 /**
- * Sets the index of the entity variable.
+ * Устанавливает индекс переменной сущности.
  *
- * @param ind The new index to set.
+ * @param ind Новый индекс для установки.
  */
 void SetIndex(tstring & ind) { index = ind; };
 
 /**
- * Sets the label of the entity variable.
+ * Устанавливает метку переменной сущности.
  *
- * @param lab The new label to set.
+ * @param lab Новая метка для установки.
  */
 void SetLabel(tstring & lab) { label = lab; };
 
 /**
- * Sets the type of the entity variable.
+ * Устанавливает тип переменной сущности.
  *
- * @param type_ The new type to set.
+ * @param type_ Новый тип для установки.
  */
 void SetType(VariableType type_) { type = type_; };
 
 /**
- * Equality operator for comparing two EntityVariable objects.
+ * Оператор равенства для сравнения двух объектов EntityVariable.
  *
- * @param ev1 The first EntityVariable to compare.
- * @param ev2 The second EntityVariable to compare.
- * @return true if the variables are equal, false otherwise.
+ * @param ev1 Первая EntityVariable для сравнения.
+ * @param ev2 Вторая EntityVariable для сравнения.
+ * @return true, если переменные равны, иначе false.
  */
 bool operator == (EntityVariable& ev1, EntityVariable& ev2);
 
 /**
- * Represents an entity with free and linked variables, a description, and additional information.
- * Provides accessors for free and linked variables, as well as the text and description of the entity.
+ * Представляет сущность со свободными и связанными переменными, описанием и дополнительной информацией.
+ * Предоставляет методы для доступа к свободным и связанным переменным, а также к тексту и описанию сущности.
  */
 class EntityBase
 {
 protected:
-    vector <EntityVariable *> freeVariables;  ///< List of free variables.
-    vector <EntityVariable *> linkedVariables;  ///< List of linked variables.
-    tstring description;  ///< Description of the entity.
-    tstring addons;  ///< Addons related to the entity.
-    tstring label; ///< Label associated with the entity.
-    tstring text; ///< Text associated with the entity.
-    EntityBaseType type; ///< Type of the entity, from EntityBaseType enum.
-    tstring redefined_text; ///< Redefined text, if any.
-    bool redefined; ///< Flag indicating if the entity has been redefined.
-    EntityBase * replaced_base; ///< Pointer to the replaced base entity, or nullptr.
-    EntityVariable * initial_variable; ///< Initial variable, or nullptr.
-    EntityVariable * new_variable; ///< New variable, or nullptr.
+    vector <EntityVariable *> freeVariables;  ///< Список свободных переменных.
+    vector <EntityVariable *> linkedVariables;  ///< Список связанных переменных.
+    tstring description;  ///< Описание сущности.
+    tstring addons;  ///< Дополнения, связанные с сущностью.
+    tstring label; ///< Метка, связанная с сущностью.
+    tstring text; ///< Текст, связанный с сущностью.
+    EntityBaseType type; ///< Тип сущности по перечислению EntityBaseType.
+    tstring redefined_text; ///< Переопределенный текст, если таков имеется.
+    bool redefined; ///< Флаг, указывающий, было ли сущность переопределена.
+    EntityBase * replaced_base; ///< Указатель на замененную сущность, или nullptr.
+    EntityVariable * initial_variable; ///< Начальная переменная, или nullptr.
+    EntityVariable * new_variable; ///< Новая переменная, или nullptr.
 
 public:
     /**
-     * Default constructor for the EntityBase class.
+     * Конструктор по умолчанию для класса EntityBase.
      */
     EntityBase(void);
 
     /**
-     * Destructor for the EntityBase class.
+     * Деструктор для класса EntityBase.
      */
     ~EntityBase(void);
 
     /**
-     * Returns the list of free variables.
+     * Возвращает список свободных переменных.
      *
-     * @return A pointer to the vector of free variables.
+     * @return Указатель на вектор свободных переменных.
      */
     vector <EntityVariable *> * getFreeVariables() { return &freeVariables; };
 
     /**
-     * Returns the list of linked variables.
+     * Возвращает список связанных переменных.
      *
-     * @return A pointer to the vector of linked variables.
+     * @return Указатель на вектор связанных переменных.
      */
     vector <EntityVariable *> * getLinkedVariables() { return &linkedVariables; };
 
     /**
-     * Returns the text associated with the entity, considering redefinition if available.
+     * Возвращает текст, связанный с сущностью, учитывая переопределение, если оно имеется.
      *
-     * @return A reference to the current text (either redefined or original).
+     * @return Ссылка на текущий текст (либо переопределенный, либо оригинальный).
      */
     tstring & getText() { if(redefined_text.length() > 0) return redefined_text; else return text; };
 
     /**
-     * Returns the description of the entity.
+     * Возвращает описание сущности.
      *
-     * @return A pointer to the description string.
+     * @return Указатель на строку описания.
      */
     tstring * getDescription() { return &description; };
 
     /**
-     * Returns the addons related to the entity.
+     * Возвращает дополнения, связанные с сущностью.
      *
-     * @return A pointer to the addons string.
+     * @return Указатель на строку дополнений.
      */
     tstring * getAddOns() { return &addons; };
 
     /**
-     * Sets the text for the entity.
+     * Устанавливает текст для сущности.
      *
-     * @param lpctstr The text to set.
+     * @param lpctstr Текст для установки.
      */
     void SetText(LPCTSTR lpctstr);
 
     /**
-     * Sets the redefined text for the entity.
+     * Устанавливает переопределенный текст для сущности.
      *
-     * @param lpctstr The redefined text to set.
+     * @param lpctstr Переопределенный текст для установки.
      */
     //void SetIRedefinedText(LPCTSTR lpctstr) { redefined_text = lpctstr; };
 };
-
-
-
-
-
-
-
-
 /**
- * Sets the description of the entity.
+ * Устанавливает описание сущности.
  *
- * @param lpctstr The description text to set.
+ * @param lpctstr Текст описания для установки.
  */
 void SetDescription(LPCTSTR lpctstr) { description = lpctstr; };
 
 /**
- * Sets the addons for the entity.
+ * Устанавливает дополнения для сущности.
  *
- * @param lpctstr The addon text to set.
+ * @param lpctstr Текст дополнений для установки.
  */
 void SetAddons(LPCTSTR lpctstr) { addons = lpctstr; };
 
 /**
- * Returns a pointer to the label of the entity.
+ * Возвращает указатель на метку сущности.
  *
- * @return A pointer to the label string.
+ * @return Указатель на строку метки.
  */
 tstring * getLabel() { return &label; };
 
 /**
- * Returns a pointer to the initial text (before redefinition) of the entity.
+ * Возвращает указатель на начальный текст (до переопределения) сущности.
  *
- * @return A pointer to the initial text.
+ * @return Указатель на начальный текст.
  */
 tstring * getInitialText() { return &text; };
 
 /**
- * Returns a pointer to the redefined text of the entity.
+ * Возвращает указатель на переопределенный текст сущности.
  *
- * @return A pointer to the redefined text.
+ * @return Указатель на переопределенный текст.
  */
 tstring * getRedefinedText() { return &redefined_text; };
 
 /**
- * Returns the type of the entity, considering redefinition.
+ * Возвращает тип сущности, учитывая переопределение.
  *
- * @return The type of the entity (may return ATOMIC_FORMULA if redefined).
+ * @return Тип сущности (может вернуть ATOMIC_FORMULA, если переопределено).
  */
 EntityBaseType getType() { if ((type != FORMULA_SET) && isRedefined()) return ATOMIC_FORMULA; else return type; };
 
 /**
- * Returns the type of the entity if it has been replaced.
+ * Возвращает тип сущности, если она была заменена.
  *
- * @return The replaced type of the entity.
+ * @return Замененный тип сущности.
  */
 EntityBaseType getReplacedType();
 
 /**
- * Sets the type of the entity.
+ * Устанавливает тип сущности.
  *
- * @param type_ The new type to set.
+ * @param type_ Новый тип для установки.
  */
 void setType(EntityBaseType type_) { type = type_; };
 
 /**
- * Checks if the entity is a formula.
+ * Проверяет, является ли сущность формулой.
  *
- * @return true if the entity is a formula, false otherwise.
+ * @return true, если сущность является формулой, иначе false.
  */
 bool isFormula() { return ((type != FORMULA_SET) && !((type == REPLACE_VARIABLE) && (replaced_base != nullptr) && replaced_base->isSet())); };
 
 /**
- * Checks if the entity is a set.
+ * Проверяет, является ли сущность множеством.
  *
- * @return true if the entity is a set, false otherwise.
+ * @return true, если сущность является множеством, иначе false.
  */
 bool isSet() { bool res = false; ((type == FORMULA_SET) || ((type == REPLACE_VARIABLE) && (replaced_base != nullptr) && replaced_base->isSet())) ? res = true : res = false; return res; };
 
 /**
- * Checks if the entity is a subset.
+ * Проверяет, является ли сущность подмножеством.
  *
- * @return true if the entity is a subset, false otherwise.
+ * @return true, если сущность является подмножеством, иначе false.
  */
 bool isSubset() { if (type == SUBSET) return true; else return false; };
 
 /**
- * Checks if the entity has been redefined.
+ * Проверяет, было ли сущность переопределена.
  *
- * @return true if the entity is redefined, false otherwise.
+ * @return true, если сущность переопределена, иначе false.
  */
 bool isRedefined() { return redefined; };
 
 /**
- * Marks the entity as redefined.
+ * Помечает сущность как переопределенную.
  */
 void setRedefined() { redefined = true; };
 
 /**
- * Marks the entity as temporarily unredefined.
+ * Временно снимает пометку с сущности, что она переопределена.
  */
 void setTemporarilyUnredefined() { redefined = false; };
 
 /**
- * Sets the replacing entity, initial variable, and new variable for REPLACE_VARIABLE.
+ * Устанавливает заменяемую сущность, начальную переменную и новую переменную для REPLACE_VARIABLE.
  *
- * @param base_ The entity to replace.
- * @param initial_ The initial variable.
- * @param new_ The new variable.
+ * @param base_ Заменяемая сущность.
+ * @param initial_ Начальная переменная.
+ * @param new_ Новая переменная.
  */
 void SetReplacing(EntityBase * base_, EntityVariable * initial_, EntityVariable * new_);
 
 /**
- * Sets the replaced base entity.
+ * Устанавливает замененную базовую сущность.
  *
- * @param preplaced The entity to set as replaced.
+ * @param preplaced Сущность для установки в качестве замененной.
  */
 void setReplacedBase(EntityBase * preplaced) { replaced_base = preplaced; };
 
 /**
- * Returns the replaced base entity.
+ * Возвращает замененную базовую сущность.
  *
- * @return A pointer to the replaced base entity.
+ * @return Указатель на замененную базовую сущность.
  */
 EntityBase * getReplacedBase() { return replaced_base; };
 
 /**
- * Returns the initial variable associated with the entity.
+ * Возвращает начальную переменную, связанную с сущностью.
  *
- * @return A pointer to the initial variable.
+ * @return Указатель на начальную переменную.
  */
 EntityVariable * getInitialVariable() { return initial_variable; };
 
 /**
- * Returns the new variable associated with the entity.
+ * Возвращает новую переменную, связанную с сущностью.
  *
- * @return A pointer to the new variable.
+ * @return Указатель на новую переменную.
  */
 EntityVariable * getNewVariable() { return new_variable; };
 
 /**
- * Checks if the entity is part of a set group.
+ * Проверяет, является ли сущность частью группы множеств.
  *
- * @param pentities The vector of entities to check.
- * @return A SetGroup indicating the group the entity belongs to.
+ * @param pentities Вектор сущностей для проверки.
+ * @return SetGroup, указывающая группу, к которой принадлежит сущность.
  */
 SetGroup isPartOfSetGroup(vector <EntityBase *> * pentities);
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////
-//  Class Formula, representing a formula entity.
+//  Класс Formula, представляющий сущность формулы.
 class Formula: public EntityBase
 {
 private:
     /**
-     * Sets the subset text for the formula.
+     * Устанавливает текст для подмножества формулы.
      *
-     * @param entities The entities to include in the subset.
+     * @param entities Сущности, включенные в подмножество.
      */
     void SetSubsetText(vector <EntityBase *> * entities);
 
     /**
-     * Sets the subset label for the formula.
+     * Устанавливает метку для подмножества формулы.
      *
-     * @param entities The entities to include in the subset.
+     * @param entities Сущности, включенные в подмножество.
      */
     void SetSubsetLabel(vector <EntityBase *> * entities);
 
 protected:
-    Formula_Feature feature;  ///< Feature of the formula.
+    Formula_Feature feature;  ///< Характеристика формулы.
 
 public:
-    vector <ParentLink *> parents;  ///< List of parent links to other formulas.
-    vector <EntityVariable *> possibleVariables; ///< List of possible variables in the formula.
-    vector <Formula*> possibleFormulas; ///< List of possible formulas for further relationships.
+    vector <ParentLink *> parents;  ///< Список связей с другими формулами.
+    vector <EntityVariable *> possibleVariables; ///< Список возможных переменных в формуле.
+    vector <Formula*> possibleFormulas; ///< Список возможных формул для дальнейших отношений.
 
 public:
     /**
-     * Default constructor for the Formula class.
+     * Конструктор по умолчанию для класса Formula.
      */
     Formula(void);
 
     /**
-     * Destructor for the Formula class.
+     * Деструктор для класса Formula.
      */
     ~Formula(void);
 
     #if defined(LIBXML_TREE_ENABLED) && defined(LIBXML_OUTPUT_ENABLED)
     #else
     /**
-     * Constructor that initializes the formula from a CFormulaItem.
+     * Конструктор, инициализирующий формулу из CFormulaItem.
      *
-     * @param cfi The CFormulaItem to initialize the formula.
+     * @param cfi CFormulaItem для инициализации формулы.
      */
     Formula(const CFormulaItem& );
     #endif
 };
 /**
- * Unsets the free variables in the formula.
+ * Сбрасывает свободные переменные в формуле.
  *
- * This function clears and unsets all the variables that are no longer needed in the
- * current context and adds them to the unset list.
+ * Эта функция очищает и сбрасывает все переменные, которые больше не нужны в текущем контексте,
+ * и добавляет их в список сброшенных переменных.
  *
- * @param unset A reference to the vector where the unset variables are added.
+ * @param unset Вектор, куда добавляются сброшенные переменные.
  */
 void unsetFreeVariables(vector <EntityVariable *> * unset);
 
 /**
- * Gets the feature of the formula.
+ * Возвращает характеристику формулы.
  *
- * This method returns the current feature of the formula, which was set during its
- * creation or modification.
+ * Этот метод возвращает текущую характеристику формулы, которая была установлена во время ее создания или изменения.
  *
- * @return The feature of the formula.
+ * @return Характеристика формулы.
  */
 Formula_Feature getFeature() { return feature; };
 
 /**
- * Sets a new feature for the formula.
+ * Устанавливает новую характеристику для формулы.
  *
- * This method allows changing the formula's feature, which might be necessary when
- * modifying the formula's structure.
+ * Этот метод позволяет изменить характеристику формулы, что может потребоваться при изменении структуры формулы.
  *
- * @param feature_ The new feature to set for the formula.
+ * @param feature_ Новая характеристика для установки.
  */
 void setFeature(Formula_Feature feature_) { feature = feature_; };
 
 /**
- * Gets the quantifier prefix for the formula.
+ * Возвращает префикс квантора для формулы.
  *
- * The quantifier prefix is used to denote the type of quantifier in the formula,
- * and it may be required when processing or transforming the formula.
+ * Префикс квантора используется для обозначения типа квантора в формуле,
+ * и он может быть необходим при обработке или преобразовании формулы.
  *
- * @return A pointer to the quantifier prefix string.
+ * @return Указатель на строку префикса квантора.
  */
 tstring * getQuantifierPrefix() { return &quantifierPrefix; };
 
 /**
- * Joins all formulas of a specified type from a list of entities.
+ * Объединяет все формулы указанного типа из списка сущностей.
  *
- * This function processes all entities of the given type and combines them into
- * a single formula, which is returned as a result.
+ * Эта функция обрабатывает все сущности данного типа и объединяет их в одну формулу,
+ * которая возвращается в виде результата.
  *
- * @param entities A pointer to the list of entities to process.
- * @param type The type of the entities to join.
+ * @param entities Указатель на список сущностей для обработки.
+ * @param type Тип сущностей для объединения.
  */
 friend void joinAllFormulas(vector <EntityBase *> * entities, EntityBaseType type);
 
 /**
- * Joins two formulas of a specified type from a list of entities.
+ * Объединяет две формулы указанного типа из списка сущностей.
  *
- * This function processes two formulas of the specified type, merging them into
- * a single formula, and returns the result.
+ * Эта функция обрабатывает две формулы указанного типа, объединяя их в одну формулу,
+ * и возвращает результат.
  *
- * @param entities A pointer to the list of entities to process.
- * @param type The type of the entities to join.
- * @param first The first formula to combine.
- * @param second The second formula to combine.
- * @return A pointer to the new combined formula.
+ * @param entities Указатель на список сущностей для обработки.
+ * @param type Тип сущностей для объединения.
+ * @param first Первая формула для объединения.
+ * @param second Вторая формула для объединения.
+ * @return Указатель на новую объединенную формулу.
  */
 friend Formula * joinFormula(vector <EntityBase *> * entities, EntityBaseType type, Formula * first, Formula * second);
 
 /**
- * Processes the quantifier formula of a specified type.
+ * Обрабатывает формулу квантора указанного типа.
  *
- * This function generates the quantifier formula by processing the entities and
- * their respective types, taking into account free variables.
+ * Эта функция генерирует формулу квантора, обрабатывая сущности и
+ * их типы, принимая во внимание свободные переменные.
  *
- * @param entities A pointer to the list of entities to process.
- * @param type The type of quantifier to process.
+ * @param entities Указатель на список сущностей для обработки.
+ * @param type Тип квантора для обработки.
  */
 void quantifierFormula(vector <EntityBase *> * entities, EntityBaseType type);
-
 /**
- * Sets an atomic formula using two entity variables.
+ * Устанавливает атомарную формулу, используя две переменные сущности.
  *
- * This function sets a simple atomic formula using the provided variables, which
- * are processed and transformed accordingly.
+ * Эта функция устанавливает простую атомарную формулу, используя предоставленные переменные,
+ * которые обрабатываются и преобразуются соответствующим образом.
  *
- * @param ev1 The first entity variable to use in the atomic formula.
- * @param ev2 The second entity variable to use in the atomic formula.
+ * @param ev1 Первая переменная сущности для использования в атомарной формуле.
+ * @param ev2 Вторая переменная сущности для использования в атомарной формуле.
  */
 void setAtomFormula(const EntityVariable & ev1, const EntityVariable & ev2);
 
 /**
- * Sets an atomic formula using two entity variables, and processes the entities.
+ * Устанавливает атомарную формулу, используя две переменные сущности и обрабатывая сущности.
  *
- * This function processes a list of entities and sets the atomic formula based
- * on the provided variables, returning true if the operation was successful.
+ * Эта функция обрабатывает список сущностей и устанавливает атомарную формулу на основе
+ * предоставленных переменных, возвращая true, если операция была успешной.
  *
- * @param entities A pointer to the list of entities to process.
- * @param ev1 The first entity variable to use in the atomic formula.
- * @param ev2 The second entity variable to use in the atomic formula.
- * @return True if the formula was set successfully, otherwise false.
+ * @param entities Указатель на список сущностей для обработки.
+ * @param ev1 Первая переменная сущности для использования в атомарной формуле.
+ * @param ev2 Вторая переменная сущности для использования в атомарной формуле.
+ * @return True, если формула была успешно установлена, иначе false.
  */
 bool setAtomFormula(vector <EntityBase *> * entities, const EntityVariable & ev1, const EntityVariable & ev2);
 
 /**
- * Sets a quantifier formula with a free variable and returns the new formula.
+ * Устанавливает формулу квантора со свободной переменной и возвращает новую формулу.
  *
- * This function generates a quantifier formula based on the list of entities,
- * the quantifier type, and the free variable. It returns the resulting formula.
+ * Эта функция генерирует формулу квантора на основе списка сущностей, типа квантора и свободной переменной.
+ * Возвращает результирующую формулу.
  *
- * @param entities A pointer to the list of entities to process.
- * @param type The type of quantifier.
- * @param freeVariable A pointer to the free variable.
- * @return A pointer to the generated quantifier formula.
+ * @param entities Указатель на список сущностей для обработки.
+ * @param type Тип квантора.
+ * @param freeVariable Указатель на свободную переменную.
+ * @return Указатель на сгенерированную формулу квантора.
  */
 Formula* quantifierFormula(vector <EntityBase *> * entities, EntityBaseType type, EntityVariable * freeVariable);
 
 /**
- * Creates a quantifier formula with a free variable and returns the result.
+ * Создает формулу квантора со свободной переменной и возвращает результат.
  *
- * This function generates and returns a quantifier formula, taking into account
- * the type of quantifier and the free variable provided.
+ * Эта функция генерирует и возвращает формулу квантора, учитывая тип квантора и предоставленную свободную переменную.
  *
- * @param type The type of quantifier.
- * @param freeVariable A pointer to the free variable.
- * @return A pointer to the quantifier formula.
+ * @param type Тип квантора.
+ * @param freeVariable Указатель на свободную переменную.
+ * @return Указатель на формулу квантора.
  */
 Formula* quantifierFormula(EntityBaseType type, EntityVariable * freeVariable);
 
 /**
- * Joins all formulas of a specified type from the entities.
+ * Объединяет все формулы указанного типа из списка сущностей.
  *
- * This function processes all entities of the given type and combines them into
- * a single formula, which is returned as the result.
+ * Эта функция обрабатывает все сущности данного типа и объединяет их в одну формулу,
+ * которая возвращается в виде результата.
  *
- * @param entities A pointer to the list of entities to process.
- * @param type The type of entities to join.
+ * @param entities Указатель на список сущностей для обработки.
+ * @param type Тип сущностей для объединения.
  */
 friend void quantifierAllFormulas(vector <EntityBase *> * entities, EntityBaseType type);
 
 /**
- * Applies a negative operation to all formulas in the list of entities.
+ * Применяет операцию отрицания ко всем формулам в списке сущностей.
  *
- * This function processes all formulas in the provided entities and applies a
- * negation operation to each one.
+ * Эта функция обрабатывает все формулы в предоставленных сущностях и применяет
+ * операцию отрицания к каждой из них.
  *
- * @param entities A pointer to the list of entities to process.
+ * @param entities Указатель на список сущностей для обработки.
  */
 friend void negativeAllFormulas(vector <EntityBase *> * entities);
 
 /**
- * Applies a negation operation to the formula.
+ * Применяет операцию отрицания к формуле.
  *
- * This function negates the formula and returns the result.
+ * Эта функция выполняет отрицание формулы и возвращает результат.
  *
- * @param entities A pointer to the list of entities to process.
- * @return A pointer to the negated formula.
+ * @param entities Указатель на список сущностей для обработки.
+ * @return Указатель на отрицательную формулу.
  */
-Formula*  negativeFormula(vector <EntityBase *> * entities);
+Formula* negativeFormula(vector <EntityBase *> * entities);
 
 /**
- * Applies a negation operation to a specific formula within the list of entities.
+ * Применяет операцию отрицания к определенной формуле внутри списка сущностей.
  *
- * This function applies negation to a specific formula in the list, identified by
- * the provided index, and returns the result.
+ * Эта функция применяет отрицание к определенной формуле в списке, идентифицированной
+ * предоставленным индексом, и возвращает результат.
  *
- * @param entities A pointer to the list of entities to process.
- * @param i The index of the formula to negate.
- * @return A pointer to the negated formula.
+ * @param entities Указатель на список сущностей для обработки.
+ * @param i Индекс формулы для отрицания.
+ * @return Указатель на отрицательную формулу.
  */
-Formula*  negativeFormula(vector <EntityBase *> * entities, int i);
+Formula* negativeFormula(vector <EntityBase *> * entities, int i);
 
 /**
- * Determines if the formula belongs to a specific predicate.
+ * Определяет, принадлежит ли формула определенному предикату.
  *
- * This function checks whether the given formula belongs to the specified predicate
- * and returns true if it does, otherwise false.
+ * Эта функция проверяет, принадлежит ли данная формула указанному предикату,
+ * и возвращает true, если это так, иначе false.
  *
- * @param entities A pointer to the list of entities to process.
- * @param parent A pointer to the parent formula.
- * @param set A pointer to the formula set.
- * @param ptvars Optional pointer to a string containing predicate variables.
- * @return True if the formula belongs to the predicate, otherwise false.
+ * @param entities Указатель на список сущностей для обработки.
+ * @param parent Указатель на основную формулу.
+ * @param set Указатель на набор формул.
+ * @param ptvars Необязательный указатель на строку, содержащую переменные предиката.
+ * @return True, если формула принадлежит предикату, иначе false.
  */
 bool predicateBelonging(vector <EntityBase *> * entities, Formula * parent, FormulaSet * set, tstring * ptvars = nullptr);
 
 /**
- * Sets the predicate text for a given formula.
+ * Устанавливает текст предиката для заданной формулы.
  *
- * This function assigns a textual representation for the predicate associated with
- * the parent formula.
+ * Эта функция назначает текстовое представление для предиката, связанного с
+ * основной формулой.
  *
- * @param parent A pointer to the parent formula.
- * @param ptvars A pointer to a string containing predicate variables.
+ * @param parent Указатель на основную формулу.
+ * @param ptvars Указатель на строку, содержащую переменные предиката.
  */
 void SetPredicateText(Formula * parent, tstring * ptvars);
 
 /**
- * Sets the predicate text for the given formula set.
+ * Устанавливает текст предиката для заданного набора формул.
  *
- * This function generates and assigns the text representation for the predicate
- * of the formula set.
+ * Эта функция генерирует и назначает текстовое представление для предиката
+ * набора формул.
  *
- * @param set_text The text representation of the predicate.
+ * @param set_text Текстовое представление предиката.
  */
 void SetPredicateText(tstring & set_text);
 
 /**
- * Sets the subset text for the given formula set.
+ * Устанавливает текст подмножества для заданного набора формул.
  *
- * This function generates and assigns the text representation for the subset
- * of the formula set.
+ * Эта функция генерирует и назначает текстовое представление для подмножества
+ * набора формул.
  *
- * @param set_text The text representation of the subset.
+ * @param set_text Текстовое представление подмножества.
  */
 void SetSubsetText(tstring & set_text);
 
 /**
- * Determines if the formula belongs to a specified subset.
+ * Определяет, принадлежит ли формула заданному подмножеству.
  *
- * This function checks whether the formula belongs to the given set and
- * returns the result.
+ * Эта функция проверяет, принадлежит ли формула заданному множеству, и
+ * возвращает результат.
  *
- * @param entities A pointer to the list of entities to process.
- * @param set A pointer to the formula set.
- * @param variables A pointer to the list of variables.
- * @return True if the formula belongs to the subset, otherwise false.
+ * @param entities Указатель на список сущностей для обработки.
+ * @param set Указатель на набор формул.
+ * @param variables Указатель на список переменных.
+ * @return True, если формула принадлежит подмножеству, иначе false.
  */
 bool subset(vector <EntityBase *> * entities, FormulaSet * set, vector <EntityVariable *> * variables);
 
 /**
- * Checks if the formula is atomic.
+ * Проверяет, является ли формула атомарной.
  *
- * This function checks whether the current formula is atomic.
+ * Эта функция проверяет, является ли текущая формула атомарной.
  *
- * @return True if the formula is atomic, otherwise false.
+ * @return True, если формула является атомарной, иначе false.
  */
 bool isAtom() { return (type == ATOMIC_FORMULA); };
 
 /**
- * Checks if the formula is a negation.
+ * Проверяет, является ли формула отрицанием.
  *
- * This function checks if the current formula is a negation operation.
+ * Эта функция проверяет, является ли текущая формула операцией отрицания.
  *
- * @return True if the formula is a negation, otherwise false.
+ * @return True, если формула является отрицанием, иначе false.
  */
 bool isNegative() { if( isRedefined()) return false; else return (type == NEGATIVE_OPERATION); };
 
 /**
- * Checks if the formula is a quantifier.
+ * Проверяет, является ли формула квантором.
  *
- * This function checks if the current formula is a quantifier operation.
+ * Эта функция проверяет, является ли текущая формула операцией квантора.
  *
- * @return True if the formula is a quantifier, otherwise false.
+ * @return True, если формула является квантором, иначе false.
  */
 bool isQuantifier() { if( isRedefined()) return false; else if((type == QUANTIFIER1_OPERATION) || (type == QUANTIFIER2_OPERATION)) return true; return false; };
 
 /**
- * Checks if the formula represents a belonging predicate.
+ * Проверяет, представляет ли формула предикат принадлежности.
  *
- * This function checks if the current formula represents a belonging predicate.
+ * Эта функция проверяет, представляет ли текущая формула предикат принадлежности.
  *
- * @return True if the formula is a belonging predicate, otherwise false.
+ * @return True, если формула является предикатом принадлежности, иначе false.
  */
 bool isBelongingPredicate() { return (type == BELONGING_PREDICATE); };
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////
-//  class FormulaSet - Represents a set of formulas, potentially nested, with variable-based and set-based properties
+//  Класс FormulaSet - Представляет набор формул, потенциально вложенных, с переменными и свойствами на основе множеств
 //
+
 class FormulaSet : public EntityBase //, public Level
 {
 private:
-    Formula *formula;               ///< Pointer to the parent Formula object
-    FormulaSet *set;                ///< Pointer to a nested FormulaSet object
-    vector <EntityVariable *> baseVariables;  ///< List of base variables for the FormulaSet
-    EntityVariable *pnaming;        ///< Variable representing the naming of the FormulaSet
+    Formula *formula;               ///< Указатель на основную формулу
+    FormulaSet *set;                ///< Указатель на вложенный набор формул
+    vector<EntityVariable *> baseVariables;  ///< Список базовых переменных для набора формул
+    EntityVariable *pnaming;        ///< Переменная, представляющая наименование набора формул
 
 public:
     /**
-     * @brief Default constructor for FormulaSet
+     * @brief Конструктор по умолчанию для FormulaSet
      */
     FormulaSet(void);
 
     /**
-     * @brief Destructor for FormulaSet
+     * @brief Деструктор для FormulaSet
      */
     ~FormulaSet(void);
 
     /**
-     * @brief Constructor to initialize FormulaSet with a parent Formula, a list of variables, and a naming variable.
-     * @param parent Pointer to the parent Formula
-     * @param variables Pointer to a vector of EntityVariable objects
-     * @param naming Pointer to the naming EntityVariable
+     * @brief Конструктор для инициализации FormulaSet с родительской формулой, списком переменных и переменной наименования.
+     * @param parent Указатель на родительскую формулу
+     * @param variables Указатель на вектор объектов EntityVariable
+     * @param naming_ Указатель на переменную наименования EntityVariable
      */
-    FormulaSet(Formula *parent, vector <EntityVariable *> *variables, EntityVariable *naming_);
+    FormulaSet(Formula *parent, vector<EntityVariable *> *variables, EntityVariable *naming_);
 
 #if defined(LIBXML_TREE_ENABLED) && defined(LIBXML_OUTPUT_ENABLED)
-    // Additional constructors can be added here for XML-based initialization
+    // Здесь можно добавить дополнительные конструкторы для инициализации на основе XML
 #else
     /**
-     * @brief Constructor that initializes FormulaSet from an XML item.
-     * @param item The XML item representing the FormulaSet
+     * @brief Конструктор, который инициализирует FormulaSet из элемента XML.
+     * @param item Элемент XML, представляющий FormulaSet
      */
     FormulaSet(const CSetItem& item);
 #endif
 
     /**
-     * @brief Sets the text for the FormulaSet.
+     * @brief Устанавливает текст для FormulaSet.
      */
     void setText();
 
     /**
-     * @brief Sets the text for the FormulaSet using the provided variable string.
-     * @param tvars String representing the variables to use in the text.
+     * @brief Устанавливает текст для FormulaSet, используя предоставленную строку переменных.
+     * @param tvars Строка, представляющая переменные для использования в тексте.
      */
     void setText(tstring tvars);
 
     /**
-     * @brief Sets the text for the FormulaSet from a list of EntityBase objects.
-     * @param entities Pointer to a vector of EntityBase objects.
+     * @brief Устанавливает текст для FormulaSet из списка объектов EntityBase.
+     * @param entities Указатель на вектор объектов EntityBase.
      */
-    void setText(vector <EntityBase *> *entities);
+    void setText(vector<EntityBase *> *entities);
 
     /**
-     * @brief Gets the parent Formula of the FormulaSet.
-     * @return Pointer to the parent Formula object.
+     * @brief Получает родительскую формулу для FormulaSet.
+     * @return Указатель на объект родительской формулы.
      */
     Formula *getParentFormula() { return formula; }
 
     /**
-     * @brief Sets the parent Formula of the FormulaSet.
-     * @param parent Pointer to the parent Formula object.
+     * @brief Устанавливает родительскую формулу для FormulaSet.
+     * @param parent Указатель на объект родительской формулы.
      */
     void setParentFormula(Formula *parent) { formula = parent; }
 
     /**
-     * @brief Sets a label for the FormulaSet using a list of entities.
-     * @param entities Pointer to a vector of EntityBase objects.
+     * @brief Устанавливает метку для FormulaSet, используя список сущностей.
+     * @param entities Указатель на вектор объектов EntityBase.
      */
-    void SetLabel(vector <EntityBase *> *entities);
+    void SetLabel(vector<EntityBase *> *entities);
 
     /**
-     * @brief Checks if the FormulaSet is based on variables.
-     * @return True if based on variables, false otherwise.
+     * @brief Проверяет, основан ли FormulaSet на переменных.
+     * @return True если основан на переменных, иначе false.
      */
     bool isVariableBased();
 
     /**
-     * @brief Checks if the FormulaSet is based on other sets.
-     * @return True if based on sets, false otherwise.
+     * @brief Проверяет, основан ли FormulaSet на других множествах.
+     * @return True если основан на множествах, иначе false.
      */
     bool isSetBased();
 
     /**
-     * @brief Gets the list of base variables for the FormulaSet.
-     * @return Pointer to the vector of base variables.
+     * @brief Получает список базовых переменных для FormulaSet.
+     * @return Указатель на вектор базовых переменных.
      */
-    vector <EntityVariable *> *getBaseVariables() { return &baseVariables; }
+    vector<EntityVariable *> *getBaseVariables() { return &baseVariables; }
 
     /**
-     * @brief Gets the naming variable for the FormulaSet.
-     * @return Pointer to the naming EntityVariable.
+     * @brief Получает переменную для наименования FormulaSet.
+     * @return Указатель на переменную наименования EntityVariable.
      */
     EntityVariable *getNaming() { return pnaming; }
 
     /**
-     * @brief Sets the naming variable for the FormulaSet.
-     * @param pev Pointer to the EntityVariable to set as the naming variable.
+     * @brief Устанавливает переменную для наименования FormulaSet.
+     * @param pev Указатель на объект EntityVariable для установки в качестве переменной наименования.
      */
     void setNaming(EntityVariable *pev) { pnaming = pev; }
 
     /**
-     * @brief Checks if the FormulaSet is an exclusion formula.
-     * @param parent Pointer to the parent Formula.
-     * @return True if the FormulaSet is an exclusion, false otherwise.
+     * @brief Проверяет, является ли FormulaSet формулой исключения.
+     * @param parent Указатель на родительскую формулу.
+     * @return True если FormulaSet является исключением, иначе false.
      */
     bool isExclusion(Formula *parent);
 
     /**
-     * @brief Processes exclusion for the FormulaSet.
-     * @param parent Pointer to the parent Formula.
-     * @param variables Pointer to a vector of variables.
-     * @param tvars String to store text variables.
-     * @param tlevel String to store the text level.
-     * @param produceText Boolean flag to determine if text should be produced (default is true).
+     * @brief Обрабатывает исключение для FormulaSet.
+     * @param parent Указатель на родительскую формулу.
+     * @param variables Указатель на вектор переменных.
+     * @param tvars Строка для хранения текстовых переменных.
+     * @param tlevel Строка для хранения уровня текста.
+     * @param produceText Логический флаг для определения, следует ли генерировать текст (по умолчанию true).
      */
-    void proccessExclusion(Formula *parent, vector <EntityVariable *> *variables, tstring &tvars, tstring &tlevel, bool produceText = TRUE);
+    void proccessExclusion(Formula *parent, vector<EntityVariable *> *variables, tstring &tvars, tstring &tlevel, bool produceText = TRUE);
 };
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////
-//  class Tuple - Represents a tuple of variables within a formula
+//  Класс Tuple - Представляет кортеж переменных в формуле
 //
 class Tuple: public Formula
 {
 private:
-    int level;  ///< Level associated with the Tuple
+    int level;  ///< Уровень, связанный с кортежем
 
 public:
     /**
-     * @brief Default constructor for Tuple
+     * @brief Конструктор по умолчанию для Tuple
      */
     Tuple(void);
 
     /**
-     * @brief Constructor to create a Tuple with a set of EntityVariables.
-     * @param ev1 First EntityVariable
-     * @param set The set EntityVariable
+     * @brief Конструктор для создания кортежа с набором переменных EntityVariable.
+     * @param ev1 Первая переменная сущности
+     * @param set Набор переменных EntityVariable
      */
     Tuple(EntityVariable &ev1, EntityVariable &set);
 
     /**
-     * @brief Constructor to create a Tuple with two EntityVariables and a set.
-     * @param ev1 First EntityVariable
-     * @param ev2 Second EntityVariable
-     * @param set The set EntityVariable
+     * @brief Конструктор для создания кортежа с двумя переменными EntityVariable и набором.
+     * @param ev1 Первая переменная сущности
+     * @param ev2 Вторая переменная сущности
+     * @param set Набор переменных EntityVariable
      */
     Tuple(EntityVariable &ev1, EntityVariable &ev2, EntityVariable &set);
 
     /**
-     * @brief Constructor to create a Tuple from a vector of EntityVariables and a set.
-     * @param pev Pointer to a vector of EntityVariables
-     * @param set The set EntityVariable
+     * @brief Конструктор для создания кортежа из вектора переменных EntityVariable и набора.
+     * @param pev Указатель на вектор переменных EntityVariable
+     * @param set Набор переменных EntityVariable
      */
-    Tuple(vector <EntityVariable *> *pev, EntityVariable &set);
+    Tuple(vector<EntityVariable *> *pev, EntityVariable &set);
 
     /**
-     * @brief Constructor to create a Tuple from a CFormulaItem.
-     * @param fi The CFormulaItem to initialize the Tuple.
+     * @brief Конструктор для создания кортежа из CFormulaItem.
+     * @param fi CFormulaItem для инициализации кортежа.
      */
     Tuple(const CFormulaItem& fi);
 
     /**
-     * @brief Destructor for Tuple
+     * @brief Деструктор для Tuple
      */
     ~Tuple(void);
 
     /**
-     * @brief Sets the level for the Tuple.
-     * @param l The level to set.
+     * @brief Устанавливает уровень для Tuple.
+     * @param l Уровень для установки.
      */
     void SetLevel(int l) { level = l; }
 
     /**
-     * @brief Sets the text for the Tuple based on the provided variables.
-     * @param depending Pointer to a vector of EntityVariables (optional)
-     * @param ptvars Pointer to a string of variables (optional)
+     * @brief Устанавливает текст для Tuple на основе предоставленных переменных.
+     * @param depending Указатель на вектор переменных EntityVariable (опционально)
+     * @param ptvars Указатель на строку переменных (опционально)
      */
-    void SetTupleText(vector <EntityVariable *> *depending = nullptr, tstring *ptvars = nullptr);
+    void SetTupleText(vector<EntityVariable *> *depending = nullptr, tstring *ptvars = nullptr);
 
     /**
-     * @brief Sets the text for the Tuple directly from a string.
-     * @param tstr The text to set.
+     * @brief Устанавливает текст для Tuple напрямую из строки.
+     * @param tstr Текст для установки.
      */
     void SetTupleText(tstring &tstr) { text = tstr; }
 
     /**
-     * @brief Sets the label for the Tuple from a string.
-     * @param tstr The label string to set.
+     * @brief Устанавливает метку для Tuple из строки.
+     * @param tstr Строка метки для установки.
      */
     void SetTupleLabel(tstring &tstr) { label = tstr; }
 
     /**
-     * @brief Compares the Tuple to an EntityVariable.
-     * @param ev The EntityVariable to compare with.
-     * @return True if the Tuple matches the EntityVariable, false otherwise.
+     * @brief Сравнивает Tuple с переменной EntityVariable.
+     * @param ev Переменная EntityVariable для сравнения.
+     * @return True если Tuple соответствует переменной EntityVariable, иначе false.
      */
     bool compare(const EntityVariable& ev);
 };
 
-// Auxiliary functions
+// Вспомогательные функции
 
 /**
- * @brief Compares two EntityVariables to determine their order in a binary search.
- * @param ev The first EntityVariable
- * @param evcomp The second EntityVariable
- * @return True if ev is less than evcomp, false otherwise.
+ * @brief Сравнивает две переменные EntityVariable для определения их порядка в бинарном поиске.
+ * @param ev Первая переменная EntityVariable
+ * @param evcomp Вторая переменная EntityVariable
+ * @return True если ev меньше чем evcomp, иначе false.
  */
 bool myentity_compare(EntityVariable *ev, EntityVariable *evcomp);
 
 /**
- * @brief Checks if a variable exists based on its symbol and index in a list of entities.
- * @param symbol The symbol of the variable
- * @param index The index of the variable
- * @param entities Pointer to a vector of EntityBase objects
- * @return True if the variable exists, false otherwise.
+ * @brief Проверяет существование переменной на основе её символа и индекса в списке сущностей.
+ * @param symbol Символ переменной
+     * @param index Индекс переменной
+ * @param entities Указатель на список объектов EntityBase
+ * @return True если переменная существует, иначе false.
  */
-bool isExistVariable(tstring &symbol, tstring &index, vector <EntityBase *> *entities);
+bool isExistVariable(tstring &symbol, tstring &index, vector<EntityBase *> *entities);
 
 /**
- * @brief Checks if a naming variable exists based on its symbol and index in a list of entities.
- * @param symbol The symbol of the naming variable
- * @param index The index of the naming variable
- * @param entities Pointer to a vector of EntityBase objects
- * @return True if the naming variable exists, false otherwise.
+ * @brief Проверяет существование переменной наименования на основе её символа и индекса в списке сущностей.
+ * @param symbol Символ переменной наименования
+ * @param index Индекс переменной наименования
+ * @param entities Указатель на список объектов EntityBase
+ * @return True если переменная наименования существует, иначе false.
  */
-bool isExistNaming(tstring &symbol, tstring &index, vector <EntityBase *> *entities);
+bool isExistNaming(tstring &symbol, tstring &index, vector<EntityBase *> *entities);
 
 /**
- * @brief Checks if a FormulaSet exists based on its symbol and index in a list of entities.
- * @param symbol The symbol of the FormulaSet
- * @param index The index of the FormulaSet
- * @param entities Pointer to a vector of EntityBase objects
- * @return Pointer to the matching FormulaSet if it exists, nullptr otherwise.
+ * @brief Проверяет существование FormulaSet на основе её символа и индекса в списке сущностей.
+ * @param symbol Символ FormulaSet
+ * @param index Индекс FormulaSet
+ * @param entities Указатель на список объектов EntityBase
+ * @return Указатель на совпадающий FormulaSet если он существует, иначе nullptr.
  */
-FormulaSet *isExistFormulaSet(tstring &symbol, tstring &index, vector <EntityBase *> *entities);
+FormulaSet *isExistFormulaSet(tstring &symbol, tstring &index, vector<EntityBase *> *entities);
 
 /**
- * @brief Checks if the given text represents a variable part of a label.
- * @param text The text to check
- * @return True if the text is a valid variable part of a label, false otherwise.
+ * @brief Проверяет, представляет ли данный текст переменную в метке.
+ * @param text Текст для проверки
+ * @return True если текст является допустимой переменной в метке, иначе false.
  */
 bool isTextOfVariable(tstring &text);
 
 /**
- * @brief Creates a variable part of a label based on a vector of entities.
- * @param entities Pointer to a vector of EntityBase objects
- * @param base The EntityBase representing the base of the label
- * @return The string representing the variable part of the label.
+ * @brief Создает переменную в метке на основе вектора сущностей.
+ * @param entities Указатель на вектор объектов EntityBase
+ * @param base Объект EntityBase, представляющий основу метки
+ * @return Строка, представляющая переменную в метке.
  */
-tstring makeVarPartOfLabel(vector <EntityBase *> *entities, EntityBase *base);
-
+tstring makeVarPartOfLabel(vector<EntityBase *> *entities, EntityBase *base);

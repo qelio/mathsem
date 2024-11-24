@@ -1,11 +1,11 @@
 /**
  * @class SetDialog
- * @brief This class represents the dialog for setting operations on sets.
+ * @brief Этот класс представляет диалог для выполнения операций с множествами.
  *
- * It is associated with the IDD_SETDIALOG resource and allows users to perform operations related to sets,
- * such as displaying and managing sets and variables.
- * The class also provides functionality for interacting with set elements, like checking set memberships or
- * creating subsets.
+ * Он связан с ресурсом IDD_SETDIALOG и позволяет пользователям выполнять операции, связанные с множествами,
+ * такие как отображение и управление множествами и переменными.
+ * Класс также предоставляет функции для взаимодействия с элементами множества, такие как проверка принадлежности к множеству
+ * или создание подмножеств.
  */
 class SetDialog : public CDialogEx
 {
@@ -13,32 +13,32 @@ class SetDialog : public CDialogEx
 
     /**
      * @var entities
-     * @brief A pointer to a vector of EntityBase objects, used for manipulating the data associated with sets.
-     * This is passed from other parts of the application to provide the relevant entities for the dialog operations.
+     * @brief Указатель на вектор объектов EntityBase, используемый для манипулирования данными, связанными с множествами.
+     * Передается из других частей приложения для обеспечения соответствующих сущностей для операций в диалоге.
      */
 	vector <EntityBase *> * entities;
 
 public:
 	/**
-	 * @brief Default constructor for the SetDialog class.
-	 * @param pParent The parent window for the dialog (optional).
+	 * @brief Конструктор по умолчанию для класса SetDialog.
+	 * @param pParent Родительское окно для диалога (необязательно).
 	 */
 	SetDialog(CWnd* pParent = NULL);
 
 	/**
-	 * @brief Destructor for the SetDialog class.
+	 * @brief Деструктор для класса SetDialog.
 	 */
 	virtual ~SetDialog();
 
 	/** @enum IDD
-	 * @brief The ID for this dialog's resource, used by the dialog system.
+	 * @brief Идентификатор ресурса для этого диалога, используемый системой диалога.
 	 */
 	enum { IDD = IDD_SETDIALOG };
 
 protected:
 	/**
-	 * @brief Exchanges data between the dialog and the associated variables.
-	 * @param pDX Pointer to the data exchange object.
+	 * @brief Обмен данными между диалогом и связанными с ним переменными.
+	 * @param pDX Указатель на объект обмена данными.
 	 */
 	virtual void DoDataExchange(CDataExchange* pDX);
 
@@ -47,136 +47,136 @@ protected:
 public:
 	/**
 	 * @var m_list
-	 * @brief A list box control for displaying a list of elements in a set.
+	 * @brief Элемент управления списком для отображения списка элементов в множестве.
 	 */
 	ScientificListBox m_list;
 
 	/**
 	 * @var m_fIndexes
-	 * @brief Font object for indexing the list elements.
+	 * @brief Объект шрифта для индексации элементов списка.
 	 */
 	CFont * m_fIndexes;
 
 	/**
 	 * @var m_fSymbol
-	 * @brief Font object for displaying symbols, typically from the Symbol font.
+	 * @brief Объект шрифта для отображения символов, обычно из шрифта Symbol.
 	 */
 	CFont * m_fSymbol;
 
 	/**
 	 * @var m_listVariables
-	 * @brief A list box control for displaying a list of free variables associated with sets.
+	 * @brief Элемент управления списком для отображения списка свободных переменных, связанных с множествами.
 	 */
 	ScientificListBox m_listVariables;
 
 	/**
 	 * @var m_buttonOK
-	 * @brief The "OK" button control to confirm changes or selections in the dialog.
+	 * @brief Элемент управления кнопкой "OK" для подтверждения изменений или выборов в диалоге.
 	 */
 	CButton m_buttonOK;
 
 	/**
-	 * @brief Called when the "OK" button is clicked.
+	 * @brief Вызывается при нажатии кнопки "OK".
 	 */
 	afx_msg void OnBnClickedOk();
 
 	/**
-	 * @brief Initializes the dialog and prepares it for interaction with the user.
-	 * @return TRUE if initialization is successful, otherwise FALSE.
+	 * @brief Инициализирует диалог и подготавливает его для взаимодействия с пользователем.
+	 * @return TRUE, если инициализация прошла успешно, иначе FALSE.
 	 */
 	virtual BOOL OnInitDialog();
 
 	/**
-	 * @brief Sets the entities used for the dialog operations.
-	 * @param all_entities A pointer to a vector of EntityBase objects to be used in the dialog. Default is NULL.
+	 * @brief Устанавливает сущности, используемые для операций в диалоге.
+	 * @param all_entities Указатель на вектор объектов EntityBase для использования в диалоге. По умолчанию NULL.
 	 */
 	void setEntities(vector <EntityBase *> * all_entities = NULL) { entities = all_entities; };
 
 	/**
-	 * @brief Displays the list of free variables in the m_listVariables control.
+	 * @brief Отображает список свободных переменных в элементе управления m_listVariables.
 	 */
 	void ShowFreeVariables();
 
 	/**
-	 * @brief Hides the list of free variables from the m_listVariables control.
+	 * @brief Скрывает список свободных переменных из элемента управления m_listVariables.
 	 */
 	void HideFreeVariables();
 
 	/**
-	 * @brief Called when the selection changes in the first set list.
+	 * @brief Вызывается при изменении выбора в первом списке множеств.
 	 */
 	afx_msg void OnSelchangeSetlist1();
 
 	/**
 	 * @var m_CheckBelonging
-	 * @brief A checkbox that checks if an element belongs to a set.
+	 * @brief Флажок для проверки принадлежности элемента множеству.
 	 */
 	CButton m_CheckBelonging;
 
 	/**
 	 * @var m_CheckSubSet
-	 * @brief A checkbox that checks if a set is a subset of another.
+	 * @brief Флажок для проверки, является ли множество подмножеством другого.
 	 */
 	CButton m_CheckSubSet;
 
 	/**
-	 * @brief Called when the "Build Subset" button is clicked.
+	 * @brief Вызывается при нажатии кнопки "Построить подмножество".
 	 */
 	afx_msg void OnClickedBuildsubset();
 
 	/**
 	 * @var m_ComboSubSet
-	 * @brief A combo box for selecting a subset.
+	 * @brief Комбинированный список для выбора подмножества.
 	 */
 	CComboBox m_ComboSubSet;
 
 	/**
 	 * @var m_IndexSubSet
-	 * @brief A text box for entering the index of the subset.
+	 * @brief Поле ввода текста для ввода индекса подмножества.
 	 */
 	CEdit m_IndexSubSet;
 
 	/**
 	 * @var m_comboSet
-	 * @brief A combo box for selecting a set.
+	 * @brief Комбинированный список для выбора множества.
 	 */
 	CComboBox m_comboSet;
 
 	/**
 	 * @var m_indexSet
-	 * @brief A text box for entering the index of the set.
+	 * @brief Поле ввода текста для ввода индекса множества.
 	 */
 	CEdit m_indexSet;
 
 	/**
 	 * @var m_label
-	 * @brief A static label for displaying information about the set.
+	 * @brief Статическая метка для отображения информации о множестве.
 	 */
 	CScientificStatic m_label;
 
 	/**
 	 * @var m_level
-	 * @brief A static label for displaying the level of the set.
+	 * @brief Статическая метка для отображения уровня множества.
 	 */
 	CScientificStatic m_level;
 
 	/**
-	 * @brief Called when the selection changes in the second set list.
+	 * @brief Вызывается при изменении выбора во втором списке множеств.
 	 */
 	afx_msg void OnSelchangeSetlist2();
 
 	/**
-	 * @brief Checks the user's selection to validate the set operation.
+	 * @brief Проверяет выбор пользователя для проверки операции с множествами.
 	 */
 	void CheckSelection();
 
 	/**
-	 * @brief Called when the selected set in the combo box changes.
+	 * @brief Вызывается при изменении выбранного множества в комбинированном списке.
 	 */
 	afx_msg void OnSelchangeSetcombo();
 
 	/**
-	 * @brief Called when the set index changes.
+	 * @brief Вызывается при изменении индекса множества.
 	 */
 	afx_msg void OnChangeSetindex();
 };

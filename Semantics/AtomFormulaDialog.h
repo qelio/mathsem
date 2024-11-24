@@ -1,4 +1,4 @@
-// Author: Tatarintsev V.V., akizelokro@mail.ru, 2013-2014
+// Автор: Татаринцев В.В., akizelokro@mail.ru, 2013-2014
 #pragma once
 
 #include "ScientificStatic.h"
@@ -6,89 +6,89 @@
 
 /*!
  * \class CAtomFormulaDialog
- * \brief Dialog window for working with atomic formulas.
+ * \brief Диалоговое окно для работы с атомными формулами.
  *
- * This class provides an interface for editing atomic formulas using various controls,
- * including labels, input fields, and combo boxes.
+ * Этот класс предоставляет интерфейс для редактирования атомных формул с использованием различных элементов управления,
+ * включая метки, поля ввода и комбинированные списки.
  */
 class CAtomFormulaDialog : public CDialog
 {
 	DECLARE_DYNAMIC(CAtomFormulaDialog)
 
 	/*!
-	 * \brief Initializes the dialog.
+	 * \brief Инициализация диалога.
 	 *
-	 * This function is called when the dialog is initialized. It is used to perform
-	 * any setup or configuration for the dialog controls.
-	 * \return TRUE if initialization is successful, FALSE otherwise.
+	 * Эта функция вызывается при инициализации диалога. Она используется для выполнения
+	 * любой настройки или конфигурации элементов управления диалогом.
+	 * \return TRUE, если инициализация прошла успешно, FALSE в противном случае.
 	 */
 	BOOL OnInitDialog();
 
 public:
 	/*!
-	 * \brief Constructor for CAtomFormulaDialog.
+	 * \brief Конструктор для CAtomFormulaDialog.
 	 *
-	 * \param pParent The parent window for the dialog (default is NULL).
+	 * \param pParent Родительское окно для диалога (по умолчанию NULL).
 	 */
 	CAtomFormulaDialog(CWnd* pParent = NULL);
 
 	/*!
-	 * \brief Destructor for CAtomFormulaDialog.
+	 * \brief Деструктор для CAtomFormulaDialog.
 	 */
 	virtual ~CAtomFormulaDialog();
 
-	// Dialog Data
+	// Данные диалога
 	enum { IDD = IDD_DIALOG1 };
 
 protected:
 	/*!
-	 * \brief Handles the data exchange between controls and variables.
+	 * \brief Обработка обмена данными между элементами управления и переменными.
 	 *
-	 * This function binds the dialog controls to class member variables.
-	 * \param pDX Data exchange object.
+	 * Эта функция связывает элементы управления диалогом с переменными-членами класса.
+	 * \param pDX Объект обмена данными.
 	 */
 	virtual void DoDataExchange(CDataExchange* pDX);
 
 	DECLARE_MESSAGE_MAP()
 
 public:
-	// Character buffer for the first input field
+	// Буфер символов для первого поля ввода
 	TCHAR * tbuf1;
 
-	// Character buffer for the second input field
+	// Буфер символов для второго поля ввода
 	TCHAR * tbuf2;
 
-	// Character buffer for the index of the first input field
+	// Буфер символов для индекса первого поля ввода
 	TCHAR * tbuf_index1;
 
-	// Character buffer for the index of the second input field
+	// Буфер символов для индекса второго поля ввода
 	TCHAR * tbuf_index2;
 
-	// Static label for displaying description
+	// Статическая метка для отображения описания
 	CScientificStatic m_lblDescription;
 
 	/*!
-	 * \brief Handler for the "OK" button click event.
+	 * \brief Обработчик события нажатия кнопки "OK".
 	 *
-	 * This function is called when the "OK" button is clicked in the dialog.
+	 * Эта функция вызывается при нажатии кнопки "OK" в диалоговом окне.
 	 */
 	afx_msg void OnBnClickedOk();
 
-	// Font used for displaying indices
+	// Шрифт для отображения индексов
 	CFont * m_fIndexes;
 
-	// Font used for displaying symbols
+	// Шрифт для отображения символов
 	CFont * m_fSymbol;
 
-	// Edit control for the first index input
+	// Элемент управления редактированием для ввода первого индекса
 	CEdit m_index1;
 
-	// Edit control for the second index input
+	// Элемент управления редактированием для ввода второго индекса
 	CEdit m_index2;
 
-	// Combo box for selecting the first option
+	// Комбинированный список для выбора первой опции
 	CComboBox m_combo1;
 
-	// Combo box for selecting the second option
+	// Комбинированный список для выбора второй опции
 	CComboBox m_combo2;
 };

@@ -1,13 +1,11 @@
-//  ����� ����: ���������� �.�., akizelokro@mail.ru , 2013-2014
-//  Author: Tatarintsev V.V., akizelokro@mail.ru, 2013-2014
+//  Автор кода: Татаринцев В.В., akizelokro@mail.ru, 2013-2014
 #if !defined(AFX_ITEM_H__9DD28C1C_C5C2_4CDB_9D09_D54FA75B418E__INCLUDED_)
 #define AFX_ITEM_H__9DD28C1C_C5C2_4CDB_9D09_D54FA75B418E__INCLUDED_
 
 /**
  * @file Item.h
- * @brief Defines classes for serialization and handling of formula items.
+ * @brief Определяет классы для сериализации и обработки элементов формул.
  */
-
 
 #include <objbase.h>
 #include <msxml6.h>
@@ -17,17 +15,15 @@
 #if _MSC_VER > 1000
 #pragma once
 #endif // _MSC_VER > 1000
-// Item.h : header file
+// Item.h : заголовочный файл
 //
 
-
-
 /////////////////////////////////////////////////////////////////////////////
-// CItem - ����� �������� xml-����� ��� ������������ ����� (.fms)
+// CItem - класс для сериализации XML-структур при сохранении формулы (.fms)
 //
 class CItem : public CObject
 {
-	// ������ ������������ �����������
+	// Запрещаем копирование
 	CItem(const CItem& src);
 	void operator=(const CItem& src);
 
@@ -35,97 +31,86 @@ class CItem : public CObject
 
 public:
 	/**
-     * @brief Default constructor.
+     * @brief Конструктор по умолчанию.
      */
-// �����������
 	CItem();
-
 
 public:
 	/**
-     * @brief The creation date of the item.
+     * @brief Дата создания элемента.
      */
-	CTime		DateOfCreation;    // ���� �������� �����
+	CTime		DateOfCreation;    // Дата создания элемента
     /**
-     * @brief The version of the file.
+     * @brief Версия файла.
      */
-	CString		Version;           // ������ ������, ���� ���� "1.0"
-// ��������� ��� ������� ������������� ��������� ����������
+	CString		Version;           // Версия файла, например "1.0"
+// Атрибуты для пользовательской сериализации
 //	bool		m_boolAtribute;
 //	double		m_doubleAttribute;
 //	CStringArray m_stringArrayAttribute;
 
 public:
-	// ����������
 	/**
-     * @brief Destructor.
+     * @brief Деструктор.
      */
 	virtual ~CItem();
-	// ������� ������������ (������ � ����/�������� �� �����)
-    /**
-     * @brief Serialize the item to or from an archive.
-     * @param ar The archive to serialize to or from.
+	/**
+     * @brief Сериализация элемента (запись в поток/чтение из потока).
+     * @param ar Архив для сериализации.
      */
 	virtual void Serialize(CArchive &ar);
-
 };
 
 /////////////////////////////////////////////////////////////////////////////
-// CDerivedItem ����������� ����� �� CItem
+// CDerivedItem - производный класс от CItem
 //
 
 /**
- * @brief Represents a derived item from CItem.
+ * @brief Представляет производный элемент от CItem.
  */
 class CDerivedItem : public CItem
 {
-	// ������ ������������ �����������
+	// Запрещаем копирование
 	CDerivedItem(const CDerivedItem& src);
 	void operator=(const CDerivedItem& src);
 
 	DECLARE_XMLSERIAL(CDerivedItem)
 
-
 public:
     /**
-     * @brief Default constructor.
+     * @brief Конструктор по умолчанию.
      */
-	// �����������
 	CDerivedItem();
 
 public:
     /**
-     * @brief An example enumeration attribute.
+     * @brief Пример перечислительного атрибута.
      */
 	enum { eFIRST, eSECOND } m_enumAttribute;
 
-// Implementation
+// Реализация
 public:
 
     /**
-     * @brief Destructor.
+     * @brief Деструктор.
      */
-	// ����������
 	virtual ~CDerivedItem();
 	/**
-     * @brief Serialize the derived item to or from an archive.
-     * @param ar The archive to serialize to or from.
+     * @brief Сериализация производного элемента (запись в поток/чтение из потока).
+     * @param ar Архив для сериализации.
      */
-	// ������� ������������ (������ � ����/�������� �� �����)
 	virtual void Serialize(CArchive &ar);
-
 };
 
-
 /////////////////////////////////////////////////////////////////////////////
-// CVariableItem - ����� ��� ������������ ������ EntityVariable, ������������ ����������
+// CVariableItem - класс для сериализации переменной EntityVariable
 //
 /**
- * @brief Represents a variable item used in serialization.
+ * @brief Представляет переменную для сериализации.
  */
 class CVariableItem : public CObject
 {
-	// ������ ������������ �����������
+	// Запрещаем копирование
 	CVariableItem(const CVariableItem& src);
 	void operator=(const CVariableItem& src);
 
@@ -133,73 +118,68 @@ class CVariableItem : public CObject
 
 public:
     /**
-     * @brief Default constructor.
+     * @brief Конструктор по умолчанию.
      */
-	// �����������
 	CVariableItem();
 
 public:
 	/**
-     * @brief The type of the variable.
+     * @brief Тип переменной.
      */
     VariableType Variable;
 
     /**
-     * @brief The label of the variable.
+     * @brief Метка переменной.
      */
     CString Label;
 
     /**
-     * @brief The index of the variable.
+     * @brief Индекс переменной.
      */
     CString Index;
 
     /**
-     * @brief The initial text of the variable.
+     * @brief Исходный текст переменной.
      */
     CString Text;
 
     /**
-     * @brief The level of the variable.
+     * @brief Уровень переменной.
      */
     CString Level;
 
     /**
-     * @brief The redefinition text of the variable.
+     * @brief Текст переопределения переменной.
      */
     CString Redefinition;
 
 public:
     /**
-     * @brief Destructor.
+     * @brief Деструктор.
      */
-	// ����������
 	virtual ~CVariableItem();
     /**
-     * @brief Serialize the variable item to or from an archive.
-     * @param ar The archive to serialize to or from.
+     * @brief Сериализация переменной (запись в поток/чтение из потока).
+     * @param ar Архив для сериализации.
      */
-	// ������� ������������ (������ � ����/�������� �� �����)
 	virtual void Serialize(CArchive &ar);
     /**
-     * @brief Constructor that creates a variable item from an EntityVariable.
-     * @param ev The EntityVariable to create from.
+     * @brief Конструктор, который создает переменную из EntityVariable.
+     * @param ev EntityVariable для создания.
      */
-	// �����������, ����������� � �������� ��������� ������ �� ������ EntityVariable
 	CVariableItem(EntityVariable& ev);
-
 };
 
 
 /////////////////////////////////////////////////////////////////////////////
-// CParentLinkItem - ����� ��� ������������ ������������ ������ ParentLink
+// CParentLinkItem - класс для сериализации родительской связи ParentLink
 //
 /**
- * @brief Represents a parent link item used in serialization.
+ * @brief Представляет родительскую связь для сериализации.
  */
 class CParentLinkItem : public CObject
 {
-	// ������ ������������ �����������
+	// Запрещаем копирование
 	CParentLinkItem(const CParentLinkItem& src);
 	void operator=(const CParentLinkItem& src);
 
@@ -207,167 +187,156 @@ class CParentLinkItem : public CObject
 
 public:
     /**
-     * @brief Default constructor.
+     * @brief Конструктор по умолчанию.
      */
-	// ����������� �� ���������
 	CParentLinkItem();
 
 public:
     /**
-     * @brief The number of the parent formula.
+     * @brief Номер родительской формулы.
      */
-	int FormulaNumber;    // ���������� ����� ������������ �������
+	int FormulaNumber;    // Номер родительской формулы
     /**
-     * @brief The number of the variable in the parent formula.
+     * @brief Номер переменной в родительской формуле.
      */
-	int VariableNumber;    // ���������� ����� ������������ ����������
+	int VariableNumber;    // Номер переменной в родительской формуле
 
-// Implementation
+// Реализация
 public:
     /**
-     * @brief Destructor.
+     * @brief Деструктор.
      */
-	// ����������
 	virtual ~CParentLinkItem();
     /**
-     * @brief Serialize the parent link item to or from an archive.
-     * @param ar The archive to serialize to or from.
+     * @brief Сериализация родительской связи (запись в поток/чтение из потока).
+     * @param ar Архив для сериализации.
      */
-	// ������� ������������ (������ � ����/�������� �� �����)
 	virtual void Serialize(CArchive &ar);
     /**
-     * @brief Constructor that creates a parent link item with specified formula and variable numbers.
-     * @param FormulaNumber_ The formula number.
-     * @param VariableNumber_ The variable number.
+     * @brief Конструктор, который создает родительскую связь с указанными номерами формулы и переменной.
+     * @param FormulaNumber_ Номер формулы.
+     * @param VariableNumber_ Номер переменной.
      */
-	// �����������, ����������� � �������� ���������� ���������� ����� ������� � ���������� ����� ���������� ��� �������� ������������ �����
 	CParentLinkItem(int FormulaNumber_, int VariableNumber_);
-
 };
 
 
-
 /////////////////////////////////////////////////////////////////////////////
-// CFormulaItem - ����� ��� ������������ ������ Formula, ������������ �������
+// CFormulaItem - класс для сериализации формулы Formula
 //
 /**
- * @brief Represents a formula item used in serialization.
+ * @brief Представляет формулу для сериализации.
  */
 class CFormulaItem : public CObject
 {
-	// ������ ������������ �����������
+	// Запрещаем копирование
 	CFormulaItem(const CFormulaItem& src);
 	void operator=(const CFormulaItem& src);
 
 	DECLARE_XMLSERIAL(CFormulaItem)
 
-
 public:
     /**
-     * @brief Default constructor.
+     * @brief Конструктор по умолчанию.
      */
-	// �����������
 	CFormulaItem();
 
-// Attributes
+// Атрибуты
 public:
 	/**
-     * @brief The feature of the formula (axiom, theorem, conclusion).
+     * @brief Характеристика формулы (аксиома, теорема, заключение).
      */
     Formula_Feature Feature;
 
     /**
-     * @brief The unique number of the formula in general numbering.
+     * @brief Уникальный номер формулы в общей нумерации.
      */
     int Number;
 
     /**
-     * @brief The number of the parent set for this formula (used in conclusions).
+     * @brief Номер родительского набора для этой формулы (используется в заключениях).
      */
     int ParentSetNumber;
 
     /**
-     * @brief The number of the formula replaced by this one.
+     * @brief Номер формулы, заменённой этой.
      */
     int ReplacedNumber;
 
     /**
-     * @brief The collection of free variables.
+     * @brief Коллекция свободных переменных.
      */
     CArrayXML <CVariableItem*, CVariableItem*> FreeVariables;
 
     /**
-     * @brief The collection of linked variables.
+     * @brief Коллекция связанных переменных.
      */
     CArrayXML <CVariableItem*, CVariableItem*> LinkedVariables;
 
     /**
-     * @brief The collection of parent links.
+     * @brief Коллекция родительских связей.
      */
     CArrayXML <CParentLinkItem*, CParentLinkItem*> ParentLinks;
 
     /**
-     * @brief The collection of variables replaced in this formula.
+     * @brief Коллекция переменных, заменённых в этой формуле.
      */
     CArrayXML <CVariableItem*, CVariableItem*> ReplaceVariables;
 
     /**
-     * @brief The description of the formula.
+     * @brief Описание формулы.
      */
     CString Description;
 
     /**
-     * @brief Additional information for the formula.
+     * @brief Дополнительная информация для формулы.
      */
     CString Addons;
 
     /**
-     * @brief The label of the formula.
+     * @brief Метка формулы.
      */
     CString Label;
 
     /**
-     * @brief The initial text of the formula.
+     * @brief Исходный текст формулы.
      */
     CString Text;
 
     /**
-     * @brief The redefined text of the formula.
+     * @brief Переопределённый текст формулы.
      */
     CString Redefined;
 
     /**
-     * @brief Flag indicating whether the formula has been redefined.
+     * @brief Флаг, указывающий, была ли формула переопределена.
      */
     bool Redefined_Flag;
 
     /**
-     * @brief The type of the entity from EntityBaseType enumeration.
+     * @brief Тип сущности из перечисления EntityBaseType.
      */
-    EntityBaseType EntityType; // ��� c�������, ���� �� �������� enum EntityBaseType::
+    EntityBaseType EntityType; // Тип сущности, из перечисления enum EntityBaseType::
 
-// Implementation
+// Реализация
 public:
     /**
-     * @brief Destructor.
+     * @brief Деструктор.
      */
-	// ����������
 	virtual ~CFormulaItem();
     /**
-     * @brief Serialize the formula item to or from an archive.
-     * @param ar The archive to serialize to or from.
+     * @brief Сериализация формулы (запись в поток/чтение из потока).
+     * @param ar Архив для сериализации.
      */
-	// ������� ������������ (������ � ����/�������� �� �����)
 	virtual void Serialize(CArchive &ar);
     /**
-     * @brief Constructor that creates a formula item from a Formula object.
-     * @param f The Formula object to create from.
+     * @brief Конструктор, который создаёт формулу из объекта Formula.
+     * @param f Formula для создания.
      */
-	//  �����������, ����������� � �������� ��������� ������ �� ������ Formula
 	CFormulaItem(Formula& ev);
     /**
-     * @brief Sets the formula number.
-     * @param number The new formula number.
+     * @brief Устанавливает номер формулы.
+     * @param number Новый номер формулы.
      */
 	void SetNumber(int number) { Number = number; };
 	void SetParentSetNumber(int number) { ParentSetNumber = number; };
@@ -375,10 +344,10 @@ public:
 
 
 /////////////////////////////////////////////////////////////////////////////
-// CSetItem - ����� ��� ������������ ������ FormulaSet, ������������ ��������� ����������
+// CSetItem - класс для сериализации набора формул FormulaSet
 //
 /**
- * @brief Represents a set item used in serialization.
+ * @brief Представляет набор для сериализации.
  */
 class CSetItem : public CObject
 {
@@ -389,108 +358,99 @@ class CSetItem : public CObject
 
 public:
     /**
-     * @brief Default constructor.
+     * @brief Конструктор по умолчанию.
      */
-	// �����������
 	CSetItem();
 
 public:
 	/**
-     * @brief The feature of the formula set.
+     * @brief Характеристика набора формул.
      */
     Formula_Feature Feature;
 
     /**
-     * @brief The unique number of the set in general numbering.
+     * @brief Уникальный номер набора в общей нумерации.
      */
     int Number;
 
     /**
-     * @brief The number of the parent set for this set.
+     * @brief Номер родительского набора для этого набора.
      */
     int ParentSetNumber;
 
     /**
-     * @brief The number of the set replaced by this one.
+     * @brief Номер набора, заменённого этим.
      */
     int ReplacedNumber;
 
     /**
-     * @brief The collection of formulas in this set.
+     * @brief Коллекция формул в этом наборе.
      */
     CArrayXML <CFormulaItem*, CFormulaItem*> Formulas;
 
     /**
-     * @brief The collection of replace variables.
+     * @brief Коллекция заменённых переменных.
      */
     CArrayXML <CVariableItem*, CVariableItem*> ReplaceVariables;
 
     /**
-     * @brief The description of the set.
+     * @brief Описание набора.
      */
     CString Description;
 
     /**
-     * @brief Additional information for the set.
+     * @brief Дополнительная информация для набора.
      */
     CString Addons;
 
     /**
-     * @brief The label of the set.
+     * @brief Метка набора.
      */
     CString Label;
 
     /**
-     * @brief The initial text of the set.
+     * @brief Исходный текст набора.
      */
     CString Text;
 
     /**
-     * @brief The redefined text of the set.
+     * @brief Переопределённый текст набора.
      */
     CString Redefined;
 
     /**
-     * @brief Flag indicating whether the set has been redefined.
+     * @brief Флаг, указывающий, был ли набор переопределён.
      */
     bool Redefined_Flag;
 
     /**
-     * @brief The type of the entity from EntityBaseType enumeration.
+     * @brief Тип сущности из перечисления EntityBaseType.
      */
-    EntityBaseType EntityType; // ��� c�������, ���� �� �������� enum EntityBaseType::
+    EntityBaseType EntityType; // Тип сущности, из перечисления enum EntityBaseType::
 
-// Implementation
+// Реализация
 public:
     /**
-     * @brief Destructor.
+     * @brief Деструктор.
      */
-	// ����������
 	virtual ~CSetItem();
     /**
-     * @brief Serialize the set item to or from an archive.
-     * @param ar The archive to serialize to or from.
+     * @brief Сериализация набора (запись в поток/чтение из потока).
+     * @param ar Архив для сериализации.
      */
-	// ������� ������������ (������ � ����/�������� �� �����)
 	virtual void Serialize(CArchive &ar);
 
     /**
-     * @brief Constructor that creates a set item from a FormulaSet object.
-     * @param f The FormulaSet object to create from.
+     * @brief Конструктор, который создаёт набор из объекта FormulaSet.
+     * @param f FormulaSet для создания.
      */
-	//  �����������, ����������� � �������� ��������� ������ �� ������ FormulaSet
 	CSetItem(FormulaSet& ev);
 	void SetNumber(int number) { Number = number; };
 };
 
-
 /////////////////////////////////////////////////////////////////////////////
 
-
-
-
 //{{AFX_INSERT_LOCATION}}
-// Microsoft Visual C++ will insert additional declarations immediately before the previous line.
-
+// Microsoft Visual C++ insert additional declarations immediately before the previous line.
 
 #endif // !defined(AFX_ITEM_H__9DD28C1C_C5C2_4CDB_9D09_D54FA75B418E__INCLUDED_)

@@ -1,7 +1,7 @@
-//  ����� ����: ���������� �.�., akizelokro@mail.ru , 2013-2014
+//  Автор кода: Татаринцев В.В., akizelokro@mail.ru, 2013-2014
 //  Author: Tatarintsev V.V., akizelokro@mail.ru, 2013-2014
 //
-//  ������������ ���� ���������� ������� VUENode, VUEFormula � VUESet, � ����� ���� ��������������� ������� ��� �������� VUE-������
+//  Определение классов VUENode, VUEFormula и VUESet, а также функций, используемых для построения VUE-карт
 //
 
 #pragma once
@@ -10,196 +10,195 @@
 #include "Formula.h"
 
 //
-//  ������������ ����� �����
+//  Перечисление типов узлов
 //
 /**
  * @enum VUENodeType
- * @brief Enumeration of node types in the VUE-map.
+ * @brief Перечисление типов узлов в VUE-карте.
  */
 enum VUENodeType
 {
-    VUENODE = 0,   /**< Base node type */
-    VUEFORMULA = 1, /**< Node representing a formula */
-    VUESET = 2      /**< Node representing a formula set */
+    VUENODE = 0,   /**< Базовый тип узла */
+    VUEFORMULA = 1, /**< Узел, представляющий формулу */
+    VUESET = 2      /**< Узел, представляющий набор формул */
 };
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////
-//  ����� VUENode, ������� ��� ������� VUEFormula � VUESet, �������� ����� �����������, ����������� � ���������� ���
-//  ���������� ����� � VUE-�����
+//  Класс VUENode, базовый для классов VUEFormula и VUESet, содержит общие свойства и методы для узлов VUE-карты
 /**
  * @class VUENode
- * @brief Base class for VUEFormula and VUESet, containing common properties and methods for VUE-map nodes.
+ * @brief Базовый класс для VUEFormula и VUESet, содержащий общие свойства и методы для узлов VUE-карты.
  */
 class VUENode
 {
 protected:
-    string fillColor;    /**< Fill color of the node */
-    string textColor;    /**< Text color inside the node */
-    string strokeColor;  /**< Border color of the node */
-    string font;         /**< Font used for the node's label */
-    string xsi;          /**< Shape type of the node (e.g., rectangle, roundRect) */
-    string strokeStyle;  /**< Style of the node's border */
-    VUENodeType type;    /**< Type of the node (VUENODE, VUEFORMULA, VUESET) */
+    string fillColor;    /**< Цвет заливки узла */
+    string textColor;    /**< Цвет текста внутри узла */
+    string strokeColor;  /**< Цвет границы узла */
+    string font;         /**< Шрифт, используемый для метки узла */
+    string xsi;          /**< Тип формы узла (например, прямоугольник, округленный прямоугольник) */
+    string strokeStyle;  /**< Стиль границы узла */
+    VUENodeType type;    /**< Тип узла (VUENODE, VUEFORMULA, VUESET) */
 
 public:
-    double x;            /**< X-coordinate of the node's position */
-    double y;            /**< Y-coordinate of the node's position */
-    double width;        /**< Width of the node */
-    double height;       /**< Height of the node */
+    double x;            /**< Координата X позиции узла */
+    double y;            /**< Координата Y позиции узла */
+    double width;        /**< Ширина узла */
+    double height;       /**< Высота узла */
 
-    int numberInGroup;   /**< Number of the node within its group */
-    int groupAtom;       /**< Identifier of the group the node belongs to */
-    int numberInLayer;   /**< Position of the node within its layer */
-    int childID;         /**< Unique identifier for the node in the VUE-map */
+    int numberInGroup;   /**< Номер узла в своей группе */
+    int groupAtom;       /**< Идентификатор группы, к которой принадлежит узел */
+    int numberInLayer;   /**< Номер узла в своем слое */
+    int childID;         /**< Уникальный идентификатор для узла в VUE-карте */
 
     /**
-     * @brief Default constructor initializes default property values.
+     * @brief Конструктор по умолчанию инициализирует свойства по умолчанию.
      */
     VUENode();
 
     /**
-     * @brief Destructor.
+     * @brief Деструктор.
      */
     ~VUENode();
 
     /**
-     * @brief Parameterized constructor for creating a node with specific IDs.
-     * @param childID_ Unique identifier for the node.
-     * @param numberInLayer_ Position of the node within its layer.
+     * @brief Параметризованный конструктор для создания узла с заданными идентификаторами.
+     * @param childID_ Уникальный идентификатор для узла.
+     * @param numberInLayer_ Номер узла в его слое.
      */
     VUENode(int childID_, int numberInLayer_);
 
     /**
-     * @brief Sets the position and size of the node.
-     * @param x_ X-coordinate of the node's position.
-     * @param y_ Y-coordinate of the node's position.
-     * @param width_ Width of the node.
-     * @param height_ Height of the node.
+     * @brief Устанавливает положение и размер узла.
+     * @param x_ Координата X позиции узла.
+     * @param y_ Координата Y позиции узла.
+     * @param width_ Ширина узла.
+     * @param height_ Высота узла.
      */
     void SetPosition(double x_, double y_, double width_, double height_) { x = x_; y = y_; width = width_; height = height_; };
 
     /**
-     * @brief Outputs the node to the VUE-map file.
-     * @param os Output stream to write the node data.
-     * @param str Additional string data to include in the output.
+     * @brief Выводит узел в файл VUE-карты.
+     * @param os Поток вывода для записи данных узла.
+     * @param str Дополнительные строковые данные для включения в вывод.
      */
     void print(ostream& os, string& str);
 
     /**
-     * @brief Sets properties specific to child nodes based on their type.
+     * @brief Устанавливает свойства, специфичные для дочерних узлов, в зависимости от их типа.
      */
     void childProperties();
 
     /**
-     * @brief Gets the type of the node.
-     * @return The type of the node.
+     * @brief Получает тип узла.
+     * @return Тип узла.
      */
     VUENodeType GetType() { return type; };
 };
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////////
-//  ����� �����, �������������� �������
+//  Класс формулы, наследующий общие свойства узла
 /**
  * @class VUEFormula
- * @brief Represents a formula node in the VUE-map.
+ * @brief Представляет узел формулы в VUE-карте.
  */
 class VUEFormula : public VUENode
 {
 public:
-    Formula* formula;    /**< Pointer to the associated formula object */
+    Formula* formula;    /**< Указатель на связанный объект формулы */
 
     /**
-     * @brief Parameterized constructor for creating a formula node with specific IDs.
-     * @param childID_ Unique identifier for the node.
-     * @param numberInLayer_ Position of the node within its layer.
+     * @brief Параметризованный конструктор для создания узла формулы с заданными идентификаторами.
+     * @param childID_ Уникальный идентификатор для узла.
+     * @param numberInLayer_ Номер узла в его слое.
      */
     VUEFormula(int childID_, int numberInLayer_) : VUENode(childID_, numberInLayer_) { type = VUEFORMULA; };
 
     /**
-     * @brief Destructor.
+     * @brief Деструктор.
      */
     ~VUEFormula();
 
     /**
-     * @brief Outputs the formula node to the VUE-map file.
-     * @param os Output stream to write the node data.
+     * @brief Выводит узел формулы в файл VUE-карты.
+     * @param os Поток вывода для записи данных узла.
      */
     void print(ostream& os);
 };
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////////
-//  ����� �����, �������������� ��������� ����������
+//  Класс набора формул, наследующий общие свойства узла
 /**
  * @class VUESet
- * @brief Represents a formula set node in the VUE-map.
+ * @brief Представляет узел набора формул в VUE-карте.
  */
 class VUESet : public VUENode
 {
 public:
-    FormulaSet* parentSet;    /**< Pointer to the associated formula set object */
+    FormulaSet* parentSet;    /**< Указатель на связанный объект набора формул */
 
     /**
-     * @brief Parameterized constructor for creating a set node with specific IDs.
-     * @param childID_ Unique identifier for the node.
-     * @param numberInLayer_ Position of the node within its layer.
+     * @brief Параметризованный конструктор для создания узла набора с заданными идентификаторами.
+     * @param childID_ Уникальный идентификатор для узла.
+     * @param numberInLayer_ Номер узла в его слое.
      */
     VUESet(int childID_, int numberInLayer_) : VUENode(childID_, numberInLayer_) { type = VUESET; };
 
     /**
-     * @brief Destructor.
+     * @brief Деструктор.
      */
     ~VUESet();
 
     /**
-     * @brief Outputs the set node to the VUE-map file.
-     * @param os Output stream to write the node data.
+     * @brief Выводит узел набора в файл VUE-карты.
+     * @param os Поток вывода для записи данных узла.
      */
     void print(ostream& os);
 };
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////////
-// ��������������� ��� �������� VUE-����� �������
+// Функции, используемые для построения VUE-карт
 //
 
 /**
- * @brief Replaces mathematical notation symbols in the string with symbols suitable for VUE-maps.
- * @param tstr The string to process.
- * @param width Width parameter affecting symbol replacement.
- * @return True if the operation was successful, false otherwise.
+ * @brief Заменяет символы математической нотации в строке символами, подходящими для VUE-карт.
+ * @param tstr Строка для обработки.
+ * @param width Параметр ширины, влияющий на замену символов.
+ * @return true, если операция выполнена успешно, false в противном случае.
  */
 bool UnPrepareMathSymbols(tstring& tstr, double width);
 
 /**
- * @brief Converts Russian characters in the string to symbols suitable for VUE-maps.
- * @param tstr The string to process.
+ * @brief Преобразует русские символы в строке в символы, подходящие для VUE-карт.
+ * @param tstr Строка для обработки.
  */
 void convertVUERussianSymbols(tstring& tstr);
 
 /**
- * @brief Writes the initial part of the VUE-map header to a file.
- * @param tof Output stream to write the header.
- * @param filename Name of the file being written.
- * @param currentDir Current directory path.
+ * @brief Записывает начальную часть заголовка VUE-карты в файл.
+ * @param tof Поток вывода для записи заголовка.
+ * @param filename Имя записываемого файла.
+ * @param currentDir Текущий путь к каталогу.
  */
 void printFirstPartVUEHeader(ostream& tof, string& filename, string& currentDir);
 
 /**
- * @brief Writes the legend to the VUE-map file.
- * @param tof Output stream to write the legend.
- * @param legend String containing the legend information.
+ * @brief Записывает легенду в файл VUE-карты.
+ * @param tof Поток вывода для записи легенды.
+ * @param legend Строка, содержащая информацию о легенде.
  */
 void printVUELegend(ostream& tof, string& legend);
 
 /**
- * @brief Writes the closing part of the VUE-map to the file.
- * @param tof Output stream to write the footer.
- * @param filename Name of the file being written.
- * @param currentDir Current directory path.
+ * @brief Записывает завершающую часть VUE-карты в файл.
+ * @param tof Поток вывода для записи заключительной части.
+ * @param filename Имя записываемого файла.
+ * @param currentDir Текущий путь к каталогу.
  */
 void printVUEFooter(ostream& tof, string& filename, string& currentDir);
 
 /**
- * @brief Writes the layer information to the VUE-map file.
- * @param tof Output stream to write the layer information.
+ * @brief Записывает информацию о слоях в файл VUE-карты.
+ * @param tof Поток вывода для записи информации о слоях.
  */
 void printVUELayer(ostream& tof);

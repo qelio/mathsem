@@ -1,38 +1,39 @@
-//  Author: Tatarintsev V.V., akizelokro@mail.ru, 2013-2014
+// Автор: Татаринцев В.В., akizelokro@mail.ru, 2013-2014
 #pragma once
 #include "MathListCtrlEx.h"
 #include "common_functions.h"
 
 /**
  * @class ScientificListBox
- * @brief A custom list box class used to display scientific items with special formatting for mathematical symbols and indices.
+ * @brief Класс настраиваемого списка, используемый для отображения
+ * научных элементов со специальным форматированием для математических символов и индексов.
  *
- * This class extends from CListBox and allows for customized drawing and sorting of list items,
- * particularly for displaying mathematical symbols and expressions.
+ * Этот класс расширяет CListBox и позволяет кастомизировать отрисовку и сортировку элементов списка,
+ * в частности для отображения математических символов и выражений.
  */
 class ScientificListBox : public CListBox
 {
     DECLARE_DYNAMIC(ScientificListBox)
 
     /**
-     * @brief Flag indicating whether the list is sorted.
+     * @brief Флаг, указывающий, отсортирован ли список.
      *
-     * This boolean variable determines if the list of items in the box should be sorted.
+     * Этот булевский флаг определяет, должен ли список элементов в коробке быть отсортирован.
      */
     bool isSorted;
 
 public:
     /**
-     * @brief Constructor for the ScientificListBox class.
+     * @brief Конструктор класса ScientificListBox.
      *
-     * Initializes the scientific list box, setting up the necessary properties and states.
+     * Инициализирует научный список, настраивая необходимые свойства и состояния.
      */
     ScientificListBox();
 
     /**
-     * @brief Destructor for the ScientificListBox class.
+     * @brief Деструктор класса ScientificListBox.
      *
-     * Cleans up any resources used by the scientific list box.
+     * Очищает любые ресурсы, используемые научным списком.
      */
     virtual ~ScientificListBox();
 
@@ -40,62 +41,70 @@ protected:
     DECLARE_MESSAGE_MAP()
 
     /**
-     * @brief Font for rendering mathematical symbols in the list box.
+     * @brief Шрифт для отображения математических символов в списке.
      *
-     * This font is used to render mathematical symbols in the list box.
+     * Этот шрифт используется для отображения математических символов в списке.
      */
     CFont * m_fSymbol;
 
     /**
-     * @brief Font for rendering indexes (subscripts or superscripts) in the list box.
+     * @brief Шрифт для отображения индексов (подстрочных или надстрочных) в списке.
      *
-     * This font is used to render indexes in the list box, providing subscript and superscript functionality.
+     * Этот шрифт используется для отображения индексов в списке, предоставляя функциональность
+     * подстрочного и надстрочного текста.
      */
     CFont * m_fIndexes;
 
 public:
     /**
-     * @brief Custom method for drawing list items.
+     * @brief Кастомизированный метод для отрисовки элементов списка.
      *
-     * This method overrides the default drawing behavior of the list box items, enabling the drawing
-     * of mathematical symbols and expressions with appropriate fonts.
+     * Этот метод переопределяет стандартное поведение отрисовки элементов списка, позволяя
+     * отображение математических символов и выражений с соответствующими шрифтами.
      *
-     * @param lpDrawItemStruct Pointer to the DRAWITEMSTRUCT that contains information about the item to be drawn.
+     * @param lpDrawItemStruct Указатель на структуру DRAWITEMSTRUCT, содержащую информацию
+     * о рисуемом элементе.
      */
     virtual void DrawItem(LPDRAWITEMSTRUCT /*lpDrawItemStruct*/);
 
     /**
-     * @brief A vector of SemanticString pointers.
+     * @brief Вектор указателей на SemanticString.
      *
-     * This vector stores semantic strings, which can represent mathematical expressions or symbols in the list.
+     * Этот вектор хранит семантические строки, которые могут представлять математические выражения
+     * или символы в списке.
      */
     vector <SemanticString *> DCU;
 
     /**
-     * @brief Sets the font for rendering indexes in the list box.
+     * @brief Устанавливает шрифт для отображения индексов в списке.
      *
-     * This method sets the font to be used for rendering subscript and superscript indexes in the list box.
+     * Этот метод устанавливает шрифт, который будет использоваться для отображения подстрочного
+     * и надстрочного текста в списке.
      *
-     * @param m_fIndexes_ A pointer to the CFont to be used for indexes.
+     * @param m_fIndexes_ Указатель на CFont, который будет использоваться для индексов.
      */
     void SetIndexesFont(CFont * m_fIndexes_) { m_fIndexes = m_fIndexes_; };
 
     /**
-     * @brief Compares two list items for sorting.
+     * @brief Сравнивает два элемента списка для сортировки.
      *
-     * This method provides a comparison function used for sorting the list items in the list box.
+     * Этот метод предоставляет функцию сравнения, используемую для сортировки элементов
+     * в списке.
      *
-     * @param lpCompareItemStruct Pointer to the COMPAREITEMSTRUCT that contains information about the items to be compared.
-     * @return A value that indicates the relative order of the two items (negative, zero, or positive).
+     * @param lpCompareItemStruct Указатель на структуру COMPAREITEMSTRUCT, содержащую информацию
+     * о сравниваемых элементах.
+     * @return Значение, указывающее относительный порядок двух элементов (отрицательное, ноль
+     * или положительное).
      */
     virtual int CompareItem(LPCOMPAREITEMSTRUCT /*lpCompareItemStruct*/);
 
     /**
-     * @brief Sets whether the list should be sorted.
+     * @brief Задает, должен ли список быть отсортирован.
      *
-     * This method allows enabling or disabling sorting for the list of items in the list box.
+     * Этот метод позволяет включить или отключить сортировку для списка элементов.
      *
-     * @param toSort A boolean value indicating whether sorting should be enabled (true) or disabled (false).
+     * @param toSort Булевое значение, указывающее, должна ли сортировка быть включена
+     * (true) или отключена (false).
      */
     void SetSorting(bool toSort = false) { isSorted = toSort; };
 };

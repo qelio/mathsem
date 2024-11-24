@@ -1,43 +1,41 @@
 /**
-* @class Visualization
- * @brief A class responsible for handling the visualization of graphical elements in a static control.
+ * @class Visualization
+ * @brief Класс, отвечающий за визуализацию графических элементов в статическом элементе управления.
  *
- * This class inherits from CStatic and is used for rendering and displaying graphical elements, such as drawings or images, in a window.
+ * Этот класс наследуется от CStatic и используется для отображения и рендеринга графических элементов, таких как рисунки или изображения, в окне.
  */
 class Visualization : public CStatic
 {
 	/**
-	 * @brief Declares the dynamic creation of the Visualization class.
-	 * This macro enables the use of runtime class information for the class.
+	 * @brief Объявляет динамическое создание класса Visualization.
+	 * Этот макрос позволяет использовать информацию о классе во время выполнения.
 	 */
 	DECLARE_DYNAMIC(Visualization)
 
 public:
 	/**
-	 * @brief Default constructor for the Visualization class.
-	 * Initializes the visualization control.
+	 * @brief Конструктор по умолчанию для класса Visualization.
+	 * Инициализирует элемент управления визуализацией.
 	 */
 	Visualization();
 
 	/**
-	 * @brief Destructor for the Visualization class.
-	 * Cleans up any resources used by the visualization control.
+	 * @brief Деструктор для класса Visualization.
+	 * Освобождает любые ресурсы, использованные элементом управления визуализацией.
 	 */
 	virtual ~Visualization();
 
 protected:
 	/**
-	 * @brief Message map for handling messages related to the Visualization class.
-	 * This macro sets up the message map for processing window messages.
+	 * @brief Карта сообщений для обработки сообщений, связанных с классом Visualization.
+	 * Этот макрос настраивает карту сообщений для обработки сообщений окна.
 	 */
 	DECLARE_MESSAGE_MAP()
 
 public:
 	/**
-	 * @brief Handles the paint event for the visualization.
-	 * This function is called when the window needs to be redrawn. It is responsible for painting the graphical elements in the visualization control.
+	 * @brief Обрабатывает событие рисования для визуализации.
+	 * Эта функция вызывается, когда необходимо перерисовать окно. Она отвечает за рисование графических элементов в элементе управления визуализацией.
 	 */
 	afx_msg void OnPaint();
 };
-
-

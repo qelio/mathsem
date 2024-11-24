@@ -1,8 +1,8 @@
-// Written by Vitaly Tatarintsev, akizelokro@mail.ru, vtatarintsev.ru, 3 August 2013
-// Written by Vitaly Tatarintsev, akizelokro@mail.ru, vtatarintsev.ru, 3 August 2013
+// Написано Виталием Татаринцевым, akizelokro@mail.ru, vtatarintsev.ru, 3 августа 2013
+// Написано Виталием Татаринцевым, akizelokro@mail.ru, vtatarintsev.ru, 3 августа 2013
 //
-// The following code contains utility functions for string manipulation,
-// including removing whitespaces and searching strings.
+// В следующий код содержит вспомогательные функции для работы со строками,
+// включая удаление пробелов и поиск строк.
 
 #pragma once
 
@@ -22,7 +22,7 @@
 #include <time.h>
 using namespace std;
 
-// Defines wide character string types for Unicode or multibyte support
+// Определяет типы строк широких символов для поддержки Unicode или многобайтных символов
 #ifdef _UNICODE
 typedef wstring tstring;
 #define tcin wcin
@@ -62,86 +62,86 @@ typedef ostream tostream;
 const long bufferLength = 500;
 
 /**
- * @brief Removes leading whitespace characters from a string.
+ * @brief Удаляет начальные пробелы из строки.
  *
- * This function removes all leading whitespace characters (spaces, tabs, etc.)
- * from the beginning of the given string.
+ * Эта функция удаляет все начальные пробельные символы (пробелы, табуляции и т.д.)
+ * из начала заданной строки.
  *
- * @param str A pointer to the string to modify.
+ * @param str Указатель на строку для изменения.
  */
 void removeLeadingWhitespaces(tstring * str);
 
 /**
- * @brief Removes trailing whitespace characters from a string.
+ * @brief Удаляет конечные пробелы из строки.
  *
- * This function removes all trailing whitespace characters (spaces, tabs, etc.)
- * from the end of the given string.
+ * Эта функция удаляет все конечные пробельные символы (пробелы, табуляции и т.д.)
+ * из конца заданной строки.
  *
- * @param str A pointer to the string to modify.
+ * @param str Указатель на строку для изменения.
  */
 void removeTrailingWhitespaces(tstring * str);
 
 /**
- * @brief Trims whitespace characters from both ends of a string.
+ * @brief Обрезает пробелы с обоих концов строки.
  *
- * This function removes all leading and trailing whitespace characters
- * (spaces, tabs, etc.) from the given string.
+ * Эта функция удаляет все начальные и конечные пробельные символы
+ * (пробелы, табуляции и т.д.) из заданной строки.
  *
- * @param str A pointer to the string to modify.
+ * @param str Указатель на строку для изменения.
  */
 void trimWhitespaces(tstring * str);
 
 /**
- * @brief Removes doubled whitespace characters from a string.
+ * @brief Удаляет дублированные пробелы из строки.
  *
- * This function removes any consecutive duplicate whitespace characters
- * within the string, leaving only single spaces where there were duplicates.
+ * Эта функция удаляет любые дублирующиеся идущие подряд пробельные символы
+ * внутри строки, оставляя только один пробел там, где были дубли.
  *
- * @param ptstr A pointer to the string to modify.
+ * @param ptstr Указатель на строку для изменения.
  */
 void removeDoubledWhitespaces(tstring * ptstr);
 
 /**
- * @brief Removes all whitespace characters from a string.
+ * @brief Удаляет все пробельные символы из строки.
  *
- * This function removes all whitespace characters (spaces, tabs, etc.)
- * throughout the entire string.
+ * Эта функция удаляет все пробельные символы (пробелы, табуляции и т.д.)
+ * по всей длине строки.
  *
- * @param ptstr A pointer to the string to modify.
+ * @param ptstr Указатель на строку для изменения.
  */
 void removeAllWhitespaces(tstring * ptstr);
 
 /**
- * @brief Searches for a string within a list of strings.
+ * @brief Осуществляет поиск строки внутри списка строк.
  *
- * This function searches for a given string within a vector of strings.
- * It returns true if the string is found, otherwise false.
+ * Эта функция осуществляет поиск заданной строки внутри вектора строк.
+ * Она возвращает true, если строка найдена, в противном случае false.
  *
- * @param search A pointer to the string to search for.
- * @param where A pointer to the vector of strings where to search.
- * @return true if the string is found, false otherwise.
+ * @param search Указатель на строку для поиска.
+ * @param where Указатель на вектор строк, где осуществляется поиск.
+ * @return true если строка найдена, false в противном случае.
  */
 bool search_in(tstring *search, vector<tstring> *where);
 
 /**
- * @brief Parses a long integer from a string.
+ * @brief Парсинг целого числа типа long из строки.
  *
- * This function attempts to parse a long integer from a string. It returns
- * false if the string cannot be parsed into a valid long integer.
+ * Эта функция пытается распарсить целое число типа long из строки. Она возвращает
+ * false, если строку нельзя распарсить в правильное значение типа long.
  *
- * @param str A pointer to the string to parse.
- * @param value A pointer to the variable where the parsed value will be stored.
- * @return true if the parsing is successful, false otherwise.
+ * @param str Указатель на строку для парсинга.
+ * @param value Указатель на переменную, в которую будет сохранено распарсенное значение.
+ * @return true если парсинг успешен, false в противном случае.
  */
 bool parseLongFromString(tstring * str, long * value);
 
 /**
- * @brief Removes protocol and trailing slash from a URL.
+ * @brief Удаляет протокол и конечный слэш из URL.
  *
- * This function removes the protocol (e.g., http:// or https://) and
- * any trailing slashes from a URL, leaving just the main address.
+ * Эта функция удаляет протокол (например, http:// или https://) и
+ * любые конечные слэши из URL, оставляя только основной адрес.
  *
- * @param url A pointer to the string representing the URL.
- * @return A modified string with the protocol and trailing slashes removed.
+ * @param url Указатель на строку, представляющую URL.
+ * @return Измененная строка без протокола и конечных слэшей.
  */
 tstring * removeProtocolAndSlash(tstring * url);

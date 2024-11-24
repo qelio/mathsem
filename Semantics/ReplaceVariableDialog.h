@@ -1,4 +1,4 @@
-//  Author: Tatarintsev V.V., tatarintsev_vv@mail.ru, 2013-2017
+// Автор: Татаринцев В.В., tatarintsev_vv@mail.ru, 2013-2017
 #pragma once
 
 #include "afxwin.h"
@@ -7,50 +7,50 @@
 
 /**
  * @class ReplaceVariableDialog
- * @brief A dialog box for replacing variables in a formula.
+ * @brief Диалоговое окно для замены переменных в формуле.
  *
- * This class provides functionality for managing and replacing variables
- * in a formula. It includes list boxes for displaying variables and free variables,
- * combo boxes for selecting names, and methods to handle variable replacement logic.
+ * Этот класс предоставляет функционал для управления и замены переменных
+ * в формуле. Оно включает списки для отображения переменных и свободных переменных,
+ * комбинированные списки для выбора имен и методы для обработки логики замены переменных.
  */
 class ReplaceVariableDialog : public CDialogEx
 {
 	DECLARE_DYNAMIC(ReplaceVariableDialog)
 
     /**
-     * @brief Pointer to a list of entities that store variable data.
+     * @brief Указатель на список сущностей, хранящих данные переменных.
      *
-     * This list is used to populate the dialog with variables that can be replaced.
+     * Этот список используется для заполнения диалогового окна переменными, которые можно заменить.
      */
 	vector <EntityBase *> * entities;
 
 public:
     /**
-     * @brief Constructor for the ReplaceVariableDialog class.
+     * @brief Конструктор класса ReplaceVariableDialog.
      *
-     * Initializes the dialog, setting the parent window to `pParent` if specified.
+     * Инициализирует диалог, устанавливая родительское окно на `pParent`, если указано.
      *
-     * @param pParent The parent window for the dialog (default is NULL).
+     * @param pParent Родительское окно для диалога (по умолчанию NULL).
      */
 	ReplaceVariableDialog(CWnd* pParent = NULL);
 
     /**
-     * @brief Destructor for the ReplaceVariableDialog class.
+     * @brief Деструктор класса ReplaceVariableDialog.
      *
-     * Cleans up any resources used by the dialog.
+     * Очищает ресурсы, используемые диалогом.
      */
 	virtual ~ReplaceVariableDialog();
 
-    /** Dialog Data */
+    /** Данные диалога */
 	enum { IDD = IDD_REPLACEVARIABLE };
 
 protected:
     /**
-     * @brief Exchanges data between the dialog and the controls.
+     * @brief Обмен данными между диалогом и элементами управления.
      *
-     * This method is used to transfer data to and from the controls in the dialog box.
+     * Этот метод используется для передачи данных в и из элементов управления в диалоговом окне.
      *
-     * @param pDX The data exchange object.
+     * @param pDX Объект обмена данными.
      */
 	virtual void DoDataExchange(CDataExchange* pDX);
 
@@ -58,126 +58,126 @@ protected:
 
 public:
     /**
-     * @brief Called when the OK button is clicked.
+     * @brief Вызывается, когда нажата кнопка OK.
      *
-     * This method handles the logic to finalize the replacement of variables
-     * when the user clicks the "OK" button.
+     * Этот метод обрабатывает логику завершения замены переменных
+     * при нажатии пользователем кнопки "OK".
      */
 	afx_msg void OnBnClickedOk();
 
-    /** Font for indexes */
+    /** Шрифт для индексов */
 	CFont * m_fIndexes;
 
-    /** Font for symbols (using the Symbol font) */
+    /** Шрифт для символов (используется шрифт Symbol) */
 	CFont * m_fSymbol;
 
-    /** Edit control for entering the index */
+    /** Элемент управления для ввода индекса */
 	CEdit m_editIndex;
 
-    /** List box for displaying scientific items */
+    /** Список для отображения научных элементов */
 	ScientificListBox m_list;
 
-    /** List box for displaying free variables */
+    /** Список для отображения свободных переменных */
 	ScientificListBox m_listFreeVariables;
 
-    /** List box for displaying existing variables */
+    /** Список для отображения существующих переменных */
 	ScientificListBox m_listVariables;
 
-    /** Combo box for selecting the name of the variable */
+    /** Комбинированный список для выбора имени переменной */
 	CComboBox m_comboName;
 
     /**
-     * @brief Initializes the dialog.
+     * @brief Инициализирует диалоговое окно.
      *
-     * This method is called when the dialog is initialized to set up the initial state
-     * of controls such as list boxes and combo boxes.
+     * Этот метод вызывается при инициализации диалога для установки начального состояния
+     * элементов управления, таких как списки и комбинированные списки.
      *
-     * @return TRUE if initialization is successful, otherwise FALSE.
+     * @return TRUE, если инициализация успешна, иначе FALSE.
      */
 	virtual BOOL OnInitDialog();
 
     /**
-     * @brief Sets the list of entities for the dialog.
+     * @brief Устанавливает список сущностей для диалога.
      *
-     * This method sets the list of all available entities, which can be used to populate
-     * the dialog with the appropriate data for variable replacement.
+     * Этот метод устанавливает список всех доступных сущностей, которые можно использовать
+     * для заполнения диалога соответствующими данными для замены переменных.
      *
-     * @param all_entities The list of entities to set (default is NULL).
+     * @param all_entities Список сущностей для установки (по умолчанию NULL).
      */
 	void setEntities(vector <EntityBase *> * all_entities = NULL) {entities = all_entities; };
 
     /**
-     * @brief Displays the list of free variables.
+     * @brief Отображает список свободных переменных.
      *
-     * This method populates the list of free variables and makes it visible in the dialog.
+     * Этот метод заполняет список свободных переменных и делает его видимым в диалоге.
      */
 	void ShowFreeVariables();
 
     /**
-     * @brief Hides the list of free variables.
+     * @brief Скрывает список свободных переменных.
      *
-     * This method hides the list of free variables from the dialog.
+     * Этот метод скрывает список свободных переменных из диалога.
      */
 	void HideFreeVariables();
 
     /**
-     * @brief Displays the list of existing variables.
+     * @brief Отображает список существующих переменных.
      *
-     * This method populates the list of variables and makes it visible in the dialog.
+     * Этот метод заполняет список переменных и делает его видимым в диалоге.
      */
 	void ShowVariables();
 
     /**
-     * @brief Hides the list of variables.
+     * @brief Скрывает список переменных.
      *
-     * This method hides the list of variables from the dialog.
+     * Этот метод скрывает список переменных из диалога.
      */
 	void HideVariables();
 
     /**
-     * @brief Resets the names in the combo box.
+     * @brief Сбрасывает имена в комбинированном списке.
      *
-     * This method updates the combo box with names based on the given symbol.
-     * It ensures that the displayed names are synchronized with the selected symbol.
+     * Этот метод обновляет комбинированный список имен на основе заданного символа.
+     * Он обеспечивает синхронизацию отображаемых имен с выбранным символом.
      *
-     * @param symbol The symbol used to filter or reset the names in the combo box.
+     * @param symbol Символ, используемый для фильтрации или сброса имен в комбинированном списке.
      */
 	void ResetComboNames(TCHAR symbol);
 
-    /** Data for radio buttons */
+    /** Данные для радиокнопок */
 	int m_dataRadio;
 
-    /** Vector of new entity variables */
+    /** Вектор новых переменных сущностей */
 	vector <EntityVariable *> pev_new;
 
-    /** Button for confirming the variable replacement */
+    /** Кнопка для подтверждения замены переменных */
 	CButton m_buttonOK;
 
     /**
-     * @brief Called when the first set list selection changes.
+     * @brief Вызывается при изменении выбора в первом списке множеств.
      *
-     * This method handles changes to the selection in the first set list.
+     * Этот метод обрабатывает изменения выбора в первом списке множеств.
      */
 	afx_msg void OnSelchangeSetlist1();
 
     /**
-     * @brief Called when the second set list selection changes.
+     * @brief Вызывается при изменении выбора во втором списке множеств.
      *
-     * This method handles changes to the selection in the second set list.
+     * Этот метод обрабатывает изменения выбора во втором списке множеств.
      */
 	afx_msg void OnSelchangeSetlist2();
 
     /**
-     * @brief Called when the input text radio button is clicked.
+     * @brief Вызывается при нажатии радиокнопки ввода текста.
      *
-     * This method handles logic when the "input text" radio button is selected.
+     * Этот метод обрабатывает логику при выборе радиокнопки "ввод текста".
      */
 	afx_msg void OnBnClickedRadioinputtext();
 
     /**
-     * @brief Called when the "select variable" radio button is clicked.
+     * @brief Вызывается при нажатии радиокнопки "выбор переменной".
      *
-     * This method handles logic when the "select variable" radio button is selected.
+     * Этот метод обрабатывает логику при выборе радиокнопки "выбор переменной".
      */
 	afx_msg void OnBnClickedRadioselectvariable();
 };

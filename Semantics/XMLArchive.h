@@ -1,147 +1,147 @@
 /**
  * @class CXMLArchive
- * @brief A class that handles the archiving and retrieval of XML data for serialization and deserialization.
+ * @brief Класс, обрабатывающий архивацию и извлечение XML данных для сериализации и десериализации.
  *
- * This class is responsible for managing XML documents and nodes. It provides functionality for reading and writing data to an XML file, as well as traversing and manipulating XML nodes.
+ * Этот класс отвечает за управление XML-документами и узлами. Он предоставляет функции для чтения и записи данных в XML-файл, а также для обхода и манипулирования XML-узлами.
  */
 class CXMLArchive : public CArchive
 {
-    std::stack <CXMLArchiveNode*> m_nodeList; ///< Stack to manage XML nodes during reading and writing.
-    static CFile m_dummyFile; ///< A dummy file object used in certain operations.
-    IStream* m_streamPtr; ///< Pointer to an IStream interface for stream-based operations.
+    std::stack <CXMLArchiveNode*> m_nodeList; ///< Стек для управления XML-узлами во время чтения и записи.
+    static CFile m_dummyFile; ///< Объект фиктивного файла, используемый в некоторых операциях.
+    IStream* m_streamPtr; ///< Указатель на интерфейс IStream для операций на основе потоков.
 
 public:
     /**
-     * @brief Constructs a CXMLArchive object for the given XML file.
-     * @param fileName The name of the XML file to archive.
-     * @param nMode The mode in which to open the archive (e.g., read or write).
-     * @param streamPtr Optional pointer to a stream interface for stream-based operations.
-     * @param docPtr Optional pointer to a document for additional processing.
+     * @brief Конструктор объекта CXMLArchive для заданного XML-файла.
+     * @param fileName Имя XML-файла для архивирования.
+     * @param nMode Режим открытия архива (например, чтение или запись).
+     * @param streamPtr Необязательный указатель на интерфейс потока для операций на основе потоков.
+     * @param docPtr Необязательный указатель на документ для дополнительной обработки.
      */
     CXMLArchive(const CString& fileName, UINT nMode,
                 IStream* streamPtr = NULL,
                 CDocument* docPtr = NULL);
 
     /**
-     * @brief Destructor for CXMLArchive, cleans up resources.
+     * @brief Деструктор CXMLArchive, освобождает ресурсы.
      */
     virtual ~CXMLArchive();
 
     /**
-     * @brief Closes the archive and releases any resources.
+     * @brief Закрывает архив и освобождает ресурсы.
      */
     void Close();
 
     /**
-     * @brief Retrieves a node by name from the XML document.
-     * @param nodeNameStr The name of the XML node to retrieve.
-     * @return A pointer to the corresponding XML node.
+     * @brief Получает узел по имени из XML-документа.
+     * @param nodeNameStr Имя XML-узла, который нужно получить.
+     * @return Указатель на соответствующий XML-узел.
      */
     CXMLArchiveNode* GetNode(LPCTSTR nodeNameStr);
 
 #ifdef _UNICODE
     /**
-     * @brief Retrieves a node by name from the XML document (for Unicode strings).
-     * @param nodeNameStr The name of the XML node to retrieve.
-     * @return A pointer to the corresponding XML node.
+     * @brief Получает узел по имени из XML-документа (для Unicode строк).
+     * @param nodeNameStr Имя XML-узла, который нужно получить.
+     * @return Указатель на соответствующий XML-узел.
      */
     CXMLArchiveNode* GetNode(LPCSTR nodeNameStr);
 #endif
 
     /**
-     * @brief Removes a node from the archive.
-     * @param xmlArchiveNodePtr A pointer to the XML node to be removed.
+     * @brief Удаляет узел из архива.
+     * @param xmlArchiveNodePtr Указатель на XML-узел, который нужно удалить.
      */
     void RemoveNode(CXMLArchiveNode* xmlArchiveNodePtr);
 
     /**
-     * @brief Retrieves the current node from the XML archive.
-     * @return A pointer to the current XML node.
+     * @brief Получает текущий узел из XML-архива.
+     * @return Указатель на текущий XML-узел.
      */
     CXMLArchiveNode* GetCurrentNode();
 
-    // Attributes
-    const CString m_fileName; ///< The name of the XML file.
-    MSXML::IXMLDOMDocumentPtr m_xmlDocPtr; ///< Pointer to the MSXML DOM document interface.
+    // Атрибуты
+    const CString m_fileName; ///< Имя XML-файла.
+    MSXML::IXMLDOMDocumentPtr m_xmlDocPtr; ///< Указатель на интерфейс DOM-документа MSXML.
 };
 
 /**
  * @class CXMLArchiveNode
- * @brief A class representing an XML node in the CXMLArchive.
+ * @brief Класс, представляющий XML-узел в CXMLArchive.
  *
- * This class provides methods for manipulating individual XML nodes, such as retrieving child nodes, setting data, and creating new nodes.
- * It can be used to interact with XML nodes within an archive, either as a parent or child node.
+ * Этот класс предоставляет методы для манипуляции отдельными XML-узлами, такими как получение дочерних узлов, установка данных и создание новых узлов.
+ * Его можно использовать для взаимодействия с XML-узлами в архиве, как с родительскими, так и с дочерними узлами.
  */
 class CXMLArchiveNode
 {
-    friend class CXMLArchive; ///< Allows CXMLArchive to access private members.
+    friend class CXMLArchive; ///< Позволяет CXMLArchive доступ к приватным методам.
 
     /**
-     * @brief Private constructor, can only be constructed by CXMLArchive.
-     * @param archivePtr A pointer to the CXMLArchive instance.
-     * @param newNodePtr A pointer to the MSXML DOM element representing this node.
-     * @param fatherNodePtr A pointer to the parent node in the XML tree.
+     * @brief Приватный конструктор, может быть создан только CXMLArchive.
+     * @param archivePtr Указатель на экземпляр CXMLArchive.
+     * @param newNodePtr Указатель на элемент DOM MSXML, представляющий этот узел.
+     * @param fatherNodePtr Указатель на родительский узел в XML-дереве.
      */
     CXMLArchiveNode(CXMLArchive* archivePtr, MSXML::IXMLDOMElementPtr newNodePtr, MSXML::IXMLDOMNodePtr fatherNodePtr);
 
 protected:
-    static CMapStringToPtr m_classMap; ///< Cache for RUNTIME_CLASS to speed up object creation.
-    MSXML::IXMLDOMElementPtr const m_nodePtr; ///< Pointer to the DOM element for this node.
-    MSXML::IXMLDOMNodePtr const m_fatherNodePtr; ///< Pointer to the parent node.
-    CXMLArchive* const m_archivePtr; ///< Pointer to the CXMLArchive instance.
-    MSXML::IXMLDOMNodeListPtr m_childNodeListPtr; ///< Pointer to the list of child nodes.
-    int m_childIndex; ///< Index of the current child node.
+    static CMapStringToPtr m_classMap; ///< Кэш для RUNTIME_CLASS для ускорения создания объекта.
+    MSXML::IXMLDOMElementPtr const m_nodePtr; ///< Указатель на элемент DOM для этого узла.
+    MSXML::IXMLDOMNodePtr const m_fatherNodePtr; ///< Указатель на родительский узел.
+    CXMLArchive* const m_archivePtr; ///< Указатель на экземпляр CXMLArchive.
+    MSXML::IXMLDOMNodeListPtr m_childNodeListPtr; ///< Указатель на список дочерних узлов.
+    int m_childIndex; ///< Индекс текущего дочернего узла.
 
 public:
     /**
-     * @brief Destructor for CXMLArchiveNode, cleans up resources.
+     * @brief Деструктор CXMLArchiveNode, освобождает ресурсы.
      */
     virtual ~CXMLArchiveNode();
 
     /**
-     * @brief Creates a new data node in the XML document.
-     * @param attrName The name of the data attribute.
-     * @param attrValue The value of the attribute.
-     * @return A pointer to the created data node.
+     * @brief Создает новый узел данных в XML-документе.
+     * @param attrName Имя атрибута данных.
+     * @param attrValue Значение атрибута.
+     * @return Указатель на созданный узел данных.
      */
     MSXML::IXMLDOMNodePtr CreateDataNode(LPCTSTR attrName, CString attrValue);
 
     /**
-     * @brief Retrieves the data node for a given name from the XML document.
-     * @param nodeName The name of the data node.
-     * @param nodeText A reference to store the node's text value.
-     * @return A pointer to the data node.
+     * @brief Получает узел данных по заданному имени из XML-документа.
+     * @param nodeName Имя узла данных.
+     * @param nodeText Переменная для хранения текстового значения узла.
+     * @return Указатель на узел данных.
      */
     MSXML::IXMLDOMNodePtr GetDataNode(LPCTSTR nodeName, CString& nodeText);
 
     /**
-     * @brief Retrieves the number of children for the current node.
-     * @return The number of child nodes.
+     * @brief Получает количество дочерних узлов текущего узла.
+     * @return Количество дочерних узлов.
      */
     int GetNoChildren();
 
     /**
-     * @brief Retrieves the name of a child node at a specific index.
-     * @param childIndex The index of the child node.
-     * @return The name of the child node.
+     * @brief Получает имя дочернего узла по заданному индексу.
+     * @param childIndex Индекс дочернего узла.
+     * @return Имя дочернего узла.
      */
     CString GetChildName(int childIndex);
 
     /**
-     * @brief Retrieves the next child index for iterating over children.
-     * @return The next child index.
+     * @brief Получает следующий индекс дочернего узла для перебора дочерних узлов.
+     * @return Следующий индекс дочернего узла.
      */
     int GetNextChildIndex();
 
     /**
-     * @brief Closes the current node, ending its processing.
+     * @brief Закрывает текущий узел, завершая его обработку.
      */
     void Close();
 
     /**
-     * @brief Sets data for an attribute with various types.
-     * @param attrName The name of the attribute.
-     * @param attrValue The value of the attribute.
+     * @brief Устанавливает данные для атрибута с различными типами.
+     * @param attrName Имя атрибута.
+     * @param attrValue Значение атрибута.
      */
     void DataNode(LPCTSTR attrName, CTime& attrValue);
     void DataNode(LPCTSTR attrName, CTimeSpan& attrValue);
@@ -159,23 +159,23 @@ public:
     void DataNode(LPCTSTR attrName, CDWordArray& wordArray);
 
     /**
-     * @brief Loads data into an existing object.
-     * @param attrName The name of the attribute.
-     * @param object The object to load data into.
+     * @brief Загружает данные в существующий объект.
+     * @param attrName Имя атрибута.
+     * @param object Объект для загрузки данных.
      */
     void DataNode(LPCTSTR attrName, CObject& object);
 
     /**
-     * @brief Creates a new object when loading data.
-     * @param attrName The name of the attribute.
-     * @param objectPtr A pointer to the object to be created.
+     * @brief Создает новый объект при загрузке данных.
+     * @param attrName Имя атрибута.
+     * @param objectPtr Указатель на объект для создания.
      */
     void DataNode(LPCTSTR attrName, CObject*& objectPtr);
 
     /**
-     * @brief Creates a new object based on the node's name.
-     * @param className The class name used to create the object.
-     * @return A pointer to the created object.
+     * @brief Создает новый объект на основе имени узла.
+     * @param className Имя класса, используемого для создания объекта.
+     * @return Указатель на созданный объект.
      */
     static CObject* CreateObject(const CString& className);
 };

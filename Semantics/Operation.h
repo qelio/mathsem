@@ -1,49 +1,50 @@
+// Заголовочный файл защиты от двойного включения
 #pragma once
 
 #include "Formula.h"
 
 /**
  * @class Operation
- * @brief A template class that represents an operation with a specific entity type.
+ * @brief Шаблонный класс, представляющий операцию с определенным типом сущности.
  *
- * This class provides basic functionality for operations of a given entity type.
- * The entity type is specified as a template parameter `Type`.
+ * Этот класс предоставляет базовый функционал для операций с указанным типом сущности.
+ * Тип сущности задается параметром шаблона `Type`.
  *
- * @tparam Type The entity type associated with the operation.
+ * @tparam Type Тип сущности, связанной с операцией.
  */
 template<EntityBaseType Type>
 class Operation
 {
 public:
 	/**
-	 * @brief Default constructor for the Operation class.
+	 * @brief Конструктор по умолчанию для класса Operation.
 	 */
 	Operation(void);
 
 	/**
-	 * @brief Destructor for the Operation class.
+	 * @brief Деструктор для класса Operation.
 	 */
 	~Operation(void);
 };
 
 /**
- * @brief Compares two Formula objects for identity.
+ * @brief Сравнивает два объекта Formula на идентичность.
  *
- * This function checks if two Formula objects are identical by comparing their contents.
+ * Эта функция проверяет, являются ли два объекта Formula идентичными, сравнивая их содержимое.
  *
- * @param first The first Formula object to compare.
- * @param second The second Formula object to compare.
- * @return Returns true if the two Formula objects are identical, otherwise false.
+ * @param first Первый объект Formula для сравнения.
+ * @param second Второй объект Formula для сравнения.
+ * @return Возвращает true, если два объекта Formula идентичны, иначе false.
  */
 bool Identity(const Formula & first, const Formula & second);
 
 /**
- * @brief Compares two Formula objects for equality.
+ * @brief Сравнивает два объекта Formula на равенство.
  *
- * This operator compares two Formula objects for equality by checking if their contents are the same.
+ * Этот оператор сравнивает два объекта Formula на равенство, проверяя, одинаково ли их содержимое.
  *
- * @param first The first Formula object to compare.
- * @param second The second Formula object to compare.
- * @return Returns true if the two Formula objects are equal, otherwise false.
+ * @param first Первый объект Formula для сравнения.
+ * @param second Второй объект Formula для сравнения.
+ * @return Возвращает true, если два объекта Formula равны, иначе false.
  */
-bool operator == (const Formula & first, const Formula & second );
+bool operator == (const Formula & first, const Formula & second);

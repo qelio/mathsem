@@ -1,58 +1,58 @@
-// Semantics.h : Header file for the CSemanticsApp class in the PROJECT_NAME application.
+// Semantics.h : Заголовочный файл для класса CSemanticsApp в приложении PROJECT_NAME.
 
 #pragma once
 
 #ifndef __AFXWIN_H__
-	#error "Include 'stdafx.h' before including this file for PCH."
+	#error "Включите 'stdafx.h' перед включением этого файла для PCH."
 #endif
 
-#include "resource.h"    // Resource file
+#include "resource.h"    // Файл ресурсов
 #include <string>
 
-// A global variable to store the current language setting of the application
+// Глобальная переменная для хранения текущей языковой настройки приложения
 __declspec(selectany) std::string CURRENT_LANG_OF("eng");
 
 /**
  * @class CSemanticsApp
- * @brief Represents the application class for the Semantics project.
+ * @brief Представляет класс приложения для проекта Semantics.
  *
- * The CSemanticsApp class is derived from CWinApp and contains the initialization
- * and setup logic for the application. It serves as the entry point to the Semantics application.
+ * Класс CSemanticsApp наследуется от CWinApp и содержит логику инициализации
+ * и настройки приложения. Он служит точкой входа в приложение Semantics.
  */
 class CSemanticsApp : public CWinApp
 {
 public:
 	/**
-	 * @brief Default constructor for the CSemanticsApp class.
+	 * @brief Конструктор по умолчанию для класса CSemanticsApp.
 	 *
-	 * Initializes the CSemanticsApp object, setting up any necessary properties
-	 * for the application.
+	 * Инициализирует объект CSemanticsApp, настраивая необходимые свойства
+	 * для приложения.
 	 */
 	CSemanticsApp();
 
-	// Initialization
+	// Инициализация
 
 public:
 	/**
-	 * @brief Initializes the application instance.
+	 * @brief Инициализирует экземпляр приложения.
 	 *
-	 * This method is called to initialize the application, setting up the necessary
-	 * resources and state for the application to run.
+	 * Этот метод вызывается для инициализации приложения, настраивая необходимые
+	 * ресурсы и состояния для работы приложения.
 	 *
-	 * @return TRUE if the initialization is successful, FALSE otherwise.
+	 * @return TRUE, если инициализация прошла успешно, FALSE в противном случае.
 	 */
 	virtual BOOL InitInstance();
 
-	// Implementation
+	// Реализация
 
 	/**
-	 * @brief Declares the message map for the application.
+	 * @brief Объявляет таблицу сообщений для приложения.
 	 *
-	 * This section is used to map messages (e.g., events, user actions) to
-	 * appropriate handler functions in the application.
+	 * Этот раздел используется для отображения сообщений (например, событий, действий пользователя) на
+	 * соответствующие функции-обработчики в приложении.
 	 */
 	DECLARE_MESSAGE_MAP()
 };
 
-// A global instance of the CSemanticsApp class
+// Глобальный экземпляр класса CSemanticsApp
 extern CSemanticsApp theApp;

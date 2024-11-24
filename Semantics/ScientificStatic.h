@@ -1,14 +1,14 @@
-//  Author: Tatarintsev V.V., akizelokro@mail.ru, 2013-2014
+// Автор: Татаринцев В.В., akizelokro@mail.ru, 2013-2014
 #pragma once
 
 #include "SemanticString.h"
 
 /**
  * @class CScientificStatic
- * @brief A custom static control class for rendering mathematical expressions with special formatting for symbols and indices.
+ * @brief Класс настраиваемого статического элемента управления для отображения математических выражений со специальным форматированием символов и индексов.
  *
- * This class extends from CStatic and is used to display static text that may include mathematical symbols,
- * subscripts, and superscripts, with customizable font settings.
+ * Этот класс расширяет CStatic и используется для отображения статического текста, который может включать
+ * математические символы, подстрочные и надстрочные индексы с настраиваемыми параметрами шрифта.
  */
 class CScientificStatic : public CStatic
 {
@@ -16,16 +16,16 @@ class CScientificStatic : public CStatic
 
 public:
     /**
-     * @brief Default constructor for CScientificStatic class.
+     * @brief Конструктор по умолчанию для класса CScientificStatic.
      *
-     * Initializes the CScientificStatic object, setting up the necessary properties and states for rendering.
+     * Инициализирует объект CScientificStatic, настраивая необходимые свойства и состояния для отображения.
      */
     CScientificStatic();
 
     /**
-     * @brief Destructor for CScientificStatic class.
+     * @brief Деструктор для класса CScientificStatic.
      *
-     * Cleans up any resources used by the CScientificStatic object.
+     * Очищает любые ресурсы, используемые объектом CScientificStatic.
      */
     virtual ~CScientificStatic();
 
@@ -34,33 +34,33 @@ protected:
 
 public:
     /**
-     * @brief Paints the content of the static control.
+     * @brief Отрисовывает содержимое статического элемента управления.
      *
-     * This method is called to paint or redraw the content of the static control, rendering mathematical symbols
-     * and expressions with the appropriate fonts (symbols, subscripts, superscripts).
+     * Этот метод вызывается для отрисовки или перерисовки содержимого статического элемента управления, отображая математические символы
+     * и выражения с соответствующими шрифтами (символы, подстрочные и надстрочные индексы).
      */
     afx_msg void OnPaint();
 
     /**
-     * @brief Pointer to a SemanticString object.
+     * @brief Указатель на объект SemanticString.
      *
-     * This pointer holds a reference to a SemanticString, which can represent a mathematical expression or symbol
-     * that is rendered in the static control.
+     * Этот указатель содержит ссылку на SemanticString, который может представлять математическое выражение или символ,
+     * отображаемый в статическом элементе управления.
      */
     SemanticString * dsi;
 
     /**
-     * @brief Font used for rendering mathematical symbols in the static control.
+     * @brief Шрифт, используемый для отображения математических символов в статическом элементе управления.
      *
-     * This font is used to display the mathematical symbols in the static control.
+     * Этот шрифт используется для отображения математических символов в статическом элементе управления.
      */
     CFont * m_fSymbol;
 
     /**
-     * @brief Font used for rendering subscripts and superscripts in the static control.
+     * @brief Шрифт, используемый для отображения подстрочных и надстрочных символов в статическом элементе управления.
      *
-     * This font is used for rendering subscript and superscript elements in the static control, allowing for
-     * proper formatting of mathematical expressions.
+     * Этот шрифт используется для отображения подстрочных и надстрочных элементов в статическом элементе управления, что позволяет
+     * корректное форматирование математических выражений.
      */
     CFont * m_fIndexes;
 };

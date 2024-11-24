@@ -1,13 +1,14 @@
+// Заголовочный файл защиты от двойного включения
 #pragma once
 
 // CMyEdit
 
 /**
  * @class CMyEdit
- * @brief A custom edit control class that extends CEdit.
+ * @brief Пользовательский класс элемента управления редактирования, расширяющий CEdit.
  *
- * This class provides custom context menu handling for an edit control.
- * It includes various message handlers for specific actions related to the context menu.
+ * Этот класс предоставляет функционал для обработки пользовательского контекстного меню для элемента управления редактирования.
+ * Он включает различные обработчики сообщений для конкретных действий, связанных с контекстным меню.
  */
 class CMyEdit : public CEdit
 {
@@ -15,40 +16,40 @@ class CMyEdit : public CEdit
 
 public:
 	/**
-	 * @brief Default constructor for CMyEdit.
+	 * @brief Конструктор по умолчанию для CMyEdit.
 	 */
 	CMyEdit();
 
 	/**
-	 * @brief Destructor for CMyEdit.
+	 * @brief Деструктор для CMyEdit.
 	 */
 	virtual ~CMyEdit();
 
-	// Uncomment and implement if needed
+	// Раскомментируйте и реализуйте, если нужно
 	// BOOL Create(DWORD dwStyle, const RECT& rect, CWnd* pParentWnd, UINT nID);
 
-	/** A member variable for managing a popup menu (currently commented out). */
+	/** Переменная-член для управления всплывающим меню (в настоящее время закомментирована). */
 	// CMenu m_PopupMenu;
 
-	// Uncomment and implement if needed
-	// virtual void OnInitialUpdate(); // Called first time after construction
+	// Раскомментируйте и реализуйте, если нужно
+	// virtual void OnInitialUpdate(); // Вызывается первый раз после создания
 
 protected:
 	/**
-	 * @brief Message map declaration for CMyEdit.
-	 * This macro connects the message handlers to the appropriate Windows messages.
+	 * @brief Объявление карты сообщений для CMyEdit.
+	 * Этот макрос связывает обработчики сообщений с соответствующими сообщениями Windows.
 	 */
 	DECLARE_MESSAGE_MAP()
 
 public:
 	/**
-	 * @brief Handles the context menu event for the edit control.
-	 * @param pWnd Pointer to the window that sent the message.
-	 * @param point The point where the context menu was requested.
+	 * @brief Обрабатывает событие контекстного меню для элемента управления редактирования.
+	 * @param pWnd Указатель на окно, которое отправило сообщение.
+	 * @param point Точка, в которой было запрошено контекстное меню.
 	 */
 	afx_msg void OnContextMenu(CWnd* /*pWnd*/, CPoint /*point*/);
 
-	/** Menu item actions for different commands. */
+	/** Действия элементов меню для различных команд. */
 	afx_msg void OnMenuLow();
 	afx_msg void OnMenuLeftTag();
 	afx_msg void OnMenuRightTag();

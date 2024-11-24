@@ -1,52 +1,52 @@
 /**
-* @class Sphere
- * @brief This class represents a sphere with position and radius.
+ * @class Sphere
+ * @brief Этот класс представляет собой сферу с позицией и радиусом.
  *
- * The class provides methods for calculating the volume and surface area of the sphere, as well as displaying
- * and resizing the sphere in a graphical context using OpenGL.
+ * Класс предоставляет методы для расчета объема и площади поверхности сферы, а также для отображения
+ * и изменения размера сферы в графическом контексте с использованием OpenGL.
  */
 class Sphere
 {
 public:
 	/**
-	 * @brief Default constructor for the Sphere class.
-	 * Initializes the position (x, y, z) and radius (r) of the sphere to default values.
+	 * @brief Конструктор по умолчанию для класса Sphere.
+	 * Инициализирует позицию (x, y, z) и радиус (r) сферы значениями по умолчанию.
 	 */
 	Sphere(void);
 
 	/**
-	 * @brief Destructor for the Sphere class.
-	 * Cleans up any resources used by the Sphere object.
+	 * @brief Деструктор для класса Sphere.
+	 * Освобождает любые ресурсы, использованные объектом Sphere.
 	 */
 	~Sphere(void);
 
 	/**
 	 * @var x, y, z
-	 * @brief The coordinates of the center of the sphere.
+	 * @brief Координаты центра сферы.
 	 */
 	double x, y, z;
 
 	/**
 	 * @var r
-	 * @brief The radius of the sphere.
+	 * @brief Радиус сферы.
 	 */
 	double r;
 
 	/**
-	 * @brief Parameterized constructor for the Sphere class.
-	 * Initializes the sphere with the specified position (x, y, z) and radius (r).
-	 * @param xc The x-coordinate of the center of the sphere.
-	 * @param yc The y-coordinate of the center of the sphere.
-	 * @param zc The z-coordinate of the center of the sphere.
-	 * @param rc The radius of the sphere.
+	 * @brief Параметризированный конструктор для класса Sphere.
+	 * Инициализирует сферу с заданными координатами центра (x, y, z) и радиусом (r).
+	 * @param xc Координата x центра сферы.
+	 * @param yc Координата y центра сферы.
+	 * @param zc Координата z центра сферы.
+	 * @param rc Радиус сферы.
 	 */
 	Sphere (double xc, double yc, double zc, double rc)
 	{ x=xc; y=yc; z=zc; r=rc; }
 
 	/**
-	 * @brief Calculates the volume of the sphere.
-	 * The formula used is V = (4/3) * π * r^3.
-	 * @return The volume of the sphere.
+	 * @brief Вычисляет объем сферы.
+	 * Используемая формула: V = (4/3) * π * r^3.
+	 * @return Объем сферы.
 	 */
 	double ob()
 	{
@@ -54,9 +54,9 @@ public:
 	}
 
 	/**
-	 * @brief Calculates the surface area of the sphere.
-	 * The formula used is A = 4 * π * r^2.
-	 * @return The surface area of the sphere.
+	 * @brief Вычисляет площадь поверхности сферы.
+	 * Используемая формула: A = 4 * π * r^2.
+	 * @return Площадь поверхности сферы.
 	 */
 	double pov()
 	{
@@ -64,15 +64,15 @@ public:
 	}
 
 	/**
-	 * @brief Resizes the OpenGL viewport when the window is resized.
-	 * @param width The new width of the window.
-	 * @param height The new height of the window.
+	 * @brief Изменяет размер окна OpenGL при изменении размера окна.
+	 * @param width Новая ширина окна.
+	 * @param height Новая высота окна.
 	 */
 	void CALLBACK resize(int width,int height);
 
 	/**
-	 * @brief Displays the sphere in the OpenGL context.
-	 * This function is called to render the sphere using OpenGL drawing functions.
+	 * @brief Отображает сферу в контексте OpenGL.
+	 * Эта функция вызывается для рендеринга сферы с использованием функций рисования OpenGL.
 	 */
 	void CALLBACK display(void);
 };

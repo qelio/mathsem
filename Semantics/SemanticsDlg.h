@@ -1,4 +1,4 @@
-// SemanticsDlg.h : Header file for the CSemanticsDlg class.
+// SemanticsDlg.h : Заголовочный файл для класса CSemanticsDlg.
 
 #pragma once
 
@@ -11,7 +11,7 @@
 #include "afxwin.h"
 #include "resource.h"
 
-// Include for libxml2 (disabled for Windows compilation)
+// Подключение для libxml2 (отключено для компиляции в Windows)
 // #include <libxml\parser.h>
 // #include <libxml\tree.h>
 
@@ -20,80 +20,80 @@
 
 /**
  * @class CSemanticsDlg
- * @brief The main dialog class for the Semantics application.
+ * @brief Основной класс диалога для приложения Semantics.
  *
- * This class represents the dialog window for the Semantics application. It handles
- * the creation and interaction of various controls such as buttons and edit boxes,
- * as well as the processing of different commands triggered by the user. The dialog
- * interacts with formulas and entities, and allows for exporting and saving data.
+ * Этот класс представляет собой окно диалога для приложения Semantics. Он управляет
+ * созданием и взаимодействием различных элементов управления, таких как кнопки и поля ввода,
+ * а также обработкой различных команд, инициируемых пользователем. Диалог взаимодействует
+ * с формулами и сущностями, а также позволяет экспортировать и сохранять данные.
  */
 class CSemanticsDlg : public CDialogEx
 {
 public:
     /**
-     * @brief Default constructor for CSemanticsDlg.
+     * @brief Конструктор по умолчанию для класса CSemanticsDlg.
      *
-     * Initializes the dialog with an optional parent window.
+     * Инициализирует диалог с необязательным родительским окном.
      *
-     * @param pParent The parent window. Default is NULL.
+     * @param pParent Родительское окно. По умолчанию NULL.
      */
     CSemanticsDlg(CWnd* pParent = NULL);
 
     /**
-     * @brief Destructor for CSemanticsDlg.
+     * @brief Деструктор для класса CSemanticsDlg.
      *
-     * Cleans up any allocated resources when the dialog is destroyed.
+     * Очищает любые выделенные ресурсы при уничтожении диалога.
      */
     ~CSemanticsDlg();
 
     /**
-     * @brief Dialog Data Identifier (IDD).
+     * @brief Идентификатор данных диалога (IDD).
      *
-     * This value represents the resource ID for the Semantics dialog.
+     * Это значение представляет идентификатор ресурса для диалога Semantics.
      */
     enum { IDD = IDD_SEMANTICS_DIALOG };
 
 protected:
     /**
-     * @brief Data Exchange Function.
+     * @brief Функция обмена данными.
      *
-     * This function exchanges data between the controls and variables, ensuring
-     * that all data is updated properly during the dialog interaction.
+     * Эта функция обменивается данными между элементами управления и переменными, обеспечивая
+     * правильное обновление всех данных во время взаимодействия с диалогом.
      *
-     * @param pDX A pointer to a CDataExchange object.
+     * @param pDX Указатель на объект CDataExchange.
      */
     virtual void DoDataExchange(CDataExchange* pDX);
 
 protected:
-    HICON m_hIcon; /**< Icon for the dialog window. */
+    HICON m_hIcon; /**< Иконка для окна диалога. */
 
     /**
-     * @brief Initializes the dialog on creation.
+     * @brief Инициализирует диалог при создании.
      *
-     * This function is called when the dialog is initialized. It sets up the
-     * icon and any initial configurations for the controls.
+     * Эта функция вызывается при инициализации диалога. Она настраивает
+     * иконку и начальные конфигурации для элементов управления.
      *
-     * @return TRUE if initialization is successful, otherwise FALSE.
+     * @return TRUE, если инициализация прошла успешно, иначе FALSE.
      */
     virtual BOOL OnInitDialog();
 
     /**
-     * @brief Handles system commands, such as minimizing or closing the dialog.
+     * @brief Обрабатывает системные команды, такие как сворачивание или закрытие диалога.
      *
-     * @param nID The system command ID.
-     * @param lParam Additional message parameters.
+     * @param nID Идентификатор системной команды.
+     * @param lParam Дополнительные параметры сообщения.
      */
     afx_msg void OnSysCommand(UINT nID, LPARAM lParam);
 
     /**
-     * @brief Handles the painting of the dialog window.
+     * @brief Обрабатывает отрисовку окна диалога.
      */
     afx_msg void OnPaint();
 
     /**
-     * @brief Queries for the cursor to use when dragging the dialog.
+     * @brief Запрашивает курсор для использования при перетаскивании диалога.
      *
-     * @return The cursor for dragging the dialog.
+     * @return Курсор для перетаскивания диалога.
      */
     afx_msg HCURSOR OnQueryDragIcon();
 
@@ -101,24 +101,24 @@ protected:
 
 public:
     /**
-     * @brief Handles the click event for the OK button.
+     * @brief Обрабатывает событие клика по кнопке OK.
      */
     afx_msg void OnBnClickedOk();
 
     /**
-     * @brief Handles the click event to show all formulas.
+     * @brief Обрабатывает событие клика для отображения всех формул.
      */
     afx_msg void OnBnClickedShowallformulas3();
 
     /**
-     * @brief Handles the click event to add a new atomic formula.
+     * @brief Обрабатывает событие клика для добавления новой атомной формулы.
      */
     afx_msg void OnBnClickedAddatomformula();
 
-    vector <EntityBase *> all_entities; /**< A vector storing all entities in the application. */
+    vector <EntityBase *> all_entities; /**< Вектор, хранящий все сущности в приложении. */
 
     /**
-     * @brief Handles the click event for building formulas.
+     * @brief Обрабатывает событие клика для создания формул.
      */
     afx_msg void OnBnClickedBuildformula1();
     afx_msg void OnBnClickedBuildformula2();
@@ -130,8 +130,8 @@ public:
     afx_msg void OnBnClickedHelp();
 
     /**
-     * @brief Various scientific button controls.
-     * These controls are used to represent scientific functions in the dialog.
+     * @brief Различные элементы управления кнопками научного характера.
+     * Эти элементы управления используются для представления научных функций в диалоге.
      */
     CScientificButton m_button5;
     CScientificButton m_button4;
@@ -143,67 +143,67 @@ public:
     CMFCEditBrowseCtrl m_fileFinder;
 
     /**
-     * @brief Handles the click event for the Build Formula 6 button.
+     * @brief Обрабатывает событие клика по кнопке Build Formula 6.
      */
     afx_msg void OnBnClickedBuildformula6();
 
     /**
-     * @brief Handles the click event to export data.
+     * @brief Обрабатывает событие клика для экспорта данных.
      */
     afx_msg void OnBnClickedExport();
 
-    CMFCEditBrowseCtrl m_fileWordExport; /**< Control for browsing and selecting export file. */
+    CMFCEditBrowseCtrl m_fileWordExport; /**< Элемент управления для поиска и выбора файла экспорта. */
 
     /**
-     * @brief Handles the click event to save the scheme.
+     * @brief Обрабатывает событие клика для сохранения схемы.
      */
     afx_msg void OnBnClickedSavescheme();
 
     /**
-     * @brief Handles the click event to load a saved scheme.
+     * @brief Обрабатывает событие клика для загрузки сохраненной схемы.
      */
     afx_msg void OnBnClickedLoadscheme();
 
     /**
-     * @brief Handles the click event to cancel the current operation.
+     * @brief Обрабатывает событие клика для отмены текущей операции.
      */
     afx_msg void OnBnClickedCancel();
 
     /**
-     * @brief Handles the change event for the file browse control.
+     * @brief Обрабатывает изменение события для элемента управления поиском файла.
      */
     afx_msg void OnEnChangeMfceditbrowse2();
 
     /**
-     * @brief Handles the click event for the Build Formula 7 button.
+     * @brief Обрабатывает событие клика по кнопке Build Formula 7.
      */
     afx_msg void OnBnClickedBuildformula7();
 
-    CScientificButton m_button7; /**< Button for building formulas (Formula 7). */
+    CScientificButton m_button7; /**< Кнопка для создания формул (Formula 7). */
 
     /**
-     * @brief Handles the click event to build a tuple.
+     * @brief Обрабатывает событие клика для создания кортежа.
      */
     afx_msg void OnBnClickedBuildtuple();
 
-    CScientificButton m_KortegeButton; /**< Button for building a Kortege. */
+    CScientificButton m_KortegeButton; /**< Кнопка для создания картежа (Kortege). */
 
     /**
-     * @brief Handles the click event to change a variable.
+     * @brief Обрабатывает событие клика для изменения переменной.
      */
     afx_msg void OnBnClickedChangevariable();
 
-    CScientificButton m_ChangeVariable; /**< Button for changing variables. */
+    CScientificButton m_ChangeVariable; /**< Кнопка для изменения переменных. */
 
-    int m_rbLang; /**< Variable to store the language setting. */
+    int m_rbLang; /**< Переменная для хранения языковой настройки. */
 
     /**
-     * @brief Handles the click event to switch to Russian language.
+     * @brief Обрабатывает событие клика для переключения на русский язык.
      */
     afx_msg void OnBnClickedRus();
 
     /**
-     * @brief Handles the click event to switch to English language.
+     * @brief Обрабатывает событие клика для переключения на английский язык.
      */
     afx_msg void OnBnClickedEng();
 };

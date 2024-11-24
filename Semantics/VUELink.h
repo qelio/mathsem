@@ -1,102 +1,102 @@
 /**
  * @struct VUEPoint
- * @brief A structure representing a point in the VUE (Visual Understanding Environment) coordinate system.
+ * @brief Структура, представляющая точку в системе координат VUE (Visual Understanding Environment).
  *
- * This structure holds the x and y coordinates of a point in a 2D space.
+ * Эта структура содержит координаты x и y точки в 2D пространстве.
  */
 struct VUEPoint
 {
-    double x; ///< X-coordinate of the point.
-    double y; ///< Y-coordinate of the point.
+    double x; ///< Координата X точки.
+    double y; ///< Координата Y точки.
 };
 
 /**
  * @class VUELink
- * @brief A class representing a link between two VUE nodes in the VUE environment.
+ * @brief Класс, представляющий связь между двумя узлами VUE в окружении VUE.
  *
- * This class is used to model connections between nodes, including graphical properties such as position, size, stroke style, and color.
- * It provides methods to set and manage links between different types of entities, such as nodes and formulas.
+ * Этот класс используется для моделирования соединений между узлами, включая графические свойства, такие как положение, размер, стиль обводки и цвет.
+ * Он предоставляет методы для установки и управления связями между различными типами сущностей, такими как узлы и формулы.
  */
 class VUELink
 {
-    double x; ///< X-coordinate of the link.
-    double y; ///< Y-coordinate of the link.
-    double width; ///< Width of the link.
-    double height; ///< Height of the link.
-    string strokeStyle; ///< Stroke style of the link.
-    string strokeColor; ///< Stroke color of the link.
-    string textColor; ///< Text color of the link.
-    string strokeWidth; ///< Stroke width of the link.
-    string font; ///< Font style of the link.
-    VUEPoint start; ///< Starting point of the link.
-    VUEPoint finish; ///< Ending point of the link.
-    VUENode * nodeStart; ///< Pointer to the start node of the link.
-    VUENode * nodeFinish; ///< Pointer to the finish node of the link.
-    int numberInLayer; ///< Layer number of the link.
-    int childID; ///< ID of the child entity associated with the link.
+    double x; ///< Координата X связи.
+    double y; ///< Координата Y связи.
+    double width; ///< Ширина связи.
+    double height; ///< Высота связи.
+    string strokeStyle; ///< Стиль обводки связи.
+    string strokeColor; ///< Цвет обводки связи.
+    string textColor; ///< Цвет текста связи.
+    string strokeWidth; ///< Ширина обводки связи.
+    string font; ///< Стиль шрифта связи.
+    VUEPoint start; ///< Начальная точка связи.
+    VUEPoint finish; ///< Конечная точка связи.
+    VUENode * nodeStart; ///< Указатель на начальный узел связи.
+    VUENode * nodeFinish; ///< Указатель на конечный узел связи.
+    int numberInLayer; ///< Номер слоя связи.
+    int childID; ///< Идентификатор дочерней сущности, связанной со связью.
 
 public:
     /**
-     * @brief Default constructor for the VUELink class.
-     * Initializes the VUELink with default values.
+     * @brief Конструктор по умолчанию для класса VUELink.
+     * Инициализирует VUELink значениями по умолчанию.
      */
     VUELink(void);
 
     /**
-     * @brief Destructor for the VUELink class.
-     * Cleans up any resources associated with the link.
+     * @brief Деструктор для класса VUELink.
+     * Освобождает все ресурсы, связанные со связью.
      */
     ~VUELink(void);
 
     /**
-     * @brief Parameterized constructor for creating a VUELink with specified child ID and layer number.
-     * @param childID_ The ID of the child entity.
-     * @param numberInLayer_ The layer number of the link.
+     * @brief Параметризованный конструктор для создания VUELink с указанным идентификатором дочерней сущности и номером слоя.
+     * @param childID_ Идентификатор дочерней сущности.
+     * @param numberInLayer_ Номер слоя связи.
      */
     VUELink(int childID_, int numberInLayer_);
 
     /**
-     * @brief Prints the details of the VUELink to the given output stream.
-     * @param os The output stream to which the link details will be printed.
+     * @brief Выводит детали VUELink в указанный поток вывода.
+     * @param os Поток вывода, в который будут выведены детали связи.
      */
     void print(ostream& os);
 
     /**
-     * @brief A vector of control points defining the link's shape.
+     * @brief Вектор контрольных точек, определяющих форму связи.
      */
     vector <VUEPoint *> ctrlPoints;
 
     /**
-     * @brief Sets the link between two VUE nodes.
-     * @param node1 The start node of the link.
-     * @param node2 The finish node of the link.
+     * @brief Устанавливает связь между двумя узлами VUE.
+     * @param node1 Начальный узел связи.
+     * @param node2 Конечный узел связи.
      */
     void setLink(VUENode * node1, VUENode * node2);
 
     /**
-     * @brief Sets the link between a VUE formula node and a VUE set node.
-     * @param node1 The start node of the link (a formula).
-     * @param node2 The finish node of the link (a set).
+     * @brief Устанавливает связь между узлом формулы VUE и узлом множества VUE.
+     * @param node1 Начальный узел связи (формула).
+     * @param node2 Конечный узел связи (множество).
      */
     void setLink(VUEFormula * node1, VUESet * node2);
 
     /**
-     * @brief Sets the link between two VUE formula nodes.
-     * @param node1 The start node of the link (a formula).
-     * @param node2 The finish node of the link (a formula).
+     * @brief Устанавливает связь между двумя узлами формулы VUE.
+     * @param node1 Начальный узел связи (формула).
+     * @param node2 Конечный узел связи (формула).
      */
     void setLink(VUEFormula * node1, VUEFormula * node2);
 
     /**
-     * @brief Sets the child ID and layer number for the link.
-     * @param childID_ The ID of the child entity.
-     * @param numberInLayer_ The layer number of the link.
+     * @brief Устанавливает идентификатор дочерней сущности и номер слоя для связи.
+     * @param childID_ Идентификатор дочерней сущности.
+     * @param numberInLayer_ Номер слоя связи.
      */
     void setIDs(int childID_, int numberInLayer_);
 
     /**
-     * @brief Sets the type of the link.
-     * @param ft The entity base type that determines the link type.
+     * @brief Устанавливает тип связи.
+     * @param ft Тип базовой сущности, определяющий тип связи.
      */
     void setLinkType(EntityBaseType ft);
 };

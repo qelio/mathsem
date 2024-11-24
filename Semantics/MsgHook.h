@@ -1,79 +1,81 @@
+// Заголовочный файл защиты от двойного включения
 #pragma once
 
+// Пользовательское сообщение для скрытия редактора
 #define UM_HIDEEDITOR (WM_USER+10)
 
 /**
  * @class CMsgHook
- * @brief A class for handling message hooks for windows and their parent-child relationships.
+ * @brief Класс для обработки хук-сообщений для окон и их родительско-дочерних связей.
  *
- * This class provides functionality for attaching and detaching hooks to/from windows.
- * It manages the interaction between the hook and the associated windows.
+ * Этот класс предоставляет функционал для присоединения и отсоединения хуков к/от окон.
+ * Он управляет взаимодействием между хук-сообщениями и связанными окнами.
  */
 class CMsgHook
 {
 public:
 	/**
-	 * @brief Default constructor for CMsgHook.
+	 * @brief Конструктор по умолчанию для CMsgHook.
 	 */
 	CMsgHook(void);
 
 	/**
-	 * @brief Destructor for CMsgHook.
+	 * @brief Деструктор для CMsgHook.
 	 */
 	virtual ~CMsgHook(void);
 
 	/**
-	 * @brief Attaches a hook to a specific window.
-	 * @param hWnd The handle of the window to attach the hook to.
-	 * @param hParent The handle of the parent window.
-	 * @param hNotify Optional handle of a notification window (default is NULL).
-	 * @return TRUE if the hook was successfully attached, FALSE otherwise.
+	 * @brief Присоединяет хук к определенному окну.
+	 * @param hWnd Дескриптор окна, к которому нужно присоединить хук.
+	 * @param hParent Дескриптор родительского окна.
+	 * @param hNotify Дополнительный дескриптор окна уведомления (по умолчанию NULL).
+	 * @return TRUE, если хук был успешно присоединен, FALSE в противном случае.
 	 */
 	BOOL Attach(HWND hWnd, HWND hParent, HWND hNotify = NULL);
 
 	/**
-	 * @brief Detaches the hook from the window.
-	 * @return TRUE if the hook was successfully detached, FALSE otherwise.
+	 * @brief Отсоединяет хук от окна.
+	 * @return TRUE, если хук был успешно отсоединен, FALSE в противном случае.
 	 */
 	BOOL Detach(void);
 
 	/**
-	 * @brief Checks if the hook is currently attached to a window.
-	 * @return TRUE if the hook is attached, FALSE otherwise.
+	 * @brief Проверяет, присоединен ли хук к окну в данный момент.
+	 * @return TRUE, если хук присоединен, FALSE в противном случае.
 	 */
 	inline BOOL IsAttached() { return m_hWnd != NULL; }
 
 protected:
 	/**
-	 * @brief Callback procedure that processes hook messages.
-	 * @param nCode The hook code.
-	 * @param wParam Additional message-specific information.
-	 * @param lParam Additional message-specific information.
-	 * @return The result of the message processing.
+	 * @brief Процедура обратного вызова, обрабатывающая хук-сообщения.
+	 * @param nCode Код хука.
+	 * @param wParam Дополнительная информация специфичная для сообщения.
+	 * @param lParam Дополнительная информация специфичная для сообщения.
+	 * @return Результат обработки сообщения.
 	 */
 	static LRESULT CALLBACK CallWndRetProc(int nCode, WPARAM wParam, LPARAM lParam);
 
-	/** Static hook handle for the global hook. */
+	/** Статический дескриптор хука для глобального хука. */
 	static HHOOK m_hHook;
 
-	/** The number of instances of active hooks. */
+	/** Количество экземпляров активных хуков. */
 	static int m_nInstances;
 
 	/**
-	 * @brief A map associating windows with their hooks.
-	 * This map stores a mapping between the window handle (HWND) and the corresponding CMsgHook instance.
+	 * @brief Карта, связывающая окна с их хуками.
+	 * Эта карта хранит сопоставление между дескриптором окна (HWND) и соответствующим экземпляром CMsgHook.
 	 */
 	static CMap<HWND, HWND&, CMsgHook*, CMsgHook*&> m_mapHookedWindows;
 
-	/** Handle to the window that the hook is attached to. */
+	/** Дескриптор окна, к которому присоединен хук. */
 	HWND m_hWnd;
 
-	/** Handle to the parent window of the hooked window. */
+	/** Дескриптор родительского окна захуканного окна. */
 	HWND m_hParent;
 
-	/** Handle to the notification window. */
+	/** Дескриптор окна уведомления. */
 	HWND m_hNotify;
 
-	/** A flag indicating if the dropdown is active. */
+	/** Флаг, указывающий, активен ли dropdown. */
 	BOOL m_bDropDown;
 };

@@ -7,11 +7,11 @@ typedef BOOL (*PFNEDITORCALLBACK)(CWnd** pWnd, int nRow, int nColumn, CString& s
 
 /**
  * @class CListCtrlEx
- * @brief Extended version of CListCtrl that supports advanced features like custom sorting, editors, and cell/item data handling.
+ * @brief Расширенная версия CListCtrl, поддерживающая дополнительные функции, такие как пользовательская сортировка, редакторы и обработка данных ячеек/элементов.
  *
- * This class extends the functionality of a standard list control by adding support for custom sorting,
- * editing of cells, and handling of item-specific data. It allows the user to define editors, sort columns,
- * and customize the appearance of individual rows and cells.
+ * Этот класс расширяет функциональность стандартного элемента управления списком, добавляя поддержку пользовательской сортировки,
+ * редактирования ячеек и обработки данных элементов. Он позволяет пользователю определять редакторы, сортировать столбцы
+ * и настраивать внешний вид отдельных строк и ячеек.
  */
 class CListCtrlEx : public CListCtrl
 {
@@ -19,209 +19,208 @@ class CListCtrlEx : public CListCtrl
 
 public:
     /**
-     * @brief Default constructor.
+     * @brief Конструктор по умолчанию.
      */
 	CListCtrlEx();
 
     /**
-     * @brief Destructor.
+     * @brief Деструктор.
      */
 	virtual ~CListCtrlEx();
 
     /**
-     * @brief Retrieves the data (lParam) associated with a particular item.
-     * @param nItem The index of the item to retrieve data for.
-     * @return The data (lParam) associated with the item.
+     * @brief Получает данные (lParam), связанные с конкретным элементом.
+     * @param nItem Индекс элемента, данные которого нужно получить.
+     * @return Данные (lParam), связанные с элементом.
      */
 	DWORD_PTR GetItemData(int nItem) const;
 
     /**
-     * @brief Retrieves the internal data (lParam) associated with a particular item.
-     * @param nItem The index of the item to retrieve data for.
-     * @return The internal data (lParam) associated with the item.
+     * @brief Получает внутренние данные (lParam), связанные с конкретным элементом.
+     * @param nItem Индекс элемента, данные которого нужно получить.
+     * @return Внутренние данные (lParam), связанные с элементом.
      */
 	DWORD_PTR GetItemDataInternal(int nItem) const;
 
     /**
-     * @brief Sets the data (lParam) associated with a particular item.
-     * @param nItem The index of the item to set data for.
-     * @param dwData The data to associate with the item.
-     * @return TRUE if the operation succeeded, FALSE otherwise.
+     * @brief Устанавливает данные (lParam), связанные с конкретным элементом.
+     * @param nItem Индекс элемента, данные которого нужно установить.
+     * @param dwData Данные для связывания с элементом.
+     * @return TRUE, если операция удалась, FALSE в противном случае.
      */
 	BOOL SetItemData(int nItem, DWORD_PTR dwData);
 
     /**
-     * @brief Removes a single item from the control.
-     * @param nItem The index of the item to remove.
-     * @return TRUE if the item was successfully removed, FALSE otherwise.
+     * @brief Удаляет отдельный элемент из элемента управления.
+     * @param nItem Индекс элемента, который нужно удалить.
+     * @return TRUE, если элемент был успешно удалён, FALSE в противном случае.
      */
 	BOOL DeleteItem(int nItem);
 
     /**
-     * @brief Removes all items from the control.
-     * @return TRUE if all items were successfully removed, FALSE otherwise.
+     * @brief Удаляет все элементы из элемента управления.
+     * @return TRUE, если все элементы были успешно удалены, FALSE в противном случае.
      */
 	BOOL DeleteAllItems();
 
     /**
-     * @brief Finds an item in the control matching the specified criteria.
-     * @param pFindInfo A pointer to a structure containing the search criteria.
-     * @param nStart The starting index for the search.
-     * @return The index of the found item, or -1 if not found.
+     * @brief Ищет элемент в элементе управления, соответствующий указанным критериям.
+     * @param pFindInfo Указатель на структуру, содержащую критерии поиска.
+     * @param nStart Начальный индекс для поиска.
+     * @return Индекс найденного элемента или -1, если элемент не найден.
      */
 	int FindItem(LVFINDINFO* pFindInfo, int nStart = -1) const;
 
     /**
-     * @brief Sorts items in the control using a custom comparison function.
-     * @param pfnCompare A pointer to the comparison function.
-     * @param dwData Additional data to pass to the comparison function.
-     * @return TRUE if the sorting succeeded, FALSE otherwise.
+     * @brief Сортирует элементы в элементе управления с использованием пользовательской функции сравнения.
+     * @param pfnCompare Указатель на функцию сравнения.
+     * @param dwData Дополнительные данные для передачи в функцию сравнения.
+     * @return TRUE, если сортировка удалась, FALSE в противном случае.
      */
 	BOOL SortItems(PFNLVCOMPARE pfnCompare, DWORD_PTR dwData);
 
     /**
-     * @brief Inserts a new item into the control.
-     * @param pItem A pointer to the LVITEM structure containing item details.
-     * @return The index of the inserted item, or -1 if the insertion failed.
+     * @brief Вставляет новый элемент в элемент управления.
+     * @param pItem Указатель на структуру LVITEM, содержащую детали элемента.
+     * @return Индекс вставленного элемента или -1, если вставка не удалась.
      */
 	int InsertItem(const LVITEM* pItem);
 
     /**
-     * @brief Inserts a new item with text into the control.
-     * @param nItem The index at which to insert the item.
-     * @param lpszItem The text for the item.
-     * @return The index of the inserted item, or -1 if the insertion failed.
+     * @brief Вставляет новый элемент с текстом в элемент управления.
+     * @param nItem Индекс, по которому нужно вставить элемент.
+     * @param lpszItem Текст для элемента.
+     * @return Индекс вставленного элемента или -1, если вставка не удалась.
      */
 	int InsertItem(int nItem, LPCTSTR lpszItem);
 
     /**
-     * @brief Inserts a new item with text and an image into the control.
-     * @param nItem The index at which to insert the item.
-     * @param lpszItem The text for the item.
-     * @param nImage The index of the image to associate with the item.
-     * @return The index of the inserted item, or -1 if the insertion failed.
+     * @brief Вставляет новый элемент с текстом и изображением в элемент управления.
+     * @param nItem Индекс, по которому нужно вставить элемент.
+     * @param lpszItem Текст для элемента.
+     * @param nImage Индекс изображения для связывания с элементом.
+     * @return Индекс вставленного элемента или -1, если вставка не удалась.
      */
 	int InsertItem(int nItem, LPCTSTR lpszItem, int nImage);
 
     /**
-     * @brief Ensures a subitem is visible in the list.
-     * @param nItem The index of the item.
-     * @param nSubItem The index of the subitem.
-     * @param pRect Optional pointer to a CRect object to receive the item's rectangle.
-     * @return TRUE if the subitem is visible, FALSE otherwise.
+     * @brief Обеспечивает видимость подэлемента в списке.
+     * @param nItem Индекс элемента.
+     * @param nSubItem Индекс подэлемента.
+     * @param pRect Опциональный указатель на объект CRect для получения прямоугольника элемента.
+     * @return TRUE, если подэлемент видим, FALSE в противном случае.
      */
 	BOOL EnsureSubItemVisible(int nItem, int nSubItem, CRect *pRect = NULL);
 
     /**
-     * @brief Enumeration for sort order options.
+     * @brief Перечисление для опций порядка сортировки.
      */
 	typedef enum Sort
 	{
-		None = 0,          ///< No sorting applied.
-		Ascending = 1,     ///< Ascending order.
-		Descending = 2,    ///< Descending order.
-		Auto = 4,          ///< Automatic sorting.
-		SortBits = 7       ///< Mask for sorting options.
+		None = 0,          ///< Без сортировки.
+		Ascending = 1,     ///< По возрастанию.
+		Descending = 2,    ///< По убыванию.
+		Auto = 4,          ///< Автоматическая сортировка.
+		SortBits = 7       ///< Маска для опций сортировки.
 	} Sort;
 
     /**
-     * @brief Enumeration for column comparison types.
+     * @brief Перечисление для типов сравнения столбцов.
      */
 	typedef enum Comparer
 	{
-		NotSet,            ///< No comparison set.
-		Int,               ///< Integer comparison.
-		Double,            ///< Double comparison.
-		String,            ///< String comparison.
-		StringNumber,      ///< String with numeric comparison.
-		StringNoCase,      ///< Case-insensitive string comparison.
-		StringNumberNoCase, ///< Case-insensitive string with numeric comparison.
-		Date               ///< Date comparison.
+		NotSet,            ///< Сравнение не установлено.
+		Int,               ///< Сравнение целых чисел.
+		Double,            ///< Сравнение чисел с плавающей точкой.
+		String,            ///< Сравнение строк.
+		StringNumber,      ///< Сравнение строк с числами.
+		StringNoCase,      ///< Сравнение строк без учета регистра.
+		StringNumberNoCase, ///< Сравнение строк с числами без учета регистра.
+		Date               ///< Сравнение дат.
 	} Comparer;
 
 protected:
     /**
-     * @brief Static comparison procedure used by SortItems.
-     * @param lParam1 First item data.
-     * @param lParam2 Second item data.
-     * @param lParamSort Sorting parameters.
-     * @return The result of the comparison.
+     * @brief Статическая процедура сравнения, используемая SortItems.
+     * @param lParam1 Первые данные элемента.
+     * @param lParam2 Вторые данные элемента.
+     * @param lParamSort Параметры сортировки.
+     * @return Результат сравнения.
      */
 	static int CALLBACK CompareProc(LPARAM lParam1, LPARAM lParam2, LPARAM lParamSort);
 
     /**
-     * @brief Compares two items using the specified comparison logic.
-     * @param lParam1 First item data.
-     * @param lParam2 Second item data.
-     * @param lParamSort Sorting parameters.
-     * @return The result of the comparison.
+     * @brief Сравнивает два элемента, используя указанную логику сравнения.
+     * @param lParam1 Первые данные элемента.
+     * @param lParam2 Вторые данные элемента.
+     * @param lParamSort Параметры сортировки.
+     * @return Результат сравнения.
      */
 	static int Compare(LPARAM lParam1, LPARAM lParam2, LPARAM lParamSort);
 
     /**
-     * @brief Compares two integer values as strings.
-     * @param pLeftText The left item text.
-     * @param pRightText The right item text.
-     * @return The result of the comparison.
+     * @brief Сравнивает два значения целых чисел как строки.
+     * @param pLeftText Текст первого элемента.
+     * @param pRightText Текст второго элемента.
+     * @return Результат сравнения.
      */
 	static int CompareInt(LPCTSTR pLeftText, LPCTSTR pRightText);
 
     /**
-     * @brief Compares two double values as strings.
-     * @param pLeftText The left item text.
-     * @param pRightText The right item text.
-     * @return The result of the comparison.
+     * @brief Сравнивает два значения с плавающей точкой как строки.
+     * @param pLeftText Текст первого элемента.
+     * @param pRightText Текст второго элемента.
+     * @return Результат сравнения.
      */
 	static int CompareDouble(LPCTSTR pLeftText, LPCTSTR pRightText);
 
     /**
-     * @brief Compares two strings.
-     * @param pLeftText The left item text.
-     * @param pRightText The right item text.
-     * @return The result of the comparison.
+     * @brief Сравнивает две строки.
+     * @param pLeftText Текст первого элемента.
+     * @param pRightText Текст второго элемента.
+     * @return Результат сравнения.
      */
 	static int CompareString(LPCTSTR pLeftText, LPCTSTR pRightText);
 
     /**
-     * @brief Compares two numeric strings.
-     * @param pLeftText The left item text.
-     * @param pRightText The right item text.
-     * @return The result of the comparison.
+     * @brief Сравнивает две числовые строки.
+     * @param pLeftText Текст первого элемента.
+     * @param pRightText Текст второго элемента.
+     * @return Результат сравнения.
      */
 	static int CompareNumberString(LPCTSTR pLeftText, LPCTSTR pRightText);
 
     /**
-     * @brief Compares two numeric strings case-insensitively.
-     * @param pLeftText The left item text.
-     * @param pRightText The right item text.
-     * @return The result of the comparison.
+     * @brief Сравнивает две числовые строки без учета регистра.
+     * @param pLeftText Текст первого элемента.
+     * @param pRightText Текст второго элемента.
+     * @return Результат сравнения.
      */
 	static int CompareNumberStringNoCase(LPCTSTR pLeftText, LPCTSTR pRightText);
 
     /**
-     * @brief Compares two strings case-insensitively.
-     * @param pLeftText The left item text.
-     * @param pRightText The right item text.
-     * @return The result of the comparison.
+     * @brief Сравнивает две строки без учета регистра.
+     * @param pLeftText Текст первого элемента.
+     * @param pRightText Текст второго элемента.
+     * @return Результат сравнения.
      */
 	static int CompareStringNoCase(LPCTSTR pLeftText, LPCTSTR pRightText);
 
     /**
-     * @brief Compares two date values as strings.
-     * @param pLeftText The left item text.
-     * @param pRightText The right item text.
-     * @return The result of the comparison.
+     * @brief Сравнивает два значения дат как строки.
+     * @param pLeftText Текст первого элемента.
+     * @param pRightText Текст второго элемента.
+     * @return Результат сравнения.
      */
 	static int CompareDate(LPCTSTR pLeftText, LPCTSTR pRightText);
 
     /**
-     * @brief Critical section object for thread synchronization.
+     * @brief Объект критической секции для синхронизации потоков.
      */
 	CCriticalSection m_oLock;
 
 protected:
 	DECLARE_MESSAGE_MAP()
 
-    // Other private/protected member variables and methods omitted for brevity
-
-}; // End of class CListCtrlEx
+    // Другие частные/защищенные переменные и методы опущены для краткости
+}; // Конец класса CListCtrlEx

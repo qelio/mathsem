@@ -8,82 +8,81 @@
 
 /**
  * @class FromSetDialog
- * @brief Dialog for managing and selecting sets of formulas and entities.
+ * @brief Диалог для управления и выбора наборов формул и сущностей.
  *
- * This dialog allows users to view and select formula sets and entities from
- * the provided lists. It is typically used in applications that deal with
- * mathematical formulas or entities related to formula sets.
+ * Этот диалог позволяет пользователям просматривать и выбирать наборы формул и сущностей из
+ * предоставленных списков. Обычно используется в приложениях, работающих с математическими
+ * формулами или сущностями, связанными с наборами формул.
  */
 class FromSetDialog : public CDialogEx
 {
     DECLARE_DYNAMIC(FromSetDialog)
 
     /**
-     * @brief Vector of FormulaSet objects that the dialog will display or interact with.
+     * @brief Вектор объектов FormulaSet, которые диалог будет отображать или с которыми будет взаимодействовать.
      */
     vector <FormulaSet *> * sets;
 
     /**
-     * @brief Vector of all available EntityBase objects for selection in the dialog.
+     * @brief Вектор всех доступных объектов EntityBase для выбора в диалоге.
      */
     vector <EntityBase *> * allEntities;
 
 public:
     /**
-     * @brief Constructor for the FromSetDialog class.
-     * @param pParent Pointer to the parent window (default is NULL).
+     * @brief Конструктор класса FromSetDialog.
+     * @param pParent Указатель на родительское окно (по умолчанию NULL).
      */
     FromSetDialog(CWnd* pParent = NULL);
 
     /**
-     * @brief Destructor for the FromSetDialog class.
+     * @brief Деструктор класса FromSetDialog.
      */
     virtual ~FromSetDialog();
 
     /**
-     * @brief Dialog Data Exchange function for initializing the dialog.
-     * @param pDX Data exchange object.
+     * @brief Функция обмена данными диалога для инициализации диалога.
+     * @param pDX Объект обмена данными.
      */
     virtual void DoDataExchange(CDataExchange* pDX);
 
     /**
-     * @brief Initializes the dialog. This function is automatically called when
-     *        the dialog is created.
-     * @return TRUE if initialization is successful, FALSE otherwise.
+     * @brief Инициализирует диалог. Эта функция автоматически вызывается при создании диалога.
+     * @return TRUE, если инициализация прошла успешно, FALSE в противном случае.
      */
     virtual BOOL OnInitDialog();
 
     /**
-     * @brief Handler for list box selection change. This function is called
-     *        when the selection in the list box changes.
+     * @brief Обработчик изменения выбора в списке. Эта функция вызывается
+     *        при изменении выбора в списке.
      */
     afx_msg void OnLbnSelchangeSetlist1();
 
     /**
-     * @brief Button OK click handler. This function is called when the OK button
-     *        is clicked, typically to confirm the selection and close the dialog.
+     * @brief Обработчик нажатия кнопки OK. Эта функция вызывается при нажатии кнопки OK,
+     *        обычно для подтверждения выбора и закрытия диалога.
      */
     afx_msg void OnBnClickedOk();
 
     /**
-     * @brief Sets the vector of EntityBase objects to be used in the dialog.
-     * @param all_entities_ Pointer to a vector of EntityBase objects.
+     * @brief Устанавливает вектор объектов EntityBase для использования в диалоге.
+     * @param all_entities_ Указатель на вектор объектов EntityBase.
      */
     void setEntities(vector <EntityBase *> * all_entities_ = NULL) { allEntities = all_entities_; };
 
 protected:
     /**
-     * @brief Message map for handling Windows messages related to the dialog.
+     * @brief Карта сообщений для обработки сообщений Windows, связанных с диалогом.
      */
     DECLARE_MESSAGE_MAP()
 
     /**
-     * @brief List box control for displaying the available sets or entities.
+     * @brief Контрол списка для отображения доступных наборов или сущностей.
      */
     ScientificListBox m_ListBoxSource;
 
     /**
-     * @brief OK button control for confirming the selection.
+     * @brief Контрол кнопки OK для подтверждения выбора.
      */
     CButton m_ButtonOK;
 };

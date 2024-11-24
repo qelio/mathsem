@@ -1,8 +1,4 @@
-/**
- * @file OperationDlg.h
- * @brief Defines the OperationDlg class for performing operations on formulas.
- */
-
+// Заголовочный файл защиты от двойного включения
 #pragma once
 
 #include "afxwin.h"
@@ -13,62 +9,67 @@
 #include "afxcmn.h"
 
 /**
- * @brief Dialog class for various formula operations.
+ * @file OperationDlg.h
+ * @brief Определяет класс OperationDlg для выполнения операций с формулами.
+ */
+
+/**
+ * @brief Класс диалогового окна для различных операций с формулами.
  */
 class OperationDlg : public CDialogEx
 {
     DECLARE_DYNAMIC(OperationDlg)
 
     /**
-     * @brief Updates the state of the operation based on user interaction.
+     * @brief Обновляет состояние операции на основе взаимодействия с пользователем.
      */
     void SetOperationState();
 
     /**
-     * @brief Moves selected items from the source list box to the destination list box.
-     * @param Source The source ScientificListBox.
-     * @param Destination The destination ScientificListBox.
+     * @brief Перемещает выбранные элементы из исходного списка в целевой список.
+     * @param Source Исходный ScientificListBox.
+     * @param Destination Целевой ScientificListBox.
      */
     void MoveSelected(ScientificListBox& Source, ScientificListBox& Destination);
 
     /**
-     * @brief Moves all items from the source list box to the destination list box.
-     * @param Source The source ScientificListBox.
-     * @param Destination The destination ScientificListBox.
+     * @brief Перемещает все элементы из исходного списка в целевой список.
+     * @param Source Исходный ScientificListBox.
+     * @param Destination Целевой ScientificListBox.
      */
     void MoveAll(ScientificListBox& Source, ScientificListBox& Destination);
 
     /**
-     * @brief Pointer to a vector of formulas used in operations.
+     * @brief Указатель на вектор формул, используемых в операциях.
      */
     std::vector<Formula*>* formulas;
 
     /**
-     * @brief Pointer to a vector of all entities involved in operations.
+     * @brief Указатель на вектор всех сущностей, задействованных в операциях.
      */
     std::vector<EntityBase*>* allEntities;
 
 public:
     /**
-     * @brief Constructs the OperationDlg dialog.
-     * @param pParent Parent window of the dialog.
+     * @brief Конструктор диалогового окна OperationDlg.
+     * @param pParent Родительское окно диалога.
      */
     OperationDlg(CWnd* pParent = NULL);
 
     /**
-     * @brief Destructs the OperationDlg dialog.
+     * @brief Деструктор диалогового окна OperationDlg.
      */
     virtual ~OperationDlg();
 
     /**
-     * @brief Dialog Data Identifier.
+     * @brief Идентификатор данных диалога.
      */
     enum { IDD = IDD_CHOOSEDIALOG };
 
 protected:
     /**
-     * @brief Data exchange method for dialog controls.
-     * @param pDX Pointer to the data exchange object.
+     * @brief Метод обмена данными для элементов управления диалогом.
+     * @param pDX Указатель на объект обмена данными.
      */
     virtual void DoDataExchange(CDataExchange* pDX);
 

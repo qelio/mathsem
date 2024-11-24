@@ -1,6 +1,6 @@
 /**
  * @file SemanticString.h
- * @brief Defines the SemanticString class and related enumerations for mathematical text styling.
+ * @brief Определяет класс SemanticString и связанные с ним перечисления для стилизации математического текста.
  */
 
 #pragma once
@@ -10,68 +10,68 @@
 
 /**
  * @enum MathStyle
- * @brief Specifies the mathematical styling for characters.
+ * @brief Определяет стилизацию символов для математических выражений.
  */
 enum MathStyle {
-    NONE_MATHSTYLE = 0,  /**< No special styling, regular text */
-    LOW_MATHINDEX = 1,   /**< Subscript styling */
-    HIGH_MATHINDEX = 2,  /**< Superscript styling */
-    SYMBOL_TYPEFACE = 3  /**< Symbol typeface styling */
+    NONE_MATHSTYLE = 0,  /**< Без специальной стилизации, обычный текст */
+    LOW_MATHINDEX = 1,   /**< Подстрочный индекс */
+    HIGH_MATHINDEX = 2,  /**< Надстрочный индекс */
+    SYMBOL_TYPEFACE = 3  /**< Символьный шрифт */
 };
 
 /**
  * @class SemanticString
- * @brief Represents a semantic string for rendering mathematical expressions with styling.
+ * @brief Представляет семантическую строку для отображения математических выражений со стилизацией.
  *
- * The SemanticString class is responsible for preparing and rendering a string that contains mathematical
- * expressions with various styles such as subscripts, superscripts, and special symbols.
+ * Класс SemanticString отвечает за подготовку и отображение строки, содержащей математические
+ * выражения с различными стилями, такими как подстрочные, надстрочные индексы и специальные символы.
  */
 class SemanticString
 {
 public:
     /**
-     * @brief Constructs a new SemanticString object.
+     * @brief Конструктор для создания нового объекта SemanticString.
      */
     SemanticString();
 
     /**
-     * @brief Destructs the SemanticString object.
+     * @brief Деструктор для объекта SemanticString.
      */
     ~SemanticString();
 
     /**
-     * @brief Prepares the internal data from the input string for rendering.
+     * @brief Подготавливает внутренние данные из входной строки для отображения.
      *
-     * Parses the given text string and fills the character and style arrays accordingly.
-     * Optionally formats the string for Word export if @p forWordExport is true.
+     * Разбирает заданную текстовую строку и заполняет массивы символов и стилей соответственно.
+     * При необходимости форматирует строку для экспорта в Word, если @p forWordExport задано true.
      *
-     * @param tstr The input text string to prepare.
-     * @param forWordExport Indicates if the preparation is for Word export.
-     * @return True if preparation is successful, false otherwise.
+     * @param tstr Входная текстовая строка для подготовки.
+     * @param forWordExport Указывает, является ли подготовка для экспорта в Word.
+     * @return Возвращает true, если подготовка прошла успешно, иначе false.
      */
     bool PrepareSubItemData(tstring& tstr, bool forWordExport = false);
 
     /**
-     * @brief Draws the SemanticString content in the specified rectangle.
+     * @brief Отрисовывает содержимое SemanticString в указанном прямоугольнике.
      *
-     * Renders the prepared string onto the device context @p dc within the rectangle @p rectSubItem.
-     * Uses the provided fonts for symbols and indexes.
+     * Отображает подготовленную строку на контексте устройства @p dc внутри прямоугольника @p rectSubItem.
+     * Использует предоставленные шрифты для символов и индексов.
      *
-     * @param dc The device context to draw on.
-     * @param rectSubItem The rectangle area to draw the content.
-     * @param m_fSymbol Font used for symbol typeface characters.
-     * @param m_fIndexes Font used for subscript and superscript characters.
+     * @param dc Контекст устройства для отрисовки.
+     * @param rectSubItem Область прямоугольника для отрисовки содержимого.
+     * @param m_fSymbol Шрифт, используемый для символов.
+     * @param m_fIndexes Шрифт, используемый для подстрочных и надстрочных символов.
      */
     void DrawItem(CDC& dc, CRect& rectSubItem, CFont* m_fSymbol, CFont* m_fIndexes);
 
-    // Additional methods and members can be added here...
+    // Дополнительные методы и члены можно добавлять здесь...
 
 private:
     /**
-     * @brief Character buffer containing the semantic string.
+     * @brief Буфер символов, содержащий семантическую строку.
      *
-     * Holds the characters to be rendered, with support for Unicode if applicable.
-     * The buffer size is fixed to 256 characters.
+     * Хранит символы для отображения с поддержкой Юникода, если это применимо.
+     * Размер буфера фиксирован и составляет 256 символов.
      */
 #ifdef _UNICODE
     WCHAR tchars[256];
@@ -80,35 +80,35 @@ private:
 #endif
 
     /**
-     * @brief Array of MathStyle values corresponding to each character in @c tchars.
+     * @brief Массив значений MathStyle, соответствующих каждому символу в @c tchars.
      *
-     * Determines the styling for each character, such as subscript, superscript, or symbol typeface.
+     * Определяет стилизацию для каждого символа, такую как подстрочный, надстрочный индекс или символьный шрифт.
      */
     int symbolics[256];
 
     /**
-     * @brief Number of characters in the @c tchars and @c symbolics arrays.
+     * @brief Количество символов в массивах @c tchars и @c symbolics.
      */
     int count;
 
     /**
-     * @brief Pointer to the mathematical entity associated with this string.
+     * @brief Указатель на математическую сущность, связанную с этой строкой.
      *
-     * Typically points to a Formula or EntityBase object that is the source of the string data.
+     * Обычно указывает на объект Formula или EntityBase, который является источником данных строки.
      */
     EntityBase* formula;
 
     /**
-     * @brief Original text string used to prepare the semantic string.
+     * @brief Исходная текстовая строка, использованная для подготовки семантической строки.
      */
     tstring* text;
 
     /**
-     * @brief Precomputed size of the rendered string.
+     * @brief Предварительно вычисленный размер отрисованной строки.
      *
-     * Calculated during drawing operations to optimize rendering.
+     * Вычисляется во время операций отрисовки для оптимизации отображения.
      */
     CSize size;
 
-	SemanticString operator=(SemanticString &str); // ����������
+	SemanticString operator=(SemanticString &str); // Оператор присваивания
 };

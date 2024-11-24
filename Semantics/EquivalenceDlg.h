@@ -1,4 +1,4 @@
-// Author: Tatarintsev V.V., akizelokro@mail.ru, 2013-2014
+// Автор: Татаринцев В.В., akizelokro@mail.ru, 2013-2014
 #pragma once
 #include "afxwin.h"
 #include "afxbutton.h"
@@ -7,166 +7,166 @@
 #include "ScientificStatic.h"
 #include "afxcmn.h"
 
-// Declaration of the EquivalenceDlg class
+// Объявление класса EquivalenceDlg
 
 /**
- * @brief The EquivalenceDlg class represents a dialog for managing equivalences.
+ * @brief Класс EquivalenceDlg представляет диалог для управления эквивалентностями.
  *
- * This class is used to handle user interactions within a dialog for adding, removing,
- * and displaying scientific formulas and equivalences.
+ * Этот класс используется для обработки взаимодействий пользователя в диалоговом окне для добавления, удаления,
+ * и отображения научных формул и эквивалентностей.
  */
 class EquivalenceDlg : public CDialogEx
 {
     DECLARE_DYNAMIC(EquivalenceDlg)
 
     /**
-     * @brief Moves a selected item from one list box to another.
+     * @brief Перемещает выбранный элемент из одного списка в другой.
      *
-     * This function moves a selected item from the source list box to the destination list box.
+     * Эта функция перемещает выбранный элемент из исходного списка в целевой список.
      *
-     * @param Source The source list box to move items from.
-     * @param Destination The destination list box to move items to.
+     * @param Source Исходный список для перемещения элементов.
+     * @param Destination Целевой список для перемещения элементов.
      */
     void MoveSelected(ScientificListBox &Source, ScientificListBox &Destination);
 
     /**
-     * @brief Moves all items from one list box to another.
+     * @brief Перемещает все элементы из одного списка в другой.
      *
-     * This function moves all items from the source list box to the destination list box.
+     * Эта функция перемещает все элементы из исходного списка в целевой список.
      *
-     * @param Source The source list box to move items from.
-     * @param Destination The destination list box to move items to.
+     * @param Source Исходный список для перемещения элементов.
+     * @param Destination Целевой список для перемещения элементов.
      */
     void MoveAll(ScientificListBox &Source, ScientificListBox &Destination);
 
-    vector <Formula *> * formulas; /**< Pointer to the vector of formulas */
-    vector <EntityBase *> * allEntities; /**< Pointer to the vector of all entities */
-    vector <Equivalence *> * allEquivalences; /**< Pointer to the vector of all equivalences */
+    vector <Formula *> * formulas; /**< Указатель на вектор формул */
+    vector <EntityBase *> * allEntities; /**< Указатель на вектор всех сущностей */
+    vector <Equivalence *> * allEquivalences; /**< Указатель на вектор всех эквивалентностей */
 
 public:
     /**
-     * @brief Constructor for the EquivalenceDlg class.
+     * @brief Конструктор для класса EquivalenceDlg.
      *
-     * Initializes the dialog and sets the parent window.
+     * Инициализирует диалог и устанавливает родительское окно.
      *
-     * @param pParent Pointer to the parent window (default is NULL).
+     * @param pParent Указатель на родительское окно (по умолчанию NULL).
      */
     EquivalenceDlg(CWnd* pParent = NULL);
 
     /**
-     * @brief Destructor for the EquivalenceDlg class.
+     * @brief Деструктор для класса EquivalenceDlg.
      *
-     * Cleans up resources used by the EquivalenceDlg class.
+     * Очистка ресурсов, используемых классом EquivalenceDlg.
      */
     virtual ~EquivalenceDlg();
 
-    // Dialog data
-    enum { IDD = IDD_EQUIVALENCEDIALOG }; /**< Dialog resource ID */
+    // Данные диалога
+    enum { IDD = IDD_EQUIVALENCEDIALOG }; /**< Идентификатор ресурса диалога */
 
 protected:
     /**
-     * @brief Exchanges data between UI controls and class variables.
+     * @brief Обмен данными между элементами интерфейса и переменными класса.
      *
-     * This function is called during the dialog data exchange process.
-     * It handles the transfer of data between UI elements and internal class variables.
+     * Эта функция вызывается во время обмена данными диалога.
+     * Она обрабатывает передачу данных между элементами интерфейса и внутренними переменными класса.
      *
-     * @param pDX Pointer to the CDataExchange object for the data exchange.
+     * @param pDX Указатель на объект CDataExchange для обмена данными.
      */
     virtual void DoDataExchange(CDataExchange* pDX);
 
     DECLARE_MESSAGE_MAP()
 
 public:
-    // UI controls
-    ScientificListBox m_ListBoxSource; /**< Source list box for formulas */
-    ScientificListBox m_ListBoxDestination1; /**< Destination list box 1 */
-    ScientificListBox m_ListBoxDestination2; /**< Destination list box 2 */
-    CMFCButton m_ButtonAdd1; /**< Add button for list box 1 */
-    CMFCButton m_ButtonRemove1; /**< Remove button for list box 1 */
-    CScientificStatic m_StaticDescription; /**< Static description text */
-    CMFCButton m_ButtonAddAll1; /**< Add all button for list box 1 */
-    CMFCButton m_ButtonRemoveAll1; /**< Remove all button for list box 1 */
-    CButton m_ButtonOK; /**< OK button */
-    CFont * m_fIndexes; /**< Font for indexes */
-    CFont * m_fSymbol; /**< Font for symbols */
-    CFont * m_fVariables; /**< Font for variables */
-    CFont * m_fIndexesVariables; /**< Font for indexed variables */
-    CFont * m_fSymbolVariables; /**< Font for symbol variables */
+    // Элементы интерфейса
+    ScientificListBox m_ListBoxSource; /**< Исходный список для формул */
+    ScientificListBox m_ListBoxDestination1; /**< Целевой список 1 */
+    ScientificListBox m_ListBoxDestination2; /**< Целевой список 2 */
+    CMFCButton m_ButtonAdd1; /**< Кнопка добавления для списка 1 */
+    CMFCButton m_ButtonRemove1; /**< Кнопка удаления для списка 1 */
+    CScientificStatic m_StaticDescription; /**< Статический текст описания */
+    CMFCButton m_ButtonAddAll1; /**< Кнопка добавления всех элементов для списка 1 */
+    CMFCButton m_ButtonRemoveAll1; /**< Кнопка удаления всех элементов для списка 1 */
+    CButton m_ButtonOK; /**< Кнопка OK */
+    CFont * m_fIndexes; /**< Шрифт для индексов */
+    CFont * m_fSymbol; /**< Шрифт для символов */
+    CFont * m_fVariables; /**< Шрифт для переменных */
+    CFont * m_fIndexesVariables; /**< Шрифт для индексированных переменных */
+    CFont * m_fSymbolVariables; /**< Шрифт для символьных переменных */
 
     /**
-     * @brief Handles the click event for the "Check2" button.
+     * @brief Обработчик события нажатия на кнопку "Check2".
      */
     afx_msg void OnBnClickedCheck2();
 
     /**
-     * @brief Sets the formulas for the equivalence dialog.
+     * @brief Устанавливает формулы для диалога эквивалентностей.
      *
-     * This function is used to pass a vector of all entities that contain formulas.
+     * Эта функция используется для передачи вектора всех сущностей, содержащих формулы.
      *
-     * @param all_entities_ Optional pointer to a vector of all entities.
+     * @param all_entities_ Необязательный указатель на вектор всех сущностей.
      */
     void  setFormulas(vector <EntityBase *> * all_entities_ = NULL) { allEntities = all_entities_; };
 
     /**
-     * @brief Sets the equivalences for the equivalence dialog.
+     * @brief Устанавливает эквивалентности для диалога эквивалентностей.
      *
-     * This function is used to pass a vector of all equivalences.
+     * Эта функция используется для передачи вектора всех эквивалентностей.
      *
-     * @param all_equivalences_ Optional pointer to a vector of all equivalences.
+     * @param all_equivalences_ Необязательный указатель на вектор всех эквивалентностей.
      */
     void  setEquivalences(vector <Equivalence *> * all_equivalences_ = NULL) { allEquivalences = all_equivalences_; };
 
     /**
-     * @brief Initializes the dialog controls and settings.
+     * @brief Инициализирует элементы управления и настройки диалога.
      *
-     * This function is called when the dialog is initialized and sets up the UI components.
+     * Эта функция вызывается при инициализации диалога и настраивает компоненты интерфейса.
      *
-     * @return TRUE if initialization is successful, FALSE otherwise.
+     * @return TRUE, если инициализация успешна, FALSE в противном случае.
      */
     virtual BOOL OnInitDialog();
 
     /**
-     * @brief Handles the click event for the "OK" button.
+     * @brief Обработчик события нажатия на кнопку "OK".
      */
     afx_msg void OnBnClickedOk();
 
     /**
-     * @brief Handles the click event for the "Mfcbutton1" button.
+     * @brief Обработчик события нажатия на кнопку "Mfcbutton1".
      */
     afx_msg void OnBnClickedMfcbutton1();
 
     /**
-     * @brief Handles the click event for the "Mfcbutton5" button.
+     * @brief Обработчик события нажатия на кнопку "Mfcbutton5".
      */
     afx_msg void OnBnClickedMfcbutton5();
 
     /**
-     * @brief Handles the click event for the "Mfcbutton2" button.
+     * @brief Обработчик события нажатия на кнопку "Mfcbutton2".
      */
     afx_msg void OnBnClickedMfcbutton2();
 
     /**
-     * @brief Handles the click event for the "Mfcbutton6" button.
+     * @brief Обработчик события нажатия на кнопку "Mfcbutton6".
      */
     afx_msg void OnBnClickedMfcbutton6();
 
     /**
-     * @brief Handles the selection change event in the destination list box 1.
+     * @brief Обработчик события изменения выбора в целевом списке 1.
      */
     afx_msg void OnSelchangeListdest1();
 
     /**
-     * @brief Shows the candidate formulas for equivalences.
+     * @brief Показывает кандидатов для эквивалентностей.
      */
     void ShowCandidates();
 
     /**
-     * @brief Hides the candidate formulas for equivalences.
+     * @brief Скрывает кандидатов для эквивалентностей.
      */
     void HideCandidates();
 
     /**
-     * @brief Sets the state of equivalences based on user input.
+     * @brief Устанавливает состояние эквивалентностей на основе ввода пользователя.
      */
     void SetEquivalenceState();
 };
