@@ -12,6 +12,14 @@ public:
 
 protected:
     virtual void DoDataExchange(CDataExchange* pDX); // поддержка DDX/DDV
+    virtual BOOL OnInitDialog();
+    afx_msg void OnBnClickedButtonPrev();
+    afx_msg void OnBnClickedButtonNext();
 
     DECLARE_MESSAGE_MAP()
+
+private:
+    int m_nCurrentImage;
+    std::vector<int> m_vImageIDs;
+    void UpdateImage();
 };
