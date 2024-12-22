@@ -9,14 +9,15 @@ CHelpDialog::CHelpDialog(CWnd* pParent /*=nullptr*/)
 {
     // Инициализируйте массив идентификаторов изображений
     m_vImageIDs = {
-        IDB_BITMAP1,
-        IDB_BITMAP2,
-        IDB_BITMAP3,
-        IDB_BITMAP4,
-        IDB_BITMAP5,
-        IDB_BITMAP6,
-        IDB_BITMAP7,
-        IDB_BITMAP8
+        IDB_BITMAP9,
+        IDB_BITMAP10,
+        IDB_BITMAP11,
+        IDB_BITMAP12,
+        IDB_BITMAP13,
+        IDB_BITMAP14,
+        IDB_BITMAP15,
+        IDB_BITMAP16,
+        IDB_BITMAP17
     };
     m_nCurrentImage = 0;
 }

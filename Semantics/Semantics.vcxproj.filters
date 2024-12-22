@@ -226,28 +226,31 @@
     <Image Include="res\LogoCircle.ico">
       <Filter>Файлы ресурсов</Filter>
     </Image>
-    <Image Include="res\Рисунок1.bmp">
+    <Image Include="res\Слайд2.BMP">
       <Filter>Файлы ресурсов</Filter>
     </Image>
-    <Image Include="res\Рисунок2.bmp">
+    <Image Include="res\Слайд3.BMP">
       <Filter>Файлы ресурсов</Filter>
     </Image>
-    <Image Include="res\Рисунок3.bmp">
+    <Image Include="res\Слайд4.BMP">
       <Filter>Файлы ресурсов</Filter>
     </Image>
-    <Image Include="res\Рисунок4.bmp">
+    <Image Include="res\Слайд5.BMP">
       <Filter>Файлы ресурсов</Filter>
     </Image>
-    <Image Include="res\Рисунок5.bmp">
+    <Image Include="res\Слайд6.BMP">
       <Filter>Файлы ресурсов</Filter>
     </Image>
-    <Image Include="res\Рисунок6.bmp">
+    <Image Include="res\Слайд7.BMP">
       <Filter>Файлы ресурсов</Filter>
     </Image>
-    <Image Include="res\Рисунок7.bmp">
+    <Image Include="res\Слайд8.BMP">
       <Filter>Файлы ресурсов</Filter>
     </Image>
-    <Image Include="res\Рисунок8.bmp">
+    <Image Include="res\Слайд9.BMP">
+      <Filter>Файлы ресурсов</Filter>
+    </Image>
+    <Image Include="res\Слайд10.BMP">
       <Filter>Файлы ресурсов</Filter>
     </Image>
   </ItemGroup>
