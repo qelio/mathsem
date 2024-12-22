@@ -260,9 +260,9 @@ Formula * IsFirstMorganLawIdentity(const Formula& firstOf, const Formula& second
 			Formula * first_1 = get<0>(* first->getParentLink(0) );  
 			Formula * first_2 = get<0>(* first->getParentLink(1) );  
 
-			if( (first_1->getType() == OR_OPERATION ) && (first->getNumberOfParents() == 2) )    // если вторая формула образована операцией объединением "ИЛИ"
-			{
-				// получаю родительские формулы для формулы first
+			if ((second->getType() == OR_OPERATION) && (second->getNumberOfParents() == 2)) // если вторая формула образована операцией объединением "ИЛИ"
+            {
+                // получаю родительские формулы для формулы second
 				Formula * second_1 = get<0>(* second->getParentLink(0) );  
 				Formula * second_2 = get<0>(* second->getParentLink(1) );  
 				if( ( second_1->getType() == NEGATIVE_OPERATION ) && (second_2->getType() == NEGATIVE_OPERATION ) )
