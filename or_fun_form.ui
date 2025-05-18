@@ -6,12 +6,87 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>445</width>
-    <height>234</height>
+    <width>527</width>
+    <height>311</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>Form</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QWidget {
+	background: rgb(244, 239, 235);
+	color: rgb(47, 65, 87);
+	font-family: &quot;Segoe UI&quot;, Helvetica, Arial, sans-serif;
+}
+
+QCheckBox, QLabel {
+	font-weight: bold;
+}
+
+QPushButton {
+    background-color: rgb(87, 124, 142);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 6px 12px;
+    min-height: 28px;
+    margin: 2px;
+}
+
+QPushButton:hover {
+    background-color: rgba(87, 124, 142, 0.85);
+}
+
+QPushButton:pressed {
+    background-color: rgba(87, 124, 142, 0.75);
+}
+
+QListWidget {
+    background: white;
+    color: rgb(30, 30, 30);
+}
+
+QListWidget::item {
+    background: rgb(255, 255, 255);
+	color: rgb(30, 30, 30);
+    padding: 4px;
+}
+
+QListWidget::item:selected {
+    background: rgb(47, 65, 87);
+    color: rgb(255, 255, 255);
+}
+
+QListWidget::item:hover {
+    background: rgb(240, 240, 240);
+	color: rgba(30, 30, 30, 0.85);
+}
+
+QListWidget::item:selected:hover {
+    background: rgb(87, 124, 142);
+    color: rgb(240, 240, 240);
+}
+
+QCheckBox {
+    font-weight: bold;
+}
+
+QCheckBox::indicator {
+    width: 16px;
+    height: 16px;
+    background-color: white;
+    border: 1px solid rgb(87, 124, 142);
+    border-radius: 2px;
+}
+
+QCheckBox::indicator:checked {
+    image: url(:/check-svgrepo-com.svg);
+}
+
+QCheckBox::indicator:hover {
+    background-color: rgb(240, 240, 240);
+}</string>
   </property>
   <layout class="QGridLayout" name="gridLayout">
    <item row="3" column="1">
@@ -28,24 +103,10 @@
      </property>
     </widget>
    </item>
-   <item row="0" column="2" rowspan="3">
-    <widget class="QListWidget" name="ChoosenFormulas">
-     <property name="selectionMode">
-      <enum>QAbstractItemView::MultiSelection</enum>
-     </property>
-    </widget>
-   </item>
    <item row="1" column="0">
     <widget class="QCheckBox" name="CheckToAll1">
      <property name="text">
       <string>Применить ко всем формулам</string>
-     </property>
-    </widget>
-   </item>
-   <item row="4" column="2">
-    <widget class="QListWidget" name="listWidget_3">
-     <property name="selectionMode">
-      <enum>QAbstractItemView::MultiSelection</enum>
      </property>
     </widget>
    </item>
@@ -76,7 +137,7 @@
    <item row="3" column="0" rowspan="2">
     <widget class="QListWidget" name="ExistedFormulas">
      <property name="selectionMode">
-      <enum>QAbstractItemView::MultiSelection</enum>
+      <enum>QAbstractItemView::SelectionMode::MultiSelection</enum>
      </property>
      <item>
       <property name="text">
@@ -97,17 +158,31 @@
      </property>
     </widget>
    </item>
-   <item row="3" column="2">
+   <item row="5" column="0" colspan="3">
+    <widget class="QPushButton" name="OkBtn">
+     <property name="text">
+      <string>Подтвердить</string>
+     </property>
+    </widget>
+   </item>
+   <item row="0" column="2" rowspan="2">
+    <widget class="QListWidget" name="ChoosenFormulas">
+     <property name="selectionMode">
+      <enum>QAbstractItemView::SelectionMode::MultiSelection</enum>
+     </property>
+    </widget>
+   </item>
+   <item row="2" column="2">
     <widget class="QCheckBox" name="CheckToAll2">
      <property name="text">
       <string>Применить ко всем</string>
      </property>
     </widget>
    </item>
-   <item row="5" column="0" colspan="3">
-    <widget class="QPushButton" name="OkBtn">
-     <property name="text">
-      <string>Подтвердить</string>
+   <item row="3" column="2" rowspan="2">
+    <widget class="QListWidget" name="listWidget_3">
+     <property name="selectionMode">
+      <enum>QAbstractItemView::SelectionMode::MultiSelection</enum>
      </property>
     </widget>
    </item>

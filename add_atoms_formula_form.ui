@@ -6,12 +6,121 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>298</width>
-    <height>177</height>
+    <width>299</width>
+    <height>218</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>Form</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QWidget {
+	background: rgb(244, 239, 235);
+	font-family: &quot;Segoe UI&quot;, Helvetica, Arial, sans-serif;
+}
+
+QLabel {
+	color: rgb(47, 65, 87);
+	font-weight: bold;
+}
+
+QGroupBox {
+	background-color: rgb(255, 255, 255);
+    border: 1px solid rgb(200, 200, 200);
+    border-radius: 4px;
+	padding: 8px;
+	margin-top: 1ex;
+    color: rgb(47, 65, 87);
+    font-weight: bold;
+    font-size: 16px;
+}
+
+QGroupBox::title {
+    subcontrol-origin: margin;
+    left: 12px;
+    padding: 0 4px;
+}
+
+QPushButton {
+	background-color: rgb(87, 124, 142);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 6px 12px;
+    min-height: 28px;
+    margin: 2px;
+}
+
+QPushButton:hover {
+    background-color: rgba(87, 124, 142, 0.85);
+}
+
+QPushButton:pressed {
+    background-color: rgba(87, 124, 142, 0.75);
+}
+
+QGroupBox QLabel {
+	background: white;
+}
+
+QSpinBox {
+    min-width: 50px;
+    font-size: 14px;
+	background-color: white;
+    border: 1px solid rgb(200, 200, 200);
+    border-radius: 4px;
+    padding: 4px;
+    min-height: 20px;
+    color: rgb(47, 65, 87);
+}
+
+QSpinBox::up-button {
+    subcontrol-origin: border;
+    subcontrol-position: right top;
+    width: 16px;
+    height: 18px;
+}
+
+QSpinBox::down-button {
+    subcontrol-origin: border;
+    subcontrol-position: right bottom;
+    width: 16px;
+    height: 18px;
+}
+
+QComboBox {
+    background-color: white;
+    border: 1px solid rgb(200, 200, 200);
+    border-radius: 4px;
+    padding: 4px;
+    min-height: 20px;
+    color: rgb(47, 65, 87);
+}
+
+QComboBox:hover, QSpinBox:hover {
+    border: 1px solid rgb(87, 124, 142);
+}
+
+QComboBox QAbstractItemView {
+    background-color: white;
+    color: rgb(30, 30, 30);
+}
+
+QComboBox::drop-down {
+    border: none;
+    width: 0;
+    padding: 0;
+    margin: 0;
+}
+
+QComboBox::down-arrow {
+    image: none;
+}
+
+QComboBox QScrollBar:vertical {
+    width: 0px;
+    background: transparent;
+}</string>
   </property>
   <layout class="QGridLayout" name="gridLayout">
    <item row="3" column="0">
@@ -21,33 +130,37 @@
      </property>
     </widget>
    </item>
-   <item row="0" column="0">
-    <widget class="QLabel" name="label">
-     <property name="font">
-      <font>
-       <pointsize>11</pointsize>
-      </font>
-     </property>
-     <property name="text">
-      <string>Добавить атомарную формулу</string>
-     </property>
-     <property name="alignment">
-      <set>Qt::AlignCenter</set>
-     </property>
-    </widget>
-   </item>
    <item row="1" column="0">
     <widget class="QLabel" name="label_2">
      <property name="font">
       <font>
+       <family>Segoe UI</family>
        <pointsize>12</pointsize>
+       <bold>true</bold>
       </font>
      </property>
      <property name="text">
       <string>P(x,A)=(x∈A)</string>
      </property>
      <property name="alignment">
-      <set>Qt::AlignCenter</set>
+      <set>Qt::AlignmentFlag::AlignCenter</set>
+     </property>
+    </widget>
+   </item>
+   <item row="0" column="0">
+    <widget class="QLabel" name="label">
+     <property name="font">
+      <font>
+       <family>Segoe UI</family>
+       <pointsize>11</pointsize>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="text">
+      <string>Добавить атомарную формулу</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignmentFlag::AlignCenter</set>
      </property>
     </widget>
    </item>
@@ -60,339 +173,370 @@
       </size>
      </property>
      <property name="title">
-      <string>Ввод:</string>
+      <string>Ввод</string>
      </property>
-     <widget class="QLabel" name="label_3">
-      <property name="geometry">
-       <rect>
-        <x>30</x>
-        <y>30</y>
-        <width>241</width>
-        <height>31</height>
-       </rect>
+     <layout class="QHBoxLayout" name="horizontalLayout" stretch="0,0,0,0,0,0,0">
+      <property name="spacing">
+       <number>2</number>
       </property>
-      <property name="font">
-       <font>
-        <pointsize>15</pointsize>
-       </font>
+      <property name="leftMargin">
+       <number>6</number>
       </property>
-      <property name="text">
-       <string>P(          ,                  )</string>
+      <property name="topMargin">
+       <number>6</number>
       </property>
-     </widget>
-     <widget class="QComboBox" name="VarName">
-      <property name="geometry">
-       <rect>
-        <x>50</x>
-        <y>40</y>
-        <width>41</width>
-        <height>22</height>
-       </rect>
+      <property name="rightMargin">
+       <number>6</number>
       </property>
-      <property name="font">
-       <font>
-        <pointsize>14</pointsize>
-       </font>
-      </property>
-      <property name="currentIndex">
-       <number>23</number>
+      <property name="bottomMargin">
+       <number>6</number>
       </property>
       <item>
-       <property name="text">
-        <string>a</string>
-       </property>
+       <widget class="QLabel" name="label_open">
+        <property name="font">
+         <font>
+          <family>Segoe UI</family>
+          <pointsize>15</pointsize>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="text">
+         <string>P(</string>
+        </property>
+       </widget>
       </item>
       <item>
-       <property name="text">
-        <string>b</string>
-       </property>
+       <widget class="QComboBox" name="VarName">
+        <property name="font">
+         <font>
+          <family>Segoe UI</family>
+          <pointsize>14</pointsize>
+         </font>
+        </property>
+        <property name="currentIndex">
+         <number>23</number>
+        </property>
+        <item>
+         <property name="text">
+          <string>a</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>b</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>c</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>d</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>e</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>f</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>g</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>h</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>i</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>j</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>k</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>l</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>m</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>n</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>o</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>p</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>q</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>r</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>s</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>t</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>u</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>v</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>w</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>x</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>y</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>z</string>
+         </property>
+        </item>
+       </widget>
       </item>
       <item>
-       <property name="text">
-        <string>c</string>
-       </property>
+       <widget class="QSpinBox" name="VarIndex">
+        <property name="maximumSize">
+         <size>
+          <width>50</width>
+          <height>16777215</height>
+         </size>
+        </property>
+       </widget>
       </item>
       <item>
-       <property name="text">
-        <string>d</string>
-       </property>
+       <widget class="QLabel" name="label_comma">
+        <property name="font">
+         <font>
+          <family>Segoe UI</family>
+          <pointsize>15</pointsize>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="text">
+         <string>, </string>
+        </property>
+       </widget>
       </item>
       <item>
-       <property name="text">
-        <string>e</string>
-       </property>
+       <widget class="QComboBox" name="SetName">
+        <property name="font">
+         <font>
+          <family>Segoe UI</family>
+          <pointsize>14</pointsize>
+         </font>
+        </property>
+        <item>
+         <property name="text">
+          <string>A</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>B</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>C</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>D</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>E</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>F</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>G</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>H</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>I</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>G</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>K</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>L</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>M</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>N</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>O</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>P</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Q</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>R</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>S</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>T</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>U</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>V</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>W</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>X</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Y</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Z</string>
+         </property>
+        </item>
+       </widget>
       </item>
       <item>
-       <property name="text">
-        <string>f</string>
-       </property>
+       <widget class="QSpinBox" name="SetIndex">
+        <property name="maximumSize">
+         <size>
+          <width>50</width>
+          <height>16777215</height>
+         </size>
+        </property>
+       </widget>
       </item>
       <item>
-       <property name="text">
-        <string>g</string>
-       </property>
+       <widget class="QLabel" name="label_close">
+        <property name="font">
+         <font>
+          <family>Segoe UI</family>
+          <pointsize>15</pointsize>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="text">
+         <string>)</string>
+        </property>
+       </widget>
       </item>
-      <item>
-       <property name="text">
-        <string>h</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>i</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>j</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>k</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>l</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>m</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>n</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>o</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>p</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>q</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>r</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>s</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>t</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>u</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>v</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>w</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>x</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>y</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>z</string>
-       </property>
-      </item>
-     </widget>
-     <widget class="QComboBox" name="SetName">
-      <property name="geometry">
-       <rect>
-        <x>140</x>
-        <y>37</y>
-        <width>41</width>
-        <height>22</height>
-       </rect>
-      </property>
-      <property name="font">
-       <font>
-        <pointsize>14</pointsize>
-       </font>
-      </property>
-      <item>
-       <property name="text">
-        <string>A</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>B</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>C</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>D</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>E</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>F</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>G</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>H</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>I</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>G</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>K</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>L</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>M</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>N</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>O</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>P</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>Q</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>R</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>S</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>T</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>U</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>V</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>W</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>X</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>Y</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>Z</string>
-       </property>
-      </item>
-     </widget>
-     <widget class="QSpinBox" name="VarIndex">
-      <property name="geometry">
-       <rect>
-        <x>100</x>
-        <y>50</y>
-        <width>31</width>
-        <height>22</height>
-       </rect>
-      </property>
-     </widget>
-     <widget class="QSpinBox" name="SetIndex">
-      <property name="geometry">
-       <rect>
-        <x>190</x>
-        <y>50</y>
-        <width>31</width>
-        <height>22</height>
-       </rect>
-      </property>
-     </widget>
+     </layout>
     </widget>
    </item>
   </layout>

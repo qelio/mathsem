@@ -5,4 +5,10 @@
         <file>translations/mainwindow_En.ts</file>
         <file>translations/mainwindow_Ru.ts</file>
     </qresource>
+    <qresource prefix="/icons"/>
+    <qresource lang="ru" prefix="/icons"/>
+    <qresource prefix="/">
+        <file>check-svgrepo-com.svg</file>
+    </qresource>
+    <qresource prefix="/icon"/>
 </RCC>

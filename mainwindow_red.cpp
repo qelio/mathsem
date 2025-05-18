@@ -105,7 +105,7 @@ QTableWidgetItem*  mainwindow_red::convertWideToUtf8(const wchar_t* wideString) 
 
 void mainwindow_red::updateTable() {
 
-    ui->tableWidget->clear();
+    ui->tableWidget->clearContents();
     for(int i=0;i<all_entities.size();i++){
         // Вставляем строку
         ui->tableWidget->insertRow(i);
